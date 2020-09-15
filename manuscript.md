@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/b25fa044e0d52ef1f96a5e51f34bd7c6fd674315/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/b70d72d7f9f2efa8d30b50578320aa11c255df95/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b25fa044e0d52ef1f96a5e51f34bd7c6fd674315/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b70d72d7f9f2efa8d30b50578320aa11c255df95/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b25fa044e0d52ef1f96a5e51f34bd7c6fd674315/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b70d72d7f9f2efa8d30b50578320aa11c255df95/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: TAC3 Report (title to be confirmed)
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/b25fa044e0d52ef1f96a5e51f34bd7c6fd674315/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/b70d72d7f9f2efa8d30b50578320aa11c255df95/))
 was automatically generated
-from [mbhall88/TAC3_Report@b25fa04](https://github.com/mbhall88/TAC3_Report/tree/b25fa044e0d52ef1f96a5e51f34bd7c6fd674315)
+from [mbhall88/TAC3_Report@b70d72d](https://github.com/mbhall88/TAC3_Report/tree/b70d72d7f9f2efa8d30b50578320aa11c255df95)
 on September 15, 2020.
 </em></small>
 
@@ -127,7 +127,7 @@ on September 15, 2020.
 
 ## Part A: Progress Report {.page_break_before}
 
-Format options:
+Format options:  
 - If the student has not yet published a first author paper, the third report should be written in a first author draft paper format. If there are multiple projects, the different projects should be summarized. A bullet-point thesis outline should also be provided (max one page). 
 - Alternatively, if the fellow has already published a first author paper, the TAC3 report can instead be presented as a detailed thesis outline including key results. This is recommended for students who work on multiple projects and whose publication(s) do not cover all projects.
 
