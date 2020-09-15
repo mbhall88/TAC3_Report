@@ -1,19 +1,17 @@
-# Automated scholarly manuscripts on GitHub
+# Third year report for my EMBL-EBI Thesis Advisory Committee (TAC) 
 
 <!-- usage note: edit the H1 title above to personalize the manuscript -->
 
 [![HTML Manuscript](https://img.shields.io/badge/manuscript-HTML-blue.svg)](https://mbhall88.github.io/TAC3_Report/)
 [![PDF Manuscript](https://img.shields.io/badge/manuscript-PDF-blue.svg)](https://mbhall88.github.io/TAC3_Report/manuscript.pdf)
 [![GitHub Actions Status](https://github.com/mbhall88/TAC3_Report/workflows/Manubot/badge.svg)](https://github.com/mbhall88/TAC3_Report/actions)
-[![Travis Build Status](https://travis-ci.com/mbhall88/TAC3_Report.svg?branch=master)](https://travis-ci.com/mbhall88/TAC3_Report)
 <!-- usage note: delete CI badges above for services not used by your manuscript -->
 
 ## Manuscript description
 
 <!-- usage note: edit this section. -->
-
-This repository is a template manuscript (a.k.a. rootstock).
-Actual manuscript instances will clone this repository (see [`SETUP.md`](SETUP.md)) and replace this paragraph with a description of their manuscript.
+- Part A: Progress report
+- Part B: Training, career development and timelines
 
 ## Manubot
 

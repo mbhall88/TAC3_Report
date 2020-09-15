@@ -1,26 +1,24 @@
 ---
-title: "Manuscript Title"
+title: "TAC3 Report (title to be confirmed)"
 keywords:
-  - markdown
-  - publishing
-  - manubot
-lang: en-US
+  - phd
+  - thesis-plan
+  - genome-graphs
+  - bacterial-genomics
+  - nanopore
+  - tuberculosis
+  - variant-calling
+  - drug-resistance
+lang: en-UK
 authors:
-  - github: johndoe
-    name: John Doe
-    initials: JD
-    orcid: XXXX-XXXX-XXXX-XXXX
-    twitter: johndoe
-    email: john.doe@something.com
+  - github: mbhall88
+    name: Michael B. Hall
+    initials: MH
+    orcid: 0000-0003-3683-6208
+    twitter: mbhall88
+    email: michael.hall@ebi.ac.uk
     affiliations:
-      - Department of Something, University of Whatever
+      - EMBL-EBI
+      - University of Cambridge
     funders:
-      - Grant XXXXXXXX
-  - github: janeroe
-    name: Jane Roe
-    initials: JR
-    orcid: XXXX-XXXX-XXXX-XXXX
-    email: jane.roe@whatever.edu
-    affiliations:
-      - Department of Something, University of Whatever
-      - Department of Whatever, University of Something
+      - EMBL International PhD Programme (EIPP)
