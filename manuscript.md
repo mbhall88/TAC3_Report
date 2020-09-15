@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/4a08abb547eeaa0ac2edf8c529824f2e6d5e632f/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/b25fa044e0d52ef1f96a5e51f34bd7c6fd674315/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/4a08abb547eeaa0ac2edf8c529824f2e6d5e632f/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b25fa044e0d52ef1f96a5e51f34bd7c6fd674315/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/4a08abb547eeaa0ac2edf8c529824f2e6d5e632f/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b25fa044e0d52ef1f96a5e51f34bd7c6fd674315/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: TAC3 Report (title to be confirmed)
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/4a08abb547eeaa0ac2edf8c529824f2e6d5e632f/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/b25fa044e0d52ef1f96a5e51f34bd7c6fd674315/))
 was automatically generated
-from [mbhall88/TAC3_Report@4a08abb](https://github.com/mbhall88/TAC3_Report/tree/4a08abb547eeaa0ac2edf8c529824f2e6d5e632f)
+from [mbhall88/TAC3_Report@b25fa04](https://github.com/mbhall88/TAC3_Report/tree/b25fa044e0d52ef1f96a5e51f34bd7c6fd674315)
 on September 15, 2020.
 </em></small>
 
@@ -125,9 +125,65 @@ on September 15, 2020.
 
 
 
-## Abstract {.page_break_before}
+## Part A: Progress Report {.page_break_before}
+
+Format options:
+- If the student has not yet published a first author paper, the third report should be written in a first author draft paper format. If there are multiple projects, the different projects should be summarized. A bullet-point thesis outline should also be provided (max one page). 
+- Alternatively, if the fellow has already published a first author paper, the TAC3 report can instead be presented as a detailed thesis outline including key results. This is recommended for students who work on multiple projects and whose publication(s) do not cover all projects.
 
 
+
+
+
+## Part B: Training and career development {.page_break_before}
+
+### Publication Strategy
+
+> Briefly outline the publication strategy; set priorities if needed.
+
+### List of publications, papers in press, preprints, manuscripts submitted/in preparation to date
+
+### Work plan and timeline for thesis submission 
+
+> Provide a work plan to be completed prior to thesis writing and a timeline for submission.
+
+### List of scientific courses and conferences attended to date and planned for next year
+
+> Please list all events in reverse chronological order.
+
+###  List of additional training, teaching and other relevant activities to date
+
+> Please list all training and other activities in reverse chronological order.
+
+### Career development plan
+
+#### Please describe your current long-term career aims (i.e. 3-5 years after PhD). 
+
+#### Please comment on the types of position you would like to apply to for after the PhD and your expected application timeline? 
+
+> If applying for postdoc positions, which fields/fellowships are you considering? If you are applying for non-academic careers, what type of role? Do you have target companies or organisations in mind?
+
+#### What do you see as your strengths (2-3 skills)?
+
+#### What do you see as your areas for improvement1 (2-3 areas)?
+
+#### What are your career development priorities until the end of your contract? 
+
+> Please take into account both the scientific and non-scientific skills you will need to work on a successful and timely completion of the PhD. List the skills you still need to acquire to achieve your longer-term career aims. 
+
+#### What actions will you take to develop these skills?
+
+> This may include training courses, opportunities to practice and develop these skills, or seeking feedback/guidance. N.B. fellows should take 1-2 non-scientific trainings or career development workshops per year, and at least one international conference during their PhD.
+
+
+
+
+
+
+
+## Part C: Impact of COVID-19 pandemic {.page_break_before}
+
+> As outlined in the Procedures for COVID-19 related fellows’ contract extensions, students and their GTL should document the impact of the corona crisis on the PhD project. The TAC should assess the approximate project delay and discuss how this could be mitigated over the remaining PhD period. Please use the space below to outline the impact of corona crisis on your project (e.g. lost productivity / project delays).
 
 
 ## References {.page_break_before}

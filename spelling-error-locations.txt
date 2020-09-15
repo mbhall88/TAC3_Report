@@ -1,0 +1,6 @@
+content/02.partB.md:7:preprints
+content/02.partB.md:39:trainings
+content/03.partC.md:1:COVID
+content/03.partC.md:3:COVID
+content/03.partC.md:3:GTL
+content/03.partC.md:3:TAC
