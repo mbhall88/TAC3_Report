@@ -1,7 +1,6 @@
 ---
 author-meta:
-- John Doe
-- Jane Roe
+- Michael B. Hall
 bibliography:
 - content/manual-references.json
 date-meta: '2020-09-15'
@@ -15,21 +14,21 @@ header-includes: '<!--
 
   <meta name="dc.format" content="text/html" />
 
-  <meta name="dc.title" content="Manuscript Title" />
+  <meta name="dc.title" content="TAC3 Report (title to be confirmed)" />
 
-  <meta name="citation_title" content="Manuscript Title" />
+  <meta name="citation_title" content="TAC3 Report (title to be confirmed)" />
 
-  <meta property="og:title" content="Manuscript Title" />
+  <meta property="og:title" content="TAC3 Report (title to be confirmed)" />
 
-  <meta property="twitter:title" content="Manuscript Title" />
+  <meta property="twitter:title" content="TAC3 Report (title to be confirmed)" />
 
   <meta name="dc.date" content="2020-09-15" />
 
   <meta name="citation_publication_date" content="2020-09-15" />
 
-  <meta name="dc.language" content="en-US" />
+  <meta name="dc.language" content="en-UK" />
 
-  <meta name="citation_language" content="en-US" />
+  <meta name="citation_language" content="en-UK" />
 
   <meta name="dc.relation.ispartof" content="Manubot" />
 
@@ -39,21 +38,15 @@ header-includes: '<!--
 
   <meta name="citation_technical_report_institution" content="Manubot" />
 
-  <meta name="citation_author" content="John Doe" />
+  <meta name="citation_author" content="Michael B. Hall" />
 
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
+  <meta name="citation_author_institution" content="EMBL-EBI" />
 
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author_institution" content="University of Cambridge" />
 
-  <meta name="twitter:creator" content="@johndoe" />
+  <meta name="citation_author_orcid" content="0000-0003-3683-6208" />
 
-  <meta name="citation_author" content="Jane Roe" />
-
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-
-  <meta name="citation_author_institution" content="Department of Whatever, University of Something" />
-
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="twitter:creator" content="@mbhall88" />
 
   <link rel="canonical" href="https://mbhall88.github.io/TAC3_Report/" />
 
@@ -67,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/4da74141b87c3ea943a7cb657f9cbef35c9b7e44/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/4a08abb547eeaa0ac2edf8c529824f2e6d5e632f/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/4da74141b87c3ea943a7cb657f9cbef35c9b7e44/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/4a08abb547eeaa0ac2edf8c529824f2e6d5e632f/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/4da74141b87c3ea943a7cb657f9cbef35c9b7e44/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/4a08abb547eeaa0ac2edf8c529824f2e6d5e632f/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -85,15 +78,20 @@ header-includes: '<!--
 
   <!-- end Manubot generated metadata -->'
 keywords:
-- markdown
-- publishing
-- manubot
-lang: en-US
+- phd
+- thesis-plan
+- genome-graphs
+- bacterial-genomics
+- nanopore
+- tuberculosis
+- variant-calling
+- drug-resistance
+lang: en-UK
 manubot-clear-requests-cache: false
 manubot-output-bibliography: output/references.json
 manubot-output-citekeys: output/citations.tsv
 manubot-requests-cache-path: ci/cache/requests-cache
-title: Manuscript Title
+title: TAC3 Report (title to be confirmed)
 ...
 
 
@@ -103,9 +101,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/4da74141b87c3ea943a7cb657f9cbef35c9b7e44/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/4a08abb547eeaa0ac2edf8c529824f2e6d5e632f/))
 was automatically generated
-from [mbhall88/TAC3_Report@4da7414](https://github.com/mbhall88/TAC3_Report/tree/4da74141b87c3ea943a7cb657f9cbef35c9b7e44)
+from [mbhall88/TAC3_Report@4a08abb](https://github.com/mbhall88/TAC3_Report/tree/4a08abb547eeaa0ac2edf8c529824f2e6d5e632f)
 on September 15, 2020.
 </em></small>
 
@@ -113,25 +111,16 @@ on September 15, 2020.
 
 
 
-+ **John Doe**<br>
++ **Michael B. Hall**<br>
     ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
+    [0000-0003-3683-6208](https://orcid.org/0000-0003-3683-6208)
     · ![GitHub icon](images/github.svg){.inline_icon}
-    [johndoe](https://github.com/johndoe)
+    [mbhall88](https://github.com/mbhall88)
     · ![Twitter icon](images/twitter.svg){.inline_icon}
-    [johndoe](https://twitter.com/johndoe)<br>
+    [mbhall88](https://twitter.com/mbhall88)<br>
   <small>
-     Department of Something, University of Whatever
-     · Funded by Grant XXXXXXXX
-  </small>
-
-+ **Jane Roe**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
-    · ![GitHub icon](images/github.svg){.inline_icon}
-    [janeroe](https://github.com/janeroe)<br>
-  <small>
-     Department of Something, University of Whatever; Department of Whatever, University of Something
+     EMBL-EBI; University of Cambridge
+     · Funded by EMBL International PhD Programme (EIPP)
   </small>
 
 
