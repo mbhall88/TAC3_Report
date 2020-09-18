@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/b3f08b5165b5f30988c3835f04d7faedb74e7145/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/8568eca6f9d0069fa3687ad18a646611e85eb7c4/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b3f08b5165b5f30988c3835f04d7faedb74e7145/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/8568eca6f9d0069fa3687ad18a646611e85eb7c4/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b3f08b5165b5f30988c3835f04d7faedb74e7145/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/8568eca6f9d0069fa3687ad18a646611e85eb7c4/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/b3f08b5165b5f30988c3835f04d7faedb74e7145/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/8568eca6f9d0069fa3687ad18a646611e85eb7c4/))
 was automatically generated
-from [mbhall88/TAC3_Report@b3f08b5](https://github.com/mbhall88/TAC3_Report/tree/b3f08b5165b5f30988c3835f04d7faedb74e7145)
+from [mbhall88/TAC3_Report@8568eca](https://github.com/mbhall88/TAC3_Report/tree/8568eca6f9d0069fa3687ad18a646611e85eb7c4)
 on September 18, 2020.
 </em></small>
 
@@ -127,7 +127,9 @@ on September 18, 2020.
 
 ## Part A: Progress Report {.page_break_before}
 
-### Thesis Advisory Committee
+### Examining bacterial variation with genome graphs
+
+#### Thesis Advisory Committee
 
 - Zamin Iqbal (Supervisor) - EMBL-EBI
 - John Marioni (Chair) - EMBL-EBI
@@ -139,7 +141,6 @@ on September 18, 2020.
 **Second TAC Meeting**: 15/10/2019  
 **Third TAC Meeting**: 13/10/2020
 
-### Examining bacterial variation with genome graphs
 
 #### Executive summary
 
