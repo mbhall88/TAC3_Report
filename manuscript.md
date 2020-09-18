@@ -3,7 +3,7 @@ author-meta:
 - Michael B. Hall
 bibliography:
 - content/manual-references.json
-date-meta: '2020-09-15'
+date-meta: '2020-09-18'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -14,17 +14,17 @@ header-includes: '<!--
 
   <meta name="dc.format" content="text/html" />
 
-  <meta name="dc.title" content="TAC3 Report (title to be confirmed)" />
+  <meta name="dc.title" content="Third-year progress report for thesis advisory committee" />
 
-  <meta name="citation_title" content="TAC3 Report (title to be confirmed)" />
+  <meta name="citation_title" content="Third-year progress report for thesis advisory committee" />
 
-  <meta property="og:title" content="TAC3 Report (title to be confirmed)" />
+  <meta property="og:title" content="Third-year progress report for thesis advisory committee" />
 
-  <meta property="twitter:title" content="TAC3 Report (title to be confirmed)" />
+  <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
 
-  <meta name="dc.date" content="2020-09-15" />
+  <meta name="dc.date" content="2020-09-18" />
 
-  <meta name="citation_publication_date" content="2020-09-15" />
+  <meta name="citation_publication_date" content="2020-09-18" />
 
   <meta name="dc.language" content="en-UK" />
 
@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/b70d72d7f9f2efa8d30b50578320aa11c255df95/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/2bfe5862090c0f16e7d19b0da738bcd5bd7fd4f1/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b70d72d7f9f2efa8d30b50578320aa11c255df95/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/2bfe5862090c0f16e7d19b0da738bcd5bd7fd4f1/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b70d72d7f9f2efa8d30b50578320aa11c255df95/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/2bfe5862090c0f16e7d19b0da738bcd5bd7fd4f1/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -91,7 +91,7 @@ manubot-clear-requests-cache: false
 manubot-output-bibliography: output/references.json
 manubot-output-citekeys: output/citations.tsv
 manubot-requests-cache-path: ci/cache/requests-cache
-title: TAC3 Report (title to be confirmed)
+title: Third-year progress report for thesis advisory committee
 ...
 
 
@@ -101,10 +101,10 @@ title: TAC3 Report (title to be confirmed)
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/b70d72d7f9f2efa8d30b50578320aa11c255df95/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/2bfe5862090c0f16e7d19b0da738bcd5bd7fd4f1/))
 was automatically generated
-from [mbhall88/TAC3_Report@b70d72d](https://github.com/mbhall88/TAC3_Report/tree/b70d72d7f9f2efa8d30b50578320aa11c255df95)
-on September 15, 2020.
+from [mbhall88/TAC3_Report@2bfe586](https://github.com/mbhall88/TAC3_Report/tree/2bfe5862090c0f16e7d19b0da738bcd5bd7fd4f1)
+on September 18, 2020.
 </em></small>
 
 ## Authors
@@ -127,10 +127,21 @@ on September 15, 2020.
 
 ## Part A: Progress Report {.page_break_before}
 
-Format options:  
-- If the student has not yet published a first author paper, the third report should be written in a first author draft paper format. If there are multiple projects, the different projects should be summarized. A bullet-point thesis outline should also be provided (max one page). 
-- Alternatively, if the fellow has already published a first author paper, the TAC3 report can instead be presented as a detailed thesis outline including key results. This is recommended for students who work on multiple projects and whose publication(s) do not cover all projects.
+### Thesis Advisory Committee
 
+- Zamin Iqbal (Supervisor) - EMBL-EBI
+- John Marioni (Chair) - EMBL-EBI
+- Georg Zeller - EMBL Heidelberg
+- Estée Török - University of Cambridge
+
+**Starting Date**: 12/10/2017  
+**Qualifying Assessment Date**: 06/07/2018  
+**Second TAC Meeting**: 15/10/2019  
+**Third TAC Meeting**: 13/10/2020
+
+### Thesis title
+
+> **Examining bacterial variation with genome graphs**
 
 
 

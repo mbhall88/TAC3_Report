@@ -1,3 +1,16 @@
+content/01.partA.md:5:EBI
+content/01.partA.md:5:EMBL
+content/01.partA.md:5:Zamin
+content/01.partA.md:6:EBI
+content/01.partA.md:6:EMBL
+content/01.partA.md:6:Marioni
+content/01.partA.md:7:EMBL
+content/01.partA.md:7:Georg
+content/01.partA.md:7:Zeller
+content/01.partA.md:8:Estée
+content/01.partA.md:8:Török
+content/01.partA.md:12:TAC
+content/01.partA.md:13:TAC
 content/02.partB.md:7:preprints
 content/02.partB.md:39:trainings
 content/03.partC.md:1:COVID
