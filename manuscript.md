@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/2bfe5862090c0f16e7d19b0da738bcd5bd7fd4f1/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/b3f08b5165b5f30988c3835f04d7faedb74e7145/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/2bfe5862090c0f16e7d19b0da738bcd5bd7fd4f1/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b3f08b5165b5f30988c3835f04d7faedb74e7145/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/2bfe5862090c0f16e7d19b0da738bcd5bd7fd4f1/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b3f08b5165b5f30988c3835f04d7faedb74e7145/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/2bfe5862090c0f16e7d19b0da738bcd5bd7fd4f1/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/b3f08b5165b5f30988c3835f04d7faedb74e7145/))
 was automatically generated
-from [mbhall88/TAC3_Report@2bfe586](https://github.com/mbhall88/TAC3_Report/tree/2bfe5862090c0f16e7d19b0da738bcd5bd7fd4f1)
+from [mbhall88/TAC3_Report@b3f08b5](https://github.com/mbhall88/TAC3_Report/tree/b3f08b5165b5f30988c3835f04d7faedb74e7145)
 on September 18, 2020.
 </em></small>
 
@@ -139,10 +139,32 @@ on September 18, 2020.
 **Second TAC Meeting**: 15/10/2019  
 **Third TAC Meeting**: 13/10/2020
 
-### Thesis title
+### Examining bacterial variation with genome graphs
 
-> **Examining bacterial variation with genome graphs**
+#### Executive summary
 
+Genomics is now ubiquitous in clinical and public health microbiology, at least in the
+developed world. However, many significant challenges remain.
+- Bacterial genomes harbour huge amounts of diversity, even within a species, and
+  traditional reference-based approaches are problematic.
+- Much of the variation in bacteria is fundamentally inaccessible to short reads.
+- Long Nanopore reads are noisy, and SNP calling with this data is not properly
+  benchmarked or standardised.
+- Since *Mycobacterium tuberculosis* (Mtb) infects so many people, there is potential
+  for considerable impact for clinical applications.
+- There is also much to be gained from a high-quality pan-genome of Mtb as well as a
+  detailed map of its enigmatic *pe/ppe* gene repertoire.
+
+
+These motivations drive the following PhD thesis structure:
+1. Develop algorithms and software for variant discovery using bacterial genome graphs,
+   building on work of a previous student in the lab (my first paper, second author).
+2. Benchmark Nanopore versus Illumina SNP calling, showing our algorithms meet the needs
+   of clinical and public health users, validate, and publish (second paper).
+3. Improve upon current whole-genome sequencing-based drug resistance prediction for Mtb
+   using genome graphs.
+4. Curate a high-quality reference pan-genome for Mtb that includes a detailed map of
+   the *pe/ppe* genes.
 
 
 

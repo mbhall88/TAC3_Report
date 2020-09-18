@@ -1,3 +1,4 @@
+benchmarked
 COVID
 EBI
 EIPP
@@ -5,10 +6,16 @@ EMBL
 Estée
 Georg
 GTL
+Illumina
 Marioni
 mbhall
+Mtb
+Mycobacterium
+Nanopore
+ppe
 preprints
 Programme
+SNP
 TAC
 Török
 trainings
