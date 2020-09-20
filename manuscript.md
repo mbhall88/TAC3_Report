@@ -3,7 +3,7 @@ author-meta:
 - Michael B. Hall
 bibliography:
 - content/manual-references.json
-date-meta: '2020-09-18'
+date-meta: '2020-09-20'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
 
-  <meta name="dc.date" content="2020-09-18" />
+  <meta name="dc.date" content="2020-09-20" />
 
-  <meta name="citation_publication_date" content="2020-09-18" />
+  <meta name="citation_publication_date" content="2020-09-20" />
 
   <meta name="dc.language" content="en-UK" />
 
@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/8568eca6f9d0069fa3687ad18a646611e85eb7c4/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/c837c8d7ea1c277d3ccd806f9f8f1a2127d92f63/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/8568eca6f9d0069fa3687ad18a646611e85eb7c4/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/c837c8d7ea1c277d3ccd806f9f8f1a2127d92f63/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/8568eca6f9d0069fa3687ad18a646611e85eb7c4/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/c837c8d7ea1c277d3ccd806f9f8f1a2127d92f63/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,10 +101,10 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/8568eca6f9d0069fa3687ad18a646611e85eb7c4/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/c837c8d7ea1c277d3ccd806f9f8f1a2127d92f63/))
 was automatically generated
-from [mbhall88/TAC3_Report@8568eca](https://github.com/mbhall88/TAC3_Report/tree/8568eca6f9d0069fa3687ad18a646611e85eb7c4)
-on September 18, 2020.
+from [mbhall88/TAC3_Report@c837c8d](https://github.com/mbhall88/TAC3_Report/tree/c837c8d7ea1c277d3ccd806f9f8f1a2127d92f63)
+on September 20, 2020.
 </em></small>
 
 ## Authors
@@ -158,6 +158,7 @@ developed world. However, many significant challenges remain.
 
 
 These motivations drive the following PhD thesis structure:
+
 1. Develop algorithms and software for variant discovery using bacterial genome graphs,
    building on work of a previous student in the lab (my first paper, second author).
 2. Benchmark Nanopore versus Illumina SNP calling, showing our algorithms meet the needs
