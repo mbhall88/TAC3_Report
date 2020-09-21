@@ -38,7 +38,7 @@ phylogenetic
 polymorphisms
 ppe
 preprints
-prg
+PRG
 PRGs
 Programme
 prokaryote
