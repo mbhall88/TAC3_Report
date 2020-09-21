@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Michael B. Hall" />
-  <meta name="dcterms.date" content="2020-09-20" />
+  <meta name="dcterms.date" content="2020-09-21" />
   <meta name="keywords" content="phd, thesis-plan, genome-graphs, bacterial-genomics, nanopore, tuberculosis, variant-calling, drug-resistance" />
   <title>Third-year progress report for thesis advisory committee</title>
   <style>
@@ -28,8 +28,8 @@
   <meta name="citation_title" content="Third-year progress report for thesis advisory committee" />
   <meta property="og:title" content="Third-year progress report for thesis advisory committee" />
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
-  <meta name="dc.date" content="2020-09-20" />
-  <meta name="citation_publication_date" content="2020-09-20" />
+  <meta name="dc.date" content="2020-09-21" />
+  <meta name="citation_publication_date" content="2020-09-21" />
   <meta name="dc.language" content="en-UK" />
   <meta name="citation_language" content="en-UK" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@
   <meta name="citation_fulltext_html_url" content="https://mbhall88.github.io/TAC3_Report/" />
   <meta name="citation_pdf_url" content="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/c837c8d7ea1c277d3ccd806f9f8f1a2127d92f63/" />
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/c837c8d7ea1c277d3ccd806f9f8f1a2127d92f63/" />
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/c837c8d7ea1c277d3ccd806f9f8f1a2127d92f63/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/9d05ee8617427f90860773fe04c19cd43aa857b3/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/9d05ee8617427f90860773fe04c19cd43aa857b3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/9d05ee8617427f90860773fe04c19cd43aa857b3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -63,10 +63,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://mbhall88.github.io/TAC3_Report/v/c837c8d7ea1c277d3ccd806f9f8f1a2127d92f63/">permalink</a>)
+(<a href="https://mbhall88.github.io/TAC3_Report/v/9d05ee8617427f90860773fe04c19cd43aa857b3/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/mbhall88/TAC3_Report/tree/c837c8d7ea1c277d3ccd806f9f8f1a2127d92f63">mbhall88/TAC3_Report@c837c8d</a>
-on September 20, 2020.
+from <a href="https://github.com/mbhall88/TAC3_Report/tree/9d05ee8617427f90860773fe04c19cd43aa857b3">mbhall88/TAC3_Report@9d05ee8</a>
+on September 21, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -95,18 +95,20 @@ EMBL-EBI; University of Cambridge
 <strong>Qualifying Assessment Date</strong>: 06/07/2018<br />
 <strong>Second TAC Meeting</strong>: 15/10/2019<br />
 <strong>Third TAC Meeting</strong>: 13/10/2020</p>
-<h4 id="executive-summary">Executive summary</h4>
+<h3 id="executive-summary">Executive summary</h3>
 <p>Genomics is now ubiquitous in clinical and public health microbiology, at least in the
-developed world. However, many significant challenges remain.
-- Bacterial genomes harbour huge amounts of diversity, even within a species, and
-traditional reference-based approaches are problematic.
-- Much of the variation in bacteria is fundamentally inaccessible to short reads.
-- Long Nanopore reads are noisy, and SNP calling with this data is not properly
-benchmarked or standardised.
-- Since <em>Mycobacterium tuberculosis</em> (Mtb) infects so many people, there is potential
-for considerable impact for clinical applications.
-- There is also much to be gained from a high-quality pan-genome of Mtb as well as a
-detailed map of its enigmatic <em>pe/ppe</em> gene repertoire.</p>
+developed world. However, many significant challenges remain.</p>
+<ul>
+<li>Bacterial genomes harbour huge amounts of diversity, even within a species, and
+traditional reference-based approaches are problematic.</li>
+<li>Much of the variation in bacteria is fundamentally inaccessible to short reads.</li>
+<li>Long Nanopore reads are noisy, and SNP calling with this data is not properly
+benchmarked or standardised.</li>
+<li>Since <em>Mycobacterium tuberculosis</em> (Mtb) infects so many people, there is potential
+for considerable impact for clinical applications.</li>
+<li>There is also much to be gained from a high-quality pan-genome of Mtb as well as a
+detailed map of its enigmatic <em>pe/ppe</em> gene repertoire.</li>
+</ul>
 <p>These motivations drive the following PhD thesis structure:</p>
 <ol type="1">
 <li>Develop algorithms and software for variant discovery using bacterial genome graphs,
@@ -118,6 +120,119 @@ using genome graphs.</li>
 <li>Curate a high-quality reference pan-genome for Mtb that includes a detailed map of
 the <em>pe/ppe</em> genes.</li>
 </ol>
+<h3 id="motivation-and-background">Motivation and Background</h3>
+<p>In 2018, 1.4 million people died of tuberculosis (TB) globally, and over 10 million
+people fell ill to the disease. There were also 484,000 new cases of
+rifampicin-resistant TB reported, of which 78% were multi-drug resistant (MDR)
+<span class="citation" data-cites="owU3wUrb">[<a href="#ref-owU3wUrb" role="doc-biblioref">1</a>]</span>. Drug-resistant TB is not a new problem; the first clinical trial
+using Streptomycin to treat TB reported resistance and this outcome influenced the
+creation of the four-drug first-line regimen used today. Standard of care requires
+phenotypic testing of the infecting organism against these four drugs to ensure that
+appropriate treatment is prescribed. However, <em>Mycobacterium tuberculosis</em> (Mtb), the
+causative agent of TB, is a slow-growing organism and the gold-standard phenotypic tests
+(“mix bug and drug”) take around two months to complete. Thus, the traditional clinical
+diagnostic and treatment regimen is slow and expensive. Whole-genome sequencing offers a
+faster solution; recently it was shown that equivalent results are achievable by
+sequencing Mtb grown in “liquid culture” (also known as MGIT, Mycobacterial Growth
+Indicator Tube) after two weeks of culture in contrast to the two-month traditional
+(Lowenstein-Jensen) culture method <span class="citation" data-cites="Z3NG0hEI">[<a href="#ref-Z3NG0hEI" role="doc-biblioref">2</a>]</span>. A number of genes are
+implicated in drug resistance and predicting resistance from sequencing data based on a
+catalogue of resistance single-nucleotide polymorphisms (SNPs) and indels (insertions or
+deletions) works with high-specificity <span class="citation" data-cites="d8RxFwPN 11Jcu87Ae">[<a href="#ref-d8RxFwPN" role="doc-biblioref">3</a>,<a href="#ref-11Jcu87Ae" role="doc-biblioref">4</a>]</span>. For the four
+first-line drugs, a study by the CRyPTIC consortium is the first of its kind to
+demonstrate that phenotyping is not required if genotype predicts susceptibility
+<span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>. However, as the genetic basis for drug resistance is not
+entirely understood, there is still a sensitivity gap that differs drug-by-drug.</p>
+<p>Public health requirements for TB diagnostics are <strong>resistance prediction, species
+identification, and clustering</strong> of genomes. The clusters are intended to contain
+potential transmission events, thus enabling more effective contact tracing. All of the
+main requirements are currently successfully achieved with Illumina sequencing
+technology. However, there are reasons to consider abandoning Illumina for Oxford
+Nanopore Technology’s (ONT) sequencer. First, there is cost - Illumina has raised its
+reagent prices considerably. Second, the burden of TB lies primarily in places where
+there is neither capital nor infrastructure for purchasing or maintaining a large
+machine. The third is speed: Votintseva <em>et al.</em> showed that it was feasible to go from
+patient to result via a Nanopore sequencer in 12.5 hours <span class="citation" data-cites="9NLFJZN2">[<a href="#ref-9NLFJZN2" role="doc-biblioref">6</a>]</span>.
+Since this publication, the yield and quality of Nanopore has risen. Therefore, a
+diagnostic that delivers results while the patient is in the clinic is now imaginable.</p>
+<p>As an aside, it is worth noting that in high prevalence areas, there is no interest in
+transmission analysis, and therefore all of the information that they need (species and
+resistance) could be attained via deep amplicon sequencing. We accept this but ignore it
+and focus on a whole-genome solution nevertheless; both because of the better
+phylogenetic resolution, and because we do not yet know the relevant genetic mutations
+associated with new drugs.</p>
+<p>The idea of using a single, linear reference genome to represent a population of
+individuals is not ideal. Even more so in the context of a bacterium such as <em>Salmonella
+enterica</em>, where two individuals can differ to such a degree that they only share 16% of
+their genes <span class="citation" data-cites="5WDPm9pG IYW3CNeu">[<a href="#ref-5WDPm9pG" role="doc-biblioref">7</a>,<a href="#ref-IYW3CNeu" role="doc-biblioref">8</a>]</span>. This fluidity of genetic content leads to
+the concept of a pan-genome; defined as the set of all genes observed in a species. Some
+genes are more common than others within this pan-genome, leading to the distinction of
+the ‘core’ and ‘accessory’ genome with the core being those shared across (most) all
+individuals and accessory being everything else. The effect of using a single-reference
+genome to describe variation within samples from the same species is best illustrated in
+Figure <a href="#fig:refbias">1</a>. In this toy example, the maximum number of SNPs we can hope to
+discover is only 56%. Clearly, comparing many samples requires better methods than
+single-reference based ones.</p>
+<div id="fig:refbias" class="fignos">
+<figure>
+<img src="images/refbias.png" style="height:4in" alt="" /><figcaption><span>Figure 1:</span> An illustration of how reference bias can impact variant-calling. Each vertical
+column signifies an individual genome, with the coloured blocks representing genes.
+Numbers label 50 segregating SNPs. The percentages at the bottom express the proportion
+of SNPs which can be detected using each of the 6 ‘genomes’ as a reference by mapping
+perfect reads from the remaining 5 to this reference.</figcaption>
+</figure>
+</div>
+<p>One of the first questions that arise from a computational point-of-view is how to apply
+current methods, which assume a single reference, to a pan-genome? An approach to
+answering this question that has been gaining considerable traction in recent years is
+that of genome graphs. This new paradigm uses a population reference graph (PRG) as its
+equivalent of a single, linear, reference genome. A PRG is built to represent variation
+seen within a population, conceding the fact that no single genome can accurately
+represent an entire species. To construct such a PRG, one takes a multiple sequence
+alignment (MSA) and collapses shared sequence and creates “bubbles”, or branch points,
+where they do not (see Figure <a href="#fig:prg">2</a> for an illustration of this process). We define
+a collection of PRGs as a pan-genome reference graph (PanRG), which we will
+interchangeably refer to as a pan-genome. Thus far, genome graph methods have focused
+mainly on eukaryotes. Given the rich diversity of genetic content in the prokaryote
+world, it would seem genome graphs are more suited to utilisation there.</p>
+<div id="fig:prg" class="fignos">
+<figure>
+<img src="images/prg.png" style="width:100.0%" alt="" /><figcaption><span>Figure 2:</span> An illustration of how a population reference graph (PRG) is constructed. Regions
+(columns) of shared sequence are collapsed into a single node. Those that differ are
+split into “bubbles”, or branching nodes.</figcaption>
+</figure>
+</div>
+<p>Nanopore sequencing yields very long reads (up to 2.2Mbp <span class="citation" data-cites="QrKrCCsB">[<a href="#ref-QrKrCCsB" role="doc-biblioref">9</a>]</span>), the
+mean/mode read identity tends to fall in the range of 87-94% (using ONT’s <code>guppy</code>
+basecaller), while on a consensus level, it can achieve 99.94% with assembly polishing
+<span class="citation" data-cites="lwFwJNS9">[<a href="#ref-lwFwJNS9" role="doc-biblioref">10</a>]</span>.<br />
+Variant calling with Nanopore sequencing data has seen a somewhat slow development.
+Currently, the main tools that have had reasonable testing done and are versatile enough
+to detect both SNPs and (some) indels are <code>nanopolish</code> <span class="citation" data-cites="Oe1xiQra">[<a href="#ref-Oe1xiQra" role="doc-biblioref">11</a>]</span>, Clair
+<span class="citation" data-cites="LurPKJ01">[<a href="#ref-LurPKJ01" role="doc-biblioref">12</a>]</span> and <code>medaka</code> <span class="citation" data-cites="VSoEWPFn">[<a href="#ref-VSoEWPFn" role="doc-biblioref">13</a>]</span>. A recent
+benchmark showed that Nanopore variant calling provides reliable diagnostic information
+for <em>Neisseria gonorrhoeae</em> <span class="citation" data-cites="pPxMDtt0">[<a href="#ref-pPxMDtt0" role="doc-biblioref">14</a>]</span>. However, to date, there has
+been no extensive Nanopore variant calling benchmark done for Mtb. Given the potential
+benefits of using genome graphs and long-read Nanopore sequencing for bacterial
+genomics, it makes sense to try and blend the two.</p>
+<p>Pandora is a method being developed in the group to genotype across the <em>entire</em>
+pan-genome of a bacterial sample - not just the core. It does this by working with a
+PRG, rather than a linear reference. The method is based on the following intuition
+(similar to that behind the Li and Stephens model in population genetics): genomes
+evolve by recombination and mutation, and thus we ought to be able to approximate a
+<span class="math inline">\(N+1\)</span> genome as a mosaic of the first <span class="math inline">\(N\)</span> genomes. <code>pandora</code> maps Nanopore reads to a
+graph encoding of a PRG, infers a mosaic, and provides genotypes at all variants in the
+PanRG. Mapping is done using minimising k-mers <span class="citation" data-cites="19hwdhKN">[<a href="#ref-19hwdhKN" role="doc-biblioref">15</a>]</span> in a similar vein to
+that done by <code>minimap</code><span class="citation" data-cites="1DgB6gqeS">[<a href="#ref-1DgB6gqeS" role="doc-biblioref">16</a>]</span>, and is therefore fast. By using Nanopore
+sequencing data, it is also possible to infer gene order as, in general, a single read
+will contain multiple genes, as opposed to Illumina sequencing where multiple reads are
+required to span a single gene. Note <code>pandora</code> does not (prior to this work) include any
+facility for discovering novel variation.</p>
+<h4 id="summary">Summary</h4>
+<p>This PhD seeks to develop new methods to enable Nanopore-based diagnostics and
+epidemiology for Mtb and other bacteria. By using PRGs as a strong prior <span class="citation" data-cites="2FYPCKEv 7AwGVQXO">[<a href="#ref-2FYPCKEv" role="doc-biblioref">17</a>,<a href="#ref-7AwGVQXO" role="doc-biblioref">18</a>]</span>, we should be able to mitigate the Nanopore error biases and indel
+issues. In the process, we aim to construct a high-quality reference pan-genome for Mtb
+that we hope will open previously inaccessible parts of its genome for investigation.</p>
 <h2 class="page_break_before" id="part-b-training-and-career-development">Part B: Training and career development</h2>
 <h3 id="publication-strategy">Publication Strategy</h3>
 <blockquote>
@@ -158,8 +273,114 @@ the <em>pe/ppe</em> genes.</li>
 </blockquote>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
-<div id="refs" role="doc-bibliography">
-
+<div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-owU3wUrb">
+<p>1. <strong>Global tuberculosis report 2019</strong> <br />
+Organisation mondiale de la santé<br />
+(2019) <br />
+ISBN: <a href="https://worldcat.org/isbn/9789241565714">9789241565714</a></p>
+</div>
+<div id="ref-Z3NG0hEI">
+<p>2. <strong>Mycobacterial DNA Extraction for Whole-Genome Sequencing from Early Positive Liquid (MGIT) Cultures</strong> <br />
+Antonina A. Votintseva, Louise J. Pankhurst, Luke W. Anson, Marcus R. Morgan, Deborah Gascoyne-Binzi, Timothy M. Walker, T. Phuong Quan, David H. Wyllie, Carlos Del Ojo Elias, Mark Wilcox, … Derrick W. Crook<br />
+<em>Journal of Clinical Microbiology</em> (2015-04) <a href="https://doi.org/f65dtt">https://doi.org/f65dtt</a> <br />
+DOI: <a href="https://doi.org/10.1128/jcm.03073-14">10.1128/jcm.03073-14</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25631807">25631807</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4365189">PMC4365189</a></p>
+</div>
+<div id="ref-d8RxFwPN">
+<p>3. <strong>Rapid antibiotic-resistance predictions from genome sequence data for Staphylococcus aureus and Mycobacterium tuberculosis</strong> <br />
+Phelim Bradley, N. Claire Gordon, Timothy M. Walker, Laura Dunn, Simon Heys, Bill Huang, Sarah Earle, Louise J. Pankhurst, Luke Anson, Mariateresa de Cesare, … Zamin Iqbal<br />
+<em>Nature Communications</em> (2015-12-21) <a href="https://doi.org/f755tg">https://doi.org/f755tg</a> <br />
+DOI: <a href="https://doi.org/10.1038/ncomms10063">10.1038/ncomms10063</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26686880">26686880</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4703848">PMC4703848</a></p>
+</div>
+<div id="ref-11Jcu87Ae">
+<p>4. <strong>Whole-genome sequencing for prediction of Mycobacterium tuberculosis drug susceptibility and resistance: a retrospective cohort study</strong> <br />
+Timothy M Walker, Thomas A Kohl, Shaheed V Omar, Jessica Hedge, Carlos Del Ojo Elias, Phelim Bradley, Zamin Iqbal, Silke Feuerriegel, Katherine E Niehaus, Daniel J Wilson, … Tim EA Peto<br />
+<em>The Lancet Infectious Diseases</em> (2015-10) <a href="https://doi.org/f3jjtq">https://doi.org/f3jjtq</a> <br />
+DOI: <a href="https://doi.org/10.1016/s1473-3099(15)00062-6">10.1016/s1473-3099(15)00062-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26116186">26116186</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4579482">PMC4579482</a></p>
+</div>
+<div id="ref-4zIt0Vce">
+<p>5. <strong>Prediction of Susceptibility to First-Line Tuberculosis Drugs by DNA Sequencing</strong> <br />
+The CRyPTIC Consortium and the 100,000 Genomes Project<br />
+<em>New England Journal of Medicine</em> (2018-10-11) <a href="https://doi.org/d9kj">https://doi.org/d9kj</a> <br />
+DOI: <a href="https://doi.org/10.1056/nejmoa1800474">10.1056/nejmoa1800474</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30280646">30280646</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6121966">PMC6121966</a></p>
+</div>
+<div id="ref-9NLFJZN2">
+<p>6. <strong>Same-Day Diagnostic and Surveillance Data for Tuberculosis via Whole-Genome Sequencing of Direct Respiratory Samples</strong> <br />
+Antonina A. Votintseva, Phelim Bradley, Louise Pankhurst, Carlos del Ojo Elias, Matthew Loose, Kayzad Nilgiriwala, Anirvan Chatterjee, E. Grace Smith, Nicolas Sanderson, Timothy M. Walker, … Zamin Iqbal<br />
+<em>Journal of Clinical Microbiology</em> (2017-05) <a href="https://doi.org/f94vt4">https://doi.org/f94vt4</a> <br />
+DOI: <a href="https://doi.org/10.1128/jcm.02483-16">10.1128/jcm.02483-16</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28275074">28275074</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5405248">PMC5405248</a></p>
+</div>
+<div id="ref-5WDPm9pG">
+<p>7. <strong>Why prokaryotes have pangenomes</strong> <br />
+James O. McInerney, Alan McNally, Mary J. O’Connell<br />
+<em>Nature Microbiology</em> (2017-03-28) <a href="https://doi.org/gfw8gq">https://doi.org/gfw8gq</a> <br />
+DOI: <a href="https://doi.org/10.1038/nmicrobiol.2017.40">10.1038/nmicrobiol.2017.40</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28350002">28350002</a></p>
+</div>
+<div id="ref-IYW3CNeu">
+<p>8. <strong>panX: pan-genome analysis and exploration</strong> <br />
+Wei Ding, Franz Baumdicker, Richard A Neher<br />
+<em>Nucleic Acids Research</em> (2018-01-09) <a href="https://doi.org/gczkbr">https://doi.org/gczkbr</a> <br />
+DOI: <a href="https://doi.org/10.1093/nar/gkx977">10.1093/nar/gkx977</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29077859">29077859</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5758898">PMC5758898</a></p>
+</div>
+<div id="ref-QrKrCCsB">
+<p>9. <strong>BulkVis: a graphical viewer for Oxford nanopore bulk FAST5 files</strong> <br />
+Alexander Payne, Nadine Holmes, Vardhman Rakyan, Matthew Loose<br />
+<em>Bioinformatics</em> (2019-07-01) <a href="https://doi.org/gfnkxj">https://doi.org/gfnkxj</a> <br />
+DOI: <a href="https://doi.org/10.1093/bioinformatics/bty841">10.1093/bioinformatics/bty841</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30462145">30462145</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6596899">PMC6596899</a></p>
+</div>
+<div id="ref-lwFwJNS9">
+<p>10. <strong>Performance of neural network basecalling tools for Oxford Nanopore sequencing</strong> <br />
+Ryan R. Wick, Louise M. Judd, Kathryn E. Holt<br />
+<em>Genome Biology</em> (2019-06-24) <a href="https://doi.org/gf4jwm">https://doi.org/gf4jwm</a> <br />
+DOI: <a href="https://doi.org/10.1186/s13059-019-1727-y">10.1186/s13059-019-1727-y</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31234903">31234903</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6591954">PMC6591954</a></p>
+</div>
+<div id="ref-Oe1xiQra">
+<p>11. <strong>Real-time, portable genome sequencing for Ebola surveillance</strong> <br />
+Joshua Quick, Nicholas J. Loman, Sophie Duraffour, Jared T. Simpson, Ettore Severi, Lauren Cowley, Joseph Akoi Bore, Raymond Koundouno, Gytis Dudas, Amy Mikhail, … Miles W. Carroll<br />
+<em>Nature</em> (2016-02-03) <a href="https://doi.org/f88652">https://doi.org/f88652</a> <br />
+DOI: <a href="https://doi.org/10.1038/nature16996">10.1038/nature16996</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26840485">26840485</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4817224">PMC4817224</a></p>
+</div>
+<div id="ref-LurPKJ01">
+<p>12. <strong>Exploring the limit of using a deep neural network on pileup data for germline variant calling</strong> <br />
+Ruibang Luo, Chak-Lim Wong, Yat-Sing Wong, Chi-Ian Tang, Chi-Man Liu, Chi-Ming Leung, Tak-Wah Lam<br />
+<em>Nature Machine Intelligence</em> (2020-04-06) <a href="https://doi.org/d9kq">https://doi.org/d9kq</a> <br />
+DOI: <a href="https://doi.org/10.1038/s42256-020-0167-4">10.1038/s42256-020-0167-4</a></p>
+</div>
+<div id="ref-VSoEWPFn">
+<p>13. <strong>nanoporetech/medaka</strong> <br />
+GitHub<br />
+<a href="https://github.com/nanoporetech/medaka">https://github.com/nanoporetech/medaka</a></p>
+</div>
+<div id="ref-pPxMDtt0">
+<p>14. <strong>High precision <em>Neisseria gonorrhoeae</em> variant and antimicrobial resistance calling from metagenomic Nanopore sequencing</strong> <br />
+Nicholas D. Sanderson, Jeremy Swann, Leanne Barker, James Kavanagh, Sarah Hoosdally, Derrick Crook, Teresa L. Street, David W. Eyre, The GonFast Investigators Group<br />
+<em>Genome Research</em> (2020-09) <a href="https://doi.org/ghcbjr">https://doi.org/ghcbjr</a> <br />
+DOI: <a href="https://doi.org/10.1101/gr.262865.120">10.1101/gr.262865.120</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32873606">32873606</a></p>
+</div>
+<div id="ref-19hwdhKN">
+<p>15. <strong>Reducing storage requirements for biological sequence comparison</strong> <br />
+M. Roberts, W. Hayes, B. R. Hunt, S. M. Mount, J. A. Yorke<br />
+<em>Bioinformatics</em> (2004-07-15) <a href="https://doi.org/dkhs8w">https://doi.org/dkhs8w</a> <br />
+DOI: <a href="https://doi.org/10.1093/bioinformatics/bth408">10.1093/bioinformatics/bth408</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15256412">15256412</a></p>
+</div>
+<div id="ref-1DgB6gqeS">
+<p>16. <strong>Minimap and miniasm: fast mapping and de novo assembly for noisy long sequences</strong> <br />
+Heng Li<br />
+<em>Bioinformatics</em> (2016-07-15) <a href="https://doi.org/f8zxc3">https://doi.org/f8zxc3</a> <br />
+DOI: <a href="https://doi.org/10.1093/bioinformatics/btw152">10.1093/bioinformatics/btw152</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27153593">27153593</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4937194">PMC4937194</a></p>
+</div>
+<div id="ref-2FYPCKEv">
+<p>17. <strong>A Natural Encoding of Genetic Variation in a Burrows-Wheeler Transform to Enable Mapping and Genome Inference</strong> <br />
+Sorina Maciuca, Carlos del Ojo Elias, Gil McVean, Zamin Iqbal<br />
+<em>Lecture Notes in Computer Science</em> (2016) <a href="https://doi.org/d9ks">https://doi.org/d9ks</a> <br />
+DOI: <a href="https://doi.org/10.1007/978-3-319-43681-4_18">10.1007/978-3-319-43681-4_18</a></p>
+</div>
+<div id="ref-7AwGVQXO">
+<p>18. <strong>Improved genome inference in the MHC using a population reference graph</strong> <br />
+Alexander Dilthey, Charles Cox, Zamin Iqbal, Matthew R Nelson, Gil McVean<br />
+<em>Nature Genetics</em> (2015-04-27) <a href="https://doi.org/f7dt83">https://doi.org/f7dt83</a> <br />
+DOI: <a href="https://doi.org/10.1038/ng.3257">10.1038/ng.3257</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25915597">25915597</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4449272">PMC4449272</a></p>
+</div>
 </div>
 <!-- default theme -->
 
