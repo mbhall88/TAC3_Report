@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Michael B. Hall" />
-  <meta name="dcterms.date" content="2020-09-21" />
+  <meta name="dcterms.date" content="2020-09-22" />
   <meta name="keywords" content="phd, thesis-plan, genome-graphs, bacterial-genomics, nanopore, tuberculosis, variant-calling, drug-resistance" />
   <title>Third-year progress report for thesis advisory committee</title>
   <style>
@@ -28,8 +28,8 @@
   <meta name="citation_title" content="Third-year progress report for thesis advisory committee" />
   <meta property="og:title" content="Third-year progress report for thesis advisory committee" />
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
-  <meta name="dc.date" content="2020-09-21" />
-  <meta name="citation_publication_date" content="2020-09-21" />
+  <meta name="dc.date" content="2020-09-22" />
+  <meta name="citation_publication_date" content="2020-09-22" />
   <meta name="dc.language" content="en-UK" />
   <meta name="citation_language" content="en-UK" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@
   <meta name="citation_fulltext_html_url" content="https://mbhall88.github.io/TAC3_Report/" />
   <meta name="citation_pdf_url" content="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/18ad6fe582ba5e849b90bf4ef3da92a66c42b6e1/" />
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/18ad6fe582ba5e849b90bf4ef3da92a66c42b6e1/" />
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/18ad6fe582ba5e849b90bf4ef3da92a66c42b6e1/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/1914b4f312f5beca2bd69504539ec2c4bf4df18c/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/1914b4f312f5beca2bd69504539ec2c4bf4df18c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/1914b4f312f5beca2bd69504539ec2c4bf4df18c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -63,10 +63,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://mbhall88.github.io/TAC3_Report/v/18ad6fe582ba5e849b90bf4ef3da92a66c42b6e1/">permalink</a>)
+(<a href="https://mbhall88.github.io/TAC3_Report/v/1914b4f312f5beca2bd69504539ec2c4bf4df18c/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/mbhall88/TAC3_Report/tree/18ad6fe582ba5e849b90bf4ef3da92a66c42b6e1">mbhall88/TAC3_Report@18ad6fe</a>
-on September 21, 2020.
+from <a href="https://github.com/mbhall88/TAC3_Report/tree/1914b4f312f5beca2bd69504539ec2c4bf4df18c">mbhall88/TAC3_Report@1914b4f</a>
+on September 22, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -120,6 +120,7 @@ using genome graphs.</li>
 <li>Curate a high-quality reference pan-genome for Mtb that includes a detailed map of
 the <em>pe/ppe</em> genes.</li>
 </ol>
+<!--================================================================================-->
 <h3 id="motivation-and-background">Motivation and Background</h3>
 <p>In 2018, 1.4 million people died of tuberculosis (TB) globally, and over 10 million
 people fell ill to the disease. There were also 484,000 new cases of
@@ -233,6 +234,249 @@ facility for discovering novel variation.</p>
 epidemiology for Mtb and other bacteria. By using PRGs as a strong prior <span class="citation" data-cites="2FYPCKEv 7AwGVQXO">[<a href="#ref-2FYPCKEv" role="doc-biblioref">17</a>,<a href="#ref-7AwGVQXO" role="doc-biblioref">18</a>]</span>, we should be able to mitigate the Nanopore error biases and indel
 issues. In the process, we aim to construct a high-quality reference pan-genome for Mtb
 that we hope will open previously inaccessible parts of its genome for investigation.</p>
+<!--================================================================================-->
+<h3 id="chapter-1-variant-discovery-in-genome-graphs">Chapter 1: Variant discovery in genome graphs</h3>
+<p>Variation in bacterial genomes can arise through a diverse range of processes. Mutations
+can arise during replication and are inherited vertically, genetic material can be
+transferred horizontally, and homologous recombination can lead to eukaryote-like gene
+conversion <span class="citation" data-cites="h4yvs7gl">[<a href="#ref-h4yvs7gl" role="doc-biblioref">19</a>]</span>. This breadth of ways in which bacteria can acquire new and
+varied genetic material results gives rise to the phenomenon of a pan-genome. Bacterial
+species with an “open” pan-genome may have individuals in their population who can share
+as little as 16% of their genes (<em>S. enterica</em>) <span class="citation" data-cites="5WDPm9pG">[<a href="#ref-5WDPm9pG" role="doc-biblioref">7</a>]</span>. Not all species’
+pan-genomes are this open, but it does raise the question: what do we use as a
+“reference” genome for such a species? One solution is to use the reference genome for
+the specific strain of interest. This works fine when dealing with a single sample or
+multiple samples of the same strain. However, when expanding to many samples from
+varying strains, the reference is no longer representative. An alternative solution is
+to focus solely on the core genome - the complement of genes found in all members of a
+species (see Figure <a href="#fig:pangenome">3</a>). The issue with this approach is the loss of
+information about variation in all of the non-core genes, which could be a large number
+if the pan-genome is open. See Figure <a href="#fig:pangenome">3</a> for an illustration of this
+reference-bias problem.</p>
+<div id="fig:pangenome" class="fignos">
+<figure>
+<img src="images/pangenome.jpg" style="width:50.0%" alt="" /><figcaption><span>Figure 3:</span> Schematic representation of a pan-genome. Each oval represents the
+genetic content of a single individual within a species. Reference <span class="citation" data-cites="5WDPm9pG">[<a href="#ref-5WDPm9pG" role="doc-biblioref">7</a>]</span>.</figcaption>
+</figure>
+</div>
+<p>The message we are aiming to drive home at the beginning of this chapter is that
+reference-based analysis fundamentally cannot access all of the variation in a bacterial
+species.</p>
+<h4 id="prior-work-mosaic-approximations-and-genotyping">Prior work: Mosaic approximations and genotyping</h4>
+<p>Standard approaches to variant analysis are effectively a first-order approximation. In
+such an approximation, samples are considered identical to the reference, one maps reads
+to it, identifies clear SNPs via the read pileup, and then modifies the reference to get
+an estimate of the sample’s genome. As mentioned in
+<a href="#motivation-and-background">Motivation and Background</a>, <code>pandora</code> is a method developed
+by a previous PhD student in the lab, Rachel Colquhoun. It works on the premise of
+approximating a genome as a hierarchical mosaic. At a high-level, it represents a mosaic
+of loci - usually genes and intergenic regions - while at the locus-level, it is a
+mosaic of previously-seen genomes.</p>
+<p><code>pandora</code> has two main workflows: <code>map</code> and <code>compare</code>. <code>map</code> aims to infer a consensus
+sequence from a PRG for a single sample. The consensus sequence says two things about
+the sample: the loci present in the sample, and the most likely path through the PRG for
+each present locus. Optionally, <code>map</code> can run genotyping of the sample, providing a
+Variant Call Format (VCF) file for the sample with respect to the consensus sequence (or
+a user-provided sequence). <code>compare</code> aims to infer a consensus sequence that best
+represents a given set of genomes and then genotype each sample with respect to this
+inferred “average” genome. The advantage of this approach is that the consensus best
+represents the specific samples provided. This allows for genotyping across the <em>entire</em>
+pan-genome. If a gene is present in only 2 of 50 samples then genotyping information is
+provided for those 2 samples and null for the other 48.</p>
+<p>While <code>pandora</code>, before the work in this chapter, allows comparison of genomes to a
+level of detail provided by no other tool, there is still a significant shortcoming: it
+cannot discover novel variation. If a sample contains a variant not present in the PRG,
+the best <code>pandora</code> can do is select the path that is closest to that variant. The work
+in my first chapter outlines a method for removing this limitation within <code>pandora</code> and
+provides an analysis of the gain in recall and precision by incorporating <em>de novo</em>
+variant discovery into the <code>pandora</code> workflow.</p>
+<h4 id="local-de-novo-variant-discovery-in-a-genome-graph">Local <em>de novo</em> variant discovery in a genome graph</h4>
+<p>There are two significant difficulties in discovering <em>de novo</em> variants on a graph. The
+first is finding regions within the graph that look like the reads mapping to them
+contain variation we do not have in the PRG. Secondly, we need to generate new paths for
+these regions and add them back into the PRG for consideration when remapping.</p>
+<h5 id="finding-candidate-regions">Finding candidate regions</h5>
+<p>We define a candidate region, <span class="math inline">\(r\)</span>, as an interval within a local graph where coverage on
+the maximum likelihood path is less than a given threshold, <span class="math inline">\(c\)</span>, for more than <span class="math inline">\(l\)</span>
+consecutive positions. For a given read that has a mapping to <span class="math inline">\(r\)</span>, we define <span class="math inline">\(s_r\)</span> to be
+the subsequence of the read mapping to <span class="math inline">\(r\)</span>. We define the pileup <span class="math inline">\(P_r\)</span> as the set of all
+<span class="math inline">\(s_r \in r\)</span>.</p>
+<h5 id="enumerating-paths-through-candidate-regions">Enumerating paths through candidate regions</h5>
+<p>For <span class="math inline">\(r \in R\)</span>, where <span class="math inline">\(R\)</span> is the set of all candidate regions, we construct a de Bruijn
+graph <span class="math inline">\(G_r\)</span> from <span class="math inline">\(P_r\)</span>.<br />
+<span class="math inline">\(A_L\)</span> and <span class="math inline">\(A_R\)</span> are defined as kmers to the left and right of <span class="math inline">\(r\)</span> in the local graph.
+They are anchors to allow re-insertion of new sequences found by <em>de novo</em> discovery
+into the local graph. If <span class="math inline">\(A_L \notin G_r \lor A_R \notin G_r\)</span> then we abandon <em>de novo</em>
+discovery for <span class="math inline">\(r\)</span>.<br />
+<span class="math inline">\(T_r\)</span> is the spanning tree obtained by performing depth-first search (DFS) on <span class="math inline">\(G_r\)</span> from
+node <span class="math inline">\(A_L\)</span>. <span class="math inline">\(p_r\)</span> is defined as a path, from the root node <span class="math inline">\(A_L\)</span> of <span class="math inline">\(T_r\)</span> and ending at
+node <span class="math inline">\(A_R\)</span>, which fulfills the following two conditions:</p>
+<ul>
+<li><span class="math inline">\(p_r\)</span> is shorter than the maximum allowed path length.</li>
+<li>No more than <span class="math inline">\(k\)</span> nodes along <span class="math inline">\(p_r\)</span> have coverage <span class="math inline">\(&lt; (n_r \times 0.1) \times e_r\)</span>,
+where <span class="math inline">\(n_r\)</span> is the a counter, described below, and <span class="math inline">\(e_r\)</span> is the expected k-mer
+coverage for <span class="math inline">\(r\)</span>.</li>
+</ul>
+<p><span class="math inline">\(V_r\)</span> is the set of all <span class="math inline">\(p_r\)</span>. If <span class="math inline">\(|V_r|\)</span> is greater than a predefined threshold, <span class="math inline">\(n_r\)</span>
+is incremented by 1 and <span class="math inline">\(V_r\)</span> is repopulated. If <span class="math inline">\(n_r \times 0.1 = 1.0\)</span> then <em>de novo</em>
+discovery is abandoned for <span class="math inline">\(r\)</span>.</p>
+<h5 id="pruning-the-path-space-in-a-candidate-region">Pruning the path-space in a candidate region</h5>
+<p>As <code>pandora</code> operates on both accurate and error-prone sequencing reads, the number of
+valid paths in <span class="math inline">\(G_r\)</span> can be very large. In testing, this results in run-times beyond
+seven days (the longest any attempt was allowed to run). The increased run-time is due
+to cycles that can occur in <span class="math inline">\(G_r\)</span> and exploring paths that will never reach our required
+end anchor <span class="math inline">\(A_R\)</span>. In order to reduce the path-space within <span class="math inline">\(G_r\)</span> we prune paths based on
+multiple criteria. Critically, this pruning happens at each step of the graph walk
+(path-building).<br />
+In addition to <span class="math inline">\(T_r\)</span>, obtained by performing DFS on <span class="math inline">\(G_r\)</span>, we produce a distance map
+<span class="math inline">\(D_r\)</span> that results from running reversed breadth-first search (BFS) on <span class="math inline">\(G_r\)</span>, beginning
+from node <span class="math inline">\(A_R\)</span>. We say reversed BFS as we explore the predecessors of each node, rather
+than the successors. <span class="math inline">\(D_r\)</span> is implemented as a binary search tree where each node in the
+tree represents a k-mer in <span class="math inline">\(G_r\)</span> that is reachable from <span class="math inline">\(A_R\)</span> via reversed BFS. Each
+node additionally has an integer attached to it that describes the shortest path from
+that node to <span class="math inline">\(A_R\)</span>.<br />
+We can use <span class="math inline">\(D_r\)</span> to prune the path-space by requiring, for each node, <span class="math inline">\(n \in p_r\)</span>: is <span class="math inline">\(n \in D_r\)</span> <strong>and</strong> can <span class="math inline">\(A_R\)</span> be reached from <span class="math inline">\(n\)</span> in a minimum of <span class="math inline">\(i\)</span> nodes, where <span class="math inline">\(i\)</span> is
+defined as the maximum allowed path length minus the number of nodes walked to reach
+<span class="math inline">\(n\)</span>. If one of these conditions is not met, we abandon <span class="math inline">\(p_r\)</span>. The advantage of this
+pruning process is that we never explore paths that will not reach our required end
+point and when caught in a cycle, we will abandon the path once we have made too many
+iterations around the cycle.</p>
+<p>I programmed the above methods in C++ and added them into the code base for <code>pandora</code>.
+They constitute 1325 lines of source code and 3486 lines of test code. I had help with
+the implementation of multi-threading the <em>de novo</em> component and the BFS pruning from
+Leandro Ishi. The overall workflow for <code>pandora</code> with <em>de novo</em> variant discovery
+enabled is illustrated in Figure <a href="#fig:pandora">4</a>.</p>
+<div id="fig:pandora" class="fignos">
+<figure>
+<img src="images/pandora.png" style="width:80.0%" alt="" /><figcaption><span>Figure 4:</span> Schematic of the <code>pandora</code> method. Note Steps 4-6 are those developed and added
+in the scope of chapter 1. 1) A Population Reference Graph (PRG) built from known
+variants or previous samples. 2) Sequencing reads to try and map on to the PRG. 3) Reads
+mapped on to the PRG (where possible) using minimising k-mers. Coloured segments show
+paths where reads map. 4) Local assembly of the reads using a de Bruijn graph due to
+lower than expected coverage on a section of the PRG (many unmapped reads). A new path
+is discovered (orange). 5) The new path is added into the original PRG. 6) Reads are
+remapped to the new PRG with many reads mapping to the newly included path (orange).</figcaption>
+</figure>
+</div>
+<h4 id="evaluation">Evaluation</h4>
+<h5 id="simulated-data">Simulated data</h5>
+<p>The first step in evaluating the effect of adding <em>de novo</em> variant calling to <code>pandora</code>
+is with a simulated dataset. What we aim to show here is that the addition of <em>de novo</em>
+discovery allows <code>pandora</code> to improve its probability of variant detection (recall). The
+first step was randomly selecting 100 gene MSAs from a pool of 29702 obtained for
+<em>Escherichia coli</em> from the panX database <span class="citation" data-cites="IYW3CNeu">[<a href="#ref-IYW3CNeu" role="doc-biblioref">8</a>]</span>. Next, a PRG is constructed
+for each gene MSA, and a random path through each is selected using <code>pandora</code>. Each
+PRG’s random path is then concatenated together to form a single “genome” sequence. We
+subsequently add SNPs to the simulated genome at a specified rate of SNPs per-gene using
+<code>snp-mutator</code> <span class="citation" data-cites="QdpEzyJH">[<a href="#ref-QdpEzyJH" role="doc-biblioref">20</a>]</span>. We then simulated Nanopore reads from this mutated genome
+using <code>nanosim-h</code> <span class="citation" data-cites="Fp8BI1Lc 7m2CKnnh">[<a href="#ref-Fp8BI1Lc" role="doc-biblioref">21</a>,<a href="#ref-7m2CKnnh" role="doc-biblioref">22</a>]</span>. <code>pandora map</code> is then run, using the
+original PRG as input, along with the reads simulated from the mutated genome. With this
+approach, we know the exact SNPs we hope to find. After running the <code>map</code> routine, we
+are left with a collection of candidate paths produced by the <em>de novo</em> component. We
+then added these back into the PRG and iterated the <code>map</code> routine again, this time
+without <em>de novo</em> discovery enabled. Re-adding variants into the graph has the effect of
+making all of the <em>de novo</em> variants visible to genotyping. The result is a VCF file
+that (hopefully) contains the variants we introduced in the beginning. To compare the
+performance of <code>pandora</code> before and after <em>de novo</em> is added, we can compare the VCF
+produced from the first round of <code>map</code> with the last VCF.</p>
+<p>To avoid error-prone conversion of linear coordinates into graph coordinates the
+evaluation of whether the variants called by <code>pandora</code> are correct was undertaken in a
+slightly more convoluted manner. We define a probe-set <span class="math inline">\(P\)</span> as a collection of probes,
+<span class="math inline">\(p\)</span>, where <span class="math inline">\(p\)</span> represents an entry, <span class="math inline">\(e\)</span>, in a VCF file, <span class="math inline">\(V\)</span>. For each <span class="math inline">\(e \in V\)</span>, <span class="math inline">\(p\)</span> is
+constructed by the concatenation of <span class="math inline">\(l_w\)</span>, <span class="math inline">\(e_c\)</span>, and <span class="math inline">\(r_w\)</span> (in that order), where <span class="math inline">\(e_c\)</span>
+is the called variant of <span class="math inline">\(e\)</span>, and <span class="math inline">\(l_w\)</span> and <span class="math inline">\(r_w\)</span> are the sequences, of maximum length
+<span class="math inline">\(w\)</span>, in the VCF reference to the left and right, respectively, of <span class="math inline">\(e_c\)</span>.</p>
+<p>A truth probe-set, <span class="math inline">\(P_t\)</span>, was constructed from the VCF of variants added to the
+simulated genome and a query probe-set, <span class="math inline">\(P_q\)</span>, from the variants called by <code>pandora</code>. We
+then mapped all probes from <span class="math inline">\(P_t\)</span> to <span class="math inline">\(P_q\)</span> using <code>bwa mem</code> <span class="citation" data-cites="gmH6YDca">[<a href="#ref-gmH6YDca" role="doc-biblioref">23</a>]</span>. We then
+classify each mapped probe as a false positive or true positive and calculate precision
+and recall for the pre-<em>de novo</em> and post-<em>de novo</em> VCF files from <code>pandora</code>. As
+expected, Figure <a href="#fig:simulation_roc">5</a> shows that without <em>de novo</em> variant discovery,
+we are unable to find almost all introduced variants. In future work, we plan to add
+indels to the simulations.</p>
+<div id="fig:simulation_roc" class="fignos">
+<figure>
+<img src="images/simulation_roc_denovo_and_no_denovo.png" style="width:90.0%" alt="" /><figcaption><span>Figure 5:</span> Precision-recall curve for <code>pandora</code> simulations with (circles) and without (crosses) <em>de novo</em> variant
+discovery. This plot is measuring the proportion of SNPs we introduced into our
+simulated genome we correctly found (recall) on the X-axis. On the Y-axis is the
+proportion of calls we made which were correct (precision). Colours represent different
+coverage depth. Each point represents a different genotype confidence
+threshold.</figcaption>
+</figure>
+</div>
+<h5 id="empirical-data---multi-sample-comparison">Empirical data - multi-sample comparison</h5>
+<p>This section will be the major focus for the evaluation of both <em>de novo</em> <em>and</em>
+<code>pandora</code> and will constitute the results section of the <code>pandora</code> paper (near
+completion). We aim to show, with the <em>compare</em> routine, the power of using a PRG
+instead of a single reference along with <code>pandora</code>’s performance compared to
+<code>nanopolish</code> and <code>medaka</code> (Nanopore) and <code>snippy</code> (Illumina)
+<span class="citation" data-cites="6S74PtQr">[<a href="#ref-6S74PtQr" role="doc-biblioref">24</a>]</span>. We compare 20 samples, from across the <em>E. coli</em>
+phylogeny. As other variant callers do not use a PRG we carefully selected 24
+single-reference genomes representing the diversity of the <em>E. coli</em> phylogenetic tree
+as best as possible. Each variant caller was run once for each reference genome with the
+aim being to show that the more samples in the analysis, the lower the number of
+variants the caller can find.</p>
+<p>The evaluation will again follow a similar method to the
+<a href="#simulated-data">Simulated data</a>. The truth for this analysis, however, is a bit more
+complicated. In the process of developing an evaluation framework, we produced a python
+package called <code>varifier</code> (<a href="https://github.com/iqbal-lab-org/varifier" class="uri">https://github.com/iqbal-lab-org/varifier</a>). Briefly, for
+precision, <code>varifier</code> creates ‘probes’ for each variant in the VCF, using the genome the
+variants we called with-respect-to. It then maps these probes to the truth genome for
+the sample and determines the distance between the variant component of the probe and
+the part of the truth genome it maps to. For recall evaluation, <code>varifier</code> collects all
+differences in the pairwise alignment between the truth and VCF-reference genomes.
+Probes are created for these differences (based on the truth genome) and they are mapped
+to an augmented version of the VCF-reference genome, which has had the variants applied
+to it. The mappings are then evaluated in the same way as for precision.<br />
+As <code>pandora compare</code> calls variants for each sample with respect to an inferred best
+approximation sequence for all samples, creating the set of truth variants is slightly
+different. We perform a pairwise alignment for all pairs of samples and collect all the
+differences from this alignment. We then deduplicate this panel to ensure variants are
+not “double counted”, meaning core genome variants would have an unbalanced effect on
+the overall precision and recall. We then follow the same probe-mapping approach from
+<code>varifier</code> with these truth variants.</p>
+<!--https://github.com/iqbal-lab/pandora1_paper/issues/209-->
+<p>We filtered <code>pandora</code> variants based on the following criteria:</p>
+<ul>
+<li>Depth less than 15x</li>
+<li>Less than 20% of reads are on one strand</li>
+<li>50% or more of kmers on the allele have zero coverage</li>
+</ul>
+<p>After we have run this analysis, we will also most likely need to investigate applying
+filters to the VCF file to remove any biases relating to problems like strand bias or
+coverage.</p>
+<p>Whilst I wrote nearly all of the code and associated tests for evaluating the recall for
+this analysis, a lot of it has since been refactored by Leandro Ishi and by Martin Hunt
+in the form of <code>varifier</code>. Due to the novelty of the method we are proposing, this has
+taken quite a lot of time and thought. I wrote 1250 lines of code to evaluate the
+methods, along with 3500 lines of test code to ensure there are no bugs in our
+evaluation. Additionally, I built the original <code>snakemake</code> <span class="citation" data-cites="NcYZqBux">[<a href="#ref-NcYZqBux" role="doc-biblioref">25</a>]</span> pipeline of
+approximately 3500 lines of codes to orchestrate the entire evaluation and simulations
+(However, much of this has been rewritten by Leandro Ishi).</p>
+<!--TODO add ROC and associated text-->
+<!--TODO do we still want to do this?-->
+<!--\subsubsection{CPU and Memory Performance} In this section, we will investigate the-->
+<!--`pandora` CPU and memory performance impact of adding *de novo* variant discovery. Both-->
+<!--in single- and multi-threaded modes.-->
+<h4 id="outstanding-work">Outstanding work</h4>
+<p>The major work still outstanding for this project is the direct integration of <em>de novo</em>
+candidates back into the PRG. The current procedure requires a fairly laborious,
+multi-step process for adding <em>de novo</em> candidates into the PRG, requiring the user to
+run a separate pipeline from <code>pandora</code>. Ultimately this will need to be handled all
+within the <code>pandora</code> program with no intervention from the user.<br />
+To measure whether the reference bias effect in Figure <a href="#fig:refbias">1</a> is real and
+significant, we plan to measure it in three species: <em>E. coli</em>, <em>Klebsiella pneumoniae</em>,
+and <em>Streptococcus pneumoniae</em>. For each of the species, we will take a set of
+high-quality reference genomes, and perform the pair-wise alignment-based evaluation
+from the <code>pandora</code> <a href="#empirical-data---multi-sample-comparison">multi-sample comparison</a>.
+This work will aid the message in the introduction to my first chapter. Much of this
+work is being completed by Leandro Ishi, but it borrows heavily on some of the
+evaluation code I have written for the multi-sample comparison.<br />
+Lastly, there is an ongoing refinement of the <em>de novo</em> variant discovery process from
+the work in Chapters 2 and 3. The analysis in these chapters lean heavily on <code>pandora</code>,
+but for Mtb, which has a very different pan-genome to that of <em>E. coli</em> - which was used
+for most of the development of <code>pandora</code>’s methods.</p>
+<!--================================================================================-->
 <h2 class="page_break_before" id="part-b-training-and-career-development">Part B: Training and career development</h2>
 <h3 id="publication-strategy">Publication Strategy</h3>
 <blockquote>
@@ -348,8 +592,8 @@ DOI: <a href="https://doi.org/10.1038/s42256-020-0167-4">10.1038/s42256-020-0167
 </div>
 <div id="ref-VSoEWPFn">
 <p>13. <strong>nanoporetech/medaka</strong> <br />
-GitHub<br />
-<a href="https://github.com/nanoporetech/medaka">https://github.com/nanoporetech/medaka</a></p>
+Oxford Nanopore Technologies<br />
+(2020-09-14) <a href="https://github.com/nanoporetech/medaka">https://github.com/nanoporetech/medaka</a></p>
 </div>
 <div id="ref-pPxMDtt0">
 <p>14. <strong>High precision <em>Neisseria gonorrhoeae</em> variant and antimicrobial resistance calling from metagenomic Nanopore sequencing</strong> <br />
@@ -380,6 +624,46 @@ DOI: <a href="https://doi.org/10.1007/978-3-319-43681-4_18">10.1007/978-3-319-43
 Alexander Dilthey, Charles Cox, Zamin Iqbal, Matthew R Nelson, Gil McVean<br />
 <em>Nature Genetics</em> (2015-04-27) <a href="https://doi.org/f7dt83">https://doi.org/f7dt83</a> <br />
 DOI: <a href="https://doi.org/10.1038/ng.3257">10.1038/ng.3257</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25915597">25915597</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4449272">PMC4449272</a></p>
+</div>
+<div id="ref-h4yvs7gl">
+<p>19. <strong>Genetic variation: molecular mechanisms and impact on microbial evolution</strong> <br />
+Werner Arber<br />
+<em>FEMS Microbiology Reviews</em> (2000-01) <a href="https://doi.org/b4x7zf">https://doi.org/b4x7zf</a> <br />
+DOI: <a href="https://doi.org/10.1111/j.1574-6976.2000.tb00529.x">10.1111/j.1574-6976.2000.tb00529.x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/10640595">10640595</a></p>
+</div>
+<div id="ref-QdpEzyJH">
+<p>20. <strong>CFSAN SNP Pipeline: an automated method for constructing SNP matrices from next-generation sequence data</strong> <br />
+Steve Davis, James B. Pettengill, Yan Luo, Justin Payne, Al Shpuntoff, Hugh Rand, Errol Strain<br />
+<em>PeerJ Computer Science</em> (2015-08-26) <a href="https://doi.org/d9np">https://doi.org/d9np</a> <br />
+DOI: <a href="https://doi.org/10.7717/peerj-cs.20">10.7717/peerj-cs.20</a></p>
+</div>
+<div id="ref-Fp8BI1Lc">
+<p>21. <strong>NanoSim: nanopore sequence read simulator based on statistical characterization</strong> <br />
+Chen Yang, Justin Chu, René L Warren, Inanç Birol<br />
+<em>GigaScience</em> (2017-04) <a href="https://doi.org/gbj69k">https://doi.org/gbj69k</a> <br />
+DOI: <a href="https://doi.org/10.1093/gigascience/gix010">10.1093/gigascience/gix010</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28327957">28327957</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5530317">PMC5530317</a></p>
+</div>
+<div id="ref-7m2CKnnh">
+<p>22. <strong>Karel-Brinda/Nanosim-H: Nanosim-H 1.1.0.4</strong> <br />
+Karel Břinda, Chen Yang, Justin Chu, Jasper Linthorst, Wiktor Franus<br />
+<em>Zenodo</em> (2018-08-07) <a href="https://doi.org/d9nq">https://doi.org/d9nq</a> <br />
+DOI: <a href="https://doi.org/10.5281/zenodo.1341250">10.5281/zenodo.1341250</a></p>
+</div>
+<div id="ref-gmH6YDca">
+<p>23. <strong>Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM</strong> <br />
+Heng Li<br />
+<em>arXiv</em> (2013-05-28) <a href="https://arxiv.org/abs/1303.3997">https://arxiv.org/abs/1303.3997</a></p>
+</div>
+<div id="ref-6S74PtQr">
+<p>24. <strong>tseemann/snippy</strong> <br />
+Torsten Seemann<br />
+(2020-09-17) <a href="https://github.com/tseemann/snippy">https://github.com/tseemann/snippy</a></p>
+</div>
+<div id="ref-NcYZqBux">
+<p>25. <strong>Snakemake–a scalable bioinformatics workflow engine</strong> <br />
+J. Koster, S. Rahmann<br />
+<em>Bioinformatics</em> (2012-08-20) <a href="https://doi.org/gd2xzq">https://doi.org/gd2xzq</a> <br />
+DOI: <a href="https://doi.org/10.1093/bioinformatics/bts480">10.1093/bioinformatics/bts480</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/22908215">22908215</a></p>
 </div>
 </div>
 <!-- default theme -->
