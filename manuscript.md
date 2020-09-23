@@ -3,7 +3,7 @@ author-meta:
 - Michael B. Hall
 bibliography:
 - content/manual-references.json
-date-meta: '2020-09-22'
+date-meta: '2020-09-23'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
 
-  <meta name="dc.date" content="2020-09-22" />
+  <meta name="dc.date" content="2020-09-23" />
 
-  <meta name="citation_publication_date" content="2020-09-22" />
+  <meta name="citation_publication_date" content="2020-09-23" />
 
   <meta name="dc.language" content="en-UK" />
 
@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/1914b4f312f5beca2bd69504539ec2c4bf4df18c/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/81491c984eb4d0d3fe4b6de5801e715e43f585a4/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/1914b4f312f5beca2bd69504539ec2c4bf4df18c/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/81491c984eb4d0d3fe4b6de5801e715e43f585a4/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/1914b4f312f5beca2bd69504539ec2c4bf4df18c/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/81491c984eb4d0d3fe4b6de5801e715e43f585a4/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,10 +101,10 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/1914b4f312f5beca2bd69504539ec2c4bf4df18c/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/81491c984eb4d0d3fe4b6de5801e715e43f585a4/))
 was automatically generated
-from [mbhall88/TAC3_Report@1914b4f](https://github.com/mbhall88/TAC3_Report/tree/1914b4f312f5beca2bd69504539ec2c4bf4df18c)
-on September 22, 2020.
+from [mbhall88/TAC3_Report@81491c9](https://github.com/mbhall88/TAC3_Report/tree/81491c984eb4d0d3fe4b6de5801e715e43f585a4)
+on September 23, 2020.
 </em></small>
 
 ## Authors
@@ -513,6 +513,7 @@ the overall precision and recall. We then follow the same probe-mapping approach
 `varifier` with these truth variants.
 
 <!--https://github.com/iqbal-lab/pandora1_paper/issues/209-->
+
 We filtered `pandora` variants based on the following criteria:
 
 - Depth less than 15x
@@ -561,6 +562,238 @@ but for Mtb, which has a very different pan-genome to that of *E. coli* - which 
 for most of the development of `pandora`'s methods.
 
 <!--================================================================================-->
+<!--TODO improve title-->
+
+### Chapter 2: Using genome graphs and nanopore sequencing to define transmission clusters for *M. tuberculosis*
+
+Public health applications for genome sequencing of Mtb generally focus on three
+use-cases: species identification, prediction of drug resistance, and clustering of
+samples for epidemiological purposes. In this chapter, we plan to focus on how the
+methods developed in `pandora` can be used to improve clustering of samples - generally
+referred to as "transmission clusters" - while, in the next chapter, we will address the
+drug resistance prediction component. The intention is to be able to use Nanopore data
+for public health. Therefore, this chapter will focus on a head-to-head comparison of
+Nanopore and Illumina sequencing technologies for classifying transmission clusters Mtb.
+What we would like to show with the work in this chapter is that, contrary to current
+dogma, Nanopore sequencing technology has advanced to the point where it can be applied
+to this use-case to a standard acceptable by public health authorities. The work that
+will constitute this chapter (and the next) is a collaboration with researchers in
+Oxford, Birmingham, Madagascar, and South Africa, but I will be performing all of the
+analysis.
+
+#### Data
+
+As the work in this chapter (and the next) involves a direct comparison of two
+sequencing technologies - Illumina and Nanopore - the DNA sequenced by both must be
+identical so that we can be certain the technology is the only source of differences, if
+any. Each sample was sequenced on both platforms from the same isolate and DNA
+extraction. In total, we received 118 samples from Madagascar, 83 from South Africa, and
+46 from the National Tuberculosis Reference Lab in Birmingham; giving us a total of 247
+samples.  
+As these samples are not reference isolates, we need to be able to compare both Illumina
+and Nanopore to a truth. To establish how each platform compares and differs from the
+truth, we have additionally sequenced 35 of the Malagasy isolates with PacBio and will
+use the high-quality assemblies for these samples as a baseline comparison for samples
+without a truth.
+
+#### Quality Control
+
+The purpose of quality control (QC) is to ensure all samples used in later analysis are
+of the highest quality. By highest quality we mean all samples have perfectly matched
+Illumina and Nanopore data, sufficient coverage on both sequencing technologies, no
+contamination, and no evidence of a mixed Mtb population.
+
+The first step in QC was to exclude samples where the Nanopore and Illumina data were
+not perfectly matched. There were some instances where isolates had to be resequenced as
+the Nanopore data had been accidently deleted from the sequencing laboratory's computer.
+Additionally, some samples did not have any matched Nanopore or Illumina sequencing. In
+total, we excluded 40 samples at this stage.
+
+The remaining 207 samples were processed through a quality control pipeline
+(<https://github.com/mbhall88/head_to_head_pipeline/tree/master/data/QC>). The first
+step in QC is decontamination of sequencing reads. We used the decontamination database
+from `clockwork` (<https://github.com/iqbal-lab-org/clockwork>), which contains a wide
+range of organisms, including viral, human, Mtb, non-tuberculosis Mycobacterium (NTM),
+and nasopharyngeal-associated bacterial genomes. Each genome has associated metadata
+indicating if it is contamination or not. Reads were mapped to the database using `bwa
+mem` [@arxiv:1303.3997] (Illumina) and `minimap2` (Nanopore) [@doi:10/gdhbqt]. The
+resulting alignment was used to quantify the proportion of reads considered
+contamination, unmapped, and wanted. A read is considered wanted if it has any mapping
+to a non-contamination genome in the database and is output to a final decontaminated
+fastq file. All other mapped reads are considered contamination.
+
+All decontaminated fastq files were subsampled to a depth of 60x (Illumina) and 150x
+(Nanopore) using `rasusa` [@doi:10/d9rz]. The reason for subsampling is to limit
+unnecessarily large read sets that can drastically slow down later steps in the analysis
+process without significant advantage.
+
+The last step in the QC pipeline is to assign lineages for each sample. A panel of
+lineage-defining SNPs [@doi:10/gbvbxh; @doi:10/d9r2; @doi:10/f9dg9j] was used in
+conjunction with a sample's Illumina VCF from the
+[Baseline variant analysis](#baseline-variant-analysis) for the lineage assignment. At
+each lineage-defining position in the sample's VCF we determine if the called allele is
+the same as the panel allele. If it is, we add the full lineage that allele defines
+(e.g. 4.1.1) to a list of called lineages. For this analysis, if more than one
+heterozygous call was made at lineage-defining positions, we abandon lineage assignment
+for that sample. After classifying all of a sample's lineage-defining positions we then
+produce a lineage assignment based on the list of called lineages. The most recent
+common ancestor of all the called lineages is used as the lineage assignment. For
+example, if the called lineages were `[4, 4.2.3, 4.2.5]` the lineage assignment would be
+4.2. If there is more than one called lineage from a different major lineage group, a
+mixed lineage assignment is given. For example `[4, 4.2.3, 4.2.5, 3.2]` would still be
+called lineage 4.2, however, `[4, 4.2.3, 4.2.5, 3.2, 3.1]` would be called mixed.
+
+In the end, we chose to exclude samples from further analysis if they met any of the
+following criteria:
+
+- Illumina coverage below 20x
+- Nanopore coverage below 30x
+- Evidence of mixed infection - i.e. mixed lineage classification
+- Unknown lineage assignment - no valid SNPs at lineage-defining sites
+
+This filtering criteria led to a further 57 samples being excluded; leaving us with a
+total of 150 samples to use for the remainder of this work.
+
+In addition to the QC of the Illumina/Nanopore data, we sadly had to exclude 26/35
+PacBio sequencing datasets due to mismatched Illumina/Nanopore data or PacBio coverage
+lower than 20x.
+
+#### Genetic clustering of samples
+
+Although there is scientific interest in the question of identifying transmission chains
+from genetic data, all the actionable public health information exists in the
+identification of transmission clusters [@doi:10/d9r7; @doi:10/f8gsk2].
+
+The first step towards clustering a set of genomes is determining a distance matrix.
+Typically, this is done either by feeding aligned genomes into a phylogenetic
+tree-building tool, or more coarsely, by merely counting SNP differences and clustering
+based on these [@doi:10/f2g6zn; @doi:10/d9r7; @doi:10/f8gsk2]. For the majority of
+bacteria, there is a necessary step of identifying recombination tracts - which will
+contain a high density of SNPs - and removing them. Removal of these SNPs is necessary
+as they will have arrived at a different rate to the putative molecular clock and will
+artefactually extend branch lengths on the phylogenetic tree
+[@doi:10/d9r7; @doi:10/f8gsk2]. In the case of Mtb, however, there is virtually no
+recombination [@doi:10/fhqqkv; @doi:10/ftp6r2; @doi:10/f4mrqv], so this step in not
+required.
+
+There are three main issues we need to address or keep in mind for the clustering
+component of this chapter:
+
+- When running a variant caller on a single sample, typically the tool only makes a
+  non-reference call when it finds a definite difference from the reference. Therefore,
+  it is impossible to tell the difference between a reference-matching site and one in
+  which there is genotyping uncertainty. One solution is to make a de-duplicated list of
+  variants found in all samples and genotype the samples at those positions. Solving
+  this reference-bias issue is the strength of the `compare` routine within `pandora`.
+  It tackles the problem in this manner while also handling issues of overlapping
+  variants in the list of all-sample-variants.
+- What distance measure do we use? Do we exclude positions where any sample has missing
+  data? Missing data of this type could be due to low coverage, but it could also be
+  because a section of the genome is not present. We will extensively cover this issue
+  for *E. coli* in [Chapter 1](#chapter-1-variant-discovery-in-genome-graphs). The
+  pan-genome of Mtb is small, but it does exist nonetheless [@doi:10/d9r8;
+  @doi:10/f4mrqv]. There is also a secondary issue that if certain regions have
+  clustered genetic variation in some lineages of Mtb then reads will not map well to
+  the reference. Both of the above issues are handled by `pandora` due to its use of a
+  PRG, but we still need to make a choice about missing data.
+- How do we handle sites where there is evidence of heterozygosity - i.e. a mixed
+  sample?
+
+For this chapter, we define genetic distance to be the sum of genetic discordances,
+where missing data and heterozygosity do not cause discordance and study the clustering
+this definition generates.
+
+#### Multi-sample comparison
+
+Multi-sample comparison suffers from two main challenges. First, large chunks of DNA may
+be present or absent across samples - this is the pan-genome effect. This effect causes
+significant issues with single-reference approaches, as outlined previously, but
+`pandora` was developed to address this. Second, when comparing a set of samples, the
+choice of reference affects how one describes variants. `pandora`, by design, chooses a
+reference for each loci PRG based on the current dataset, intending to maximise the
+succinctness of variant descriptions (see Figure {@fig:refbias}). For example, we want
+to see SNPs as what they are - single-base variants - not as a nested region (as in
+Figure {@fig:refbias}).
+
+As mentioned, we handle these cases implicitly in `pandora`, however, the aim of this
+chapter and the next, in addition to comparing across technologies, will also be to
+compare methods for gaining drug resistance and epidemiological clustering information.
+To be able to compare with other methods though, we will need to be able to compare
+variants called with respect to a single-reference by other tools, with those from
+`pandora`.
+
+#### Baseline variant analysis
+
+The truth set of variants for the Illumina data in this chapter come from running the
+Public Health England pipeline, COMPASS [@doi:10/d9r9]. This pipeline will act as a
+guide to inform us about whether the results from the Nanopore data are comparable with
+those being used in real public health settings. COMPASS effectively uses `samtools`
+[@doi:10/ff6426] to call variants and then applies a series of complex variant
+filtering. As a baseline for the Nanopore data, we use `bcftools` [@doi:10/fw7k5k], with
+some filtering of variants to remove low-quality calls and with a mask to avoid
+repetitive and structurally variable regions of the Mtb genome.
+
+##### Nanopore SNP concordance with Illumina
+
+Whilst the Illumina SNP calls from COMPASS are filtered as part of the pipeline, we had
+to settle on filters for the Nanopore SNP calls from `bcftools`. We used the methodology
+from the section
+[Comparing Illumina and Nanopore SNPs to truth assemblies](#comparing-illumina-and-nanopore-snps-to-truth-assemblies)
+to refine the filters in an iterative process. In the end we filter all SNPs with
+quality (QUAL column in VCF) below 60, a read position bias less than 0.05, a
+segregation-based metric above -0.5, or a variant distance bias below 0.002.
+
+To assess how well the Nanopore SNPs agree with Illumina we first look at SNP
+concordance. Two metrics of interest here are the call rate - what proportion of COMPASS
+alternate alleles does `bcftools` make a reference/alternate call - and the concordance
+\- what proportion of COMPASS alternate alleles does `bcftools` genotype agree with.
+Figure {@fig:alt_concordance} shows that concordance is very high between the two
+technologies, with nearly all samples having a concordance greater than 99.5%. Call rate
+is a little lower than this, with the majority of samples being above 97%.
+
+![Call rate (Y-axis) and concordance (X-axis) of `bcftools` SNP calls to Illumina 
+COMPASS calls. Call rate is what proportion of COMPASS alternate alleles does 
+`bcftools` make a reference/alternate call. Concordance is what proportion of COMPASS 
+alternate alleles does `bcftools` genotype agree with. Each point represents a sample, 
+with samples coloured by the site the data came from.](images/alt_concordance.png){#fig:alt_concordance}
+
+<!--##### Comparing Illumina and Nanopore SNPs to truth assemblies-->
+
+<!--\subsubsection{Basic analysis of per-sample variant calls} \label{sec:evaluateprgs} The-->
+<!--aim of this subsection will be to try varying degrees of \prg{} complexity for Mtb-->
+<!--sample analysis. At this stage, we have four varieties in mind:-->
+
+<!--\begin{itemize} \item Linear \prg{} - This will just be the standard Mtb reference-->
+<!--H37Rv\cite{Camus2002,cole1998,LEW20111}. \item Sparse \prg{} - H37Rv and all variants at-->
+<!--frequency above 10\%, from a global Mtb dataset in a paper being prepared in our lab-->
+<!--looking at drug resistance prediction. \item Dense \prg{} - The same as Sparse \prg{},-->
+<!--but with variants at frequency above 1\%. \item Representative \prg{} - This will-->
+<!--contain two high-quality genomes from each lineage, plus all variants from the above-->
+<!--dataset at $\geq$5\% frequency. \end{itemize}-->
+
+<!--In all of the above \prg{}s, we will apply the same mask from the baseline analysis and-->
+<!--divide the genome into genes and intergenic regions, with a local \prg{} for each.-->
+
+<!--For each of the \prg{}s, we plan to perform the following analysis. Quantify the number-->
+<!--of SNPs and indels `pandora` calls per-sample on average and see how this compares to-->
+<!--the baseline and truth. We will report on the concordance rate, which is the proportion-->
+<!--of shared sites between `pandora` and the truth that agree. Additionally, we will-->
+<!--investigate how the complexity of the \prg{} effects the call rates and what the cost in-->
+<!--computational performance is.-->
+
+<!--\subsubsection{Reproducing "truth" Illumina clusters using genome graphs} In this-->
+<!--section, we will calculate the pairwise SNP distance between all pairs of samples, using-->
+<!--the truth set from \hyperref[sec:baseline]{Section \ref{sec:baseline}}. We will then do-->
+<!--the same using the `pandora` variant calls from whichever \prg{} in-->
+<!--\hyperref[sec:evaluateprgs]{Section \ref{sec:evaluateprgs}} we decide provides the best-->
+<!--results. The main figure for this subsection will be a dot plot where each dot is a pair-->
+<!--and the X- and Y-axes are the pairwise distance for that pair according to the truth set-->
+<!--and `pandora` respectively. In a perfect world, we would expect to see a dead-straight-->
+<!--diagonal line from the bottom-left to top-right. In reality, we hope to see a general-->
+<!--linear trend. A linear trend would allow us to state that although specific SNP distance-->
+<!--thresholds used to define clusters differ between technologies, they are relative and-->
+<!--therefore one can use Nanopore data with `pandora` to generate epidemiological clusters-->
+<!--for Mtb.-->
 
 
 ## Part B: Training and career development {.page_break_before}
