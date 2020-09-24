@@ -3,7 +3,7 @@ author-meta:
 - Michael B. Hall
 bibliography:
 - content/manual-references.json
-date-meta: '2020-09-23'
+date-meta: '2020-09-24'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
 
-  <meta name="dc.date" content="2020-09-23" />
+  <meta name="dc.date" content="2020-09-24" />
 
-  <meta name="citation_publication_date" content="2020-09-23" />
+  <meta name="citation_publication_date" content="2020-09-24" />
 
   <meta name="dc.language" content="en-UK" />
 
@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/81491c984eb4d0d3fe4b6de5801e715e43f585a4/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/0072c8e5e8e4e169da27b1f507142bc3494e4e49/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/81491c984eb4d0d3fe4b6de5801e715e43f585a4/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/0072c8e5e8e4e169da27b1f507142bc3494e4e49/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/81491c984eb4d0d3fe4b6de5801e715e43f585a4/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/0072c8e5e8e4e169da27b1f507142bc3494e4e49/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,10 +101,10 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/81491c984eb4d0d3fe4b6de5801e715e43f585a4/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/0072c8e5e8e4e169da27b1f507142bc3494e4e49/))
 was automatically generated
-from [mbhall88/TAC3_Report@81491c9](https://github.com/mbhall88/TAC3_Report/tree/81491c984eb4d0d3fe4b6de5801e715e43f585a4)
-on September 23, 2020.
+from [mbhall88/TAC3_Report@0072c8e](https://github.com/mbhall88/TAC3_Report/tree/0072c8e5e8e4e169da27b1f507142bc3494e4e49)
+on September 24, 2020.
 </em></small>
 
 ## Authors
@@ -536,11 +536,6 @@ approximately 3500 lines of codes to orchestrate the entire evaluation and simul
 
 <!--TODO add ROC and associated text-->
 
-<!--TODO do we still want to do this?-->
-<!--\subsubsection{CPU and Memory Performance} In this section, we will investigate the-->
-<!--`pandora` CPU and memory performance impact of adding *de novo* variant discovery. Both-->
-<!--in single- and multi-threaded modes.-->
-
 #### Outstanding work
 
 The major work still outstanding for this project is the direct integration of *de novo*
@@ -562,9 +557,8 @@ but for Mtb, which has a very different pan-genome to that of *E. coli* - which 
 for most of the development of `pandora`'s methods.
 
 <!--================================================================================-->
-<!--TODO improve title-->
 
-### Chapter 2: Using genome graphs and nanopore sequencing to define transmission clusters for *M. tuberculosis*
+### Chapter 2: Applications to *M. tuberculosis* Nanopore variant calling
 
 Public health applications for genome sequencing of Mtb generally focus on three
 use-cases: species identification, prediction of drug resistance, and clustering of
@@ -703,25 +697,6 @@ For this chapter, we define genetic distance to be the sum of genetic discordanc
 where missing data and heterozygosity do not cause discordance and study the clustering
 this definition generates.
 
-#### Multi-sample comparison
-
-Multi-sample comparison suffers from two main challenges. First, large chunks of DNA may
-be present or absent across samples - this is the pan-genome effect. This effect causes
-significant issues with single-reference approaches, as outlined previously, but
-`pandora` was developed to address this. Second, when comparing a set of samples, the
-choice of reference affects how one describes variants. `pandora`, by design, chooses a
-reference for each loci PRG based on the current dataset, intending to maximise the
-succinctness of variant descriptions (see Figure {@fig:refbias}). For example, we want
-to see SNPs as what they are - single-base variants - not as a nested region (as in
-Figure {@fig:refbias}).
-
-As mentioned, we handle these cases implicitly in `pandora`, however, the aim of this
-chapter and the next, in addition to comparing across technologies, will also be to
-compare methods for gaining drug resistance and epidemiological clustering information.
-To be able to compare with other methods though, we will need to be able to compare
-variants called with respect to a single-reference by other tools, with those from
-`pandora`.
-
 #### Baseline variant analysis
 
 The truth set of variants for the Illumina data in this chapter come from running the
@@ -757,43 +732,116 @@ COMPASS calls. Call rate is what proportion of COMPASS alternate alleles does
 alternate alleles does `bcftools` genotype agree with. Each point represents a sample, 
 with samples coloured by the site the data came from.](images/alt_concordance.png){#fig:alt_concordance}
 
-<!--##### Comparing Illumina and Nanopore SNPs to truth assemblies-->
+As transmission clusters are ultimately defined based on a SNP distance matrix, it is
+important to understand how such matrices differ between Illumina and Nanopore variant
+calls. As we saw in Figure {@fig:alt_concordance} that the Nanopore SNPs are reasonably
+concordant with Illumina, but how does this relate to distances between samples? To
+investigate this a consensus sequence was generated from the filtered VCFs by replacing
+reference positions with called alternate bases. Any positions with a null genotype or
+that failed the filtering we masked by replacing the reference positions with an N.
+Positions which do not appear in the VCF (i.e. no reads mapped to this region) were also
+masked, as were positions in a previously-defined genome mask of repetitve regions
+[@doi:10/f3hxn7]. We then generate a pairwise SNP distance matrix for each sequencing
+technology from their respective consensus genomes using `snp-dists` [@doi:10/d9zj].  
+Figure {@fig:dotplot} shows the relationship of these distances between pairs of samples
+based on the sequencing technology used. While the relationship across all samples of
+all distances is interesting, in the context of defining transmission clusters, it is
+slightly misleading. Transmission clusters by grouping together samples that are within
+a certain number of SNPs. The threshold used for this grouping is generally in the order
+of tens-of-SNPs [@doi:10/d9r7] so it makes more sense to look at the distance
+relationship for samples that are closer to each other. In Figure {@fig:close_dotplot},
+we zoom in on the bottom left of Figure {@fig:dotplot}, to samples within an Illumina
+SNP distance of 100. It shows that, at this scale, the relationship between Illumina-
+and Nanopore-defined SNP distance is much closer. The correlation between the two can be
+quantified by the linear equation $y=0.93x+0.84$, where $y$ is the predicted Nanopore
+distance between two samples, given the Illumina distance $x$. We can use this equation
+as a way of translating transmission cluster SNP thresholds for Illumina data to
+Nanopore. For instance, if clusters are defined as samples within 12 SNPs of each other,
+we can use this as $x$ and define our Nanopore transmission clusters as $y=0.93\times 12
+\+ 0.84=12.0$. So at a threshold of 12 SNPs, the Nanopore threshold would be the same as
+Illumina.
 
-<!--\subsubsection{Basic analysis of per-sample variant calls} \label{sec:evaluateprgs} The-->
-<!--aim of this subsection will be to try varying degrees of \prg{} complexity for Mtb-->
-<!--sample analysis. At this stage, we have four varieties in mind:-->
+![Relationship between pairwise SNP distance for Illumina (COMPASS; X-axis) and Nanopore
+(`bcftools`; Y-axis). Each point represents a pair of samples. The red diagonal line
+is the identity line, which is where the points should lie if the distance between samples
+is the same for each technology. The black line shows the line of best fit for the data.
+The legend also shows the equations for these lines, along with their correlation
+coefficient (r).](images/dotplot.png){#fig:dotplot}
 
-<!--\begin{itemize} \item Linear \prg{} - This will just be the standard Mtb reference-->
-<!--H37Rv\cite{Camus2002,cole1998,LEW20111}. \item Sparse \prg{} - H37Rv and all variants at-->
-<!--frequency above 10\%, from a global Mtb dataset in a paper being prepared in our lab-->
-<!--looking at drug resistance prediction. \item Dense \prg{} - The same as Sparse \prg{},-->
-<!--but with variants at frequency above 1\%. \item Representative \prg{} - This will-->
-<!--contain two high-quality genomes from each lineage, plus all variants from the above-->
-<!--dataset at $\geq$5\% frequency. \end{itemize}-->
+![Relationship between pairwise SNP distance for Illumina (COMPASS; X-axis) and Nanopore
+(`bcftools`; Y-axis) for samples within 100 SNPs of each other (based on Illumina distance).
+Each point represents a pair of samples. The red diagonal line
+is the identity line, which is where the points should lie if the distance between samples
+is the same for each technology. The black line shows the line of best fit for the data.
+The legend also shows the equations for these lines, along with their correlation
+coefficient (r).](images/close_dotplot.png){#fig:close_dotplot}
 
-<!--In all of the above \prg{}s, we will apply the same mask from the baseline analysis and-->
-<!--divide the genome into genes and intergenic regions, with a local \prg{} for each.-->
+##### Comparing Illumina and Nanopore SNPs to truth assemblies
 
-<!--For each of the \prg{}s, we plan to perform the following analysis. Quantify the number-->
-<!--of SNPs and indels `pandora` calls per-sample on average and see how this compares to-->
-<!--the baseline and truth. We will report on the concordance rate, which is the proportion-->
-<!--of shared sites between `pandora` and the truth that agree. Additionally, we will-->
-<!--investigate how the complexity of the \prg{} effects the call rates and what the cost in-->
-<!--computational performance is.-->
+The analyses so far have treated the Illumina SNPs as a kind of "truth". In order to get
+a sense of how "correct" the SNP calls are for each technology we need to compare then
+to a "truth". For the nine samples with PacBio CCS data that passed QC, we generated
+assemblies (using only the CCS reads) with `flye` [@doi:10/gfzbrd]. We masked any
+positions in the assembly where mapped Illumina reads did not have more than 90%
+agreement with the assembly, or had less than 10 reads. One sample was excluded due to
+the detection of other species contigs within the assembly. We then used `varifier` to
+assess the precision and recall of the SNP calls for the eight samples with high quality
+assemblies. Figure {@fig:baseline_truth} shows that ...
 
-<!--\subsubsection{Reproducing "truth" Illumina clusters using genome graphs} In this-->
-<!--section, we will calculate the pairwise SNP distance between all pairs of samples, using-->
-<!--the truth set from \hyperref[sec:baseline]{Section \ref{sec:baseline}}. We will then do-->
-<!--the same using the `pandora` variant calls from whichever \prg{} in-->
-<!--\hyperref[sec:evaluateprgs]{Section \ref{sec:evaluateprgs}} we decide provides the best-->
-<!--results. The main figure for this subsection will be a dot plot where each dot is a pair-->
-<!--and the X- and Y-axes are the pairwise distance for that pair according to the truth set-->
-<!--and `pandora` respectively. In a perfect world, we would expect to see a dead-straight-->
-<!--diagonal line from the bottom-left to top-right. In reality, we hope to see a general-->
-<!--linear trend. A linear trend would allow us to state that although specific SNP distance-->
-<!--thresholds used to define clusters differ between technologies, they are relative and-->
-<!--therefore one can use Nanopore data with `pandora` to generate epidemiological clusters-->
-<!--for Mtb.-->
+![Evaluation of the Illumina (COMPASS; green) and Nanopore (`bcftools`; orange) SNP calls to the PacBio CCS assemblies for eight samples using `varifier`. The left plot shows precision and the right is recall. Each point is one of the eight samples.](images/baseline_truth.png){#fig:baseline_truth}
+
+#### Per-sample variant calls with `pandora`
+
+The aim of this section will be to try varying degrees of PRG complexity for Mtb sample
+analysis. At this stage, we have two varieties in mind:
+
+- Sparse PRG - H37Rv and all variants from a random selection of 100 samples from each
+  lineage in the CRyPTIC dataset [@doi:10/d9kj].
+- Dense PRG - The same as Sparse PRG, but 2,000 samples from each lineage.
+
+In all of the above PRGs, we will apply the same mask from the baseline analysis and
+divide the genome into genes and intergenic regions, with a local PRG for each.
+
+For each of the PRGs, we plan to perform the following analysis. Quantify the number of
+SNPs and indels `pandora` calls per-sample and see how this compares to the baseline and
+truth. We will report on the concordance rate, which is the proportion of shared sites
+between `pandora` and the truth that agree. Additionally, we will investigate how the
+complexity of the PRG effects the call rates and what the cost in computational
+performance is.
+
+#### Multi-sample comparison
+
+Multi-sample comparison suffers from two main challenges. First, large chunks of DNA may
+be present or absent across samples - this is the pan-genome effect. This effect causes
+significant issues with single-reference approaches, as outlined previously, but
+`pandora` was developed to address this. Second, when comparing a set of samples, the
+choice of reference affects how one describes variants. `pandora`, by design, chooses a
+reference for each loci PRG based on the current dataset, intending to maximise the
+succinctness of variant descriptions (see Figure {@fig:refbias}). For example, we want
+to see SNPs as what they are - single-base variants - not as a nested region (as in
+Figure {@fig:refbias}).
+
+As mentioned, we handle these cases implicitly in `pandora`, however, the aim of this
+chapter and the next, in addition to comparing across technologies, will also be to
+compare methods for gaining drug resistance and epidemiological clustering information.
+To be able to compare with other methods though, we will need to be able to compare
+variants called with respect to a single-reference by other tools, with those from
+`pandora`.
+
+With that in mind, this section will focus on producing a distance matrix for all
+samples using the result of the `pandora compare` routine and contrast this to those
+obtained from the single-reference methods.
+
+
+#### Reproducing "truth" Illumina transmission clusters
+
+In this section we will examine how well we can recreate the transmission clusters
+produced from COMPASS SNP calls with Nanopore data. Ultimately we will conclude with a
+recommendation of which method to call variants with: `bcftools`, `pandora map`
+(single-sample), or `pandora compare` (multi-sample). And what SNP threshold is required
+to ensure clusters are as similar as possible - if it *is* possible to get comparable
+clusters.
+
 
 
 ## Part B: Training and career development {.page_break_before}

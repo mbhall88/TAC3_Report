@@ -5,8 +5,10 @@ basecaller
 benchmarked
 BFS
 Bruijn
+CCS
 coli
 Colquhoun
+contigs
 COVID
 dataset
 datasets
@@ -14,6 +16,7 @@ deduplicate
 DFS
 dg
 discordances
+dotplot
 EBI
 EIPP
 EMBL
@@ -80,6 +83,7 @@ Programme
 prokaryote
 QUAL
 refbias
+repetitve
 resequenced
 rifampicin
 roc
@@ -93,6 +97,7 @@ Török
 trainings
 unmapped
 VCF
+VCFs
 Votintseva
 Zamin
 Zeller
