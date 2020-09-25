@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Michael B. Hall" />
-  <meta name="dcterms.date" content="2020-09-24" />
+  <meta name="dcterms.date" content="2020-09-25" />
   <meta name="keywords" content="phd, thesis-plan, genome-graphs, bacterial-genomics, nanopore, tuberculosis, variant-calling, drug-resistance" />
   <title>Third-year progress report for thesis advisory committee</title>
   <style>
@@ -28,8 +28,8 @@
   <meta name="citation_title" content="Third-year progress report for thesis advisory committee" />
   <meta property="og:title" content="Third-year progress report for thesis advisory committee" />
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
-  <meta name="dc.date" content="2020-09-24" />
-  <meta name="citation_publication_date" content="2020-09-24" />
+  <meta name="dc.date" content="2020-09-25" />
+  <meta name="citation_publication_date" content="2020-09-25" />
   <meta name="dc.language" content="en-UK" />
   <meta name="citation_language" content="en-UK" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@
   <meta name="citation_fulltext_html_url" content="https://mbhall88.github.io/TAC3_Report/" />
   <meta name="citation_pdf_url" content="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/0072c8e5e8e4e169da27b1f507142bc3494e4e49/" />
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/0072c8e5e8e4e169da27b1f507142bc3494e4e49/" />
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/0072c8e5e8e4e169da27b1f507142bc3494e4e49/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/e175c71df13d8e11dade81bed9a572648c992b71/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/e175c71df13d8e11dade81bed9a572648c992b71/" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/e175c71df13d8e11dade81bed9a572648c992b71/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -63,10 +63,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://mbhall88.github.io/TAC3_Report/v/0072c8e5e8e4e169da27b1f507142bc3494e4e49/">permalink</a>)
+(<a href="https://mbhall88.github.io/TAC3_Report/v/e175c71df13d8e11dade81bed9a572648c992b71/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/mbhall88/TAC3_Report/tree/0072c8e5e8e4e169da27b1f507142bc3494e4e49">mbhall88/TAC3_Report@0072c8e</a>
-on September 24, 2020.
+from <a href="https://github.com/mbhall88/TAC3_Report/tree/e175c71df13d8e11dade81bed9a572648c992b71">mbhall88/TAC3_Report@e175c71</a>
+on September 25, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -304,7 +304,7 @@ the subsequence of the read mapping to <span class="math inline">\(r\)</span>. W
 <h5 id="enumerating-paths-through-candidate-regions">Enumerating paths through candidate regions</h5>
 <p>For <span class="math inline">\(r \in R\)</span>, where <span class="math inline">\(R\)</span> is the set of all candidate regions, we construct a de Bruijn
 graph <span class="math inline">\(G_r\)</span> from <span class="math inline">\(P_r\)</span>.<br />
-<span class="math inline">\(A_L\)</span> and <span class="math inline">\(A_R\)</span> are defined as kmers to the left and right of <span class="math inline">\(r\)</span> in the local graph.
+<span class="math inline">\(A_L\)</span> and <span class="math inline">\(A_R\)</span> are defined as k-mers to the left and right of <span class="math inline">\(r\)</span> in the local graph.
 They are anchors to allow re-insertion of new sequences found by <em>de novo</em> discovery
 into the local graph. If <span class="math inline">\(A_L \notin G_r \lor A_R \notin G_r\)</span> then we abandon <em>de novo</em>
 discovery for <span class="math inline">\(r\)</span>.<br />
@@ -440,7 +440,7 @@ the overall precision and recall. We then follow the same probe-mapping approach
 <ul>
 <li>Depth less than 15x</li>
 <li>Less than 20% of reads are on one strand</li>
-<li>50% or more of kmers on the allele have zero coverage</li>
+<li>50% or more of k-mers on the allele have zero coverage</li>
 </ul>
 <p>After we have run this analysis, we will also most likely need to investigate applying
 filters to the VCF file to remove any biases relating to problems like strand bias or
@@ -695,7 +695,8 @@ assemblies. Figure <a href="#fig:baseline_truth">9</a> shows that …</p>
 analysis. At this stage, we have two varieties in mind:</p>
 <ul>
 <li>Sparse PRG - H37Rv and all variants from a random selection of 100 samples from each
-lineage in the CRyPTIC dataset <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>.</li>
+lineage in the CRyPTIC (Comprehensive Resistance Prediction for Tuberculosis: an
+International Consortium) dataset <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>.</li>
 <li>Dense PRG - The same as Sparse PRG, but 2,000 samples from each lineage.</li>
 </ul>
 <p>In all of the above PRGs, we will apply the same mask from the baseline analysis and
@@ -732,6 +733,91 @@ recommendation of which method to call variants with: <code>bcftools</code>, <co
 (single-sample), or <code>pandora compare</code> (multi-sample). And what SNP threshold is required
 to ensure clusters are as similar as possible - if it <em>is</em> possible to get comparable
 clusters.</p>
+<h4 id="outstanding-work-1">Outstanding work</h4>
+<p>I am currently producing the <code>pandora</code> variant calls. This has required an iterative
+refinement of the <em>de novo</em> variant discovery process - thus improving it’s ability to
+detect clustered variants. Additionally, there is likely to be some software development
+time required to allow the <code>compare</code> routine to deal with samples of varying coverage.
+This will entail refining some prototyping that has been done already on genotype
+confidence percentile, which allows for normalising over coverage.<br />
+Once the <code>pandora</code> variants are in-hand, there just remains the clustering of samples.
+We don’t anticipate any impediments to generating clusters and it <em>should</em> be a fairly
+quick process.</p>
+<!--================================================================================-->
+<h3 id="chapter-3-applications-to-improving-m.-tuberculosis-drug-resistance-prediction">Chapter 3: Applications to improving <em>M. tuberculosis</em> drug resistance prediction</h3>
+<p>The genetic basis for drug resistance in Mtb is only partially understood. For the four
+first-line drugs, it is possible to detect the majority of resistant strains with high
+confidence <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>, but for second-line, novel, and repurposed drugs, this is much
+harder.</p>
+<p>Previous work from our group has shown that using whole-genome sequencing (WGS) it is
+possible to create a panel of resistance markers and then successfully use this panel to
+predict drug resistance from Mtb sequence data <span class="citation" data-cites="d8RxFwPN 11Jcu87Ae">[<a href="#ref-d8RxFwPN" role="doc-biblioref">3</a>,<a href="#ref-11Jcu87Ae" role="doc-biblioref">4</a>]</span>. This
+work involved the development of a software program called <code>mykrobe</code> to automate this
+inference and can use either Illumina or Nanopore data <span class="citation" data-cites="9NLFJZN2">[<a href="#ref-9NLFJZN2" role="doc-biblioref">6</a>]</span>. During the
+previous year, the predictive power of <code>mykrobe</code> has expanded and become even more
+accurate <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">44</a>]</span> (I played a small role in improving the likelihood
+calculations). This update of the <code>mykrobe</code> panel was mostly due to the recently
+published work from the CRyPTIC project <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>. CRyPTIC aims to perform drug susceptibility
+testing and WGS on 40,000 Mtb samples (many MDR) from all over the globe, and combine
+this with WGS data from another 60,000 samples. The goal of the project is to improve
+genotypic resistance prediction by expanding our catalogue of resistance mutations.</p>
+<p>The proposed work for this chapter is based on the assumption that a large part of the
+work by this consortium (which our group is a critical part of) will be available. While
+there has already been a significant amount of data produced from CRyPTIC, there will be
+more coming during the remainder of my PhD. Given the collection of SNPs and indels
+identified as being necessary for resistance to the 14 major drugs tested, we want to
+show that we can detect them as well with Nanopore data as we can with Illumina.</p>
+<h4 id="limitations-of-existing-methods">Limitations of existing methods</h4>
+<p>Although there are many tools available for predicting drug resistance in Mtb from
+Illumina WGS, only two support the use of Nanopore data - <code>mykrobe</code> and <code>tb-profiler</code>
+<span class="citation" data-cites="AgK2Kztc">[<a href="#ref-AgK2Kztc" role="doc-biblioref">45</a>]</span>. In the recent update to <code>mykrobe</code> from our group <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">44</a>]</span>, we
+have shown that the primary factor determining how well a tool performed was the
+catalogue of resistance mutations used. However, given the same panel, different tools
+do not perform identically, and therefore methodology is still important. While some
+studies have focused specifically on Nanopore data, all used a small sample size
+(Votintseva <em>et al.</em> 2017 n=5, Hunt <em>et al.</em> 2019 n=5, <code>tb-profiler</code> 2019 n=3).
+Additionally, <code>tb-profiler</code> and <code>mykrobe</code> both have limitations with their methods.</p>
+<p><code>tb-profiler</code> uses an approach similar to a read pileup and then taking consensus at
+each site. This means they will never perform particularly well with indel calls as
+pileups do not work well for Illumina <span class="citation" data-cites="3x48DbyN">[<a href="#ref-3x48DbyN" role="doc-biblioref">46</a>]</span>, let alone Nanopore. Given that
+indel calls are critical for some drugs in Mtb such as pyrazinamide <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>, this
+becomes a ceiling for the <code>tb-profiler</code> method. On the other hand, <code>mykrobe</code> uses a
+conservative, precise approach of mapping 21-mers to a de Bruijn graph. With an
+approximate error rate of 10% in Nanopore data, the probability of a correct 21-mer is
+11%. Meaning that <code>mykrobe</code> requires high depth-of-coverage to get sufficient, correct
+21-mers. By comparison, <code>pandora</code> maps entire reads to genes - rather than k-mers in
+isolation as with <code>mykrobe</code> - confirms that the read really does overlap the gene, and
+only then includes the k-mers in the calculation. Theoretically, this allows for the use
+of a smaller k-mer size and therefore reduces coverage requirements.<br />
+A second limitation of both <code>tb-profiler</code> and <code>mykrobe</code> is that they only genotype with
+respect to know variants - i.e. they cannot detect novel variants. The CRyPTIC
+consortium recently introduced a new approach whereby if an unknown mutation is
+identified in a gene known to be involved in resistance, they refuse to make a call and
+instead send the sample for phenotyping <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>. On their 10,000 samples, this
+achieved a specificity and sensitivity for first-line drugs that was acceptable for
+clinical usage. This method is now in use at Public Health England for all Mtb samples
+in England. Hunt <em>et al.</em> 2019 <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">44</a>]</span> quantified the cost of the
+pure-genotyping approach of <code>mykrobe</code>, showing that 2.4-4.6% of resistant samples were
+missed. By introducing <em>de novo</em> discovery into <code>pandora</code>, I enable us to address this
+issue, and that is the focus for this chapter.</p>
+<h4 id="drug-susceptibility-prediction-for-m.-tuberculosis-using-pandora">Drug susceptibility prediction for <em>M. tuberculosis</em> using <code>pandora</code></h4>
+<p>The work in this chapter will aim to predict drug-resistance for Mtb using <code>pandora</code> and
+its new <em>de novo</em> component introduced in
+<a href="#chapter-1-variant-discovery-in-genome-graphs">Chapter 1</a>. The first step in this will
+be producing a gene-succinct PRG that includes variants from the above-mentioned CRyPTIC
+work that are known to cause resistance or susceptibility. This PRG will be easy to
+build as the alleles and probes for these variants-of-interest are already defined for
+<code>mykrobe</code>. I will write a software program (either an extension of <code>pandora</code> or a
+standalone tool) that takes the output of <code>pandora</code> used with this PRG and makes
+predictions about resistance, susceptibility, and whether phenotyping should be
+performed. As we know whether an allele causes resistance or susceptibility, this
+prediction will be straightforward to implement.</p>
+<p>I plan to validate this approach with the data from
+<a href="#chapter-2-applications-to-m-tuberculosis-nanopore-variant-calling">Chapter 2</a>,
+comparing concordance with <code>mykrobe</code> for Illumina and Nanopore. In particular, the
+analysis will focus on the (hopefully) lower coverage required by <code>pandora</code> to achieve
+the same, or better, results as <code>mykrobe</code>, and the increased detection power provided by
+<em>de novo</em> variant discovery.</p>
 <h2 class="page_break_before" id="part-b-training-and-career-development">Part B: Training and career development</h2>
 <h3 id="publication-strategy">Publication Strategy</h3>
 <blockquote>
@@ -1028,6 +1114,24 @@ Mikhail Kolmogorov, Jeffrey Yuan, Yu Lin, Pavel A. Pevzner<br />
 <em>Nature Biotechnology</em> (2019-04-01) <a href="https://doi.org/gfzbrd">https://doi.org/gfzbrd</a> <br />
 DOI: <a href="https://doi.org/10.1038/s41587-019-0072-8">10.1038/s41587-019-0072-8</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30936562">30936562</a></p>
 </div>
+<div id="ref-zRTBU1FP">
+<p>44. <strong>Antibiotic resistance prediction for Mycobacterium tuberculosis from genome sequence data with Mykrobe</strong> <br />
+Martin Hunt, Phelim Bradley, Simon Grandjean Lapierre, Simon Heys, Mark Thomsit, Michael B. Hall, Kerri M. Malone, Penelope Wintringer, Timothy M. Walker, Daniela M. Cirillo, … Zamin Iqbal<br />
+<em>Wellcome Open Research</em> (2019-12-02) <a href="https://doi.org/ggd835">https://doi.org/ggd835</a> <br />
+DOI: <a href="https://doi.org/10.12688/wellcomeopenres.15603.1">10.12688/wellcomeopenres.15603.1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32055708">32055708</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7004237">PMC7004237</a></p>
+</div>
+<div id="ref-AgK2Kztc">
+<p>45. <strong>Integrating informatics tools and portable sequencing technology for rapid detection of resistance to anti-tuberculous drugs</strong> <br />
+Jody E. Phelan, Denise M. O’Sullivan, Diana Machado, Jorge Ramos, Yaa E. A. Oppong, Susana Campino, Justin O’Grady, Ruth McNerney, Martin L. Hibberd, Miguel Viveiros, … Taane G. Clark<br />
+<em>Genome Medicine</em> (2019-06-24) <a href="https://doi.org/d949">https://doi.org/d949</a> <br />
+DOI: <a href="https://doi.org/10.1186/s13073-019-0650-x">10.1186/s13073-019-0650-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31234910">31234910</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6591855">PMC6591855</a></p>
+</div>
+<div id="ref-3x48DbyN">
+<p>46. <strong>High-throughput microbial population genomics using the Cortex variation assembler</strong> <br />
+Zamin Iqbal, Isaac Turner, Gil McVean<br />
+<em>Bioinformatics</em> (2013-01-15) <a href="https://doi.org/d95c">https://doi.org/d95c</a> <br />
+DOI: <a href="https://doi.org/10.1093/bioinformatics/bts673">10.1093/bioinformatics/bts673</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23172865">23172865</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3546798">PMC3546798</a></p>
+</div>
 </div>
 <!-- default theme -->
 
@@ -1080,6 +1184,13 @@ DOI: <a href="https://doi.org/10.1038/s41587-019-0072-8">10.1038/s41587-019-0072
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.05) inset;
             background: none;
         }
+    }
+
+    /* -------------------------------------------------- */
+    /* references */
+    /* -------------------------------------------------- */
+    #refs {
+        font-size: 0.9em;
     }
 
     /* -------------------------------------------------- */
@@ -1244,6 +1355,8 @@ DOI: <a href="https://doi.org/10.1038/s41587-019-0072-8">10.1038/s41587-019-0072
     figcaption {
         padding: 0;
         padding-top: 10px;
+        font-size: 0.9em;
+        font-style: oblique;
     }
 
     /* figure image element */
