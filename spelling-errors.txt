@@ -27,6 +27,7 @@ fastq
 gczkbr
 genotype
 genotypes
+genotypic
 genotyping
 Georg
 gonorrhoeae
@@ -41,7 +42,6 @@ intergenic
 Ishi
 jjtq
 Klebsiella
-kmers
 Leandro
 Lowenstein
 Marioni
@@ -81,9 +81,11 @@ PRGs
 PRG’s
 Programme
 prokaryote
+pyrazinamide
 QUAL
 refbias
 repetitve
+repurposed
 resequenced
 rifampicin
 roc
@@ -99,5 +101,6 @@ unmapped
 VCF
 VCFs
 Votintseva
+WGS
 Zamin
 Zeller
