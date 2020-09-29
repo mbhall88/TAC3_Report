@@ -3,7 +3,7 @@ author-meta:
 - Michael B. Hall
 bibliography:
 - content/manual-references.json
-date-meta: '2020-09-25'
+date-meta: '2020-09-29'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
 
-  <meta name="dc.date" content="2020-09-25" />
+  <meta name="dc.date" content="2020-09-29" />
 
-  <meta name="citation_publication_date" content="2020-09-25" />
+  <meta name="citation_publication_date" content="2020-09-29" />
 
   <meta name="dc.language" content="en-UK" />
 
@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/e175c71df13d8e11dade81bed9a572648c992b71/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/bf894889ff5ba16614773907e8bb29d5b00f5bcd/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/e175c71df13d8e11dade81bed9a572648c992b71/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/bf894889ff5ba16614773907e8bb29d5b00f5bcd/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/e175c71df13d8e11dade81bed9a572648c992b71/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/bf894889ff5ba16614773907e8bb29d5b00f5bcd/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,10 +101,10 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/e175c71df13d8e11dade81bed9a572648c992b71/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/bf894889ff5ba16614773907e8bb29d5b00f5bcd/))
 was automatically generated
-from [mbhall88/TAC3_Report@e175c71](https://github.com/mbhall88/TAC3_Report/tree/e175c71df13d8e11dade81bed9a572648c992b71)
-on September 25, 2020.
+from [mbhall88/TAC3_Report@bf89488](https://github.com/mbhall88/TAC3_Report/tree/bf894889ff5ba16614773907e8bb29d5b00f5bcd)
+on September 29, 2020.
 </em></small>
 
 ## Authors
@@ -490,18 +490,18 @@ as best as possible. Each variant caller was run once for each reference genome 
 aim being to show that the more samples in the analysis, the lower the number of
 variants the caller can find.
 
-The evaluation will again follow a similar method to the
-[Simulated data](#simulated-data). The truth for this analysis, however, is a bit more
-complicated. In the process of developing an evaluation framework, we produced a python
-package called `varifier` (<https://github.com/iqbal-lab-org/varifier>). Briefly, for
-precision, `varifier` creates 'probes' for each variant in the VCF, using the genome the
-variants we called with-respect-to. It then maps these probes to the truth genome for
-the sample and determines the distance between the variant component of the probe and
-the part of the truth genome it maps to. For recall evaluation, `varifier` collects all
-differences in the pairwise alignment between the truth and VCF-reference genomes.
-Probes are created for these differences (based on the truth genome) and they are mapped
-to an augmented version of the VCF-reference genome, which has had the variants applied
-to it. The mappings are then evaluated in the same way as for precision.  
+The evaluation follows a similar method to the [Simulated data](#simulated-data). The
+truth for this analysis, however, is a bit more complicated. In the process of
+developing an evaluation framework, we produced a python package called `varifier`
+(<https://github.com/iqbal-lab-org/varifier>). Briefly, for precision, `varifier`
+creates 'probes' for each variant in the VCF, using the genome the variants we called
+with-respect-to. It then maps these probes to the truth genome for the sample and
+determines the distance between the variant component of the probe and the part of the
+truth genome it maps to. For recall evaluation, `varifier` collects all differences in
+the pairwise alignment between the truth and VCF-reference genomes. Probes are created
+for these differences (based on the truth genome) and they are mapped to an augmented
+version of the VCF-reference genome, which has had the variants applied to it. The
+mappings are then evaluated in the same way as for precision.  
 As `pandora compare` calls variants for each sample with respect to an inferred best
 approximation sequence for all samples, creating the set of truth variants is slightly
 different. We perform a pairwise alignment for all pairs of samples and collect all the
@@ -532,6 +532,8 @@ approximately 3500 lines of codes to orchestrate the entire evaluation and simul
 (However, much of this has been rewritten by Leandro Ishi).
 
 <!--TODO add ROC and associated text-->
+<!--https://github.com/leoisl/pandora1_paper_full_pipeline/issues/1-->
+<!--https://github.com/iqbal-lab/pandora1_paper/issues/206-->
 
 #### Outstanding work
 
@@ -794,7 +796,7 @@ analysis. At this stage, we have two varieties in mind:
 
 - Sparse PRG - H37Rv and all variants from a random selection of 100 samples from each
   lineage in the CRyPTIC (Comprehensive Resistance Prediction for Tuberculosis: an
-International Consortium) dataset [@doi:10/d9kj].
+  International Consortium) dataset [@doi:10/d9kj].
 - Dense PRG - The same as Sparse PRG, but 2,000 samples from each lineage.
 
 In all of the above PRGs, we will apply the same mask from the baseline analysis and
@@ -857,8 +859,8 @@ quick process.
 
 The genetic basis for drug resistance in Mtb is only partially understood. For the four
 first-line drugs, it is possible to detect the majority of resistant strains with high
-confidence [@doi:10/d9kj], but for second-line, novel, and repurposed drugs, this is much
-harder.
+confidence [@doi:10/d9kj], but for second-line, novel, and repurposed drugs, this is
+much harder.
 
 Previous work from our group has shown that using whole-genome sequencing (WGS) it is
 possible to create a panel of resistance markers and then successfully use this panel to
@@ -868,10 +870,11 @@ inference and can use either Illumina or Nanopore data [@doi:10/f94vt4]. During 
 previous year, the predictive power of `mykrobe` has expanded and become even more
 accurate [@doi:10/ggd835] (I played a small role in improving the likelihood
 calculations). This update of the `mykrobe` panel was mostly due to the recently
-published work from the CRyPTIC project [@doi:10/d9kj]. CRyPTIC aims to perform drug susceptibility
-testing and WGS on 40,000 Mtb samples (many MDR) from all over the globe, and combine
-this with WGS data from another 60,000 samples. The goal of the project is to improve
-genotypic resistance prediction by expanding our catalogue of resistance mutations.
+published work from the CRyPTIC project [@doi:10/d9kj]. CRyPTIC aims to perform drug
+susceptibility testing and WGS on 40,000 Mtb samples (many MDR) from all over the globe,
+and combine this with WGS data from another 60,000 samples. The goal of the project is
+to improve genotypic resistance prediction by expanding our catalogue of resistance
+mutations.
 
 The proposed work for this chapter is based on the assumption that a large part of the
 work by this consortium (which our group is a critical part of) will be available. While
@@ -936,6 +939,78 @@ comparing concordance with `mykrobe` for Illumina and Nanopore. In particular, t
 analysis will focus on the (hopefully) lower coverage required by `pandora` to achieve
 the same, or better, results as `mykrobe`, and the increased detection power provided by
 *de novo* variant discovery.
+
+### Chapter 4: Construction of a *M. tuberculosis* reference pan-genome
+
+Although Mtb has a closed pan-genome due to its lack of recombination and horizontal
+gene transfer [@doi:10/fhqqkv; @doi:10/ftp6r2; @doi:10/f4mrqv], there are reasons why a
+pan-genome would be useful to the community. First of all, some genes exist within the
+pan-genome that are not present in the H37Rv reference genome [@doi:10/gchzjz].
+Secondly, approximately 10% of the genome consists of so-called *pe/ppe* genes. These
+genes have a high GC-content, are very repetitive, and have been implicated in immune
+evasion and virulence [@doi:10/gbpvsd; @doi:10/f8sf3h]. The *pe/ppe* genes also harbour
+a disproportionately large amount of genetic diversity between isolates and a nucleotide
+diversity approximately 2-fold higher than the rest of the genome [@doi:10/f8sf3h]. They
+are sufficiently similar that short reads fail to map, and are frequently masked out of
+the genome for variant calling. The ability to accurately map sequencing reads to these
+genes would likely improve our ability to perform variant calling in Mtb and therefore
+better determine how isolates relate to each other.
+
+For this chapter, the aim is to build a high-quality pan-genome for Mtb, to allow
+variant discovery in *all* genes - ideally including the *pe/ppe* genes.
+
+#### Assembly and multiple sequence alignment of high-quality *M. tuberculosis* genomes
+
+To facilitate the desired outcomes of this chapter, we will first assemble the highest
+quality Mtb genomes from
+[Chapter 2](#chapter-2-applications-to-m-tuberculosis-nanopore-variant-calling). These
+genomes, in the worst-case, have matched Illumina and Nanopore data and, in the
+best-case, PacBio too. The idea is that these assemblies will serve as the scaffold for
+the Mtb pan-genome, with the addition of other high-quality genomes outside of this
+thesis (2 PacBio assemblies from every lineage), and population variants discovered from
+the CRyPTIC consortium.
+
+After assembly, we plan to perform large-scale multiple sequence alignment of these
+genomes to investigate how stable the Mtb genome is when ignoring the *pe/ppe* genes.
+The unknown quantity going into this chapter will be how easily *pe/ppe* genes can be
+assigned and matched across genomes. It may end up being necessary to assign genes from
+these genomes using synteny and parsimony with existing gene identifiers.
+
+Ultimately, the overall gene ordering is not of great importance for the construction of
+a `pandora`-friendly pan-genome. The design of `pandora` is such that we divide the
+pan-genome into discrete pieces (loci) - i.e. genes and intergenic regions. Due to the
+low nucleotide diversity of Mtb, it may end up being necessary to split the Mtb genome
+into synteny blocks rather than the standard gene/intergenic approach we have used for
+other bacteria.
+
+#### A genome graph map of *pe/ppe* genes
+
+One question which will be of particular interest for this section will be whether reads
+covering one *pe/ppe* gene map to various others. If, as shown by others, *pe/ppe* genes
+arose through gene conversion [@doi:10/ddsnv6], we would expect this to be the case.
+However, having high-quality assemblies built from a combination of long- and short-read
+technologies, we hope we can improve on the current nucleotide resolution and allow more
+accurate mapping to these genes. The main deliverable from this section will be a
+collection of high-quality *pe/ppe* PRGs with information about what read length will
+provide reliable mapping, and whether Illumina data can be reliably mapped to them. For
+some genes, this may be a no, but for others, we expect it will be possible to reliably
+map shorter reads than before.
+
+#### Re-analysis of head-to-head data
+
+Using this newly constructed, high-quality pan-genome, without the *pe/ppe* genes
+masked, we will re-analyse some of the data from the head-to-head analysis in [Chapter
+2](#chapter-2-applications-to-m-tuberculosis-nanopore-variant-calling). The aim is to
+see how many more variants we find, and whether we are better able to cluster samples as
+a result of having access to high-quality *pe/ppe* PRGs.
+
+#### *pe/ppe* genetic variation in 10000 genomes
+
+As mentioned previously, the CRyPTIC consortium are sequencing tens of thousands of Mtb
+genomes. In this section, we will look at the *pe/ppe* variation across 10,000 Mtb
+genomes using our newly constructed Mtb pan-genome and present the patterns we find.
+This work will be aided by a mycobacteriologist postdoc in our group who has extensive
+knowledge of Mtb biology.
 
 
 

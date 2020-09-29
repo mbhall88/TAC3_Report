@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Michael B. Hall" />
-  <meta name="dcterms.date" content="2020-09-25" />
+  <meta name="dcterms.date" content="2020-09-29" />
   <meta name="keywords" content="phd, thesis-plan, genome-graphs, bacterial-genomics, nanopore, tuberculosis, variant-calling, drug-resistance" />
   <title>Third-year progress report for thesis advisory committee</title>
   <style>
@@ -28,8 +28,8 @@
   <meta name="citation_title" content="Third-year progress report for thesis advisory committee" />
   <meta property="og:title" content="Third-year progress report for thesis advisory committee" />
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
-  <meta name="dc.date" content="2020-09-25" />
-  <meta name="citation_publication_date" content="2020-09-25" />
+  <meta name="dc.date" content="2020-09-29" />
+  <meta name="citation_publication_date" content="2020-09-29" />
   <meta name="dc.language" content="en-UK" />
   <meta name="citation_language" content="en-UK" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@
   <meta name="citation_fulltext_html_url" content="https://mbhall88.github.io/TAC3_Report/" />
   <meta name="citation_pdf_url" content="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/e175c71df13d8e11dade81bed9a572648c992b71/" />
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/e175c71df13d8e11dade81bed9a572648c992b71/" />
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/e175c71df13d8e11dade81bed9a572648c992b71/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/bf894889ff5ba16614773907e8bb29d5b00f5bcd/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/bf894889ff5ba16614773907e8bb29d5b00f5bcd/" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/bf894889ff5ba16614773907e8bb29d5b00f5bcd/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -63,10 +63,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://mbhall88.github.io/TAC3_Report/v/e175c71df13d8e11dade81bed9a572648c992b71/">permalink</a>)
+(<a href="https://mbhall88.github.io/TAC3_Report/v/bf894889ff5ba16614773907e8bb29d5b00f5bcd/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/mbhall88/TAC3_Report/tree/e175c71df13d8e11dade81bed9a572648c992b71">mbhall88/TAC3_Report@e175c71</a>
-on September 25, 2020.
+from <a href="https://github.com/mbhall88/TAC3_Report/tree/bf894889ff5ba16614773907e8bb29d5b00f5bcd">mbhall88/TAC3_Report@bf89488</a>
+on September 29, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -388,7 +388,7 @@ is the called variant of <span class="math inline">\(e\)</span>, and <span class
 <span class="math inline">\(w\)</span>, in the VCF reference to the left and right, respectively, of <span class="math inline">\(e_c\)</span>.</p>
 <p>A truth probe-set, <span class="math inline">\(P_t\)</span>, was constructed from the VCF of variants added to the
 simulated genome and a query probe-set, <span class="math inline">\(P_q\)</span>, from the variants called by <code>pandora</code>. We
-then mapped all probes from <span class="math inline">\(P_t\)</span> to <span class="math inline">\(P_q\)</span> using <code>bwa mem</code> <span class="citation" data-cites="gmH6YDca">[<a href="#ref-gmH6YDca" role="doc-biblioref">23</a>]</span>. We then
+then mapped all probes from <span class="math inline">\(P_t\)</span> to <span class="math inline">\(P_q\)</span> using <code>bwa mem</code> <span class="citation" data-cites="arxiv:1303.3997">[<span class="citeproc-not-found" data-reference-id="arxiv:1303.3997"><strong>???</strong></span>]</span>. We then
 classify each mapped probe as a false positive or true positive and calculate precision
 and recall for the pre-<em>de novo</em> and post-<em>de novo</em> VCF files from <code>pandora</code>. As
 expected, Figure <a href="#fig:simulation_roc">5</a> shows that without <em>de novo</em> variant discovery,
@@ -410,24 +410,24 @@ threshold.</figcaption>
 completion). We aim to show, with the <em>compare</em> routine, the power of using a PRG
 instead of a single reference along with <code>pandora</code>’s performance compared to
 <code>nanopolish</code> and <code>medaka</code> (Nanopore) and <code>snippy</code> (Illumina)
-<span class="citation" data-cites="6S74PtQr">[<a href="#ref-6S74PtQr" role="doc-biblioref">24</a>]</span>. We compare 20 samples, from across the <em>E. coli</em>
+<span class="citation" data-cites="6S74PtQr">[<a href="#ref-6S74PtQr" role="doc-biblioref">23</a>]</span>. We compare 20 samples, from across the <em>E. coli</em>
 phylogeny. As other variant callers do not use a PRG we carefully selected 24
 single-reference genomes representing the diversity of the <em>E. coli</em> phylogenetic tree
 as best as possible. Each variant caller was run once for each reference genome with the
 aim being to show that the more samples in the analysis, the lower the number of
 variants the caller can find.</p>
-<p>The evaluation will again follow a similar method to the
-<a href="#simulated-data">Simulated data</a>. The truth for this analysis, however, is a bit more
-complicated. In the process of developing an evaluation framework, we produced a python
-package called <code>varifier</code> (<a href="https://github.com/iqbal-lab-org/varifier" class="uri">https://github.com/iqbal-lab-org/varifier</a>). Briefly, for
-precision, <code>varifier</code> creates ‘probes’ for each variant in the VCF, using the genome the
-variants we called with-respect-to. It then maps these probes to the truth genome for
-the sample and determines the distance between the variant component of the probe and
-the part of the truth genome it maps to. For recall evaluation, <code>varifier</code> collects all
-differences in the pairwise alignment between the truth and VCF-reference genomes.
-Probes are created for these differences (based on the truth genome) and they are mapped
-to an augmented version of the VCF-reference genome, which has had the variants applied
-to it. The mappings are then evaluated in the same way as for precision.<br />
+<p>The evaluation follows a similar method to the <a href="#simulated-data">Simulated data</a>. The
+truth for this analysis, however, is a bit more complicated. In the process of
+developing an evaluation framework, we produced a python package called <code>varifier</code>
+(<a href="https://github.com/iqbal-lab-org/varifier" class="uri">https://github.com/iqbal-lab-org/varifier</a>). Briefly, for precision, <code>varifier</code>
+creates ‘probes’ for each variant in the VCF, using the genome the variants we called
+with-respect-to. It then maps these probes to the truth genome for the sample and
+determines the distance between the variant component of the probe and the part of the
+truth genome it maps to. For recall evaluation, <code>varifier</code> collects all differences in
+the pairwise alignment between the truth and VCF-reference genomes. Probes are created
+for these differences (based on the truth genome) and they are mapped to an augmented
+version of the VCF-reference genome, which has had the variants applied to it. The
+mappings are then evaluated in the same way as for precision.<br />
 As <code>pandora compare</code> calls variants for each sample with respect to an inferred best
 approximation sequence for all samples, creating the set of truth variants is slightly
 different. We perform a pairwise alignment for all pairs of samples and collect all the
@@ -450,10 +450,12 @@ this analysis, a lot of it has since been refactored by Leandro Ishi and by Mart
 in the form of <code>varifier</code>. Due to the novelty of the method we are proposing, this has
 taken quite a lot of time and thought. I wrote 1250 lines of code to evaluate the
 methods, along with 3500 lines of test code to ensure there are no bugs in our
-evaluation. Additionally, I built the original <code>snakemake</code> <span class="citation" data-cites="NcYZqBux">[<a href="#ref-NcYZqBux" role="doc-biblioref">25</a>]</span> pipeline of
+evaluation. Additionally, I built the original <code>snakemake</code> <span class="citation" data-cites="NcYZqBux">[<a href="#ref-NcYZqBux" role="doc-biblioref">24</a>]</span> pipeline of
 approximately 3500 lines of codes to orchestrate the entire evaluation and simulations
 (However, much of this has been rewritten by Leandro Ishi).</p>
 <!--TODO add ROC and associated text-->
+<!--https://github.com/leoisl/pandora1_paper_full_pipeline/issues/1-->
+<!--https://github.com/iqbal-lab/pandora1_paper/issues/206-->
 <h4 id="outstanding-work">Outstanding work</h4>
 <p>The major work still outstanding for this project is the direct integration of <em>de novo</em>
 candidates back into the PRG. The current procedure requires a fairly laborious,
@@ -517,17 +519,17 @@ step in QC is decontamination of sequencing reads. We used the decontamination d
 from <code>clockwork</code> (<a href="https://github.com/iqbal-lab-org/clockwork" class="uri">https://github.com/iqbal-lab-org/clockwork</a>), which contains a wide
 range of organisms, including viral, human, Mtb, non-tuberculosis Mycobacterium (NTM),
 and nasopharyngeal-associated bacterial genomes. Each genome has associated metadata
-indicating if it is contamination or not. Reads were mapped to the database using <code>bwa mem</code> <span class="citation" data-cites="gmH6YDca">[<a href="#ref-gmH6YDca" role="doc-biblioref">23</a>]</span> (Illumina) and <code>minimap2</code> (Nanopore) <span class="citation" data-cites="172cJaw4Q">[<a href="#ref-172cJaw4Q" role="doc-biblioref">26</a>]</span>. The
+indicating if it is contamination or not. Reads were mapped to the database using <code>bwa mem</code> <span class="citation" data-cites="arxiv:1303.3997">[<span class="citeproc-not-found" data-reference-id="arxiv:1303.3997"><strong>???</strong></span>]</span> (Illumina) and <code>minimap2</code> (Nanopore) <span class="citation" data-cites="172cJaw4Q">[<a href="#ref-172cJaw4Q" role="doc-biblioref">25</a>]</span>. The
 resulting alignment was used to quantify the proportion of reads considered
 contamination, unmapped, and wanted. A read is considered wanted if it has any mapping
 to a non-contamination genome in the database and is output to a final decontaminated
 fastq file. All other mapped reads are considered contamination.</p>
 <p>All decontaminated fastq files were subsampled to a depth of 60x (Illumina) and 150x
-(Nanopore) using <code>rasusa</code> <span class="citation" data-cites="4U7AuMzS">[<a href="#ref-4U7AuMzS" role="doc-biblioref">27</a>]</span>. The reason for subsampling is to limit
+(Nanopore) using <code>rasusa</code> <span class="citation" data-cites="4U7AuMzS">[<a href="#ref-4U7AuMzS" role="doc-biblioref">26</a>]</span>. The reason for subsampling is to limit
 unnecessarily large read sets that can drastically slow down later steps in the analysis
 process without significant advantage.</p>
 <p>The last step in the QC pipeline is to assign lineages for each sample. A panel of
-lineage-defining SNPs <span class="citation" data-cites="c17o0GrE 6J5Bt0f7 1CS78SxuA">[<a href="#ref-c17o0GrE" role="doc-biblioref">28</a>,<a href="#ref-6J5Bt0f7" role="doc-biblioref">29</a>,<a href="#ref-1CS78SxuA" role="doc-biblioref">30</a>]</span> was used in
+lineage-defining SNPs <span class="citation" data-cites="c17o0GrE 6J5Bt0f7 1CS78SxuA">[<a href="#ref-c17o0GrE" role="doc-biblioref">27</a>,<a href="#ref-6J5Bt0f7" role="doc-biblioref">28</a>,<a href="#ref-1CS78SxuA" role="doc-biblioref">29</a>]</span> was used in
 conjunction with a sample’s Illumina VCF from the
 <a href="#baseline-variant-analysis">Baseline variant analysis</a> for the lineage assignment. At
 each lineage-defining position in the sample’s VCF we determine if the called allele is
@@ -557,17 +559,17 @@ lower than 20x.</p>
 <h4 id="genetic-clustering-of-samples">Genetic clustering of samples</h4>
 <p>Although there is scientific interest in the question of identifying transmission chains
 from genetic data, all the actionable public health information exists in the
-identification of transmission clusters <span class="citation" data-cites="tGyXVFvJ 64Rp8zLg">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">31</a>,<a href="#ref-64Rp8zLg" role="doc-biblioref">32</a>]</span>.</p>
+identification of transmission clusters <span class="citation" data-cites="tGyXVFvJ 64Rp8zLg">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">30</a>,<a href="#ref-64Rp8zLg" role="doc-biblioref">31</a>]</span>.</p>
 <p>The first step towards clustering a set of genomes is determining a distance matrix.
 Typically, this is done either by feeding aligned genomes into a phylogenetic
 tree-building tool, or more coarsely, by merely counting SNP differences and clustering
-based on these <span class="citation" data-cites="18CTtAeF9 tGyXVFvJ 64Rp8zLg">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">31</a>,<a href="#ref-64Rp8zLg" role="doc-biblioref">32</a>,<a href="#ref-18CTtAeF9" role="doc-biblioref">33</a>]</span>. For the majority of
+based on these <span class="citation" data-cites="18CTtAeF9 tGyXVFvJ 64Rp8zLg">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">30</a>,<a href="#ref-64Rp8zLg" role="doc-biblioref">31</a>,<a href="#ref-18CTtAeF9" role="doc-biblioref">32</a>]</span>. For the majority of
 bacteria, there is a necessary step of identifying recombination tracts - which will
 contain a high density of SNPs - and removing them. Removal of these SNPs is necessary
 as they will have arrived at a different rate to the putative molecular clock and will
 artefactually extend branch lengths on the phylogenetic tree
-<span class="citation" data-cites="tGyXVFvJ 64Rp8zLg">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">31</a>,<a href="#ref-64Rp8zLg" role="doc-biblioref">32</a>]</span>. In the case of Mtb, however, there is virtually no
-recombination <span class="citation" data-cites="dRRsEE8Z hpSc80yh 1H760aM5J">[<a href="#ref-dRRsEE8Z" role="doc-biblioref">34</a>,<a href="#ref-hpSc80yh" role="doc-biblioref">35</a>,<a href="#ref-1H760aM5J" role="doc-biblioref">36</a>]</span>, so this step in not
+<span class="citation" data-cites="tGyXVFvJ 64Rp8zLg">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">30</a>,<a href="#ref-64Rp8zLg" role="doc-biblioref">31</a>]</span>. In the case of Mtb, however, there is virtually no
+recombination <span class="citation" data-cites="dRRsEE8Z hpSc80yh 1H760aM5J">[<a href="#ref-dRRsEE8Z" role="doc-biblioref">33</a>,<a href="#ref-hpSc80yh" role="doc-biblioref">34</a>,<a href="#ref-1H760aM5J" role="doc-biblioref">35</a>]</span>, so this step in not
 required.</p>
 <p>There are three main issues we need to address or keep in mind for the clustering
 component of this chapter:</p>
@@ -584,7 +586,7 @@ variants in the list of all-sample-variants.</li>
 data? Missing data of this type could be due to low coverage, but it could also be
 because a section of the genome is not present. We will extensively cover this issue
 for <em>E. coli</em> in <a href="#chapter-1-variant-discovery-in-genome-graphs">Chapter 1</a>. The
-pan-genome of Mtb is small, but it does exist nonetheless <span class="citation" data-cites="Coyn9XyF 1H760aM5J">[<a href="#ref-1H760aM5J" role="doc-biblioref">36</a>,<a href="#ref-Coyn9XyF" role="doc-biblioref">37</a>]</span>. There is also a secondary issue that if certain regions have
+pan-genome of Mtb is small, but it does exist nonetheless <span class="citation" data-cites="Coyn9XyF 1H760aM5J">[<a href="#ref-1H760aM5J" role="doc-biblioref">35</a>,<a href="#ref-Coyn9XyF" role="doc-biblioref">36</a>]</span>. There is also a secondary issue that if certain regions have
 clustered genetic variation in some lineages of Mtb then reads will not map well to
 the reference. Both of the above issues are handled by <code>pandora</code> due to its use of a
 PRG, but we still need to make a choice about missing data.</li>
@@ -596,11 +598,11 @@ where missing data and heterozygosity do not cause discordance and study the clu
 this definition generates.</p>
 <h4 id="baseline-variant-analysis">Baseline variant analysis</h4>
 <p>The truth set of variants for the Illumina data in this chapter come from running the
-Public Health England pipeline, COMPASS <span class="citation" data-cites="Lvhz1sqs">[<a href="#ref-Lvhz1sqs" role="doc-biblioref">38</a>]</span>. This pipeline will act as a
+Public Health England pipeline, COMPASS <span class="citation" data-cites="Lvhz1sqs">[<a href="#ref-Lvhz1sqs" role="doc-biblioref">37</a>]</span>. This pipeline will act as a
 guide to inform us about whether the results from the Nanopore data are comparable with
 those being used in real public health settings. COMPASS effectively uses <code>samtools</code>
-<span class="citation" data-cites="IPc8cy7s">[<a href="#ref-IPc8cy7s" role="doc-biblioref">39</a>]</span> to call variants and then applies a series of complex variant
-filtering. As a baseline for the Nanopore data, we use <code>bcftools</code> <span class="citation" data-cites="bXIkkZJW">[<a href="#ref-bXIkkZJW" role="doc-biblioref">40</a>]</span>, with
+<span class="citation" data-cites="IPc8cy7s">[<a href="#ref-IPc8cy7s" role="doc-biblioref">38</a>]</span> to call variants and then applies a series of complex variant
+filtering. As a baseline for the Nanopore data, we use <code>bcftools</code> <span class="citation" data-cites="bXIkkZJW">[<a href="#ref-bXIkkZJW" role="doc-biblioref">39</a>]</span>, with
 some filtering of variants to remove low-quality calls and with a mask to avoid
 repetitive and structurally variable regions of the Mtb genome.</p>
 <h5 id="nanopore-snp-concordance-with-illumina">Nanopore SNP concordance with Illumina</h5>
@@ -636,14 +638,14 @@ reference positions with called alternate bases. Any positions with a null genot
 that failed the filtering we masked by replacing the reference positions with an N.
 Positions which do not appear in the VCF (i.e. no reads mapped to this region) were also
 masked, as were positions in a previously-defined genome mask of repetitve regions
-<span class="citation" data-cites="zOTPF2vW">[<a href="#ref-zOTPF2vW" role="doc-biblioref">41</a>]</span>. We then generate a pairwise SNP distance matrix for each sequencing
-technology from their respective consensus genomes using <code>snp-dists</code> <span class="citation" data-cites="WXM67imc">[<a href="#ref-WXM67imc" role="doc-biblioref">42</a>]</span>.<br />
+<span class="citation" data-cites="zOTPF2vW">[<a href="#ref-zOTPF2vW" role="doc-biblioref">40</a>]</span>. We then generate a pairwise SNP distance matrix for each sequencing
+technology from their respective consensus genomes using <code>snp-dists</code> <span class="citation" data-cites="WXM67imc">[<a href="#ref-WXM67imc" role="doc-biblioref">41</a>]</span>.<br />
 Figure <a href="#fig:dotplot">7</a> shows the relationship of these distances between pairs of samples
 based on the sequencing technology used. While the relationship across all samples of
 all distances is interesting, in the context of defining transmission clusters, it is
 slightly misleading. Transmission clusters by grouping together samples that are within
 a certain number of SNPs. The threshold used for this grouping is generally in the order
-of tens-of-SNPs <span class="citation" data-cites="tGyXVFvJ">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">31</a>]</span> so it makes more sense to look at the distance
+of tens-of-SNPs <span class="citation" data-cites="tGyXVFvJ">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">30</a>]</span> so it makes more sense to look at the distance
 relationship for samples that are closer to each other. In Figure <a href="#fig:close_dotplot">8</a>,
 we zoom in on the bottom left of Figure <a href="#fig:dotplot">7</a>, to samples within an Illumina
 SNP distance of 100. It shows that, at this scale, the relationship between Illumina-
@@ -679,7 +681,7 @@ coefficient (r).</figcaption>
 <p>The analyses so far have treated the Illumina SNPs as a kind of “truth”. In order to get
 a sense of how “correct” the SNP calls are for each technology we need to compare then
 to a “truth”. For the nine samples with PacBio CCS data that passed QC, we generated
-assemblies (using only the CCS reads) with <code>flye</code> <span class="citation" data-cites="f0G74pRS">[<a href="#ref-f0G74pRS" role="doc-biblioref">43</a>]</span>. We masked any
+assemblies (using only the CCS reads) with <code>flye</code> <span class="citation" data-cites="f0G74pRS">[<a href="#ref-f0G74pRS" role="doc-biblioref">42</a>]</span>. We masked any
 positions in the assembly where mapped Illumina reads did not have more than 90%
 agreement with the assembly, or had less than 10 reads. One sample was excluded due to
 the detection of other species contigs within the assembly. We then used <code>varifier</code> to
@@ -747,20 +749,21 @@ quick process.</p>
 <h3 id="chapter-3-applications-to-improving-m.-tuberculosis-drug-resistance-prediction">Chapter 3: Applications to improving <em>M. tuberculosis</em> drug resistance prediction</h3>
 <p>The genetic basis for drug resistance in Mtb is only partially understood. For the four
 first-line drugs, it is possible to detect the majority of resistant strains with high
-confidence <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>, but for second-line, novel, and repurposed drugs, this is much
-harder.</p>
+confidence <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>, but for second-line, novel, and repurposed drugs, this is
+much harder.</p>
 <p>Previous work from our group has shown that using whole-genome sequencing (WGS) it is
 possible to create a panel of resistance markers and then successfully use this panel to
 predict drug resistance from Mtb sequence data <span class="citation" data-cites="d8RxFwPN 11Jcu87Ae">[<a href="#ref-d8RxFwPN" role="doc-biblioref">3</a>,<a href="#ref-11Jcu87Ae" role="doc-biblioref">4</a>]</span>. This
 work involved the development of a software program called <code>mykrobe</code> to automate this
 inference and can use either Illumina or Nanopore data <span class="citation" data-cites="9NLFJZN2">[<a href="#ref-9NLFJZN2" role="doc-biblioref">6</a>]</span>. During the
 previous year, the predictive power of <code>mykrobe</code> has expanded and become even more
-accurate <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">44</a>]</span> (I played a small role in improving the likelihood
+accurate <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">43</a>]</span> (I played a small role in improving the likelihood
 calculations). This update of the <code>mykrobe</code> panel was mostly due to the recently
-published work from the CRyPTIC project <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>. CRyPTIC aims to perform drug susceptibility
-testing and WGS on 40,000 Mtb samples (many MDR) from all over the globe, and combine
-this with WGS data from another 60,000 samples. The goal of the project is to improve
-genotypic resistance prediction by expanding our catalogue of resistance mutations.</p>
+published work from the CRyPTIC project <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>. CRyPTIC aims to perform drug
+susceptibility testing and WGS on 40,000 Mtb samples (many MDR) from all over the globe,
+and combine this with WGS data from another 60,000 samples. The goal of the project is
+to improve genotypic resistance prediction by expanding our catalogue of resistance
+mutations.</p>
 <p>The proposed work for this chapter is based on the assumption that a large part of the
 work by this consortium (which our group is a critical part of) will be available. While
 there has already been a significant amount of data produced from CRyPTIC, there will be
@@ -770,7 +773,7 @@ show that we can detect them as well with Nanopore data as we can with Illumina.
 <h4 id="limitations-of-existing-methods">Limitations of existing methods</h4>
 <p>Although there are many tools available for predicting drug resistance in Mtb from
 Illumina WGS, only two support the use of Nanopore data - <code>mykrobe</code> and <code>tb-profiler</code>
-<span class="citation" data-cites="AgK2Kztc">[<a href="#ref-AgK2Kztc" role="doc-biblioref">45</a>]</span>. In the recent update to <code>mykrobe</code> from our group <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">44</a>]</span>, we
+<span class="citation" data-cites="AgK2Kztc">[<a href="#ref-AgK2Kztc" role="doc-biblioref">44</a>]</span>. In the recent update to <code>mykrobe</code> from our group <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">43</a>]</span>, we
 have shown that the primary factor determining how well a tool performed was the
 catalogue of resistance mutations used. However, given the same panel, different tools
 do not perform identically, and therefore methodology is still important. While some
@@ -779,7 +782,7 @@ studies have focused specifically on Nanopore data, all used a small sample size
 Additionally, <code>tb-profiler</code> and <code>mykrobe</code> both have limitations with their methods.</p>
 <p><code>tb-profiler</code> uses an approach similar to a read pileup and then taking consensus at
 each site. This means they will never perform particularly well with indel calls as
-pileups do not work well for Illumina <span class="citation" data-cites="3x48DbyN">[<a href="#ref-3x48DbyN" role="doc-biblioref">46</a>]</span>, let alone Nanopore. Given that
+pileups do not work well for Illumina <span class="citation" data-cites="3x48DbyN">[<a href="#ref-3x48DbyN" role="doc-biblioref">45</a>]</span>, let alone Nanopore. Given that
 indel calls are critical for some drugs in Mtb such as pyrazinamide <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>, this
 becomes a ceiling for the <code>tb-profiler</code> method. On the other hand, <code>mykrobe</code> uses a
 conservative, precise approach of mapping 21-mers to a de Bruijn graph. With an
@@ -796,7 +799,7 @@ identified in a gene known to be involved in resistance, they refuse to make a c
 instead send the sample for phenotyping <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>. On their 10,000 samples, this
 achieved a specificity and sensitivity for first-line drugs that was acceptable for
 clinical usage. This method is now in use at Public Health England for all Mtb samples
-in England. Hunt <em>et al.</em> 2019 <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">44</a>]</span> quantified the cost of the
+in England. Hunt <em>et al.</em> 2019 <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">43</a>]</span> quantified the cost of the
 pure-genotyping approach of <code>mykrobe</code>, showing that 2.4-4.6% of resistant samples were
 missed. By introducing <em>de novo</em> discovery into <code>pandora</code>, I enable us to address this
 issue, and that is the focus for this chapter.</p>
@@ -818,6 +821,65 @@ comparing concordance with <code>mykrobe</code> for Illumina and Nanopore. In pa
 analysis will focus on the (hopefully) lower coverage required by <code>pandora</code> to achieve
 the same, or better, results as <code>mykrobe</code>, and the increased detection power provided by
 <em>de novo</em> variant discovery.</p>
+<h3 id="chapter-4-construction-of-a-m.-tuberculosis-reference-pan-genome">Chapter 4: Construction of a <em>M. tuberculosis</em> reference pan-genome</h3>
+<p>Although Mtb has a closed pan-genome due to its lack of recombination and horizontal
+gene transfer <span class="citation" data-cites="dRRsEE8Z hpSc80yh 1H760aM5J">[<a href="#ref-dRRsEE8Z" role="doc-biblioref">33</a>,<a href="#ref-hpSc80yh" role="doc-biblioref">34</a>,<a href="#ref-1H760aM5J" role="doc-biblioref">35</a>]</span>, there are reasons why a
+pan-genome would be useful to the community. First of all, some genes exist within the
+pan-genome that are not present in the H37Rv reference genome <span class="citation" data-cites="3yP1ZZU9">[<a href="#ref-3yP1ZZU9" role="doc-biblioref">46</a>]</span>.
+Secondly, approximately 10% of the genome consists of so-called <em>pe/ppe</em> genes. These
+genes have a high GC-content, are very repetitive, and have been implicated in immune
+evasion and virulence <span class="citation" data-cites="cF2ezTu8 edkEM6K6">[<a href="#ref-cF2ezTu8" role="doc-biblioref">47</a>,<a href="#ref-edkEM6K6" role="doc-biblioref">48</a>]</span>. The <em>pe/ppe</em> genes also harbour
+a disproportionately large amount of genetic diversity between isolates and a nucleotide
+diversity approximately 2-fold higher than the rest of the genome <span class="citation" data-cites="edkEM6K6">[<a href="#ref-edkEM6K6" role="doc-biblioref">48</a>]</span>. They
+are sufficiently similar that short reads fail to map, and are frequently masked out of
+the genome for variant calling. The ability to accurately map sequencing reads to these
+genes would likely improve our ability to perform variant calling in Mtb and therefore
+better determine how isolates relate to each other.</p>
+<p>For this chapter, the aim is to build a high-quality pan-genome for Mtb, to allow
+variant discovery in <em>all</em> genes - ideally including the <em>pe/ppe</em> genes.</p>
+<h4 id="assembly-and-multiple-sequence-alignment-of-high-quality-m.-tuberculosis-genomes">Assembly and multiple sequence alignment of high-quality <em>M. tuberculosis</em> genomes</h4>
+<p>To facilitate the desired outcomes of this chapter, we will first assemble the highest
+quality Mtb genomes from
+<a href="#chapter-2-applications-to-m-tuberculosis-nanopore-variant-calling">Chapter 2</a>. These
+genomes, in the worst-case, have matched Illumina and Nanopore data and, in the
+best-case, PacBio too. The idea is that these assemblies will serve as the scaffold for
+the Mtb pan-genome, with the addition of other high-quality genomes outside of this
+thesis (2 PacBio assemblies from every lineage), and population variants discovered from
+the CRyPTIC consortium.</p>
+<p>After assembly, we plan to perform large-scale multiple sequence alignment of these
+genomes to investigate how stable the Mtb genome is when ignoring the <em>pe/ppe</em> genes.
+The unknown quantity going into this chapter will be how easily <em>pe/ppe</em> genes can be
+assigned and matched across genomes. It may end up being necessary to assign genes from
+these genomes using synteny and parsimony with existing gene identifiers.</p>
+<p>Ultimately, the overall gene ordering is not of great importance for the construction of
+a <code>pandora</code>-friendly pan-genome. The design of <code>pandora</code> is such that we divide the
+pan-genome into discrete pieces (loci) - i.e. genes and intergenic regions. Due to the
+low nucleotide diversity of Mtb, it may end up being necessary to split the Mtb genome
+into synteny blocks rather than the standard gene/intergenic approach we have used for
+other bacteria.</p>
+<h4 id="a-genome-graph-map-of-peppe-genes">A genome graph map of <em>pe/ppe</em> genes</h4>
+<p>One question which will be of particular interest for this section will be whether reads
+covering one <em>pe/ppe</em> gene map to various others. If, as shown by others, <em>pe/ppe</em> genes
+arose through gene conversion <span class="citation" data-cites="12kbnk87l">[<a href="#ref-12kbnk87l" role="doc-biblioref">49</a>]</span>, we would expect this to be the case.
+However, having high-quality assemblies built from a combination of long- and short-read
+technologies, we hope we can improve on the current nucleotide resolution and allow more
+accurate mapping to these genes. The main deliverable from this section will be a
+collection of high-quality <em>pe/ppe</em> PRGs with information about what read length will
+provide reliable mapping, and whether Illumina data can be reliably mapped to them. For
+some genes, this may be a no, but for others, we expect it will be possible to reliably
+map shorter reads than before.</p>
+<h4 id="re-analysis-of-head-to-head-data">Re-analysis of head-to-head data</h4>
+<p>Using this newly constructed, high-quality pan-genome, without the <em>pe/ppe</em> genes
+masked, we will re-analyse some of the data from the head-to-head analysis in <a href="#chapter-2-applications-to-m-tuberculosis-nanopore-variant-calling">Chapter
+2</a>. The aim is to
+see how many more variants we find, and whether we are better able to cluster samples as
+a result of having access to high-quality <em>pe/ppe</em> PRGs.</p>
+<h4 id="peppe-genetic-variation-in-10000-genomes"><em>pe/ppe</em> genetic variation in 10000 genomes</h4>
+<p>As mentioned previously, the CRyPTIC consortium are sequencing tens of thousands of Mtb
+genomes. In this section, we will look at the <em>pe/ppe</em> variation across 10,000 Mtb
+genomes using our newly constructed Mtb pan-genome and present the patterns we find.
+This work will be aided by a mycobacteriologist postdoc in our group who has extensive
+knowledge of Mtb biology.</p>
 <h2 class="page_break_before" id="part-b-training-and-career-development">Part B: Training and career development</h2>
 <h3 id="publication-strategy">Publication Strategy</h3>
 <blockquote>
@@ -990,147 +1052,166 @@ Karel Břinda, Chen Yang, Justin Chu, Jasper Linthorst, Wiktor Franus<br />
 <em>Zenodo</em> (2018-08-07) <a href="https://doi.org/d9nq">https://doi.org/d9nq</a> <br />
 DOI: <a href="https://doi.org/10.5281/zenodo.1341250">10.5281/zenodo.1341250</a></p>
 </div>
-<div id="ref-gmH6YDca">
-<p>23. <strong>Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM</strong> <br />
-Heng Li<br />
-<em>arXiv</em> (2013-05-28) <a href="https://arxiv.org/abs/1303.3997">https://arxiv.org/abs/1303.3997</a></p>
-</div>
 <div id="ref-6S74PtQr">
-<p>24. <strong>tseemann/snippy</strong> <br />
+<p>23. <strong>tseemann/snippy</strong> <br />
 GitHub<br />
 <a href="https://github.com/tseemann/snippy">https://github.com/tseemann/snippy</a></p>
 </div>
 <div id="ref-NcYZqBux">
-<p>25. <strong>Snakemake–a scalable bioinformatics workflow engine</strong> <br />
+<p>24. <strong>Snakemake–a scalable bioinformatics workflow engine</strong> <br />
 J. Koster, S. Rahmann<br />
 <em>Bioinformatics</em> (2012-08-20) <a href="https://doi.org/gd2xzq">https://doi.org/gd2xzq</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/bts480">10.1093/bioinformatics/bts480</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/22908215">22908215</a></p>
 </div>
 <div id="ref-172cJaw4Q">
-<p>26. <strong>Minimap2: pairwise alignment for nucleotide sequences</strong> <br />
+<p>25. <strong>Minimap2: pairwise alignment for nucleotide sequences</strong> <br />
 Heng Li<br />
 <em>Bioinformatics</em> (2018-09-15) <a href="https://doi.org/gdhbqt">https://doi.org/gdhbqt</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/bty191">10.1093/bioinformatics/bty191</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29750242">29750242</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6137996">PMC6137996</a></p>
 </div>
 <div id="ref-4U7AuMzS">
-<p>27. <strong>Rasusa: Randomly subsample sequencing reads to a specified coverage</strong> <br />
+<p>26. <strong>Rasusa: Randomly subsample sequencing reads to a specified coverage</strong> <br />
 Michael Hall<br />
 <em>Zenodo</em> (2020-03-27) <a href="https://doi.org/d9rz">https://doi.org/d9rz</a> <br />
 DOI: <a href="https://doi.org/10.5281/zenodo.3731394">10.5281/zenodo.3731394</a></p>
 </div>
 <div id="ref-c17o0GrE">
-<p>28. <strong>Evolutionary pathway analysis and unified classification of East Asian lineage of Mycobacterium tuberculosis</strong> <br />
+<p>27. <strong>Evolutionary pathway analysis and unified classification of East Asian lineage of Mycobacterium tuberculosis</strong> <br />
 Egor Shitikov, Sergey Kolchenko, Igor Mokrousov, Julia Bespyatykh, Dmitry Ischenko, Elena Ilina, Vadim Govorun<br />
 <em>Scientific Reports</em> (2017-08-23) <a href="https://doi.org/gbvbxh">https://doi.org/gbvbxh</a> <br />
 DOI: <a href="https://doi.org/10.1038/s41598-017-10018-5">10.1038/s41598-017-10018-5</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28835627">28835627</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5569047">PMC5569047</a></p>
 </div>
 <div id="ref-6J5Bt0f7">
-<p>29. <strong>Multiple Introductions of Mycobacterium tuberculosis Lineage 2–Beijing Into Africa Over Centuries</strong> <br />
+<p>28. <strong>Multiple Introductions of Mycobacterium tuberculosis Lineage 2–Beijing Into Africa Over Centuries</strong> <br />
 Liliana K. Rutaihwa, Fabrizio Menardo, David Stucki, Sebastian M. Gygli, Serej D. Ley, Bijaya Malla, Julia Feldmann, Sonia Borrell, Christian Beisel, Kerren Middelkoop, … Sebastien Gagneux<br />
 <em>Frontiers in Ecology and Evolution</em> (2019-04-16) <a href="https://doi.org/d9r2">https://doi.org/d9r2</a> <br />
 DOI: <a href="https://doi.org/10.3389/fevo.2019.00112">10.3389/fevo.2019.00112</a></p>
 </div>
 <div id="ref-1CS78SxuA">
-<p>30. <strong>Mycobacterium tuberculosis lineage 4 comprises globally distributed and geographically restricted sublineages</strong> <br />
+<p>29. <strong>Mycobacterium tuberculosis lineage 4 comprises globally distributed and geographically restricted sublineages</strong> <br />
 David Stucki, Daniela Brites, Leïla Jeljeli, Mireia Coscolla, Qingyun Liu, Andrej Trauner, Lukas Fenner, Liliana Rutaihwa, Sonia Borrell, Tao Luo, … Sebastien Gagneux<br />
 <em>Nature Genetics</em> (2016-10-31) <a href="https://doi.org/f9dg9j">https://doi.org/f9dg9j</a> <br />
 DOI: <a href="https://doi.org/10.1038/ng.3704">10.1038/ng.3704</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27798628">27798628</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5238942">PMC5238942</a></p>
 </div>
 <div id="ref-tGyXVFvJ">
-<p>31. <strong>Beyond the SNP Threshold: Identifying Outbreak Clusters Using Inferred Transmissions</strong> <br />
+<p>30. <strong>Beyond the SNP Threshold: Identifying Outbreak Clusters Using Inferred Transmissions</strong> <br />
 James Stimson, Jennifer Gardy, Barun Mathema, Valeriu Crudu, Ted Cohen, Caroline Colijn<br />
 <em>Molecular Biology and Evolution</em> (2019-03) <a href="https://doi.org/d9r7">https://doi.org/d9r7</a> <br />
 DOI: <a href="https://doi.org/10.1093/molbev/msy242">10.1093/molbev/msy242</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30690464">30690464</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6389316">PMC6389316</a></p>
 </div>
 <div id="ref-64Rp8zLg">
-<p>32. <strong>Interpreting whole genome sequencing for investigating tuberculosis transmission: a systematic review</strong> <br />
+<p>31. <strong>Interpreting whole genome sequencing for investigating tuberculosis transmission: a systematic review</strong> <br />
 Hollie-Ann Hatherell, Caroline Colijn, Helen R. Stagg, Charlotte Jackson, Joanne R. Winter, Ibrahim Abubakar<br />
 <em>BMC Medicine</em> (2016-03-23) <a href="https://doi.org/f8gsk2">https://doi.org/f8gsk2</a> <br />
 DOI: <a href="https://doi.org/10.1186/s12916-016-0566-x">10.1186/s12916-016-0566-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27005433">27005433</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4804562">PMC4804562</a></p>
 </div>
 <div id="ref-18CTtAeF9">
-<p>33. <strong>Whole-genome sequencing to delineate Mycobacterium tuberculosis outbreaks: a retrospective observational study</strong> <br />
+<p>32. <strong>Whole-genome sequencing to delineate Mycobacterium tuberculosis outbreaks: a retrospective observational study</strong> <br />
 Timothy M Walker, Camilla LC Ip, Ruth H Harrell, Jason T Evans, Georgia Kapatai, Martin J Dedicoat, David W Eyre, Daniel J Wilson, Peter M Hawkey, Derrick W Crook, … Tim EA Peto<br />
 <em>The Lancet Infectious Diseases</em> (2013-02) <a href="https://doi.org/f2g6zn">https://doi.org/f2g6zn</a> <br />
 DOI: <a href="https://doi.org/10.1016/s1473-3099(12)70277-3">10.1016/s1473-3099(12)70277-3</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23158499">23158499</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3556524">PMC3556524</a></p>
 </div>
 <div id="ref-dRRsEE8Z">
-<p>34. <strong>Bottlenecks and broomsticks: the molecular evolution of Mycobacterium bovis</strong> <br />
+<p>33. <strong>Bottlenecks and broomsticks: the molecular evolution of Mycobacterium bovis</strong> <br />
 Noel H. Smith, Stephen V. Gordon, Ricardo de la Rua-Domenech, Richard S. Clifton-Hadley, R. Glyn Hewinson<br />
 <em>Nature Reviews Microbiology</em> (2006-09) <a href="https://doi.org/fhqqkv">https://doi.org/fhqqkv</a> <br />
 DOI: <a href="https://doi.org/10.1038/nrmicro1472">10.1038/nrmicro1472</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16912712">16912712</a></p>
 </div>
 <div id="ref-hpSc80yh">
-<p>35. <strong>Evidence for Recombination in Mycobacterium tuberculosis</strong> <br />
+<p>34. <strong>Evidence for Recombination in Mycobacterium tuberculosis</strong> <br />
 Xiaoming Liu, Michaela M. Gutacker, James M. Musser, Yun-Xin Fu<br />
 <em>Journal of Bacteriology</em> (2006-12-01) <a href="https://doi.org/ftp6r2">https://doi.org/ftp6r2</a> <br />
 DOI: <a href="https://doi.org/10.1128/jb.01062-06">10.1128/jb.01062-06</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16997954">16997954</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1698211">PMC1698211</a></p>
 </div>
 <div id="ref-1H760aM5J">
-<p>36. <strong>Genomic analysis of smooth tubercle bacilli provides insights into ancestry and pathoadaptation of Mycobacterium tuberculosis</strong> <br />
+<p>35. <strong>Genomic analysis of smooth tubercle bacilli provides insights into ancestry and pathoadaptation of Mycobacterium tuberculosis</strong> <br />
 Philip Supply, Michael Marceau, Sophie Mangenot, David Roche, Carine Rouanet, Varun Khanna, Laleh Majlessi, Alexis Criscuolo, Julien Tap, Alexandre Pawlik, … Roland Brosch<br />
 <em>Nature Genetics</em> (2013-01-06) <a href="https://doi.org/f4mrqv">https://doi.org/f4mrqv</a> <br />
 DOI: <a href="https://doi.org/10.1038/ng.2517">10.1038/ng.2517</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23291586">23291586</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3856870">PMC3856870</a></p>
 </div>
 <div id="ref-Coyn9XyF">
-<p>37. <strong>Computational genomics-proteomics and Phylogeny analysis of twenty one mycobacterial genomes (Tuberculosis &amp; non Tuberculosis strains)</strong> <br />
+<p>36. <strong>Computational genomics-proteomics and Phylogeny analysis of twenty one mycobacterial genomes (Tuberculosis &amp; non Tuberculosis strains)</strong> <br />
 Fathiah Zakham, Othmane Aouane, David Ussery, Abdelaziz Benjouad, Moulay Ennaji<br />
 <em>Microbial Informatics and Experimentation</em> (2012) <a href="https://doi.org/d9r8">https://doi.org/d9r8</a> <br />
 DOI: <a href="https://doi.org/10.1186/2042-5783-2-7">10.1186/2042-5783-2-7</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/22929624">22929624</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3504576">PMC3504576</a></p>
 </div>
 <div id="ref-Lvhz1sqs">
-<p>38. <strong>Towards standardisation: comparison of five whole genome sequencing (WGS) analysis pipelines for detection of epidemiologically linked tuberculosis cases</strong> <br />
+<p>37. <strong>Towards standardisation: comparison of five whole genome sequencing (WGS) analysis pipelines for detection of epidemiologically linked tuberculosis cases</strong> <br />
 Rana Jajou, Thomas A Kohl, Timothy Walker, Anders Norman, Daniela Maria Cirillo, Elisa Tagliani, Stefan Niemann, Albert de Neeling, Troels Lillebaek, Richard M Anthony, Dick van Soolingen<br />
 <em>Eurosurveillance</em> (2019-12-12) <a href="https://doi.org/d9r9">https://doi.org/d9r9</a> <br />
 DOI: <a href="https://doi.org/10.2807/1560-7917.es.2019.24.50.1900130">10.2807/1560-7917.es.2019.24.50.1900130</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31847944">31847944</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6918587">PMC6918587</a></p>
 </div>
 <div id="ref-IPc8cy7s">
-<p>39. <strong>The Sequence Alignment/Map format and SAMtools</strong> <br />
+<p>38. <strong>The Sequence Alignment/Map format and SAMtools</strong> <br />
 H. Li, B. Handsaker, A. Wysoker, T. Fennell, J. Ruan, N. Homer, G. Marth, G. Abecasis, R. Durbin, 1000 Genome Project Data Processing Subgroup<br />
 <em>Bioinformatics</em> (2009-06-08) <a href="https://doi.org/ff6426">https://doi.org/ff6426</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/btp352">10.1093/bioinformatics/btp352</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/19505943">19505943</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2723002">PMC2723002</a></p>
 </div>
 <div id="ref-bXIkkZJW">
-<p>40. <strong>Improving SNP discovery by base alignment quality</strong> <br />
+<p>39. <strong>Improving SNP discovery by base alignment quality</strong> <br />
 H. Li<br />
 <em>Bioinformatics</em> (2011-02-13) <a href="https://doi.org/fw7k5k">https://doi.org/fw7k5k</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/btr076">10.1093/bioinformatics/btr076</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21320865">21320865</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3072548">PMC3072548</a></p>
 </div>
 <div id="ref-zOTPF2vW">
-<p>41. <strong>Assessment of Mycobacterium tuberculosis transmission in Oxfordshire, UK, 2007–12, with whole pathogen genome sequences: an observational study</strong> <br />
+<p>40. <strong>Assessment of Mycobacterium tuberculosis transmission in Oxfordshire, UK, 2007–12, with whole pathogen genome sequences: an observational study</strong> <br />
 Timothy M Walker, Maeve K Lalor, Agnieszka Broda, Luisa Saldana Ortega, Marcus Morgan, Lynne Parker, Sheila Churchill, Karen Bennett, Tanya Golubchik, Adam P Giess, … Christopher P Conlon<br />
 <em>The Lancet Respiratory Medicine</em> (2014-04) <a href="https://doi.org/f3hxn7">https://doi.org/f3hxn7</a> <br />
 DOI: <a href="https://doi.org/10.1016/s2213-2600(14)70027-x">10.1016/s2213-2600(14)70027-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24717625">24717625</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4571080">PMC4571080</a></p>
 </div>
 <div id="ref-WXM67imc">
-<p>42. <strong>Source code for snp-dists software</strong> <br />
+<p>41. <strong>Source code for snp-dists software</strong> <br />
 Torsten Seemann<br />
 <em>Zenodo</em> (2018-09-09) <a href="https://doi.org/d9zj">https://doi.org/d9zj</a> <br />
 DOI: <a href="https://doi.org/10.5281/zenodo.1411986">10.5281/zenodo.1411986</a></p>
 </div>
 <div id="ref-f0G74pRS">
-<p>43. <strong>Assembly of long, error-prone reads using repeat graphs</strong> <br />
+<p>42. <strong>Assembly of long, error-prone reads using repeat graphs</strong> <br />
 Mikhail Kolmogorov, Jeffrey Yuan, Yu Lin, Pavel A. Pevzner<br />
 <em>Nature Biotechnology</em> (2019-04-01) <a href="https://doi.org/gfzbrd">https://doi.org/gfzbrd</a> <br />
 DOI: <a href="https://doi.org/10.1038/s41587-019-0072-8">10.1038/s41587-019-0072-8</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30936562">30936562</a></p>
 </div>
 <div id="ref-zRTBU1FP">
-<p>44. <strong>Antibiotic resistance prediction for Mycobacterium tuberculosis from genome sequence data with Mykrobe</strong> <br />
+<p>43. <strong>Antibiotic resistance prediction for Mycobacterium tuberculosis from genome sequence data with Mykrobe</strong> <br />
 Martin Hunt, Phelim Bradley, Simon Grandjean Lapierre, Simon Heys, Mark Thomsit, Michael B. Hall, Kerri M. Malone, Penelope Wintringer, Timothy M. Walker, Daniela M. Cirillo, … Zamin Iqbal<br />
 <em>Wellcome Open Research</em> (2019-12-02) <a href="https://doi.org/ggd835">https://doi.org/ggd835</a> <br />
 DOI: <a href="https://doi.org/10.12688/wellcomeopenres.15603.1">10.12688/wellcomeopenres.15603.1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32055708">32055708</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7004237">PMC7004237</a></p>
 </div>
 <div id="ref-AgK2Kztc">
-<p>45. <strong>Integrating informatics tools and portable sequencing technology for rapid detection of resistance to anti-tuberculous drugs</strong> <br />
+<p>44. <strong>Integrating informatics tools and portable sequencing technology for rapid detection of resistance to anti-tuberculous drugs</strong> <br />
 Jody E. Phelan, Denise M. O’Sullivan, Diana Machado, Jorge Ramos, Yaa E. A. Oppong, Susana Campino, Justin O’Grady, Ruth McNerney, Martin L. Hibberd, Miguel Viveiros, … Taane G. Clark<br />
 <em>Genome Medicine</em> (2019-06-24) <a href="https://doi.org/d949">https://doi.org/d949</a> <br />
 DOI: <a href="https://doi.org/10.1186/s13073-019-0650-x">10.1186/s13073-019-0650-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31234910">31234910</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6591855">PMC6591855</a></p>
 </div>
 <div id="ref-3x48DbyN">
-<p>46. <strong>High-throughput microbial population genomics using the Cortex variation assembler</strong> <br />
+<p>45. <strong>High-throughput microbial population genomics using the Cortex variation assembler</strong> <br />
 Zamin Iqbal, Isaac Turner, Gil McVean<br />
 <em>Bioinformatics</em> (2013-01-15) <a href="https://doi.org/d95c">https://doi.org/d95c</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/bts673">10.1093/bioinformatics/bts673</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23172865">23172865</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3546798">PMC3546798</a></p>
+</div>
+<div id="ref-3yP1ZZU9">
+<p>46. <strong>Limitations of the Mycobacterium tuberculosis reference genome H37Rv in the detection of virulence-related loci</strong> <br />
+Ronan F. O’Toole, Sanjay S. Gautam<br />
+<em>Genomics</em> (2017-10) <a href="https://doi.org/gchzjz">https://doi.org/gchzjz</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.ygeno.2017.07.004">10.1016/j.ygeno.2017.07.004</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28743540">28743540</a></p>
+</div>
+<div id="ref-cF2ezTu8">
+<p>47. <strong>The Enigmatic PE/PPE Multigene Family of Mycobacteria and Tuberculosis Vaccination</strong> <br />
+Michael J. Brennan<br />
+<em>Infection and Immunity</em> (2017-03-27) <a href="https://doi.org/gbpvsd">https://doi.org/gbpvsd</a> <br />
+DOI: <a href="https://doi.org/10.1128/iai.00969-16">10.1128/iai.00969-16</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28348055">28348055</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5442627">PMC5442627</a></p>
+</div>
+<div id="ref-edkEM6K6">
+<p>48. <strong>Recombination in pe/ppe genes contributes to genetic variation in Mycobacterium tuberculosis lineages</strong> <br />
+Jody E. Phelan, Francesc Coll, Indra Bergval, Richard M. Anthony, Rob Warren, Samantha L. Sampson, Nicolaas C. Gey van Pittius, Judith R. Glynn, Amelia C. Crampin, Adriana Alves, … Taane G. Clark<br />
+<em>BMC Genomics</em> (2016-02-29) <a href="https://doi.org/f8sf3h">https://doi.org/f8sf3h</a> <br />
+DOI: <a href="https://doi.org/10.1186/s12864-016-2467-y">10.1186/s12864-016-2467-y</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26923687">26923687</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4770551">PMC4770551</a></p>
+</div>
+<div id="ref-12kbnk87l">
+<p>49.<strong>:{unav)</strong> <br />
+Nicolaas C Gey van Pittius, Samantha L Sampson, Hyeyoung Lee, Yeun Kim, Paul D van Helden, Robin M Warren<br />
+<em>BMC Evolutionary Biology</em> (2006) <a href="https://doi.org/ddsnv6">https://doi.org/ddsnv6</a> <br />
+DOI: <a href="https://doi.org/10.1186/1471-2148-6-95">10.1186/1471-2148-6-95</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/17105670">17105670</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1660551">PMC1660551</a></p>
 </div>
 </div>
 <!-- default theme -->

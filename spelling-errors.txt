@@ -24,6 +24,7 @@ enterica
 Estée
 eukaryote
 fastq
+GC
 gczkbr
 genotype
 genotypes
@@ -56,6 +57,7 @@ MSA
 MSAs
 Mtb
 Mycobacterial
+mycobacteriologist
 Mycobacterium
 Nanopore
 nasopharyngeal
@@ -76,7 +78,7 @@ polymorphisms
 ppe
 pre
 preprints
-PRG
+prg
 PRGs
 PRG’s
 Programme
@@ -94,6 +96,7 @@ SNPs
 subsampled
 subsampling
 subsequence
+synteny
 TAC
 Török
 trainings
