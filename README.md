@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/mbhall88/TAC3_Report/tree/gh-pages) branch hosts the contents of this directory at <https://mbhall88.github.io/TAC3_Report/>.
-The permalink for this webpage version is <https://mbhall88.github.io/TAC3_Report/v/bf894889ff5ba16614773907e8bb29d5b00f5bcd/>.
+The permalink for this webpage version is <https://mbhall88.github.io/TAC3_Report/v/20936f57e1d27936dc74c128bfd8c52240bcc09a/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://mbhall88.github.io/TAC3_Report/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`bf894889ff5ba16614773907e8bb29d5b00f5bcd`](https://github.com/mbhall88/TAC3_Report/commit/bf894889ff5ba16614773907e8bb29d5b00f5bcd).
+[`20936f57e1d27936dc74c128bfd8c52240bcc09a`](https://github.com/mbhall88/TAC3_Report/commit/20936f57e1d27936dc74c128bfd8c52240bcc09a).
