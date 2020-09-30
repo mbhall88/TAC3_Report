@@ -3,7 +3,7 @@ author-meta:
 - Michael B. Hall
 bibliography:
 - content/manual-references.json
-date-meta: '2020-09-29'
+date-meta: '2020-09-30'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
 
-  <meta name="dc.date" content="2020-09-29" />
+  <meta name="dc.date" content="2020-09-30" />
 
-  <meta name="citation_publication_date" content="2020-09-29" />
+  <meta name="citation_publication_date" content="2020-09-30" />
 
   <meta name="dc.language" content="en-UK" />
 
@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/bf894889ff5ba16614773907e8bb29d5b00f5bcd/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/20936f57e1d27936dc74c128bfd8c52240bcc09a/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/bf894889ff5ba16614773907e8bb29d5b00f5bcd/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/20936f57e1d27936dc74c128bfd8c52240bcc09a/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/bf894889ff5ba16614773907e8bb29d5b00f5bcd/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/20936f57e1d27936dc74c128bfd8c52240bcc09a/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,10 +101,10 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/bf894889ff5ba16614773907e8bb29d5b00f5bcd/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/20936f57e1d27936dc74c128bfd8c52240bcc09a/))
 was automatically generated
-from [mbhall88/TAC3_Report@bf89488](https://github.com/mbhall88/TAC3_Report/tree/bf894889ff5ba16614773907e8bb29d5b00f5bcd)
-on September 29, 2020.
+from [mbhall88/TAC3_Report@20936f5](https://github.com/mbhall88/TAC3_Report/tree/20936f57e1d27936dc74c128bfd8c52240bcc09a)
+on September 30, 2020.
 </em></small>
 
 ## Authors
@@ -512,15 +512,16 @@ the overall precision and recall. We then follow the same probe-mapping approach
 
 <!--https://github.com/iqbal-lab/pandora1_paper/issues/209-->
 
-We filtered `pandora` variants based on the following criteria:
+We filtered `pandora` (Nanopore/Illumina) variants based on the following criteria:
 
-- Depth less than 15x
-- Less than 20% of reads are on one strand
-- 50% or more of k-mers on the allele have zero coverage
+- Depth less than 10x/5x
+- Less than 5%/5% of reads are on one strand
+- 60%/80% or more of k-mers on the allele have zero coverage
+- 
 
-After we have run this analysis, we will also most likely need to investigate applying
-filters to the VCF file to remove any biases relating to problems like strand bias or
-coverage.
+<!--TODO add ROC and associated text-->
+<!--https://github.com/leoisl/pandora1_paper_full_pipeline/issues/1-->
+<!--https://github.com/iqbal-lab/pandora1_paper/issues/206-->
 
 Whilst I wrote nearly all of the code and associated tests for evaluating the recall for
 this analysis, a lot of it has since been refactored by Leandro Ishi and by Martin Hunt
@@ -530,10 +531,6 @@ methods, along with 3500 lines of test code to ensure there are no bugs in our
 evaluation. Additionally, I built the original `snakemake` [@doi:10/gd2xzq] pipeline of
 approximately 3500 lines of codes to orchestrate the entire evaluation and simulations
 (However, much of this has been rewritten by Leandro Ishi).
-
-<!--TODO add ROC and associated text-->
-<!--https://github.com/leoisl/pandora1_paper_full_pipeline/issues/1-->
-<!--https://github.com/iqbal-lab/pandora1_paper/issues/206-->
 
 #### Outstanding work
 
@@ -987,8 +984,8 @@ other bacteria.
 
 One question which will be of particular interest for this section will be whether reads
 covering one *pe/ppe* gene map to various others. If, as shown by others, *pe/ppe* genes
-arose through gene conversion [@doi:10/ddsnv6], we would expect this to be the case.
-However, having high-quality assemblies built from a combination of long- and short-read
+arose through gene conversion [@pmc:PMC1660551], we would expect this to be the case. However,
+having high-quality assemblies built from a combination of long- and short-read
 technologies, we hope we can improve on the current nucleotide resolution and allow more
 accurate mapping to these genes. The main deliverable from this section will be a
 collection of high-quality *pe/ppe* PRGs with information about what read length will
@@ -1018,45 +1015,192 @@ knowledge of Mtb biology.
 
 ### Publication Strategy
 
-> Briefly outline the publication strategy; set priorities if needed.
+- The paper covering the work in
+  [Chapter 1](./20.partA.md#chapter-1-variant-discovery-in-genome-graphs) is currently
+  in preparation - titled *Nucleotide-resolution bacterial pan-genomics with reference
+  graphs*. This paper covers the entirety of the `pandora` method. As the bulk of this
+  method was produced by a previous PhD student in the lab, Rachel Colquhoun, I will be
+  the second author. The work I will have contributed to this paper include the addition
+  of the *de novo* variant discovery, and a large amount of the evaluation. We aim to
+  submit the paper in October 2020.
+- The work that will constitute
+  [Chapter 2](./20.partA.md#chapter-2-applications-to-m-tuberculosis-nanopore-variant-calling)
+  and
+  [Chapter 3](./20.partA.md#chapter-3-applications-to-improving-m-tuberculosis-drug-resistance-prediction)
+  will also be contained in a paper, of which I will be the first author. We aim to have
+  this work completed and a manuscript submitted by the end of November 2020 - or the
+  first quarter of 2021 at the latest.
+- The work in
+  [Chapter 4](./20.partA.md#chapter-4-construction-of-a-m-tuberculosis-reference-pan-genome)
+  is a bit harder to put an approximate date on, but we would hope to have it completed
+  sometime in the third quarter of 2021, with myself being the first author.
 
 ### List of publications, papers in press, preprints, manuscripts submitted/in preparation to date
 
-### Work plan and timeline for thesis submission 
+In addition to the major "thesis publications" listed [above](#publication-strategy), I
+am also involved in the following publications:
 
-> Provide a work plan to be completed prior to thesis writing and a timeline for submission.
+- The recent publication of `mykrobe` [@doi:10/ggd835], in which I assisted with the
+  improvement of the genotyping model for Nanopore data.
+- A preprint [@doi:10.1101/2020.02.06.936302] from a student-led project investigating
+  the use of Nanopore sequencing for freshwater monitoring. I did a large part of the
+  data analysis for this work.
+- Supplementary to the work in
+  [Chapter 2](20.partA.md#chapter-2-applications-to-m-tuberculosis-nanopore-variant-calling)
+  we also aim to submit a paper that will be a "crowd-sourcing" call for training
+  species-specific Nanopore basecalling models. I used the data we have good PacBio
+  assemblies for to try and train a Mtb-specific basecalling model, as it has been
+  previously shown (in *K. pneumoniae*) [@doi:10.1186/s13059-019-1727-y] that this can
+  improve read and consensus accuracy. This attempt did not yield a more accurate model
+  than the default, but we think it is important to make this result available and
+  challenge others to do the same for their species-of-interest.
+- I am third-author on a new manuscript for the workflow management system `snakemake`
+  [@doi:10.1093/bioinformatics/bts480]. The manuscript is in the process of being
+  submitted to *Nature Communications*. I contributed to this work by co-developing a
+  tool called `snakefmt` (<https://github.com/snakemake/snakefmt>) that is used to
+  provide automatic formatting of `snakemake` code - improving the readability of
+  workflows. Additionally, I also developed and maintain the `snakemake`
+  ["profile"][lsf] that configures job submission and status-checking for the LSF
+  cluster system.
+- I plan to submit an ["Application Note"][app-note] to *Bioinformatics* for `rasusa`
+  [@doi:10/d9rz]. This is a tool I wrote in the Rust programming language to randomly
+  subsample sequencing reads to a specified coverage.
+
+### Work plan and timeline for thesis submission
+
+I started working on my thesis in April 2020. For the last two months I have been
+spending approximately 2 hours a week writing.  
+The writing I have done includes:
+
+- The methods section for *de novo* variant discovery in Chapter 1.
+- The methods and results for sections in Chapter 2 covering the training of an
+  Mtb-specific basecalling model, an assembly method benchmark for the samples we have
+  PacBio data for, and the quality control of the data.
+
+I plan to continue writing the results and methods for Chapter 2 and 3 in parallel with
+the daily work I am doing. As the work in these chapters will be published together (see
+[Publication Strategy](#publication-strategy)) I hope to have completed a well-polished
+draft for them both by the end of the year.
+
+As a lot of the work in Chapters 2 and 3 leverage (and improve) the methods in Chapter
+1, I will revisit this chapter once the work in these two chapters is complete. By this
+point, the `pandora` paper will be submitted, as will the paper for Chapter 2 and 3.
+This will allow me to write a "finalised" methods and results section for Chapter 1. As
+such, I plan to take some time at the start of next year (2021) to work solely on
+getting Chapter 1 to a near-finished state.
+
+Chapter 4 will be approached in a similar manner to Chapters 2 and 3 - writing methods
+and results in parallel with the work I am doing. This means I will hope to have this
+chapter in a near-complete state, regardless of whether I "finish" the project before
+when I need to submit.
+
+Lastly, I will work on the introductory chapter. I prefer to do this once I have a clear
+picture of all of the topics touched on in the body of the work.
+
+I plan to submit (pending the six-month extension) my thesis in (INSERT MONTH) 2021.
 
 ### List of scientific courses and conferences attended to date and planned for next year
 
-> Please list all events in reverse chronological order.
+- Applied Bioinformatics and Public Health Microbiology, Hinxton, UK - May 2021
+- [TBScience][tbscience] - October 2020 (virtual)
+- [Genome Informatics][gi] - September 2020 (virtual)
+- CRyPTIC Consortium Annual Meeting, Hyderabad, India - October 2019
+- [Computational Pan-genomics workshop][bielefeld], Bielefeld, Germany - October 2019
 
-###  List of additional training, teaching and other relevant activities to date
+### List of additional training, teaching and other relevant activities to date
 
-> Please list all training and other activities in reverse chronological order.
+- [Hackseq][hackseq], October 2019 (virtual). I was involved in a project that created
+  an automated bioinformatics bug discovery tool called [`hypothesis-bio`][hypo-bio].
 
 ### Career development plan
 
-#### Please describe your current long-term career aims (i.e. 3-5 years after PhD). 
+#### Please describe your current long-term career aims (i.e. 3-5 years after PhD).
 
-#### Please comment on the types of position you would like to apply to for after the PhD and your expected application timeline? 
+Within 3-5 years of completing my PhD I hope to be in a postdoctoral position.
+Geographically, I will be based in Queensland, Australia with my (soon-to-be) wife. I
+would like to continue working on Mtb genomics. Some Mtb-related topics I would like to
+pursue would be real-time analysis from a Nanopore device and also method development
+for improving our ability to analyse mixed infections. I also have a strong desire to do
+research within the reproducible bioinformatics field.
 
-> If applying for postdoc positions, which fields/fellowships are you considering? If you are applying for non-academic careers, what type of role? Do you have target companies or organisations in mind?
+#### Please comment on the types of position you would like to apply to for after the PhD and your expected application timeline?
+
+I have already been in discussions with Lachlan Coin (my Master's supervisor), from the
+University of Melbourne, about the possibility of a job post-PhD. He recently received
+funding for a project aimed at implementation, in Papua New Guinea, of rapid
+direct-from-sample DNA sequencing approaches to characterise drug resistant
+tuberculosis, and evaluation of the accuracy of this approach compared to standard
+culture-based approaches. The bioinformatics component of this project is not yet filled
+and Lachlan and I are in discussions about the possibility of me joining the project in
+either a postdoc or research officer capacity.
+
+There are also a couple of Australian-based postdoctoral fellowships I would like to
+apply for within the next year or two:
+
+- Australian Research Council (ARC) [Discovery Early Career Researcher Awards][decra]
+  (DECRA). The applications for funding beginning 2022 closes on October 14 2020.
+  Therefore, I will need to apply for this fellowship next year (for 2023 funding). This
+  grant provides focused research support for early career researchers in both teaching
+  and research, and research-only positions.
+- [NHMRC Investigator Grant][nhmrc]: These grants provide the investigator with
+  flexibility to pursue important new research directions as they arise and to form
+  collaborations as needed, rather than being restricted to the scope of a specific
+  research project. This grant has been [postponed][postpone], but applications are
+  likely to open in February/March 2021. I will need to try and begun discussions with a
+  university partner in order to be able to apply for this funding and come up with a
+  project.
+
+In addition to these national-level funding schemes, I have started contacting
+researchers in Queensland to discuss mutual research interests and see if there is any
+funding already available within established projects.
 
 #### What do you see as your strengths (2-3 skills)?
 
-#### What do you see as your areas for improvement1 (2-3 areas)?
+- Nanopore bioinformatics method development and analysis
+- Bacterial variant-calling evaluation
+- Software engineering
 
-#### What are your career development priorities until the end of your contract? 
+#### What do you see as your areas for improvement (2-3 areas)?
 
-> Please take into account both the scientific and non-scientific skills you will need to work on a successful and timely completion of the PhD. List the skills you still need to acquire to achieve your longer-term career aims. 
+- Structural organisation of the Mtb genome
+- Phylogenetics
+- Writing and reviewing academic publications
+
+#### What are your career development priorities until the end of your contract?
+
+- Improve on my understanding of Mtb genomics at the nucleotide level, but also macro
+  elements such as the pan-genomic landscape. This skill set will benefit both my PhD
+  and my future postdoctoral aspirations to work on Mtb further.
+- Reviewing and writing papers will be a valuable set of skills for applying to
+  postdoctoral fellowships and is something that can fit into the completion of my PhD
+  nicely.
 
 #### What actions will you take to develop these skills?
 
-> This may include training courses, opportunities to practice and develop these skills, or seeking feedback/guidance. N.B. fellows should take 1-2 non-scientific trainings or career development workshops per year, and at least one international conference during their PhD.
+- Chapters 2, 3, and 4 of my thesis will all dramatically improve upon my understanding
+  of Mtb genomics.
+- The TBScience conference I am (virtually) attending in October 2020 is another action
+  I am taking to increase my Mtb knowledge. It is part of the Union World Conference On
+  Lung Health and so will cover a wide range of Mtb topics.
+- I am currently reviewing a paper together with Zam to learn how this process works. I
+  plan to be involved in other reviewing opportunities before the end of my PhD.
+- Aside from writing my thesis, I have at least three publications that I would like to
+  first-author before the end of my PhD. The practise of writing and submitting these
+  will no doubt help me when it comes time to write a grant proposal for a postdoctoral
+  position.
+- I have registered for the EMBL "Applying to postdoc positions" workshop (late-October)
+  and am also waiting for the next "Grant Writing" workshop to become available.
 
-
-
-
+[app-note]: https://academic.oup.com/bioinformatics/pages/instructions_for_authors#Types%20of%20Manuscript
+[bielefeld]: https://www.uni-bielefeld.de/(en)/ZiF/AG/2019/09-30-Stoye.html
+[decra]: https://www.arc.gov.au/grants/discovery-program/discovery-early-career-researcher-award-decra
+[gi]: https://coursesandconferences.wellcomegenomecampus.org/our-events/genome-informatics-2020/
+[hackseq]: https://www.hackseq.com/hackseq19
+[hypo-bio]: https://github.com/IQTLabs/hypothesis-bio
+[lsf]: https://github.com/Snakemake-Profiles/lsf
+[nhmrc]: https://www.nhmrc.gov.au/funding/find-funding/investigator-grants
+[postpone]: https://www.nhmrc.gov.au/about-us/news-centre/changes-nhmrcs-grant-schedule-and-policies-response-covid-19
+[tbscience]: https://conf2020.theunion.org/programme/tb-science/
 
 
 
