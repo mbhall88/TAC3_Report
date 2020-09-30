@@ -12,6 +12,7 @@
 <!-- usage note: edit this section. -->
 - Part A: Progress report
 - Part B: Training, career development and timelines
+- Part C: Impact of COVID-19 pandemic
 
 ## Manubot
 
