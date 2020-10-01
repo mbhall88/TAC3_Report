@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/1292c4c6d0706f5f3b1fbd29dc24d90066cb4e10/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/4ffc2719367a1eded3b0fdc46b9715ce00179787/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/1292c4c6d0706f5f3b1fbd29dc24d90066cb4e10/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/4ffc2719367a1eded3b0fdc46b9715ce00179787/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/1292c4c6d0706f5f3b1fbd29dc24d90066cb4e10/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/4ffc2719367a1eded3b0fdc46b9715ce00179787/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/1292c4c6d0706f5f3b1fbd29dc24d90066cb4e10/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/4ffc2719367a1eded3b0fdc46b9715ce00179787/))
 was automatically generated
-from [mbhall88/TAC3_Report@1292c4c](https://github.com/mbhall88/TAC3_Report/tree/1292c4c6d0706f5f3b1fbd29dc24d90066cb4e10)
+from [mbhall88/TAC3_Report@4ffc271](https://github.com/mbhall88/TAC3_Report/tree/4ffc2719367a1eded3b0fdc46b9715ce00179787)
 on October 1, 2020.
 </em></small>
 
@@ -125,7 +125,7 @@ on October 1, 2020.
 
 
 
-## Thesis Advisory Committee {.page_break_before}
+## Thesis Advisory Committee
 
 - Zamin Iqbal (Supervisor) - EMBL-EBI
 - John Marioni (Chair) - EMBL-EBI
@@ -510,18 +510,32 @@ not "double counted", meaning core genome variants would have an unbalanced effe
 the overall precision and recall. We then follow the same probe-mapping approach from
 `varifier` with these truth variants.
 
-<!--https://github.com/iqbal-lab/pandora1_paper/issues/209-->
+Figure {@fig:basecall_model} shows, for a subset of four samples, two important results
+regarding the effect of (unfiltered) *de novo* variant discovery in `pandora`. Firstly,
+is shows that the choice of the Nanopore basecalling model has a sizeable impact - at
+least for *E. coli*. When using a methylation-aware model (not default), there is a
+significant increase in recall and decrease in error rate. While this has been
+previously described for Enterobacteriaceae [@doi:10.1186/s13059-019-1727-y], it
+highlights a weakness in the *de novo* variant discovery process. If the default model
+is used (green line in Figure {@fig:basecall_model}), `pandora` has a higher error rate
+if discovering variants is enabled, however, we do get an increase in recall. This means
+that our discovery process is indeed picking up known systematic biases in Nanopore
+reads and we will need to apply careful filters to negate this. Removal of a large
+amount of this methylation-related systematic bias - by using a methylation-aware model
+(orange line in Figure {@fig:basecall_model}) - shows that enabling discovery of novel
+variants improves both error rate and recall for `pandora`.
+
+
+![Effect of Nanopore basecalling model](images/basecall_model.png){#fig:basecall_model
+width="80%"}
 
 We filtered `pandora` (Nanopore/Illumina) variants based on the following criteria:
 
 - Depth less than 10x/5x
 - Less than 5%/5% of reads are on one strand
 - 60%/80% or more of k-mers on the allele have zero coverage
-- 
 
-<!--TODO add ROC and associated text-->
-<!--https://github.com/leoisl/pandora1_paper_full_pipeline/issues/1-->
-<!--https://github.com/iqbal-lab/pandora1_paper/issues/206-->
+![ROC curve for Illumina and Nanopore data](images/roc.png){#fig:roc}
 
 Whilst I wrote nearly all of the code and associated tests for evaluating the recall for
 this analysis, a lot of it has since been refactored by Leandro Ishi and by Martin Hunt
