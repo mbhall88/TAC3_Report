@@ -556,6 +556,10 @@ content/30.partB.md:189:nhmrc
 content/30.partB.md:190:programme
 content/30.partB.md:190:tbscience
 content/40.partC.md:1:COVID
-content/40.partC.md:3:COVID
-content/40.partC.md:3:GTL
-content/40.partC.md:3:TAC
+content/40.partC.md:13:COVID
+content/40.partC.md:20:predoc
+content/40.partC.md:22:onwards
+content/40.partC.md:23:pre
+content/40.partC.md:28:predoc
+content/40.partC.md:29:Zam
+content/40.partC.md:32:COVID

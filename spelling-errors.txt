@@ -6,7 +6,7 @@ basecalling
 benchmarked
 BFS
 Bielefeld
-bioinformatics
+Bioinformatics
 Bruijn
 CCS
 coli
@@ -38,7 +38,6 @@ genotyping
 Georg
 gonorrhoeae
 gsk
-GTL
 Hackseq
 heterozygosity
 heterozygous
@@ -76,6 +75,7 @@ novo
 nq
 NTM
 ONT’s
+onwards
 PacBio
 pangenome
 PanRG
@@ -89,6 +89,7 @@ pneumoniae
 polymorphisms
 ppe
 pre
+predoc
 preprint
 preprints
 PRG

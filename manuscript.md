@@ -3,7 +3,7 @@ author-meta:
 - Michael B. Hall
 bibliography:
 - content/manual-references.json
-date-meta: '2020-09-30'
+date-meta: '2020-10-01'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
 
-  <meta name="dc.date" content="2020-09-30" />
+  <meta name="dc.date" content="2020-10-01" />
 
-  <meta name="citation_publication_date" content="2020-09-30" />
+  <meta name="citation_publication_date" content="2020-10-01" />
 
   <meta name="dc.language" content="en-UK" />
 
@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/20936f57e1d27936dc74c128bfd8c52240bcc09a/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/1292c4c6d0706f5f3b1fbd29dc24d90066cb4e10/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/20936f57e1d27936dc74c128bfd8c52240bcc09a/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/1292c4c6d0706f5f3b1fbd29dc24d90066cb4e10/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/20936f57e1d27936dc74c128bfd8c52240bcc09a/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/1292c4c6d0706f5f3b1fbd29dc24d90066cb4e10/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,10 +101,10 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/20936f57e1d27936dc74c128bfd8c52240bcc09a/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/1292c4c6d0706f5f3b1fbd29dc24d90066cb4e10/))
 was automatically generated
-from [mbhall88/TAC3_Report@20936f5](https://github.com/mbhall88/TAC3_Report/tree/20936f57e1d27936dc74c128bfd8c52240bcc09a)
-on September 30, 2020.
+from [mbhall88/TAC3_Report@1292c4c](https://github.com/mbhall88/TAC3_Report/tree/1292c4c6d0706f5f3b1fbd29dc24d90066cb4e10)
+on October 1, 2020.
 </em></small>
 
 ## Authors
@@ -1206,7 +1206,37 @@ funding already available within established projects.
 
 ## Part C: Impact of COVID-19 pandemic {.page_break_before}
 
-> As outlined in the Procedures for COVID-19 related fellows’ contract extensions, students and their GTL should document the impact of the corona crisis on the PhD project. The TAC should assess the approximate project delay and discuss how this could be mitigated over the remaining PhD period. Please use the space below to outline the impact of corona crisis on your project (e.g. lost productivity / project delays).
+Our research lab began working from home full-time on 16/03/2020. My partner, who lives
+in Australia, was due to arrive in Cambridge in early April for seven weeks. This trip
+had to be cancelled due to Australian border restrictions. The cancellation meant that I
+would not be seeing her for an unknown amount of time - having not seen each other since
+the beginning of 2020. As such, I organised to travel back to Australia. Trying to
+organise international travel at this time ended up being quite disastrous and after 3
+flight cancellations, I was due to fly back to Australia on 27/04/2020. In the meantime,
+I found it very difficult to stay focused working at home. As I live in college
+accommodation, my office and bedroom are one-and-the-same. Adding the stress of trying
+to get back to my partner, I would say this was the most unproductive time of my PhD
+to-date. The day before my flight to Australia, on 27/04, I started displaying COVID-19
+symptoms - fever, lethargy, lack of appetite - and had to isolate for a week. Needless
+to say, I did not work for this week and I flew to Australia the following week on
+03/05. I was in hotel quarantine for 16 days in Australia, but this was surprisingly
+productive from my PhD perspective. However, my first 6 weeks after arriving in
+Australia were not as productive as I would have liked as my living arrangement with my
+partner was difficult to adjust to accommodate both of our working requirements. In the
+end, I started paying (from my predoc budget) to work from a co-working space three days
+a week and have additionally bought new home office equipment that has improved my
+ability to work from home. From July onwards I would say that my productivity has
+returned to pre-pandemic levels. I began meticulously tracking my work hours at the
+beginning of the pandemic and I am now doing roughly twice as many hours of productive
+work than I was prior to July.
+
+I will remain in Australia until the beginning of January 2021 and continue to work
+three days a week from the co-working space - provided my predoc budget does not run
+out. Zam and I meet twice a week and I still attend group meetings every week - our lab
+will remain remote until January 2021.
+
+Overall, I estimate that COVID-19 has caused me to lose about 6-8 weeks worth of time
+spent on my PhD.
 
 
 ## References {.page_break_before}
