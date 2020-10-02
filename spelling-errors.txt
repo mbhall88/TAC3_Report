@@ -1,4 +1,3 @@
-accidently
 amplicon
 artefactually
 basecall
@@ -7,7 +6,7 @@ basecalling
 benchmarked
 BFS
 Bielefeld
-Bioinformatics
+bioinformatics
 Bruijn
 CCS
 coli
@@ -43,7 +42,6 @@ gonorrhoeae
 gsk
 Hackseq
 heterozygosity
-heterozygous
 Hinxton
 Illumina
 indel
@@ -100,21 +98,17 @@ prokaryote
 pyrazinamide
 QUAL
 refbias
-repetitve
 repurposed
-resequenced
 rifampicin
 SNP
 SNPs
 subsample
 subsampled
-subsampling
 subsequence
 synteny
 TAC
 TBScience
 Török
-unmapped
 VCF
 VCFs
 Votintseva

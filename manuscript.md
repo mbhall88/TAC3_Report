@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/8277cd5859b36d4eccc26241b5c1874d0080a69f/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/a3d3550288f6b7b000263defff7e60492f1a8923/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/8277cd5859b36d4eccc26241b5c1874d0080a69f/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/a3d3550288f6b7b000263defff7e60492f1a8923/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/8277cd5859b36d4eccc26241b5c1874d0080a69f/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/a3d3550288f6b7b000263defff7e60492f1a8923/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/8277cd5859b36d4eccc26241b5c1874d0080a69f/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/a3d3550288f6b7b000263defff7e60492f1a8923/))
 was automatically generated
-from [mbhall88/TAC3_Report@8277cd5](https://github.com/mbhall88/TAC3_Report/tree/8277cd5859b36d4eccc26241b5c1874d0080a69f)
+from [mbhall88/TAC3_Report@a3d3550](https://github.com/mbhall88/TAC3_Report/tree/a3d3550288f6b7b000263defff7e60492f1a8923)
 on October 2, 2020.
 </em></small>
 
@@ -563,75 +563,82 @@ methods developed in `pandora` can be used to improve clustering of samples - ge
 referred to as "transmission clusters" - while, in the next chapter, we will address the
 drug resistance prediction component. The intention is to be able to use Nanopore data
 for public health. Therefore, this chapter will focus on a head-to-head comparison of
-Nanopore and Illumina sequencing technologies for classifying transmission clusters Mtb.
-What we would like to show with the work in this chapter is that, contrary to current
-dogma, Nanopore sequencing technology has advanced to the point where it can be applied
-to this use-case to a standard acceptable by public health authorities. The work that
-will constitute this chapter (and the next) is a collaboration with researchers in
-Oxford, Birmingham, Madagascar, and South Africa, but I will be performing all of the
-analysis.
+Nanopore and Illumina sequencing technologies for classifying transmission clusters for
+Mtb. What we aim to show is that, contrary to current dogma, Nanopore sequencing
+technology has advanced to the point where it can be applied to this use-case to a
+standard acceptable by public health authorities.
+
+##### Genetic clustering of samples
+
+Although there is scientific interest in the question of identifying transmission chains
+from genetic data, all the actionable public health information exists in the
+identification of transmission clusters [@doi:10/d9r7; @doi:10/f8gsk2].
+
+The first step towards clustering a set of genomes is determining a distance matrix. For
+the majority of bacteria, there is a necessary step of identifying recombination tracts
+\- which will contain a high density of SNPs - and removing them. Removal of these SNPs
+is necessary as they will have arrived at a different rate to the putative molecular
+clock and will artefactually extend branch lengths on the phylogenetic tree
+[@doi:10/d9r7; @doi:10/f8gsk2]. In the case of Mtb, however, there is virtually no
+recombination [@doi:10/fhqqkv; @doi:10/ftp6r2; @doi:10/f4mrqv], so this step in not
+required.
+
+<!--There are three main issues we need to address or keep in mind for the clustering-->
+<!--component of this chapter:-->
+
+<!--- When running a variant caller on a single sample, typically the tool only makes a-->
+<!--  non-reference call when it finds a definite difference from the reference. Therefore,-->
+<!--  it is impossible to tell the difference between a reference-matching site and one in-->
+<!--  which there is genotyping uncertainty. One solution is to make a de-duplicated list of-->
+<!--  variants found in all samples and genotype the samples at those positions. Solving-->
+<!--  this reference-bias issue is the strength of the `compare` routine within `pandora`.-->
+<!--  It tackles the problem in this manner while also handling issues of overlapping-->
+<!--  variants in the list of all-sample-variants.-->
+<!--- What distance measure do we use? Do we exclude positions where any sample has missing-->
+<!--  data? Missing data of this type could be due to low coverage, but it could also be-->
+<!--  because a section of the genome is not present. We will extensively cover this issue-->
+<!--  for *E. coli* in [Chapter 1](#chapter-1-variant-discovery-in-genome-graphs). The-->
+<!--  pan-genome of Mtb is small, but it does exist nonetheless [@doi:10/d9r8;-->
+<!--  @doi:10/f4mrqv]. There is also a secondary issue that if certain regions have-->
+<!--  clustered genetic variation in some lineages of Mtb then reads will not map well to-->
+<!--  the reference. Both of the above issues are handled by `pandora` due to its use of a-->
+<!--  PRG, but we still need to make a choice about missing data.-->
+<!--- How do we handle sites where there is evidence of heterozygosity - i.e. a mixed-->
+<!--  sample?-->
+
+For this chapter, we define genetic distance to be the sum of genetic discordances,
+where missing data and heterozygosity do not cause discordance and study the clustering
+this definition generates.
 
 #### Data
 
-As the work in this chapter (and the next) involves a direct comparison of two
-sequencing technologies - Illumina and Nanopore - the DNA sequenced by both must be
-identical so that we can be certain the technology is the only source of differences, if
-any. Each sample was sequenced on both platforms from the same isolate and DNA
-extraction. In total, we received 118 samples from Madagascar, 83 from South Africa, and
-46 from the National Tuberculosis Reference Lab in Birmingham; giving us a total of 247
-samples.  
-As these samples are not reference isolates, we need to be able to compare both Illumina
-and Nanopore to a truth. To establish how each platform compares and differs from the
-truth, we have additionally sequenced 35 of the Malagasy isolates with PacBio and will
-use the high-quality assemblies for these samples as a baseline comparison for samples
-without a truth.
+Each sample was sequenced on both Nanopore and Illumina platforms from the same isolate
+and DNA extraction. In total, we received 118 samples from Madagascar, 83 from South
+Africa, and 46 from the National Tuberculosis Reference Lab in Birmingham; giving us a
+total of 247 samples. As these samples are not reference isolates, we need to be able to
+compare both Illumina and Nanopore to a truth. To establish how each platform compares
+to the truth, we have additionally sequenced 35 of the Malagasy isolates with PacBio and
+will use the high-quality assemblies for validation of variant calls.
 
 #### Quality Control
 
-The purpose of quality control (QC) is to ensure all samples used in later analysis are
-of the highest quality. By highest quality we mean all samples have perfectly matched
-Illumina and Nanopore data, sufficient coverage on both sequencing technologies, no
-contamination, and no evidence of a mixed Mtb population.
+The first step in quality control (QC) was to exclude samples where the Nanopore and
+Illumina data were not perfectly matched. In total, we excluded 40 samples at this
+stage.
 
-The first step in QC was to exclude samples where the Nanopore and Illumina data were
-not perfectly matched. There were some instances where isolates had to be resequenced as
-the Nanopore data had been accidently deleted from the sequencing laboratory's computer.
-Additionally, some samples did not have any matched Nanopore or Illumina sequencing. In
-total, we excluded 40 samples at this stage.
-
-The remaining 207 samples were processed through a quality control pipeline
-(<https://github.com/mbhall88/head_to_head_pipeline/tree/master/data/QC>). The first
-step in QC is decontamination of sequencing reads. We used the decontamination database
+The remaining 207 samples were processed through a QC pipeline. The first step in the
+pipeline is decontamination of sequencing reads. We used the decontamination database
 from `clockwork` (<https://github.com/iqbal-lab-org/clockwork>), which contains a wide
 range of organisms, including viral, human, Mtb, non-tuberculosis Mycobacterium (NTM),
-and nasopharyngeal-associated bacterial genomes. Each genome has associated metadata
-indicating if it is contamination or not. Reads were mapped to the database using `bwa
-mem` [@arxiv:1303.3997] (Illumina) and `minimap2` (Nanopore) [@doi:10/gdhbqt]. The
-resulting alignment was used to quantify the proportion of reads considered
-contamination, unmapped, and wanted. A read is considered wanted if it has any mapping
-to a non-contamination genome in the database and is output to a final decontaminated
-fastq file. All other mapped reads are considered contamination.
-
-All decontaminated fastq files were subsampled to a depth of 60x (Illumina) and 150x
-(Nanopore) using `rasusa` [@doi:10/d9rz]. The reason for subsampling is to limit
-unnecessarily large read sets that can drastically slow down later steps in the analysis
-process without significant advantage.
+and nasopharyngeal-associated bacterial genomes. Reads were mapped to the database and
+was output to a final decontaminated fastq file if it had any mapping to a
+non-contaminant genome. All decontaminated fastq files were subsampled to a depth of 60x
+(Illumina) and 150x (Nanopore) using `rasusa` [@doi:10/d9rz].
 
 The last step in the QC pipeline is to assign lineages for each sample. A panel of
 lineage-defining SNPs [@doi:10/gbvbxh; @doi:10/d9r2; @doi:10/f9dg9j] was used in
 conjunction with a sample's Illumina VCF from the
-[Baseline variant analysis](#baseline-variant-analysis) for the lineage assignment. At
-each lineage-defining position in the sample's VCF we determine if the called allele is
-the same as the panel allele. If it is, we add the full lineage that allele defines
-(e.g. 4.1.1) to a list of called lineages. For this analysis, if more than one
-heterozygous call was made at lineage-defining positions, we abandon lineage assignment
-for that sample. After classifying all of a sample's lineage-defining positions we then
-produce a lineage assignment based on the list of called lineages. The most recent
-common ancestor of all the called lineages is used as the lineage assignment. For
-example, if the called lineages were `[4, 4.2.3, 4.2.5]` the lineage assignment would be
-4.2. If there is more than one called lineage from a different major lineage group, a
-mixed lineage assignment is given. For example `[4, 4.2.3, 4.2.5, 3.2]` would still be
-called lineage 4.2, however, `[4, 4.2.3, 4.2.5, 3.2, 3.1]` would be called mixed.
+[Baseline variant analysis](#baseline-variant-analysis) for the lineage assignment.
 
 In the end, we chose to exclude samples from further analysis if they met any of the
 following criteria:
@@ -642,56 +649,9 @@ following criteria:
 - Unknown lineage assignment - no valid SNPs at lineage-defining sites
 
 This filtering criteria led to a further 57 samples being excluded; leaving us with a
-total of 150 samples to use for the remainder of this work.
-
-In addition to the QC of the Illumina/Nanopore data, we sadly had to exclude 26/35
-PacBio sequencing datasets due to mismatched Illumina/Nanopore data or PacBio coverage
-lower than 20x.
-
-#### Genetic clustering of samples
-
-Although there is scientific interest in the question of identifying transmission chains
-from genetic data, all the actionable public health information exists in the
-identification of transmission clusters [@doi:10/d9r7; @doi:10/f8gsk2].
-
-The first step towards clustering a set of genomes is determining a distance matrix.
-Typically, this is done either by feeding aligned genomes into a phylogenetic
-tree-building tool, or more coarsely, by merely counting SNP differences and clustering
-based on these [@doi:10/f2g6zn; @doi:10/d9r7; @doi:10/f8gsk2]. For the majority of
-bacteria, there is a necessary step of identifying recombination tracts - which will
-contain a high density of SNPs - and removing them. Removal of these SNPs is necessary
-as they will have arrived at a different rate to the putative molecular clock and will
-artefactually extend branch lengths on the phylogenetic tree
-[@doi:10/d9r7; @doi:10/f8gsk2]. In the case of Mtb, however, there is virtually no
-recombination [@doi:10/fhqqkv; @doi:10/ftp6r2; @doi:10/f4mrqv], so this step in not
-required.
-
-There are three main issues we need to address or keep in mind for the clustering
-component of this chapter:
-
-- When running a variant caller on a single sample, typically the tool only makes a
-  non-reference call when it finds a definite difference from the reference. Therefore,
-  it is impossible to tell the difference between a reference-matching site and one in
-  which there is genotyping uncertainty. One solution is to make a de-duplicated list of
-  variants found in all samples and genotype the samples at those positions. Solving
-  this reference-bias issue is the strength of the `compare` routine within `pandora`.
-  It tackles the problem in this manner while also handling issues of overlapping
-  variants in the list of all-sample-variants.
-- What distance measure do we use? Do we exclude positions where any sample has missing
-  data? Missing data of this type could be due to low coverage, but it could also be
-  because a section of the genome is not present. We will extensively cover this issue
-  for *E. coli* in [Chapter 1](#chapter-1-variant-discovery-in-genome-graphs). The
-  pan-genome of Mtb is small, but it does exist nonetheless [@doi:10/d9r8;
-  @doi:10/f4mrqv]. There is also a secondary issue that if certain regions have
-  clustered genetic variation in some lineages of Mtb then reads will not map well to
-  the reference. Both of the above issues are handled by `pandora` due to its use of a
-  PRG, but we still need to make a choice about missing data.
-- How do we handle sites where there is evidence of heterozygosity - i.e. a mixed
-  sample?
-
-For this chapter, we define genetic distance to be the sum of genetic discordances,
-where missing data and heterozygosity do not cause discordance and study the clustering
-this definition generates.
+total of 150 samples to use for the remainder of this work. In addition to the QC of the
+Illumina/Nanopore data, we sadly had to exclude 26/35 PacBio sequencing datasets due to
+mismatched Illumina/Nanopore data or PacBio coverage lower than 20x.
 
 #### Baseline variant analysis
 
@@ -730,15 +690,13 @@ with samples coloured by the site the data came from.](images/alt_concordance.pn
 
 As transmission clusters are ultimately defined based on a SNP distance matrix, it is
 important to understand how such matrices differ between Illumina and Nanopore variant
-calls. As we saw in Figure {@fig:alt_concordance} that the Nanopore SNPs are reasonably
-concordant with Illumina, but how does this relate to distances between samples? To
-investigate this a consensus sequence was generated from the filtered VCFs by replacing
-reference positions with called alternate bases. Any positions with a null genotype or
-that failed the filtering we masked by replacing the reference positions with an N.
-Positions which do not appear in the VCF (i.e. no reads mapped to this region) were also
-masked, as were positions in a previously-defined genome mask of repetitve regions
-[@doi:10/f3hxn7]. We then generate a pairwise SNP distance matrix for each sequencing
-technology from their respective consensus genomes using `snp-dists` [@doi:10/d9zj].  
+calls. To investigate this, a consensus sequence was generated from the filtered VCFs by
+replacing reference positions with passing SNP calls. Any positions with a null genotype
+or that failed the filtering were masked. Positions which do not appear in the VCF (i.e.
+no reads mapped to this region) were also masked, as were positions in repetitive
+regions [@doi:10/f3hxn7]. We then generate a pairwise SNP distance matrix for each
+sequencing technology from their respective consensus genomes using `snp-dists`
+[@doi:10/d9zj].  
 Figure {@fig:dotplot} shows the relationship of these distances between pairs of samples
 based on the sequencing technology used. While the relationship across all samples of
 all distances is interesting, in the context of defining transmission clusters, it is
@@ -837,6 +795,12 @@ recommendation of which method to call variants with: `bcftools`, `pandora map`
 (single-sample), or `pandora compare` (multi-sample). And what SNP threshold is required
 to ensure clusters are as similar as possible - if it *is* possible to get comparable
 clusters.
+
+---
+
+All of the analysis in this chapter was performed by myself - with the exception of the
+running of COMPASS - and all of the pipelines can be found at
+<https://github.com/mbhall88/head_to_head_pipeline>.
 
 #### Outstanding work
 
