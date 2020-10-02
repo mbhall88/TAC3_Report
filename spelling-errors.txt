@@ -7,11 +7,12 @@ basecalling
 benchmarked
 BFS
 Bielefeld
-bioinformatics
+Bioinformatics
 Bruijn
 CCS
 coli
 Colquhoun
+combinatorial
 contigs
 COVID
 dataset
@@ -50,7 +51,6 @@ indels
 intergenic
 Ishi
 jjtq
-Klebsiella
 Lachlan
 Leandro
 Lowenstein
@@ -65,7 +65,6 @@ methylation
 MGIT
 mrqv
 MSA
-MSAs
 Mtb
 Mycobacterial
 mycobacteriologist
@@ -75,19 +74,18 @@ nasopharyngeal
 Neisseria
 NHMRC
 novo
-nq
 NTM
 ONT’s
 onwards
 PacBio
 pangenome
 PanRG
-panX
 Papua
 phenotypic
 phenotyping
 phylogenetic
 Phylogenetics
+phylogroup
 pneumoniae
 polymorphisms
 ppe
@@ -97,7 +95,6 @@ preprint
 preprints
 PRG
 PRGs
-PRG’s
 Programme
 prokaryote
 pyrazinamide
@@ -107,7 +104,6 @@ repetitve
 repurposed
 resequenced
 rifampicin
-roc
 SNP
 SNPs
 subsample
