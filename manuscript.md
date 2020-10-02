@@ -3,7 +3,7 @@ author-meta:
 - Michael B. Hall
 bibliography:
 - content/manual-references.json
-date-meta: '2020-10-01'
+date-meta: '2020-10-02'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
 
-  <meta name="dc.date" content="2020-10-01" />
+  <meta name="dc.date" content="2020-10-02" />
 
-  <meta name="citation_publication_date" content="2020-10-01" />
+  <meta name="citation_publication_date" content="2020-10-02" />
 
   <meta name="dc.language" content="en-UK" />
 
@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/4ffc2719367a1eded3b0fdc46b9715ce00179787/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/e3967821cb77bbbed5b557b9974c311cb370ad14/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/4ffc2719367a1eded3b0fdc46b9715ce00179787/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/e3967821cb77bbbed5b557b9974c311cb370ad14/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/4ffc2719367a1eded3b0fdc46b9715ce00179787/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/e3967821cb77bbbed5b557b9974c311cb370ad14/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,10 +101,10 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/4ffc2719367a1eded3b0fdc46b9715ce00179787/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/e3967821cb77bbbed5b557b9974c311cb370ad14/))
 was automatically generated
-from [mbhall88/TAC3_Report@4ffc271](https://github.com/mbhall88/TAC3_Report/tree/4ffc2719367a1eded3b0fdc46b9715ce00179787)
-on October 1, 2020.
+from [mbhall88/TAC3_Report@e396782](https://github.com/mbhall88/TAC3_Report/tree/e3967821cb77bbbed5b557b9974c311cb370ad14)
+on October 2, 2020.
 </em></small>
 
 ## Authors
@@ -535,7 +535,10 @@ We filtered `pandora` (Nanopore/Illumina) variants based on the following criter
 - Less than 5%/5% of reads are on one strand
 - 60%/80% or more of k-mers on the allele have zero coverage
 
-![ROC curve for Illumina and Nanopore data](images/roc.png){#fig:roc}
+![Recall](images/recall.png){#fig:recall}
+
+
+![Precision](images/precision.png){#fig:precision}
 
 Whilst I wrote nearly all of the code and associated tests for evaluating the recall for
 this analysis, a lot of it has since been refactored by Leandro Ishi and by Martin Hunt
