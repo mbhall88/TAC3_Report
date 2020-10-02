@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Michael B. Hall" />
-  <meta name="dcterms.date" content="2020-10-01" />
+  <meta name="dcterms.date" content="2020-10-02" />
   <meta name="keywords" content="phd, thesis-plan, genome-graphs, bacterial-genomics, nanopore, tuberculosis, variant-calling, drug-resistance" />
   <title>Third-year progress report for thesis advisory committee</title>
   <style>
@@ -28,8 +28,8 @@
   <meta name="citation_title" content="Third-year progress report for thesis advisory committee" />
   <meta property="og:title" content="Third-year progress report for thesis advisory committee" />
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
-  <meta name="dc.date" content="2020-10-01" />
-  <meta name="citation_publication_date" content="2020-10-01" />
+  <meta name="dc.date" content="2020-10-02" />
+  <meta name="citation_publication_date" content="2020-10-02" />
   <meta name="dc.language" content="en-UK" />
   <meta name="citation_language" content="en-UK" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@
   <meta name="citation_fulltext_html_url" content="https://mbhall88.github.io/TAC3_Report/" />
   <meta name="citation_pdf_url" content="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/4ffc2719367a1eded3b0fdc46b9715ce00179787/" />
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/4ffc2719367a1eded3b0fdc46b9715ce00179787/" />
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/4ffc2719367a1eded3b0fdc46b9715ce00179787/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/e3967821cb77bbbed5b557b9974c311cb370ad14/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/e3967821cb77bbbed5b557b9974c311cb370ad14/" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/e3967821cb77bbbed5b557b9974c311cb370ad14/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -63,10 +63,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://mbhall88.github.io/TAC3_Report/v/4ffc2719367a1eded3b0fdc46b9715ce00179787/">permalink</a>)
+(<a href="https://mbhall88.github.io/TAC3_Report/v/e3967821cb77bbbed5b557b9974c311cb370ad14/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/mbhall88/TAC3_Report/tree/4ffc2719367a1eded3b0fdc46b9715ce00179787">mbhall88/TAC3_Report@4ffc271</a>
-on October 1, 2020.
+from <a href="https://github.com/mbhall88/TAC3_Report/tree/e3967821cb77bbbed5b557b9974c311cb370ad14">mbhall88/TAC3_Report@e396782</a>
+on October 2, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -460,9 +460,14 @@ variants improves both error rate and recall for <code>pandora</code>.</p>
 <li>Less than 5%/5% of reads are on one strand</li>
 <li>60%/80% or more of k-mers on the allele have zero coverage</li>
 </ul>
-<div id="fig:roc" class="fignos">
+<div id="fig:recall" class="fignos">
 <figure>
-<img src="images/roc.png" alt="" /><figcaption><span>Figure 7:</span> ROC curve for Illumina and Nanopore data</figcaption>
+<img src="images/recall.png" alt="" /><figcaption><span>Figure 7:</span> Recall</figcaption>
+</figure>
+</div>
+<div id="fig:precision" class="fignos">
+<figure>
+<img src="images/precision.png" alt="" /><figcaption><span>Figure 8:</span> Precision</figcaption>
 </figure>
 </div>
 <p>Whilst I wrote nearly all of the code and associated tests for evaluating the recall for
@@ -634,12 +639,12 @@ segregation-based metric above -0.5, or a variant distance bias below 0.002.</p>
 concordance. Two metrics of interest here are the call rate - what proportion of COMPASS
 alternate alleles does <code>bcftools</code> make a reference/alternate call - and the concordance
 - what proportion of COMPASS alternate alleles does <code>bcftools</code> genotype agree with.
-Figure <a href="#fig:alt_concordance">8</a> shows that concordance is very high between the two
+Figure <a href="#fig:alt_concordance">9</a> shows that concordance is very high between the two
 technologies, with nearly all samples having a concordance greater than 99.5%. Call rate
 is a little lower than this, with the majority of samples being above 97%.</p>
 <div id="fig:alt_concordance" class="fignos">
 <figure>
-<img src="images/alt_concordance.png" alt="" /><figcaption><span>Figure 8:</span> Call rate (Y-axis) and concordance (X-axis) of <code>bcftools</code> SNP calls to Illumina
+<img src="images/alt_concordance.png" alt="" /><figcaption><span>Figure 9:</span> Call rate (Y-axis) and concordance (X-axis) of <code>bcftools</code> SNP calls to Illumina
 COMPASS calls. Call rate is what proportion of COMPASS alternate alleles does
 <code>bcftools</code> make a reference/alternate call. Concordance is what proportion of COMPASS
 alternate alleles does <code>bcftools</code> genotype agree with. Each point represents a sample,
@@ -648,7 +653,7 @@ with samples coloured by the site the data came from.</figcaption>
 </div>
 <p>As transmission clusters are ultimately defined based on a SNP distance matrix, it is
 important to understand how such matrices differ between Illumina and Nanopore variant
-calls. As we saw in Figure <a href="#fig:alt_concordance">8</a> that the Nanopore SNPs are reasonably
+calls. As we saw in Figure <a href="#fig:alt_concordance">9</a> that the Nanopore SNPs are reasonably
 concordant with Illumina, but how does this relate to distances between samples? To
 investigate this a consensus sequence was generated from the filtered VCFs by replacing
 reference positions with called alternate bases. Any positions with a null genotype or
@@ -657,14 +662,14 @@ Positions which do not appear in the VCF (i.e. no reads mapped to this region) 
 masked, as were positions in a previously-defined genome mask of repetitve regions
 <span class="citation" data-cites="zOTPF2vW">[<a href="#ref-zOTPF2vW" role="doc-biblioref">41</a>]</span>. We then generate a pairwise SNP distance matrix for each sequencing
 technology from their respective consensus genomes using <code>snp-dists</code> <span class="citation" data-cites="WXM67imc">[<a href="#ref-WXM67imc" role="doc-biblioref">42</a>]</span>.<br />
-Figure <a href="#fig:dotplot">9</a> shows the relationship of these distances between pairs of samples
+Figure <a href="#fig:dotplot">10</a> shows the relationship of these distances between pairs of samples
 based on the sequencing technology used. While the relationship across all samples of
 all distances is interesting, in the context of defining transmission clusters, it is
 slightly misleading. Transmission clusters by grouping together samples that are within
 a certain number of SNPs. The threshold used for this grouping is generally in the order
 of tens-of-SNPs <span class="citation" data-cites="tGyXVFvJ">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">31</a>]</span> so it makes more sense to look at the distance
-relationship for samples that are closer to each other. In Figure <a href="#fig:close_dotplot">10</a>,
-we zoom in on the bottom left of Figure <a href="#fig:dotplot">9</a>, to samples within an Illumina
+relationship for samples that are closer to each other. In Figure <a href="#fig:close_dotplot">11</a>,
+we zoom in on the bottom left of Figure <a href="#fig:dotplot">10</a>, to samples within an Illumina
 SNP distance of 100. It shows that, at this scale, the relationship between Illumina-
 and Nanopore-defined SNP distance is much closer. The correlation between the two can be
 quantified by the linear equation <span class="math inline">\(y=0.93x+0.84\)</span>, where <span class="math inline">\(y\)</span> is the predicted Nanopore
@@ -675,7 +680,7 @@ we can use this as <span class="math inline">\(x\)</span> and define our Nanopor
 Illumina.</p>
 <div id="fig:dotplot" class="fignos">
 <figure>
-<img src="images/dotplot.png" alt="" /><figcaption><span>Figure 9:</span> Relationship between pairwise SNP distance for Illumina (COMPASS; X-axis) and Nanopore
+<img src="images/dotplot.png" alt="" /><figcaption><span>Figure 10:</span> Relationship between pairwise SNP distance for Illumina (COMPASS; X-axis) and Nanopore
 (<code>bcftools</code>; Y-axis). Each point represents a pair of samples. The red diagonal line
 is the identity line, which is where the points should lie if the distance between samples
 is the same for each technology. The black line shows the line of best fit for the data.
@@ -685,7 +690,7 @@ coefficient (r).</figcaption>
 </div>
 <div id="fig:close_dotplot" class="fignos">
 <figure>
-<img src="images/close_dotplot.png" alt="" /><figcaption><span>Figure 10:</span> Relationship between pairwise SNP distance for Illumina (COMPASS; X-axis) and Nanopore
+<img src="images/close_dotplot.png" alt="" /><figcaption><span>Figure 11:</span> Relationship between pairwise SNP distance for Illumina (COMPASS; X-axis) and Nanopore
 (<code>bcftools</code>; Y-axis) for samples within 100 SNPs of each other (based on Illumina distance).
 Each point represents a pair of samples. The red diagonal line
 is the identity line, which is where the points should lie if the distance between samples
@@ -703,10 +708,10 @@ positions in the assembly where mapped Illumina reads did not have more than 90%
 agreement with the assembly, or had less than 10 reads. One sample was excluded due to
 the detection of other species contigs within the assembly. We then used <code>varifier</code> to
 assess the precision and recall of the SNP calls for the eight samples with high quality
-assemblies. Figure <a href="#fig:baseline_truth">11</a> shows that …</p>
+assemblies. Figure <a href="#fig:baseline_truth">12</a> shows that …</p>
 <div id="fig:baseline_truth" class="fignos">
 <figure>
-<img src="images/baseline_truth.png" alt="" /><figcaption><span>Figure 11:</span> Evaluation of the Illumina (COMPASS; green) and Nanopore (<code>bcftools</code>; orange) SNP calls to the PacBio CCS assemblies for eight samples using <code>varifier</code>. The left plot shows precision and the right is recall. Each point is one of the eight samples.</figcaption>
+<img src="images/baseline_truth.png" alt="" /><figcaption><span>Figure 12:</span> Evaluation of the Illumina (COMPASS; green) and Nanopore (<code>bcftools</code>; orange) SNP calls to the PacBio CCS assemblies for eight samples using <code>varifier</code>. The left plot shows precision and the right is recall. Each point is one of the eight samples.</figcaption>
 </figure>
 </div>
 <h4 id="per-sample-variant-calls-with-pandora">Per-sample variant calls with <code>pandora</code></h4>
@@ -1171,7 +1176,7 @@ DOI: <a href="https://doi.org/10.1038/s42256-020-0167-4">10.1038/s42256-020-0167
 <div id="ref-VSoEWPFn">
 <p>13. <strong>nanoporetech/medaka</strong> <br />
 Oxford Nanopore Technologies<br />
-(2020-09-30) <a href="https://github.com/nanoporetech/medaka">https://github.com/nanoporetech/medaka</a></p>
+(2020-10-01) <a href="https://github.com/nanoporetech/medaka">https://github.com/nanoporetech/medaka</a></p>
 </div>
 <div id="ref-pPxMDtt0">
 <p>14. <strong>High precision <em>Neisseria gonorrhoeae</em> variant and antimicrobial resistance calling from metagenomic Nanopore sequencing</strong> <br />
