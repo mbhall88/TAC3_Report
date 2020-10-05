@@ -4,7 +4,7 @@ basecalling
 benchmarked
 BFS
 Bielefeld
-bioinformatics
+Bioinformatics
 Bruijn
 CCS
 coli
@@ -68,6 +68,7 @@ novo
 NTM
 onwards
 PacBio
+Padova
 PanRG
 Papua
 phenotypic
@@ -86,6 +87,7 @@ PRGs
 Programme
 prokaryote
 QUAL
+RECOMB
 refbias
 repurposed
 SNP

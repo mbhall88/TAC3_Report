@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/b09dfe0c36d95da89fe34b3a77fc2559f4a09b83/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b09dfe0c36d95da89fe34b3a77fc2559f4a09b83/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b09dfe0c36d95da89fe34b3a77fc2559f4a09b83/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/b09dfe0c36d95da89fe34b3a77fc2559f4a09b83/))
 was automatically generated
-from [mbhall88/TAC3_Report@819b83e](https://github.com/mbhall88/TAC3_Report/tree/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88)
+from [mbhall88/TAC3_Report@b09dfe0](https://github.com/mbhall88/TAC3_Report/tree/b09dfe0c36d95da89fe34b3a77fc2559f4a09b83)
 on October 5, 2020.
 </em></small>
 
@@ -916,6 +916,8 @@ I plan to submit (pending the six-month extension) my thesis in (INSERT MONTH) 2
 
 ### List of scientific courses and conferences attended to date and planned for next year
 
+- [RECOMB][recomb], Padova, Italy - April 2021
+- [Computational Pan-genomics workshop][bielefeld], Bielefeld, Germany - February 2021
 - Applied Bioinformatics and Public Health Microbiology, Hinxton, UK - May 2021
 - [TBScience][tbscience] - October 2020 (virtual)
 - [Genome Informatics][gi] - September 2020 (virtual)
@@ -1009,6 +1011,7 @@ apply for within the next year or two:
 [nhmrc]: https://www.nhmrc.gov.au/funding/find-funding/investigator-grants
 [postpone]: https://www.nhmrc.gov.au/about-us/news-centre/changes-nhmrcs-grant-schedule-and-policies-response-covid-19
 [tbscience]: https://conf2020.theunion.org/programme/tb-science/
+[recomb]: https://www.recomb2021.org/
 
 
 
