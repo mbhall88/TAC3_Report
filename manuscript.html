@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Michael B. Hall" />
-  <meta name="dcterms.date" content="2020-10-02" />
+  <meta name="dcterms.date" content="2020-10-05" />
   <meta name="keywords" content="phd, thesis-plan, genome-graphs, bacterial-genomics, nanopore, tuberculosis, variant-calling, drug-resistance" />
   <title>Third-year progress report for thesis advisory committee</title>
   <style>
@@ -28,8 +28,8 @@
   <meta name="citation_title" content="Third-year progress report for thesis advisory committee" />
   <meta property="og:title" content="Third-year progress report for thesis advisory committee" />
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
-  <meta name="dc.date" content="2020-10-02" />
-  <meta name="citation_publication_date" content="2020-10-02" />
+  <meta name="dc.date" content="2020-10-05" />
+  <meta name="citation_publication_date" content="2020-10-05" />
   <meta name="dc.language" content="en-UK" />
   <meta name="citation_language" content="en-UK" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@
   <meta name="citation_fulltext_html_url" content="https://mbhall88.github.io/TAC3_Report/" />
   <meta name="citation_pdf_url" content="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/a3d3550288f6b7b000263defff7e60492f1a8923/" />
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/a3d3550288f6b7b000263defff7e60492f1a8923/" />
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/a3d3550288f6b7b000263defff7e60492f1a8923/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88/" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -63,10 +63,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://mbhall88.github.io/TAC3_Report/v/a3d3550288f6b7b000263defff7e60492f1a8923/">permalink</a>)
+(<a href="https://mbhall88.github.io/TAC3_Report/v/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/mbhall88/TAC3_Report/tree/a3d3550288f6b7b000263defff7e60492f1a8923">mbhall88/TAC3_Report@a3d3550</a>
-on October 2, 2020.
+from <a href="https://github.com/mbhall88/TAC3_Report/tree/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88">mbhall88/TAC3_Report@819b83e</a>
+on October 5, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -122,50 +122,10 @@ the <em>pe/ppe</em> genes.</li>
 </ol>
 <!--================================================================================-->
 <h3 id="motivation-and-background">Motivation and Background</h3>
-<p>In 2018, 1.4 million people died of tuberculosis (TB) globally, and over 10 million
-people fell ill to the disease. There were also 484,000 new cases of
-rifampicin-resistant TB reported, of which 78% were multi-drug resistant (MDR)
-<span class="citation" data-cites="owU3wUrb">[<a href="#ref-owU3wUrb" role="doc-biblioref">1</a>]</span>. Drug-resistant TB is not a new problem; the first clinical trial
-using Streptomycin to treat TB reported resistance and this outcome influenced the
-creation of the four-drug first-line regimen used today. Standard of care requires
-phenotypic testing of the infecting organism against these four drugs to ensure that
-appropriate treatment is prescribed. However, <em>Mycobacterium tuberculosis</em> (Mtb), the
-causative agent of TB, is a slow-growing organism and the gold-standard phenotypic tests
-(“mix bug and drug”) take around two months to complete. Thus, the traditional clinical
-diagnostic and treatment regimen is slow and expensive. Whole-genome sequencing offers a
-faster solution; recently it was shown that equivalent results are achievable by
-sequencing Mtb grown in “liquid culture” (also known as MGIT, Mycobacterial Growth
-Indicator Tube) after two weeks of culture in contrast to the two-month traditional
-(Lowenstein-Jensen) culture method <span class="citation" data-cites="Z3NG0hEI">[<a href="#ref-Z3NG0hEI" role="doc-biblioref">2</a>]</span>. A number of genes are
-implicated in drug resistance and predicting resistance from sequencing data based on a
-catalogue of resistance single-nucleotide polymorphisms (SNPs) and indels (insertions or
-deletions) works with high-specificity <span class="citation" data-cites="d8RxFwPN 11Jcu87Ae">[<a href="#ref-d8RxFwPN" role="doc-biblioref">3</a>,<a href="#ref-11Jcu87Ae" role="doc-biblioref">4</a>]</span>. For the four
-first-line drugs, a study by the CRyPTIC consortium is the first of its kind to
-demonstrate that phenotyping is not required if genotype predicts susceptibility
-<span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>. However, as the genetic basis for drug resistance is not
-entirely understood, there is still a sensitivity gap that differs drug-by-drug.</p>
-<p>Public health requirements for TB diagnostics are <strong>resistance prediction, species
-identification, and clustering</strong> of genomes. The clusters are intended to contain
-potential transmission events, thus enabling more effective contact tracing. All of the
-main requirements are currently successfully achieved with Illumina sequencing
-technology. However, there are reasons to consider abandoning Illumina for Oxford
-Nanopore Technology’s (ONT) sequencer. First, there is cost - Illumina has raised its
-reagent prices considerably. Second, the burden of TB lies primarily in places where
-there is neither capital nor infrastructure for purchasing or maintaining a large
-machine. The third is speed: Votintseva <em>et al.</em> showed that it was feasible to go from
-patient to result via a Nanopore sequencer in 12.5 hours <span class="citation" data-cites="9NLFJZN2">[<a href="#ref-9NLFJZN2" role="doc-biblioref">6</a>]</span>.
-Since this publication, the yield and quality of Nanopore has risen. Therefore, a
-diagnostic that delivers results while the patient is in the clinic is now imaginable.</p>
-<p>As an aside, it is worth noting that in high prevalence areas, there is no interest in
-transmission analysis, and therefore all of the information that they need (species and
-resistance) could be attained via deep amplicon sequencing. We accept this but ignore it
-and focus on a whole-genome solution nevertheless; both because of the better
-phylogenetic resolution, and because we do not yet know the relevant genetic mutations
-associated with new drugs.</p>
 <p>The idea of using a single, linear reference genome to represent a population of
 individuals is not ideal. Even more so in the context of a bacterium such as <em>Salmonella
 enterica</em>, where two individuals can differ to such a degree that they only share 16% of
-their genes <span class="citation" data-cites="5WDPm9pG IYW3CNeu">[<a href="#ref-5WDPm9pG" role="doc-biblioref">7</a>,<a href="#ref-IYW3CNeu" role="doc-biblioref">8</a>]</span>. This fluidity of genetic content leads to
+their genes <span class="citation" data-cites="5WDPm9pG IYW3CNeu">[<a href="#ref-5WDPm9pG" role="doc-biblioref">1</a>,<a href="#ref-IYW3CNeu" role="doc-biblioref">2</a>]</span>. This fluidity of genetic content leads to
 the concept of a pan-genome; defined as the set of all genes observed in a species. Some
 genes are more common than others within this pan-genome, leading to the distinction of
 the ‘core’ and ‘accessory’ genome with the core being those shared across (most) all
@@ -176,7 +136,7 @@ discover is only 56%. Clearly, comparing many samples requires better methods th
 single-reference based ones.</p>
 <div id="fig:refbias" class="fignos">
 <figure>
-<img src="images/refbias.png" style="height:4in" alt="" /><figcaption><span>Figure 1:</span> An illustration of how reference bias can impact variant-calling. Each vertical
+<img src="images/refbias.png" style="width:40.0%" alt="" /><figcaption><span>Figure 1:</span> An illustration of how reference bias can impact variant-calling. Each vertical
 column signifies an individual genome, with the coloured blocks representing genes.
 Numbers label 50 segregating SNPs. The percentages at the bottom express the proportion
 of SNPs which can be detected using each of the 6 ‘genomes’ as a reference by mapping
@@ -187,51 +147,65 @@ perfect reads from the remaining 5 to this reference.</figcaption>
 current methods, which assume a single reference, to a pan-genome? An approach to
 answering this question that has been gaining considerable traction in recent years is
 that of genome graphs. This new paradigm uses a population reference graph (PRG) as its
-equivalent of a single, linear, reference genome. A PRG is built to represent variation
-seen within a population, conceding the fact that no single genome can accurately
-represent an entire species. To construct such a PRG, one takes a multiple sequence
-alignment (MSA) and collapses shared sequence and creates “bubbles”, or branch points,
-where they do not (see Figure <a href="#fig:prg">2</a> for an illustration of this process). We define
-a collection of PRGs as a pan-genome reference graph (PanRG), which we will
-interchangeably refer to as a pan-genome. Thus far, genome graph methods have focused
-mainly on eukaryotes. Given the rich diversity of genetic content in the prokaryote
-world, it would seem genome graphs are more suited to utilisation there.</p>
+equivalent of a reference genome. A PRG is built to represent variation seen within a
+population, conceding the fact that no single genome can accurately represent an entire
+species. To construct such a PRG, one takes a multiple sequence alignment (MSA) and
+collapses shared sequence and creates “bubbles”, or branch points, where they do not
+(see Figure <a href="#fig:prg">2</a> for an illustration of this process). We define a collection of
+PRGs as a pan-genome reference graph (PanRG), which we will interchangeably refer to as
+a pan-genome. Thus far, genome graph methods have focused mainly on eukaryotes. Given
+the rich diversity of genetic content in the prokaryote world, it would seem genome
+graphs are more suited to utilisation there.</p>
 <div id="fig:prg" class="fignos">
 <figure>
-<img src="images/prg.png" style="width:100.0%" alt="" /><figcaption><span>Figure 2:</span> An illustration of how a population reference graph (PRG) is constructed. Regions
+<img src="images/prg.png" style="width:65.0%" alt="" /><figcaption><span>Figure 2:</span> An illustration of how a population reference graph (PRG) is constructed. Regions
 (columns) of shared sequence are collapsed into a single node. Those that differ are
 split into “bubbles”, or branching nodes.</figcaption>
 </figure>
 </div>
-<p>Nanopore sequencing yields very long reads (up to 2.2Mbp <span class="citation" data-cites="QrKrCCsB">[<a href="#ref-QrKrCCsB" role="doc-biblioref">9</a>]</span>), the
-mean/mode read identity tends to fall in the range of 87-94% (using ONT’s <code>guppy</code>
-basecaller), while on a consensus level, it can achieve 99.94% with assembly polishing
-<span class="citation" data-cites="lwFwJNS9">[<a href="#ref-lwFwJNS9" role="doc-biblioref">10</a>]</span>.<br />
+<p>In 2018, 1.4 million people died of tuberculosis (TB) globally, and over 10 million
+people fell ill to the disease, with 377,520 of those being multi-drug resistant (MDR)
+<span class="citation" data-cites="owU3wUrb">[<a href="#ref-owU3wUrb" role="doc-biblioref">3</a>]</span>. Standard of care requires phenotypic testing of the infecting
+organism against the four first-line drugs to ensure that appropriate treatment is
+prescribed. However, <em>Mycobacterium tuberculosis</em> (Mtb), the causative agent of TB, is a
+slow-growing organism and phenotypic testing takes around two months to complete.
+Whole-genome sequencing (WGS) offers a faster solution; recently it was shown that
+equivalent results are achievable by sequencing Mtb grown in liquid culture after two
+weeks of culture in contrast to the two-month traditional (Lowenstein-Jensen) culture
+method <span class="citation" data-cites="Z3NG0hEI">[<a href="#ref-Z3NG0hEI" role="doc-biblioref">4</a>]</span>. A number of genes are implicated in drug resistance
+and predicting resistance from sequencing data based on a catalogue of resistance SNPs
+and indels works with high specificity <span class="citation" data-cites="d8RxFwPN 11Jcu87Ae">[<a href="#ref-d8RxFwPN" role="doc-biblioref">5</a>,<a href="#ref-11Jcu87Ae" role="doc-biblioref">6</a>]</span>. For the four
+first-line drugs, a study by the CRyPTIC consortium is the first of its kind to
+demonstrate that phenotyping is not required if genotype predicts susceptibility
+<span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">7</a>]</span>. However, as the genetic basis for drug resistance is not
+entirely understood, there is still a sensitivity gap that differs drug-by-drug.</p>
+<p>Nanopore sequencing yields ultra long reads with a mean/mode read identity in the range
+of 87-94%, while on a consensus level, it can achieve 99.94% identity with assembly
+polishing <span class="citation" data-cites="lwFwJNS9">[<a href="#ref-lwFwJNS9" role="doc-biblioref">8</a>]</span>.<br />
 Variant calling with Nanopore sequencing data has seen a somewhat slow development.
-Currently, the main tools that have had reasonable testing done and are versatile enough
-to detect both SNPs and (some) indels are <code>nanopolish</code> <span class="citation" data-cites="Oe1xiQra">[<a href="#ref-Oe1xiQra" role="doc-biblioref">11</a>]</span>, Clair
-<span class="citation" data-cites="LurPKJ01">[<a href="#ref-LurPKJ01" role="doc-biblioref">12</a>]</span> and <code>medaka</code> <span class="citation" data-cites="VSoEWPFn">[<a href="#ref-VSoEWPFn" role="doc-biblioref">13</a>]</span>. A recent
-benchmark showed that Nanopore variant calling provides reliable diagnostic information
-for <em>Neisseria gonorrhoeae</em> <span class="citation" data-cites="pPxMDtt0">[<a href="#ref-pPxMDtt0" role="doc-biblioref">14</a>]</span>. However, to date, there has
-been no extensive Nanopore variant calling benchmark done for Mtb. Given the potential
-benefits of using genome graphs and long-read Nanopore sequencing for bacterial
-genomics, it makes sense to try and blend the two.</p>
+Currently, the main tools that have had reasonable testing done are <code>nanopolish</code>
+<span class="citation" data-cites="Oe1xiQra">[<a href="#ref-Oe1xiQra" role="doc-biblioref">9</a>]</span>, Clair <span class="citation" data-cites="LurPKJ01">[<a href="#ref-LurPKJ01" role="doc-biblioref">10</a>]</span> and <code>medaka</code>
+<span class="citation" data-cites="VSoEWPFn">[<a href="#ref-VSoEWPFn" role="doc-biblioref">11</a>]</span>. A recent benchmark showed that Nanopore
+variant calling provides reliable diagnostic information for <em>Neisseria gonorrhoeae</em>
+<span class="citation" data-cites="pPxMDtt0">[<a href="#ref-pPxMDtt0" role="doc-biblioref">12</a>]</span>. However, to date, there has been no extensive Nanopore
+variant calling benchmark done for Mtb. Given the potential benefits of using genome
+graphs and long-read Nanopore sequencing for bacterial genomics, it makes sense to try
+and blend the two.</p>
 <p>Pandora is a method being developed in the group to genotype across the <em>entire</em>
-pan-genome of a bacterial sample - not just the core. It does this by working with a
-PRG, rather than a linear reference. The method is based on the following intuition
-(similar to that behind the Li and Stephens model in population genetics): genomes
-evolve by recombination and mutation, and thus we ought to be able to approximate a
-<span class="math inline">\(N+1\)</span> genome as a mosaic of the first <span class="math inline">\(N\)</span> genomes. <code>pandora</code> maps Nanopore reads to a
-graph encoding of a PRG, infers a mosaic, and provides genotypes at all variants in the
-PanRG. Mapping is done using minimising k-mers <span class="citation" data-cites="19hwdhKN">[<a href="#ref-19hwdhKN" role="doc-biblioref">15</a>]</span> in a similar vein to
-that done by <code>minimap</code><span class="citation" data-cites="1DgB6gqeS">[<a href="#ref-1DgB6gqeS" role="doc-biblioref">16</a>]</span>, and is therefore fast. By using Nanopore
-sequencing data, it is also possible to infer gene order as, in general, a single read
-will contain multiple genes, as opposed to Illumina sequencing where multiple reads are
-required to span a single gene. Note <code>pandora</code> does not (prior to this work) include any
-facility for discovering novel variation.</p>
+pan-genome of a bacterial sample. It does this by working with a PRG, rather than a
+linear reference. The method is based on the following intuition: genomes evolve by
+recombination and mutation, and thus we ought to be able to approximate a <span class="math inline">\(N+1\)</span> genome
+as a mosaic of the first <span class="math inline">\(N\)</span> genomes. <code>pandora</code> maps Nanopore reads to a graph encoding
+of a PRG, infers a mosaic, and provides genotypes at all variants in the PanRG. Mapping
+is done using minimising k-mers <span class="citation" data-cites="19hwdhKN">[<a href="#ref-19hwdhKN" role="doc-biblioref">13</a>]</span> in a similar vein to that done by
+<code>minimap</code><span class="citation" data-cites="1DgB6gqeS">[<a href="#ref-1DgB6gqeS" role="doc-biblioref">14</a>]</span>, and is therefore fast. By using Nanopore sequencing data, it
+is also possible to infer gene order as, in general, a single read will contain multiple
+genes, as opposed to Illumina sequencing where multiple reads are required to span a
+single gene. Note <code>pandora</code> does not (prior to this work) include any facility for
+discovering novel variation.</p>
 <h4 id="summary">Summary</h4>
 <p>This PhD seeks to develop new methods to enable Nanopore-based diagnostics and
-epidemiology for Mtb and other bacteria. By using PRGs as a strong prior <span class="citation" data-cites="2FYPCKEv 7AwGVQXO">[<a href="#ref-2FYPCKEv" role="doc-biblioref">17</a>,<a href="#ref-7AwGVQXO" role="doc-biblioref">18</a>]</span>, we should be able to mitigate the Nanopore error biases and indel
+epidemiology for Mtb and other bacteria. By using PRGs as a strong prior <span class="citation" data-cites="2FYPCKEv 7AwGVQXO">[<a href="#ref-2FYPCKEv" role="doc-biblioref">15</a>,<a href="#ref-7AwGVQXO" role="doc-biblioref">16</a>]</span>, we should be able to mitigate the Nanopore error biases and indel
 issues. In the process, we aim to construct a high-quality reference pan-genome for Mtb
 that we hope will open previously inaccessible parts of its genome for investigation.</p>
 <!--================================================================================-->
@@ -239,48 +213,36 @@ that we hope will open previously inaccessible parts of its genome for investiga
 <p>Variation in bacterial genomes can arise through a diverse range of processes. Mutations
 can occur during replication and are inherited vertically, genetic material can be
 transferred horizontally, and homologous recombination can lead to eukaryote-like gene
-conversion <span class="citation" data-cites="h4yvs7gl">[<a href="#ref-h4yvs7gl" role="doc-biblioref">19</a>]</span>. This breadth of ways in which bacteria can acquire new and
+conversion <span class="citation" data-cites="h4yvs7gl">[<a href="#ref-h4yvs7gl" role="doc-biblioref">17</a>]</span>. This breadth of ways in which bacteria can acquire new and
 varied genetic material results gives rise to the phenomenon of a pan-genome. Bacterial
 species with an “open” pan-genome may have individuals in their population who can share
-as little as 16% of their genes (<em>S. enterica</em>) <span class="citation" data-cites="5WDPm9pG">[<a href="#ref-5WDPm9pG" role="doc-biblioref">7</a>]</span>. Not all species’
+as little as 16% of their genes (<em>S. enterica</em>) <span class="citation" data-cites="5WDPm9pG">[<a href="#ref-5WDPm9pG" role="doc-biblioref">1</a>]</span>. Not all species’
 pan-genomes are this open, but it does raise the question: what do we use as a
 “reference” genome for such a species? One solution is to use the reference genome for
 the specific strain of interest. This works fine when dealing with a single sample or
 multiple samples of the same strain. However, when expanding to many samples from
 varying strains, the reference is no longer representative. An alternative solution is
-to focus solely on the core genome - the complement of genes found in all members of a
-species. The issue with this approach is the loss of information about variation in all
-of the non-core genes, which could be a large number if the pan-genome is open. See
-Figure ?? for an illustration of this reference-bias problem.</p>
-<!--![Schematic representation of a pan-genome. Each oval represents the-->
-<!--genetic content of a single individual within a species. Reference [@doi:10/gfw8gq].](images/pangenome.jpg){#fig:pangenome-->
-<!--width="50%"}-->
-<p>The message we are aiming to drive home at the beginning of this chapter is that
-reference-based analysis fundamentally cannot access all of the variation in a bacterial
-species.</p>
+to focus solely on the core genome. The issue with this approach is the loss of
+information about variation in all of the non-core genes, which could be a large number
+if the pan-genome is open.</p>
 <h4 id="prior-work-mosaic-approximations-and-genotyping">Prior work: Mosaic approximations and genotyping</h4>
-<p>Standard approaches to variant analysis are effectively a first-order approximation. In
-such an approximation, samples are considered identical to the reference, one maps reads
-to it, identifies clear SNPs via the read pileup, and then modifies the reference to get
-an estimate of the sample’s genome. As mentioned in
-<a href="#motivation-and-background">Motivation and Background</a>, <code>pandora</code> is a method developed
-by a previous PhD student in the lab, Rachel Colquhoun. It works on the premise of
-approximating a genome as a hierarchical mosaic. At a high-level, it represents a mosaic
-of loci - usually genes and intergenic regions - while at the locus-level, it is a
-mosaic of previously-seen genomes.</p>
+<p>As mentioned in <a href="#motivation-and-background">Motivation and Background</a>, <code>pandora</code> is a
+method developed by a previous PhD student in the lab, Rachel Colquhoun. It works on the
+premise of approximating a genome as a hierarchical mosaic. At a high-level, it
+represents a mosaic of loci - usually genes and intergenic regions - while at the
+locus-level, it is a mosaic of previously-seen genomes.</p>
 <p><code>pandora</code> aims to infer a consensus sequence from a PRG for a single sample or a
 collection of samples. In the case of a collection of samples, the consensus sequence
-will be one that collection of samples. <code>pandora</code> can additionally perform genotyping of
-the sample(s) with respect to this inferred consensus and produces a Variant Call Format
-(VCF) file. If a gene is present in only 2 of 50 samples then genotyping information is
-provided for those 2 samples and null for the other 48.</p>
+will be one that best fits the collection of samples. <code>pandora</code> can additionally perform
+genotyping of the sample(s) with respect to this inferred consensus and produces a
+Variant Call Format (VCF) file. If a gene is present in only 2 of 50 samples then
+genotyping information is provided for those 2 samples and null for the other 48.</p>
 <p>While <code>pandora</code>, before the work in this chapter, allows comparison of genomes to a
 level of detail provided by no other tool, there is still a significant shortcoming: it
 cannot discover novel variation. If a sample contains a variant not present in the PRG,
 the best <code>pandora</code> can do is select the path that is closest to that variant. The work
-in my first chapter outlines a method for removing this limitation within <code>pandora</code> and
-provides an analysis of the gain in recall and precision by incorporating <em>de novo</em>
-variant discovery into the <code>pandora</code> workflow.</p>
+in this chapter outlines a method for removing this limitation and provides an analysis
+of the gain in recall and precision by incorporating <em>de novo</em> variant discovery.</p>
 <h4 id="local-de-novo-variant-discovery-in-a-genome-graph">Local <em>de novo</em> variant discovery in a genome graph</h4>
 <p>There are two significant difficulties in discovering <em>de novo</em> variants on a graph. The
 first is finding regions within the graph that look like the reads mapping to them
@@ -307,78 +269,26 @@ the de Bruijn graph, beginning from the <em>right</em> anchor. Each entry in the
 describes the shortest path from that node to the end anchor. So as we walk along the
 DFS tree, if a node is not reachable within our maximum distance threshold, we abandon
 path enumeration.</p>
+<hr />
 <p>I programmed the above methods in C++ and added them into the code base for <code>pandora</code>.
 They constitute 1325 lines of source code and 3486 lines of test code. I had help with
 the implementation of multi-threading the <em>de novo</em> component and the BFS pruning from
-Leandro Ishi. The overall workflow for <code>pandora</code> with <em>de novo</em> variant discovery
-enabled is illustrated in Figure ??.</p>
-<!--![Schematic of the `pandora` method. Note Steps 4-6 are those developed and added-->
-<!--in the scope of chapter 1. 1) A Population Reference Graph (PRG) built from known-->
-<!--variants or previous samples. 2) Sequencing reads to try and map on to the PRG. 3) Reads-->
-<!--mapped on to the PRG (where possible) using minimising k-mers. Coloured segments show-->
-<!--paths where reads map. 4) Local assembly of the reads using a de Bruijn graph due to-->
-<!--lower than expected coverage on a section of the PRG (many unmapped reads). A new path-->
-<!--is discovered (orange). 5) The new path is added into the original PRG. 6) Reads are-->
-<!--remapped to the new PRG with many reads mapping to the newly included path (orange).](images/pandora.png){#fig:pandora-->
-<!--width="80%"}-->
+Leandro Ishi.</p>
 <h4 id="evaluation">Evaluation</h4>
 <h5 id="simulated-data">Simulated data</h5>
 <p>I have previously presented results from evaluating this new <em>de novo</em> variant discovery
 method on simulated data to ensure if does indeed do as it advertises. For the sake of
 keeping this report concise, I will refrain from repeating the results here, except to
 say that this method does indeed find a large number of variants not already in the PRG.</p>
-<!--The first step in evaluating the effect of adding *de novo* variant calling to `pandora`-->
-<!--is with a simulated dataset. What we aim to show here is that the addition of *de novo*-->
-<!--discovery allows `pandora` to improve its probability of variant detection (recall). The-->
-<!--first step was randomly selecting 100 gene MSAs from a pool of 29702 obtained for-->
-<!--*Escherichia coli* from the panX database [@doi:10/gczkbr]. Next, a PRG is constructed-->
-<!--for each gene MSA, and a random path through each is selected using `pandora`. Each-->
-<!--PRG's random path is then concatenated together to form a single "genome" sequence. We-->
-<!--subsequently add SNPs to the simulated genome at a specified rate of SNPs per-gene using-->
-<!--`snp-mutator` [@doi:10/d9np]. We then simulated Nanopore reads from this mutated genome-->
-<!--using `nanosim-h` [@doi:10/gbj69k; @doi:10/d9nq]. `pandora map` is then run, using the-->
-<!--original PRG as input, along with the reads simulated from the mutated genome. With this-->
-<!--approach, we know the exact SNPs we hope to find. After running the `map` routine, we-->
-<!--are left with a collection of candidate paths produced by the *de novo* component. We-->
-<!--then added these back into the PRG and iterated the `map` routine again, this time-->
-<!--without *de novo* discovery enabled. Re-adding variants into the graph has the effect of-->
-<!--making all of the *de novo* variants visible to genotyping. The result is a VCF file-->
-<!--that (hopefully) contains the variants we introduced in the beginning. To compare the-->
-<!--performance of `pandora` before and after *de novo* is added, we can compare the VCF-->
-<!--produced from the first round of `map` with the last VCF.-->
-<!--To avoid error-prone conversion of linear coordinates into graph coordinates the-->
-<!--evaluation of whether the variants called by `pandora` are correct was undertaken in a-->
-<!--slightly more convoluted manner. We define a probe-set $P$ as a collection of probes,-->
-<!--$p$, where $p$ represents an entry, $e$, in a VCF file, $V$. For each $e \in V$, $p$ is-->
-<!--constructed by the concatenation of $l_w$, $e_c$, and $r_w$ (in that order), where $e_c$-->
-<!--is the called variant of $e$, and $l_w$ and $r_w$ are the sequences, of maximum length-->
-<!--$w$, in the VCF reference to the left and right, respectively, of $e_c$.-->
-<!--A truth probe-set, $P_t$, was constructed from the VCF of variants added to the-->
-<!--simulated genome and a query probe-set, $P_q$, from the variants called by `pandora`. We-->
-<!--then mapped all probes from $P_t$ to $P_q$ using `bwa mem` [@arxiv:1303.3997]. We then-->
-<!--classify each mapped probe as a false positive or true positive and calculate precision-->
-<!--and recall for the pre-*de novo* and post-*de novo* VCF files from `pandora`. As-->
-<!--expected, Figure {@fig:simulation_roc} shows that without *de novo* variant discovery,-->
-<!--we are unable to find almost all introduced variants. In future work, we plan to add-->
-<!--indels to the simulations.-->
-<!--![Precision-recall curve for `pandora` simulations with (circles) and without (crosses) *de novo* variant-->
-<!--discovery. This plot is measuring the proportion of SNPs we introduced into our-->
-<!--simulated genome we correctly found (recall) on the X-axis. On the Y-axis is the-->
-<!--proportion of calls we made which were correct (precision). Colours represent different-->
-<!--coverage depth. Each point represents a different genotype confidence-->
-<!--threshold.](images/simulation_roc_denovo_and_no_denovo.png){#fig:simulation_roc-->
-<!--width="90%"}-->
 <h5 id="empirical-data---multi-sample-comparison">Empirical data - multi-sample comparison</h5>
 <p>This section will be the major focus for the evaluation of both <em>de novo</em> <em>and</em>
 <code>pandora</code> and will constitute (part of) the results section of the <code>pandora</code> paper (near
-completion). We show the power of using a PRG, instead of a single reference, along with
-<code>pandora</code>’s performance compared to Nanopore- and Illumina-based variant callers. We
-compare 20 samples, from across the <em>E. coli</em> phylogeny. As other variant callers do not
-use a PRG we carefully selected 24 single-reference genomes representing the diversity
-of the <em>E. coli</em> phylogenetic tree as best as possible. Each variant caller was run once
-for each reference genome with the aim being to show that the more samples in the
-analysis (i.e. the larger the pan-genome of the samples), the lower the number of
-variants the other callers can find.</p>
+completion). We show the benefits of using a PRG, along with <code>pandora</code>’s performance
+compared to Nanopore- and Illumina-based variant callers. We compare 20 samples, from
+across the <em>E. coli</em> phylogeny. As other variant callers do not use a PRG we carefully
+selected 24 single-reference genomes representing the diversity of the <em>E. coli</em> tree as
+best as possible. Each variant caller was run once for each reference genome to
+illustrate the variance in results depending on the reference genome used.</p>
 <p>In the process of developing an evaluation framework, we produced a python package
 called <code>varifier</code> (<a href="https://github.com/iqbal-lab-org/varifier" class="uri">https://github.com/iqbal-lab-org/varifier</a>). Briefly, for precision,
 <code>varifier</code> creates ‘probes’ for each variant in the VCF, using the genome the variants
@@ -401,7 +311,7 @@ regarding the effect of (unfiltered) <em>de novo</em> variant discovery in <code
 is shows that the choice of the Nanopore basecalling model has a sizeable impact - at
 least for <em>E. coli</em>. When using a methylation-aware model (not default), there is a
 significant increase in recall and decrease in error rate. While this has been
-previously described for Enterobacteriaceae <span class="citation" data-cites="lwFwJNS9">[<a href="#ref-lwFwJNS9" role="doc-biblioref">10</a>]</span>, it
+previously described for Enterobacteriaceae <span class="citation" data-cites="lwFwJNS9">[<a href="#ref-lwFwJNS9" role="doc-biblioref">8</a>]</span>, it
 highlights a weakness in the <em>de novo</em> variant discovery process. If the default model
 is used (green line in Figure <a href="#fig:basecall_model">3</a>), <code>pandora</code> has a higher error rate
 if discovering variants is enabled, however, we do get an increase in recall. This means
@@ -456,7 +366,7 @@ this analysis, a lot of it has since been refactored by Leandro Ishi and by Mart
 in the form of <code>varifier</code>. Due to the novelty of the method we are proposing, this has
 taken quite a lot of time and thought. I wrote 1250 lines of code to evaluate the
 methods, along with 3500 lines of test code to ensure there are no bugs in our
-evaluation. Additionally, I built the original <code>snakemake</code> <span class="citation" data-cites="NcYZqBux">[<a href="#ref-NcYZqBux" role="doc-biblioref">20</a>]</span> pipeline of
+evaluation. Additionally, I built the original <code>snakemake</code> <span class="citation" data-cites="NcYZqBux">[<a href="#ref-NcYZqBux" role="doc-biblioref">18</a>]</span> pipeline of
 approximately 3500 lines of codes to orchestrate the entire evaluation and simulations
 (However, much of this has been rewritten by Leandro Ishi).</p>
 <h4 id="outstanding-work">Outstanding work</h4>
@@ -485,36 +395,15 @@ standard acceptable by public health authorities.</p>
 <h5 id="genetic-clustering-of-samples">Genetic clustering of samples</h5>
 <p>Although there is scientific interest in the question of identifying transmission chains
 from genetic data, all the actionable public health information exists in the
-identification of transmission clusters <span class="citation" data-cites="tGyXVFvJ 64Rp8zLg">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">21</a>,<a href="#ref-64Rp8zLg" role="doc-biblioref">22</a>]</span>.</p>
+identification of transmission clusters <span class="citation" data-cites="tGyXVFvJ 64Rp8zLg">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">19</a>,<a href="#ref-64Rp8zLg" role="doc-biblioref">20</a>]</span>.</p>
 <p>The first step towards clustering a set of genomes is determining a distance matrix. For
 the majority of bacteria, there is a necessary step of identifying recombination tracts
 - which will contain a high density of SNPs - and removing them. Removal of these SNPs
 is necessary as they will have arrived at a different rate to the putative molecular
 clock and will artefactually extend branch lengths on the phylogenetic tree
-<span class="citation" data-cites="tGyXVFvJ 64Rp8zLg">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">21</a>,<a href="#ref-64Rp8zLg" role="doc-biblioref">22</a>]</span>. In the case of Mtb, however, there is virtually no
-recombination <span class="citation" data-cites="dRRsEE8Z hpSc80yh 1H760aM5J">[<a href="#ref-dRRsEE8Z" role="doc-biblioref">23</a>,<a href="#ref-hpSc80yh" role="doc-biblioref">24</a>,<a href="#ref-1H760aM5J" role="doc-biblioref">25</a>]</span>, so this step in not
+<span class="citation" data-cites="tGyXVFvJ 64Rp8zLg">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">19</a>,<a href="#ref-64Rp8zLg" role="doc-biblioref">20</a>]</span>. In the case of Mtb, however, there is virtually no
+recombination <span class="citation" data-cites="dRRsEE8Z hpSc80yh 1H760aM5J">[<a href="#ref-dRRsEE8Z" role="doc-biblioref">21</a>,<a href="#ref-hpSc80yh" role="doc-biblioref">22</a>,<a href="#ref-1H760aM5J" role="doc-biblioref">23</a>]</span>, so this step in not
 required.</p>
-<!--There are three main issues we need to address or keep in mind for the clustering-->
-<!--component of this chapter:-->
-<!--- When running a variant caller on a single sample, typically the tool only makes a-->
-<!--  non-reference call when it finds a definite difference from the reference. Therefore,-->
-<!--  it is impossible to tell the difference between a reference-matching site and one in-->
-<!--  which there is genotyping uncertainty. One solution is to make a de-duplicated list of-->
-<!--  variants found in all samples and genotype the samples at those positions. Solving-->
-<!--  this reference-bias issue is the strength of the `compare` routine within `pandora`.-->
-<!--  It tackles the problem in this manner while also handling issues of overlapping-->
-<!--  variants in the list of all-sample-variants.-->
-<!--- What distance measure do we use? Do we exclude positions where any sample has missing-->
-<!--  data? Missing data of this type could be due to low coverage, but it could also be-->
-<!--  because a section of the genome is not present. We will extensively cover this issue-->
-<!--  for *E. coli* in [Chapter 1](#chapter-1-variant-discovery-in-genome-graphs). The-->
-<!--  pan-genome of Mtb is small, but it does exist nonetheless [@doi:10/d9r8;-->
-<!--  @doi:10/f4mrqv]. There is also a secondary issue that if certain regions have-->
-<!--  clustered genetic variation in some lineages of Mtb then reads will not map well to-->
-<!--  the reference. Both of the above issues are handled by `pandora` due to its use of a-->
-<!--  PRG, but we still need to make a choice about missing data.-->
-<!--- How do we handle sites where there is evidence of heterozygosity - i.e. a mixed-->
-<!--  sample?-->
 <p>For this chapter, we define genetic distance to be the sum of genetic discordances,
 where missing data and heterozygosity do not cause discordance and study the clustering
 this definition generates.</p>
@@ -537,30 +426,24 @@ range of organisms, including viral, human, Mtb, non-tuberculosis Mycobacterium 
 and nasopharyngeal-associated bacterial genomes. Reads were mapped to the database and
 was output to a final decontaminated fastq file if it had any mapping to a
 non-contaminant genome. All decontaminated fastq files were subsampled to a depth of 60x
-(Illumina) and 150x (Nanopore) using <code>rasusa</code> <span class="citation" data-cites="4U7AuMzS">[<a href="#ref-4U7AuMzS" role="doc-biblioref">26</a>]</span>.</p>
+(Illumina) and 150x (Nanopore) using <code>rasusa</code> <span class="citation" data-cites="4U7AuMzS">[<a href="#ref-4U7AuMzS" role="doc-biblioref">24</a>]</span>.</p>
 <p>The last step in the QC pipeline is to assign lineages for each sample. A panel of
-lineage-defining SNPs <span class="citation" data-cites="c17o0GrE 6J5Bt0f7 1CS78SxuA">[<a href="#ref-c17o0GrE" role="doc-biblioref">27</a>,<a href="#ref-6J5Bt0f7" role="doc-biblioref">28</a>,<a href="#ref-1CS78SxuA" role="doc-biblioref">29</a>]</span> was used in
+lineage-defining SNPs <span class="citation" data-cites="c17o0GrE 6J5Bt0f7 1CS78SxuA">[<a href="#ref-c17o0GrE" role="doc-biblioref">25</a>,<a href="#ref-6J5Bt0f7" role="doc-biblioref">26</a>,<a href="#ref-1CS78SxuA" role="doc-biblioref">27</a>]</span> was used in
 conjunction with a sample’s Illumina VCF from the
 <a href="#baseline-variant-analysis">Baseline variant analysis</a> for the lineage assignment.</p>
-<p>In the end, we chose to exclude samples from further analysis if they met any of the
-following criteria:</p>
-<ul>
-<li>Illumina coverage below 20x</li>
-<li>Nanopore coverage below 30x</li>
-<li>Evidence of mixed infection - i.e. mixed lineage classification</li>
-<li>Unknown lineage assignment - no valid SNPs at lineage-defining sites</li>
-</ul>
-<p>This filtering criteria led to a further 57 samples being excluded; leaving us with a
-total of 150 samples to use for the remainder of this work. In addition to the QC of the
+<p>We exclude samples from further analysis if they had coverage below 20x (Illumina) or
+30x (Nanopore), or if they could not be assigned a single lineage. This filtering
+criteria led to a further 57 samples being excluded; leaving us with a total of 150
+samples to use for the remainder of this work. In addition to the QC of the
 Illumina/Nanopore data, we sadly had to exclude 26/35 PacBio sequencing datasets due to
 mismatched Illumina/Nanopore data or PacBio coverage lower than 20x.</p>
 <h4 id="baseline-variant-analysis">Baseline variant analysis</h4>
 <p>The truth set of variants for the Illumina data in this chapter come from running the
-Public Health England pipeline, COMPASS <span class="citation" data-cites="Lvhz1sqs">[<a href="#ref-Lvhz1sqs" role="doc-biblioref">30</a>]</span>. This pipeline will act as a
+Public Health England pipeline, COMPASS <span class="citation" data-cites="Lvhz1sqs">[<a href="#ref-Lvhz1sqs" role="doc-biblioref">28</a>]</span>. This pipeline will act as a
 guide to inform us about whether the results from the Nanopore data are comparable with
 those being used in real public health settings. COMPASS effectively uses <code>samtools</code>
-<span class="citation" data-cites="IPc8cy7s">[<a href="#ref-IPc8cy7s" role="doc-biblioref">31</a>]</span> to call variants and then applies a series of complex variant
-filtering. As a baseline for the Nanopore data, we use <code>bcftools</code> <span class="citation" data-cites="bXIkkZJW">[<a href="#ref-bXIkkZJW" role="doc-biblioref">32</a>]</span>, with
+<span class="citation" data-cites="IPc8cy7s">[<a href="#ref-IPc8cy7s" role="doc-biblioref">29</a>]</span> to call variants and then applies a series of complex variant
+filtering. As a baseline for the Nanopore data, we use <code>bcftools</code> <span class="citation" data-cites="bXIkkZJW">[<a href="#ref-bXIkkZJW" role="doc-biblioref">30</a>]</span>, with
 some filtering of variants to remove low-quality calls and with a mask to avoid
 repetitive and structurally variable regions of the Mtb genome.</p>
 <h5 id="nanopore-snp-concordance-with-illumina">Nanopore SNP concordance with Illumina</h5>
@@ -574,47 +457,35 @@ segregation-based metric above -0.5, or a variant distance bias below 0.002.</p>
 <p>To assess how well the Nanopore SNPs agree with Illumina we first look at SNP
 concordance. Two metrics of interest here are the call rate - what proportion of COMPASS
 alternate alleles does <code>bcftools</code> make a reference/alternate call - and the concordance
-- what proportion of COMPASS alternate alleles does <code>bcftools</code> genotype agree with.
-Figure <a href="#fig:alt_concordance">6</a> shows that concordance is very high between the two
-technologies, with nearly all samples having a concordance greater than 99.5%. Call rate
-is a little lower than this, with the majority of samples being above 97%.</p>
-<div id="fig:alt_concordance" class="fignos">
-<figure>
-<img src="images/alt_concordance.png" alt="" /><figcaption><span>Figure 6:</span> Call rate (Y-axis) and concordance (X-axis) of <code>bcftools</code> SNP calls to Illumina
-COMPASS calls. Call rate is what proportion of COMPASS alternate alleles does
-<code>bcftools</code> make a reference/alternate call. Concordance is what proportion of COMPASS
-alternate alleles does <code>bcftools</code> genotype agree with. Each point represents a sample,
-with samples coloured by the site the data came from.</figcaption>
-</figure>
-</div>
+- what proportion of COMPASS alternate alleles does <code>bcftools</code> genotype agree with. We
+found that concordance is very high between the two technologies, with nearly all
+samples having a concordance greater than 99.5%. Call rate is a little lower than this,
+with the majority of samples being above 97%.</p>
 <p>As transmission clusters are ultimately defined based on a SNP distance matrix, it is
 important to understand how such matrices differ between Illumina and Nanopore variant
-calls. To investigate this, a consensus sequence was generated from the filtered VCFs by
-replacing reference positions with passing SNP calls. Any positions with a null genotype
-or that failed the filtering were masked. Positions which do not appear in the VCF (i.e.
-no reads mapped to this region) were also masked, as were positions in repetitive
-regions <span class="citation" data-cites="zOTPF2vW">[<a href="#ref-zOTPF2vW" role="doc-biblioref">33</a>]</span>. We then generate a pairwise SNP distance matrix for each
-sequencing technology from their respective consensus genomes using <code>snp-dists</code>
-<span class="citation" data-cites="WXM67imc">[<a href="#ref-WXM67imc" role="doc-biblioref">34</a>]</span>.<br />
-Figure <a href="#fig:dotplot">7</a> shows the relationship of these distances between pairs of samples
-based on the sequencing technology used. While the relationship across all samples of
-all distances is interesting, in the context of defining transmission clusters, it is
-slightly misleading. Transmission clusters by grouping together samples that are within
-a certain number of SNPs. The threshold used for this grouping is generally in the order
-of tens-of-SNPs <span class="citation" data-cites="tGyXVFvJ">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">21</a>]</span> so it makes more sense to look at the distance
-relationship for samples that are closer to each other. In Figure <a href="#fig:close_dotplot">8</a>,
-we zoom in on the bottom left of Figure <a href="#fig:dotplot">7</a>, to samples within an Illumina
-SNP distance of 100. It shows that, at this scale, the relationship between Illumina-
-and Nanopore-defined SNP distance is much closer. The correlation between the two can be
-quantified by the linear equation <span class="math inline">\(y=0.93x+0.84\)</span>, where <span class="math inline">\(y\)</span> is the predicted Nanopore
-distance between two samples, given the Illumina distance <span class="math inline">\(x\)</span>. We can use this equation
-as a way of translating transmission cluster SNP thresholds for Illumina data to
-Nanopore. For instance, if clusters are defined as samples within 12 SNPs of each other,
-we can use this as <span class="math inline">\(x\)</span> and define our Nanopore transmission clusters as <span class="math inline">\(y=0.93\times 12 \+ 0.84=12.0\)</span>. So at a threshold of 12 SNPs, the Nanopore threshold would be the same as
-Illumina.</p>
+calls. To investigate this, a consensus sequence was generated from the filtered VCFs,
+with repetitive regions masked <span class="citation" data-cites="zOTPF2vW">[<a href="#ref-zOTPF2vW" role="doc-biblioref">31</a>]</span>. We then generate a pairwise SNP
+distance matrix for each sequencing technology from their respective consensus genomes
+using <code>snp-dists</code> <span class="citation" data-cites="WXM67imc">[<a href="#ref-WXM67imc" role="doc-biblioref">32</a>]</span>.<br />
+Figure <a href="#fig:dotplot">6</a> shows the relationship of the pairwise distance of samples based
+on the sequencing technology used. While the relationship across all samples is
+interesting, in the context of defining transmission clusters, it is slightly
+misleading. Transmission clusters are defined by grouping together samples that are
+within a certain number of SNPs. The threshold used for this grouping is generally in
+the order of tens-of-SNPs <span class="citation" data-cites="tGyXVFvJ">[<a href="#ref-tGyXVFvJ" role="doc-biblioref">19</a>]</span> so it makes more sense to look at the distance
+relationship for samples that are closer to each other. In Figure <a href="#fig:close_dotplot">7</a>,
+we limit to samples within an Illumina SNP distance of 100. It shows that, at this
+scale, the relationship between Illumina- and Nanopore-defined SNP distance is much
+closer. The correlation between the two can be quantified by the linear equation
+<span class="math inline">\(y=0.93x+0.84\)</span>, where <span class="math inline">\(y\)</span> is the predicted Nanopore distance between two samples, given
+the Illumina distance <span class="math inline">\(x\)</span>. We can use this equation as a way of translating transmission
+cluster SNP thresholds for Illumina data to Nanopore. For instance, if clusters are
+defined as samples within 12 SNPs of each other, we can use this as <span class="math inline">\(x\)</span> and define our
+Nanopore transmission clusters as <span class="math inline">\(y=0.93\times{12}+0.84=12.0\)</span>. So at a threshold of 12
+SNPs, the Nanopore threshold would be the same as Illumina.</p>
 <div id="fig:dotplot" class="fignos">
 <figure>
-<img src="images/dotplot.png" alt="" /><figcaption><span>Figure 7:</span> Relationship between pairwise SNP distance for Illumina (COMPASS; X-axis) and Nanopore
+<img src="images/dotplot.png" style="width:80.0%" alt="" /><figcaption><span>Figure 6:</span> Relationship between pairwise SNP distance for Illumina (COMPASS; X-axis) and Nanopore
 (<code>bcftools</code>; Y-axis). Each point represents a pair of samples. The red diagonal line
 is the identity line, which is where the points should lie if the distance between samples
 is the same for each technology. The black line shows the line of best fit for the data.
@@ -624,7 +495,7 @@ coefficient (r).</figcaption>
 </div>
 <div id="fig:close_dotplot" class="fignos">
 <figure>
-<img src="images/close_dotplot.png" alt="" /><figcaption><span>Figure 8:</span> Relationship between pairwise SNP distance for Illumina (COMPASS; X-axis) and Nanopore
+<img src="images/close_dotplot.png" style="width:80.0%" alt="" /><figcaption><span>Figure 7:</span> Relationship between pairwise SNP distance for Illumina (COMPASS; X-axis) and Nanopore
 (<code>bcftools</code>; Y-axis) for samples within 100 SNPs of each other (based on Illumina distance).
 Each point represents a pair of samples. The red diagonal line
 is the identity line, which is where the points should lie if the distance between samples
@@ -637,15 +508,16 @@ coefficient (r).</figcaption>
 <p>The analyses so far have treated the Illumina SNPs as a kind of “truth”. In order to get
 a sense of how “correct” the SNP calls are for each technology we need to compare then
 to a “truth”. For the nine samples with PacBio CCS data that passed QC, we generated
-assemblies (using only the CCS reads) with <code>flye</code> <span class="citation" data-cites="f0G74pRS">[<a href="#ref-f0G74pRS" role="doc-biblioref">35</a>]</span>. We masked any
+assemblies (using only the CCS reads) with <code>flye</code> <span class="citation" data-cites="f0G74pRS">[<a href="#ref-f0G74pRS" role="doc-biblioref">33</a>]</span>. We masked any
 positions in the assembly where mapped Illumina reads did not have more than 90%
 agreement with the assembly, or had less than 10 reads. One sample was excluded due to
 the detection of other species contigs within the assembly. We then used <code>varifier</code> to
 assess the precision and recall of the SNP calls for the eight samples with high quality
-assemblies. Figure <a href="#fig:baseline_truth">9</a> shows that …</p>
+assemblies. Figure <a href="#fig:baseline_truth">8</a> shows that the precision and recall for
+Nanopore is slightly lower than for Illumina, however, the difference is not large.</p>
 <div id="fig:baseline_truth" class="fignos">
 <figure>
-<img src="images/baseline_truth.png" alt="" /><figcaption><span>Figure 9:</span> Evaluation of the Illumina (COMPASS; green) and Nanopore (<code>bcftools</code>; orange) SNP calls to the PacBio CCS assemblies for eight samples using <code>varifier</code>. The left plot shows precision and the right is recall. Each point is one of the eight samples.</figcaption>
+<img src="images/baseline_truth.png" style="width:90.0%" alt="" /><figcaption><span>Figure 8:</span> Evaluation of the Illumina (COMPASS; green) and Nanopore (<code>bcftools</code>; orange) SNP calls to the PacBio CCS assemblies for eight samples using <code>varifier</code>. The left plot shows precision and the right is recall. Each point is one of the eight samples.</figcaption>
 </figure>
 </div>
 <h4 id="per-sample-variant-calls-with-pandora">Per-sample variant calls with <code>pandora</code></h4>
@@ -654,8 +526,8 @@ analysis. At this stage, we have two varieties in mind:</p>
 <ul>
 <li>Sparse PRG - H37Rv and all variants from a random selection of 100 samples from each
 lineage in the CRyPTIC (Comprehensive Resistance Prediction for Tuberculosis: an
-International Consortium) dataset <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>.</li>
-<li>Dense PRG - The same as Sparse PRG, but 2,000 samples from each lineage.</li>
+International Consortium) dataset <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">7</a>]</span>.</li>
+<li>Dense PRG - The same as Sparse PRG, but 500 samples from each lineage.</li>
 </ul>
 <p>In all of the above PRGs, we will apply the same mask from the baseline analysis and
 divide the genome into genes and intergenic regions, with a local PRG for each.</p>
@@ -709,21 +581,20 @@ quick process.</p>
 <h3 id="chapter-3-applications-to-improving-m.-tuberculosis-drug-resistance-prediction">Chapter 3: Applications to improving <em>M. tuberculosis</em> drug resistance prediction</h3>
 <p>The genetic basis for drug resistance in Mtb is only partially understood. For the four
 first-line drugs, it is possible to detect the majority of resistant strains with high
-confidence <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>, but for second-line, novel, and repurposed drugs, this is
+confidence <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">7</a>]</span>, but for second-line, novel, and repurposed drugs, this is
 much harder.</p>
-<p>Previous work from our group has shown that using whole-genome sequencing (WGS) it is
-possible to create a panel of resistance markers and then successfully use this panel to
-predict drug resistance from Mtb sequence data <span class="citation" data-cites="d8RxFwPN 11Jcu87Ae">[<a href="#ref-d8RxFwPN" role="doc-biblioref">3</a>,<a href="#ref-11Jcu87Ae" role="doc-biblioref">4</a>]</span>. This
-work involved the development of a software program called <code>mykrobe</code> to automate this
-inference and can use either Illumina or Nanopore data <span class="citation" data-cites="9NLFJZN2">[<a href="#ref-9NLFJZN2" role="doc-biblioref">6</a>]</span>. During the
-previous year, the predictive power of <code>mykrobe</code> has expanded and become even more
-accurate <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">36</a>]</span> (I played a small role in improving the likelihood
-calculations). This update of the <code>mykrobe</code> panel was mostly due to the recently
-published work from the CRyPTIC project <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>. CRyPTIC aims to perform drug
-susceptibility testing and WGS on 40,000 Mtb samples (many MDR) from all over the globe,
-and combine this with WGS data from another 60,000 samples. The goal of the project is
-to improve genotypic resistance prediction by expanding our catalogue of resistance
-mutations.</p>
+<p>Previous work from our group has shown that using WGS it is possible to create a panel
+of resistance markers and then successfully use this panel to predict drug resistance
+from Mtb sequence data <span class="citation" data-cites="d8RxFwPN 11Jcu87Ae">[<a href="#ref-d8RxFwPN" role="doc-biblioref">5</a>,<a href="#ref-11Jcu87Ae" role="doc-biblioref">6</a>]</span>. This work involved the
+development of a software program called <code>mykrobe</code> to automate this inference and can
+use either Illumina or Nanopore data <span class="citation" data-cites="9NLFJZN2">[<a href="#ref-9NLFJZN2" role="doc-biblioref">34</a>]</span>. During the previous year, the
+predictive power of <code>mykrobe</code> has expanded and become even more accurate
+<span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">35</a>]</span> (I played a small role in improving the likelihood calculations). This
+update of the <code>mykrobe</code> panel was mostly due to the recently published work from the
+CRyPTIC project <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">7</a>]</span>. CRyPTIC aims to perform drug susceptibility testing and
+WGS on 40,000 Mtb samples (many MDR) from all over the globe, and combine this with WGS
+data from another 60,000 samples. The goal of the project is to improve genotypic
+resistance prediction by expanding our catalogue of resistance mutations.</p>
 <p>The proposed work for this chapter is based on the assumption that a large part of the
 work by this consortium (which our group is a critical part of) will be available. While
 there has already been a significant amount of data produced from CRyPTIC, there will be
@@ -733,36 +604,24 @@ show that we can detect them as well with Nanopore data as we can with Illumina.
 <h4 id="limitations-of-existing-methods">Limitations of existing methods</h4>
 <p>Although there are many tools available for predicting drug resistance in Mtb from
 Illumina WGS, only two support the use of Nanopore data - <code>mykrobe</code> and <code>tb-profiler</code>
-<span class="citation" data-cites="AgK2Kztc">[<a href="#ref-AgK2Kztc" role="doc-biblioref">37</a>]</span>. In the recent update to <code>mykrobe</code> from our group <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">36</a>]</span>, we
+<span class="citation" data-cites="AgK2Kztc">[<a href="#ref-AgK2Kztc" role="doc-biblioref">36</a>]</span>. In the recent update to <code>mykrobe</code> from our group <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">35</a>]</span>, we
 have shown that the primary factor determining how well a tool performed was the
 catalogue of resistance mutations used. However, given the same panel, different tools
 do not perform identically, and therefore methodology is still important. While some
 studies have focused specifically on Nanopore data, all used a small sample size
 (Votintseva <em>et al.</em> 2017 n=5, Hunt <em>et al.</em> 2019 n=5, <code>tb-profiler</code> 2019 n=3).
-Additionally, <code>tb-profiler</code> and <code>mykrobe</code> both have limitations with their methods.</p>
-<p><code>tb-profiler</code> uses an approach similar to a read pileup and then taking consensus at
-each site. This means they will never perform particularly well with indel calls as
-pileups do not work well for Illumina <span class="citation" data-cites="3x48DbyN">[<a href="#ref-3x48DbyN" role="doc-biblioref">38</a>]</span>, let alone Nanopore. Given that
-indel calls are critical for some drugs in Mtb such as pyrazinamide <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>, this
-becomes a ceiling for the <code>tb-profiler</code> method. On the other hand, <code>mykrobe</code> uses a
-conservative, precise approach of mapping 21-mers to a de Bruijn graph. With an
-approximate error rate of 10% in Nanopore data, the probability of a correct 21-mer is
-11%. Meaning that <code>mykrobe</code> requires high depth-of-coverage to get sufficient, correct
-21-mers. By comparison, <code>pandora</code> maps entire reads to genes - rather than k-mers in
-isolation as with <code>mykrobe</code> - confirms that the read really does overlap the gene, and
-only then includes the k-mers in the calculation. Theoretically, this allows for the use
-of a smaller k-mer size and therefore reduces coverage requirements.<br />
-A second limitation of both <code>tb-profiler</code> and <code>mykrobe</code> is that they only genotype with
-respect to know variants - i.e. they cannot detect novel variants. The CRyPTIC
-consortium recently introduced a new approach whereby if an unknown mutation is
-identified in a gene known to be involved in resistance, they refuse to make a call and
-instead send the sample for phenotyping <span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">5</a>]</span>. On their 10,000 samples, this
-achieved a specificity and sensitivity for first-line drugs that was acceptable for
-clinical usage. This method is now in use at Public Health England for all Mtb samples
-in England. Hunt <em>et al.</em> 2019 <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">36</a>]</span> quantified the cost of the
-pure-genotyping approach of <code>mykrobe</code>, showing that 2.4-4.6% of resistant samples were
-missed. By introducing <em>de novo</em> discovery into <code>pandora</code>, I enable us to address this
-issue, and that is the focus for this chapter.</p>
+Additionally, <code>tb-profiler</code> and <code>mykrobe</code> both have limitations with their methods. Both
+<code>tb-profiler</code> and <code>mykrobe</code> only genotype with respect to known variants - i.e. they
+cannot detect novel variants. The CRyPTIC consortium recently introduced a new approach
+whereby if an unknown mutation is identified in a gene known to be involved in
+resistance, they refuse to make a call and instead send the sample for phenotyping
+<span class="citation" data-cites="4zIt0Vce">[<a href="#ref-4zIt0Vce" role="doc-biblioref">7</a>]</span>. On their 10,000 samples, this achieved a specificity and sensitivity for
+first-line drugs that was acceptable for clinical usage. This method is now in use at
+Public Health England for all Mtb samples in England. Hunt <em>et al.</em> 2019
+<span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">35</a>]</span> quantified the cost of the pure-genotyping approach of <code>mykrobe</code>,
+showing that 2.4-4.6% of resistant samples were missed. By introducing <em>de novo</em>
+discovery into <code>pandora</code>, I enable us to address this issue, and that is the focus for
+this chapter.</p>
 <h4 id="drug-susceptibility-prediction-for-m.-tuberculosis-using-pandora">Drug susceptibility prediction for <em>M. tuberculosis</em> using <code>pandora</code></h4>
 <p>The work in this chapter will aim to predict drug-resistance for Mtb using <code>pandora</code> and
 its new <em>de novo</em> component introduced in
@@ -783,14 +642,14 @@ the same, or better, results as <code>mykrobe</code>, and the increased detectio
 <em>de novo</em> variant discovery.</p>
 <h3 id="chapter-4-construction-of-a-m.-tuberculosis-reference-pan-genome">Chapter 4: Construction of a <em>M. tuberculosis</em> reference pan-genome</h3>
 <p>Although Mtb has a closed pan-genome due to its lack of recombination and horizontal
-gene transfer <span class="citation" data-cites="dRRsEE8Z hpSc80yh 1H760aM5J">[<a href="#ref-dRRsEE8Z" role="doc-biblioref">23</a>,<a href="#ref-hpSc80yh" role="doc-biblioref">24</a>,<a href="#ref-1H760aM5J" role="doc-biblioref">25</a>]</span>, there are reasons why a
+gene transfer <span class="citation" data-cites="dRRsEE8Z hpSc80yh 1H760aM5J">[<a href="#ref-dRRsEE8Z" role="doc-biblioref">21</a>,<a href="#ref-hpSc80yh" role="doc-biblioref">22</a>,<a href="#ref-1H760aM5J" role="doc-biblioref">23</a>]</span>, there are reasons why a
 pan-genome would be useful to the community. First of all, some genes exist within the
-pan-genome that are not present in the H37Rv reference genome <span class="citation" data-cites="3yP1ZZU9">[<a href="#ref-3yP1ZZU9" role="doc-biblioref">39</a>]</span>.
+pan-genome that are not present in the H37Rv reference genome <span class="citation" data-cites="3yP1ZZU9">[<a href="#ref-3yP1ZZU9" role="doc-biblioref">37</a>]</span>.
 Secondly, approximately 10% of the genome consists of so-called <em>pe/ppe</em> genes. These
 genes have a high GC-content, are very repetitive, and have been implicated in immune
-evasion and virulence <span class="citation" data-cites="cF2ezTu8 edkEM6K6">[<a href="#ref-cF2ezTu8" role="doc-biblioref">40</a>,<a href="#ref-edkEM6K6" role="doc-biblioref">41</a>]</span>. The <em>pe/ppe</em> genes also harbour
+evasion and virulence <span class="citation" data-cites="cF2ezTu8 edkEM6K6">[<a href="#ref-cF2ezTu8" role="doc-biblioref">38</a>,<a href="#ref-edkEM6K6" role="doc-biblioref">39</a>]</span>. The <em>pe/ppe</em> genes also harbour
 a disproportionately large amount of genetic diversity between isolates and a nucleotide
-diversity approximately 2-fold higher than the rest of the genome <span class="citation" data-cites="edkEM6K6">[<a href="#ref-edkEM6K6" role="doc-biblioref">41</a>]</span>. They
+diversity approximately 2-fold higher than the rest of the genome <span class="citation" data-cites="edkEM6K6">[<a href="#ref-edkEM6K6" role="doc-biblioref">39</a>]</span>. They
 are sufficiently similar that short reads fail to map, and are frequently masked out of
 the genome for variant calling. The ability to accurately map sequencing reads to these
 genes would likely improve our ability to perform variant calling in Mtb and therefore
@@ -820,7 +679,7 @@ other bacteria.</p>
 <h4 id="a-genome-graph-map-of-peppe-genes">A genome graph map of <em>pe/ppe</em> genes</h4>
 <p>One question which will be of particular interest for this section will be whether reads
 covering one <em>pe/ppe</em> gene map to various others. If, as shown by others, <em>pe/ppe</em> genes
-arose through gene conversion <span class="citation" data-cites="T9mwbO7q">[<a href="#ref-T9mwbO7q" role="doc-biblioref">42</a>]</span>, we would expect this to be the case.
+arose through gene conversion <span class="citation" data-cites="T9mwbO7q">[<a href="#ref-T9mwbO7q" role="doc-biblioref">40</a>]</span>, we would expect this to be the case.
 However, having high-quality assemblies built from a combination of long- and short-read
 technologies, we hope we can improve on the current nucleotide resolution and allow more
 accurate mapping to these genes. The main deliverable from this section will be a
@@ -867,9 +726,9 @@ sometime in the third quarter of 2021, with myself being the first author.</li>
 <p>In addition to the major “thesis publications” listed <a href="#publication-strategy">above</a>, I
 am also involved in the following publications:</p>
 <ul>
-<li>The recent publication of <code>mykrobe</code> <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">36</a>]</span>, in which I assisted with the
+<li>The recent publication of <code>mykrobe</code> <span class="citation" data-cites="zRTBU1FP">[<a href="#ref-zRTBU1FP" role="doc-biblioref">35</a>]</span>, in which I assisted with the
 improvement of the genotyping model for Nanopore data.</li>
-<li>A preprint <span class="citation" data-cites="183b1YJFc">[<a href="#ref-183b1YJFc" role="doc-biblioref">43</a>]</span> from a student-led project investigating
+<li>A preprint <span class="citation" data-cites="183b1YJFc">[<a href="#ref-183b1YJFc" role="doc-biblioref">41</a>]</span> from a student-led project investigating
 the use of Nanopore sequencing for freshwater monitoring. I did a large part of the
 data analysis for this work.</li>
 <li>Supplementary to the work in
@@ -877,12 +736,12 @@ data analysis for this work.</li>
 we also aim to submit a paper that will be a “crowd-sourcing” call for training
 species-specific Nanopore basecalling models. I used the data we have good PacBio
 assemblies for to try and train a Mtb-specific basecalling model, as it has been
-previously shown (in <em>K. pneumoniae</em>) <span class="citation" data-cites="lwFwJNS9">[<a href="#ref-lwFwJNS9" role="doc-biblioref">10</a>]</span> that this can
+previously shown (in <em>K. pneumoniae</em>) <span class="citation" data-cites="lwFwJNS9">[<a href="#ref-lwFwJNS9" role="doc-biblioref">8</a>]</span> that this can
 improve read and consensus accuracy. This attempt did not yield a more accurate model
 than the default, but we think it is important to make this result available and
 challenge others to do the same for their species-of-interest.</li>
 <li>I am third-author on a new manuscript for the workflow management system <code>snakemake</code>
-<span class="citation" data-cites="NcYZqBux">[<a href="#ref-NcYZqBux" role="doc-biblioref">20</a>]</span>. The manuscript is in the process of being
+<span class="citation" data-cites="NcYZqBux">[<a href="#ref-NcYZqBux" role="doc-biblioref">18</a>]</span>. The manuscript is in the process of being
 submitted to <em>Nature Communications</em>. I contributed to this work by co-developing a
 tool called <code>snakefmt</code> (<a href="https://github.com/snakemake/snakefmt" class="uri">https://github.com/snakemake/snakefmt</a>) that is used to
 provide automatic formatting of <code>snakemake</code> code - improving the readability of
@@ -890,7 +749,7 @@ workflows. Additionally, I also developed and maintain the <code>snakemake</code
 <a href="https://github.com/Snakemake-Profiles/lsf">“profile”</a> that configures job submission and status-checking for the LSF
 cluster system.</li>
 <li>I plan to submit an <a href="https://academic.oup.com/bioinformatics/pages/instructions_for_authors#Types%20of%20Manuscript">“Application Note”</a> to <em>Bioinformatics</em> for <code>rasusa</code>
-<span class="citation" data-cites="4U7AuMzS">[<a href="#ref-4U7AuMzS" role="doc-biblioref">26</a>]</span>. This is a tool I wrote in the Rust programming language to randomly
+<span class="citation" data-cites="4U7AuMzS">[<a href="#ref-4U7AuMzS" role="doc-biblioref">24</a>]</span>. This is a tool I wrote in the Rust programming language to randomly
 subsample sequencing reads to a specified coverage.</li>
 </ul>
 <h3 id="work-plan-and-timeline-for-thesis-submission">Work plan and timeline for thesis submission</h3>
@@ -942,33 +801,27 @@ pursue would be real-time analysis from a Nanopore device and also method develo
 for improving our ability to analyse mixed infections. I also have a strong desire to do
 research within the reproducible bioinformatics field.</p>
 <h4 id="please-comment-on-the-types-of-position-you-would-like-to-apply-to-for-after-the-phd-and-your-expected-application-timeline">Please comment on the types of position you would like to apply to for after the PhD and your expected application timeline?</h4>
-<p>I have already been in discussions with Lachlan Coin (my Master’s supervisor), from the
-University of Melbourne, about the possibility of a job post-PhD. He recently received
-funding for a project aimed at implementation, in Papua New Guinea, of rapid
-direct-from-sample DNA sequencing approaches to characterise drug resistant
+<p>I have already been in discussions with my Master’s supervisor about a job post-PhD. He
+recently received funding for a project aimed at implementation, in Papua New Guinea, of
+rapid direct-from-sample DNA sequencing approaches to characterise drug resistant
 tuberculosis, and evaluation of the accuracy of this approach compared to standard
-culture-based approaches. The bioinformatics component of this project is not yet filled
-and Lachlan and I are in discussions about the possibility of me joining the project in
-either a postdoc or research officer capacity.</p>
+culture-based approaches. The bioinformatics component of this project is not yet
+filled. We are in discussions about the possibility of me joining the project in either
+a postdoc or research officer capacity.</p>
 <p>There are also a couple of Australian-based postdoctoral fellowships I would like to
 apply for within the next year or two:</p>
 <ul>
 <li>Australian Research Council (ARC) <a href="https://www.arc.gov.au/grants/discovery-program/discovery-early-career-researcher-award-decra">Discovery Early Career Researcher Awards</a>
-(DECRA). The applications for funding beginning 2022 closes on October 14 2020.
-Therefore, I will need to apply for this fellowship next year (for 2023 funding). This
-grant provides focused research support for early career researchers in both teaching
-and research, and research-only positions.</li>
+(DECRA). This grant provides focused research support for early career researchers in
+both teaching and research, and research-only positions. The applications for funding
+beginning 2023 closes in October 2021.</li>
 <li><a href="https://www.nhmrc.gov.au/funding/find-funding/investigator-grants">NHMRC Investigator Grant</a>: These grants provide the investigator with
 flexibility to pursue important new research directions as they arise and to form
 collaborations as needed, rather than being restricted to the scope of a specific
 research project. This grant has been <a href="https://www.nhmrc.gov.au/about-us/news-centre/changes-nhmrcs-grant-schedule-and-policies-response-covid-19">postponed</a>, but applications are
-likely to open in February/March 2021. I will need to try and begun discussions with a
-university partner in order to be able to apply for this funding and come up with a
-project.</li>
+likely to open in February/March 2021. I will need to begin discussions with a
+university partner in order to be able to apply for this funding.</li>
 </ul>
-<p>In addition to these national-level funding schemes, I have started contacting
-researchers in Queensland to discuss mutual research interests and see if there is any
-funding already available within established projects.</p>
 <h4 id="what-do-you-see-as-your-strengths-2-3-skills">What do you see as your strengths (2-3 skills)?</h4>
 <ul>
 <li>Nanopore bioinformatics method development and analysis</li>
@@ -1039,259 +892,247 @@ spent on my PhD.</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
-<div id="ref-owU3wUrb">
-<p>1. <strong>Global tuberculosis report 2019</strong> <br />
-Organisation mondiale de la santé<br />
-(2019) <br />
-ISBN: <a href="https://worldcat.org/isbn/9789241565714">9789241565714</a></p>
-</div>
-<div id="ref-Z3NG0hEI">
-<p>2. <strong>Mycobacterial DNA Extraction for Whole-Genome Sequencing from Early Positive Liquid (MGIT) Cultures</strong> <br />
-Antonina A. Votintseva, Louise J. Pankhurst, Luke W. Anson, Marcus R. Morgan, Deborah Gascoyne-Binzi, Timothy M. Walker, T. Phuong Quan, David H. Wyllie, Carlos Del Ojo Elias, Mark Wilcox, … Derrick W. Crook<br />
-<em>Journal of Clinical Microbiology</em> (2015-04) <a href="https://doi.org/f65dtt">https://doi.org/f65dtt</a> <br />
-DOI: <a href="https://doi.org/10.1128/jcm.03073-14">10.1128/jcm.03073-14</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25631807">25631807</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4365189">PMC4365189</a></p>
-</div>
-<div id="ref-d8RxFwPN">
-<p>3. <strong>Rapid antibiotic-resistance predictions from genome sequence data for Staphylococcus aureus and Mycobacterium tuberculosis</strong> <br />
-Phelim Bradley, N. Claire Gordon, Timothy M. Walker, Laura Dunn, Simon Heys, Bill Huang, Sarah Earle, Louise J. Pankhurst, Luke Anson, Mariateresa de Cesare, … Zamin Iqbal<br />
-<em>Nature Communications</em> (2015-12-21) <a href="https://doi.org/f755tg">https://doi.org/f755tg</a> <br />
-DOI: <a href="https://doi.org/10.1038/ncomms10063">10.1038/ncomms10063</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26686880">26686880</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4703848">PMC4703848</a></p>
-</div>
-<div id="ref-11Jcu87Ae">
-<p>4. <strong>Whole-genome sequencing for prediction of Mycobacterium tuberculosis drug susceptibility and resistance: a retrospective cohort study</strong> <br />
-Timothy M Walker, Thomas A Kohl, Shaheed V Omar, Jessica Hedge, Carlos Del Ojo Elias, Phelim Bradley, Zamin Iqbal, Silke Feuerriegel, Katherine E Niehaus, Daniel J Wilson, … Tim EA Peto<br />
-<em>The Lancet Infectious Diseases</em> (2015-10) <a href="https://doi.org/f3jjtq">https://doi.org/f3jjtq</a> <br />
-DOI: <a href="https://doi.org/10.1016/s1473-3099(15)00062-6">10.1016/s1473-3099(15)00062-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26116186">26116186</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4579482">PMC4579482</a></p>
-</div>
-<div id="ref-4zIt0Vce">
-<p>5. <strong>Prediction of Susceptibility to First-Line Tuberculosis Drugs by DNA Sequencing</strong> <br />
-The CRyPTIC Consortium and the 100,000 Genomes Project<br />
-<em>New England Journal of Medicine</em> (2018-10-11) <a href="https://doi.org/d9kj">https://doi.org/d9kj</a> <br />
-DOI: <a href="https://doi.org/10.1056/nejmoa1800474">10.1056/nejmoa1800474</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30280646">30280646</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6121966">PMC6121966</a></p>
-</div>
-<div id="ref-9NLFJZN2">
-<p>6. <strong>Same-Day Diagnostic and Surveillance Data for Tuberculosis via Whole-Genome Sequencing of Direct Respiratory Samples</strong> <br />
-Antonina A. Votintseva, Phelim Bradley, Louise Pankhurst, Carlos del Ojo Elias, Matthew Loose, Kayzad Nilgiriwala, Anirvan Chatterjee, E. Grace Smith, Nicolas Sanderson, Timothy M. Walker, … Zamin Iqbal<br />
-<em>Journal of Clinical Microbiology</em> (2017-05) <a href="https://doi.org/f94vt4">https://doi.org/f94vt4</a> <br />
-DOI: <a href="https://doi.org/10.1128/jcm.02483-16">10.1128/jcm.02483-16</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28275074">28275074</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5405248">PMC5405248</a></p>
-</div>
 <div id="ref-5WDPm9pG">
-<p>7. <strong>Why prokaryotes have pangenomes</strong> <br />
+<p>1. <strong>Why prokaryotes have pangenomes</strong> <br />
 James O. McInerney, Alan McNally, Mary J. O’Connell<br />
 <em>Nature Microbiology</em> (2017-03-28) <a href="https://doi.org/gfw8gq">https://doi.org/gfw8gq</a> <br />
 DOI: <a href="https://doi.org/10.1038/nmicrobiol.2017.40">10.1038/nmicrobiol.2017.40</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28350002">28350002</a></p>
 </div>
 <div id="ref-IYW3CNeu">
-<p>8. <strong>panX: pan-genome analysis and exploration</strong> <br />
+<p>2. <strong>panX: pan-genome analysis and exploration</strong> <br />
 Wei Ding, Franz Baumdicker, Richard A Neher<br />
 <em>Nucleic Acids Research</em> (2018-01-09) <a href="https://doi.org/gczkbr">https://doi.org/gczkbr</a> <br />
 DOI: <a href="https://doi.org/10.1093/nar/gkx977">10.1093/nar/gkx977</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29077859">29077859</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5758898">PMC5758898</a></p>
 </div>
-<div id="ref-QrKrCCsB">
-<p>9. <strong>BulkVis: a graphical viewer for Oxford nanopore bulk FAST5 files</strong> <br />
-Alexander Payne, Nadine Holmes, Vardhman Rakyan, Matthew Loose<br />
-<em>Bioinformatics</em> (2019-07-01) <a href="https://doi.org/gfnkxj">https://doi.org/gfnkxj</a> <br />
-DOI: <a href="https://doi.org/10.1093/bioinformatics/bty841">10.1093/bioinformatics/bty841</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30462145">30462145</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6596899">PMC6596899</a></p>
+<div id="ref-owU3wUrb">
+<p>3. <strong>Global tuberculosis report 2019</strong> <br />
+Organisation mondiale de la santé<br />
+(2019) <br />
+ISBN: <a href="https://worldcat.org/isbn/9789241565714">9789241565714</a></p>
+</div>
+<div id="ref-Z3NG0hEI">
+<p>4. <strong>Mycobacterial DNA Extraction for Whole-Genome Sequencing from Early Positive Liquid (MGIT) Cultures</strong> <br />
+Antonina A. Votintseva, Louise J. Pankhurst, Luke W. Anson, Marcus R. Morgan, Deborah Gascoyne-Binzi, Timothy M. Walker, T. Phuong Quan, David H. Wyllie, Carlos Del Ojo Elias, Mark Wilcox, … Derrick W. Crook<br />
+<em>Journal of Clinical Microbiology</em> (2015-04) <a href="https://doi.org/f65dtt">https://doi.org/f65dtt</a> <br />
+DOI: <a href="https://doi.org/10.1128/jcm.03073-14">10.1128/jcm.03073-14</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25631807">25631807</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4365189">PMC4365189</a></p>
+</div>
+<div id="ref-d8RxFwPN">
+<p>5. <strong>Rapid antibiotic-resistance predictions from genome sequence data for Staphylococcus aureus and Mycobacterium tuberculosis</strong> <br />
+Phelim Bradley, N. Claire Gordon, Timothy M. Walker, Laura Dunn, Simon Heys, Bill Huang, Sarah Earle, Louise J. Pankhurst, Luke Anson, Mariateresa de Cesare, … Zamin Iqbal<br />
+<em>Nature Communications</em> (2015-12-21) <a href="https://doi.org/f755tg">https://doi.org/f755tg</a> <br />
+DOI: <a href="https://doi.org/10.1038/ncomms10063">10.1038/ncomms10063</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26686880">26686880</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4703848">PMC4703848</a></p>
+</div>
+<div id="ref-11Jcu87Ae">
+<p>6. <strong>Whole-genome sequencing for prediction of Mycobacterium tuberculosis drug susceptibility and resistance: a retrospective cohort study</strong> <br />
+Timothy M Walker, Thomas A Kohl, Shaheed V Omar, Jessica Hedge, Carlos Del Ojo Elias, Phelim Bradley, Zamin Iqbal, Silke Feuerriegel, Katherine E Niehaus, Daniel J Wilson, … Tim EA Peto<br />
+<em>The Lancet Infectious Diseases</em> (2015-10) <a href="https://doi.org/f3jjtq">https://doi.org/f3jjtq</a> <br />
+DOI: <a href="https://doi.org/10.1016/s1473-3099(15)00062-6">10.1016/s1473-3099(15)00062-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26116186">26116186</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4579482">PMC4579482</a></p>
+</div>
+<div id="ref-4zIt0Vce">
+<p>7. <strong>Prediction of Susceptibility to First-Line Tuberculosis Drugs by DNA Sequencing</strong> <br />
+The CRyPTIC Consortium and the 100,000 Genomes Project<br />
+<em>New England Journal of Medicine</em> (2018-10-11) <a href="https://doi.org/d9kj">https://doi.org/d9kj</a> <br />
+DOI: <a href="https://doi.org/10.1056/nejmoa1800474">10.1056/nejmoa1800474</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30280646">30280646</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6121966">PMC6121966</a></p>
 </div>
 <div id="ref-lwFwJNS9">
-<p>10. <strong>Performance of neural network basecalling tools for Oxford Nanopore sequencing</strong> <br />
+<p>8. <strong>Performance of neural network basecalling tools for Oxford Nanopore sequencing</strong> <br />
 Ryan R. Wick, Louise M. Judd, Kathryn E. Holt<br />
 <em>Genome Biology</em> (2019-06-24) <a href="https://doi.org/gf4jwm">https://doi.org/gf4jwm</a> <br />
 DOI: <a href="https://doi.org/10.1186/s13059-019-1727-y">10.1186/s13059-019-1727-y</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31234903">31234903</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6591954">PMC6591954</a></p>
 </div>
 <div id="ref-Oe1xiQra">
-<p>11. <strong>Real-time, portable genome sequencing for Ebola surveillance</strong> <br />
+<p>9. <strong>Real-time, portable genome sequencing for Ebola surveillance</strong> <br />
 Joshua Quick, Nicholas J. Loman, Sophie Duraffour, Jared T. Simpson, Ettore Severi, Lauren Cowley, Joseph Akoi Bore, Raymond Koundouno, Gytis Dudas, Amy Mikhail, … Miles W. Carroll<br />
 <em>Nature</em> (2016-02-03) <a href="https://doi.org/f88652">https://doi.org/f88652</a> <br />
 DOI: <a href="https://doi.org/10.1038/nature16996">10.1038/nature16996</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26840485">26840485</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4817224">PMC4817224</a></p>
 </div>
 <div id="ref-LurPKJ01">
-<p>12. <strong>Exploring the limit of using a deep neural network on pileup data for germline variant calling</strong> <br />
+<p>10. <strong>Exploring the limit of using a deep neural network on pileup data for germline variant calling</strong> <br />
 Ruibang Luo, Chak-Lim Wong, Yat-Sing Wong, Chi-Ian Tang, Chi-Man Liu, Chi-Ming Leung, Tak-Wah Lam<br />
 <em>Nature Machine Intelligence</em> (2020-04-06) <a href="https://doi.org/d9kq">https://doi.org/d9kq</a> <br />
 DOI: <a href="https://doi.org/10.1038/s42256-020-0167-4">10.1038/s42256-020-0167-4</a></p>
 </div>
 <div id="ref-VSoEWPFn">
-<p>13. <strong>nanoporetech/medaka</strong> <br />
+<p>11. <strong>nanoporetech/medaka</strong> <br />
 GitHub<br />
 <a href="https://github.com/nanoporetech/medaka">https://github.com/nanoporetech/medaka</a></p>
 </div>
 <div id="ref-pPxMDtt0">
-<p>14. <strong>High precision <em>Neisseria gonorrhoeae</em> variant and antimicrobial resistance calling from metagenomic Nanopore sequencing</strong> <br />
+<p>12. <strong>High precision <em>Neisseria gonorrhoeae</em> variant and antimicrobial resistance calling from metagenomic Nanopore sequencing</strong> <br />
 Nicholas D. Sanderson, Jeremy Swann, Leanne Barker, James Kavanagh, Sarah Hoosdally, Derrick Crook, Teresa L. Street, David W. Eyre, The GonFast Investigators Group<br />
 <em>Genome Research</em> (2020-09) <a href="https://doi.org/ghcbjr">https://doi.org/ghcbjr</a> <br />
 DOI: <a href="https://doi.org/10.1101/gr.262865.120">10.1101/gr.262865.120</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32873606">32873606</a></p>
 </div>
 <div id="ref-19hwdhKN">
-<p>15. <strong>Reducing storage requirements for biological sequence comparison</strong> <br />
+<p>13. <strong>Reducing storage requirements for biological sequence comparison</strong> <br />
 M. Roberts, W. Hayes, B. R. Hunt, S. M. Mount, J. A. Yorke<br />
 <em>Bioinformatics</em> (2004-07-15) <a href="https://doi.org/dkhs8w">https://doi.org/dkhs8w</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/bth408">10.1093/bioinformatics/bth408</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15256412">15256412</a></p>
 </div>
 <div id="ref-1DgB6gqeS">
-<p>16. <strong>Minimap and miniasm: fast mapping and de novo assembly for noisy long sequences</strong> <br />
+<p>14. <strong>Minimap and miniasm: fast mapping and de novo assembly for noisy long sequences</strong> <br />
 Heng Li<br />
 <em>Bioinformatics</em> (2016-07-15) <a href="https://doi.org/f8zxc3">https://doi.org/f8zxc3</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/btw152">10.1093/bioinformatics/btw152</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27153593">27153593</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4937194">PMC4937194</a></p>
 </div>
 <div id="ref-2FYPCKEv">
-<p>17. <strong>A Natural Encoding of Genetic Variation in a Burrows-Wheeler Transform to Enable Mapping and Genome Inference</strong> <br />
+<p>15. <strong>A Natural Encoding of Genetic Variation in a Burrows-Wheeler Transform to Enable Mapping and Genome Inference</strong> <br />
 Sorina Maciuca, Carlos del Ojo Elias, Gil McVean, Zamin Iqbal<br />
 <em>Lecture Notes in Computer Science</em> (2016) <a href="https://doi.org/d9ks">https://doi.org/d9ks</a> <br />
 DOI: <a href="https://doi.org/10.1007/978-3-319-43681-4_18">10.1007/978-3-319-43681-4_18</a></p>
 </div>
 <div id="ref-7AwGVQXO">
-<p>18. <strong>Improved genome inference in the MHC using a population reference graph</strong> <br />
+<p>16. <strong>Improved genome inference in the MHC using a population reference graph</strong> <br />
 Alexander Dilthey, Charles Cox, Zamin Iqbal, Matthew R Nelson, Gil McVean<br />
 <em>Nature Genetics</em> (2015-04-27) <a href="https://doi.org/f7dt83">https://doi.org/f7dt83</a> <br />
 DOI: <a href="https://doi.org/10.1038/ng.3257">10.1038/ng.3257</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25915597">25915597</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4449272">PMC4449272</a></p>
 </div>
 <div id="ref-h4yvs7gl">
-<p>19. <strong>Genetic variation: molecular mechanisms and impact on microbial evolution</strong> <br />
+<p>17. <strong>Genetic variation: molecular mechanisms and impact on microbial evolution</strong> <br />
 Werner Arber<br />
 <em>FEMS Microbiology Reviews</em> (2000-01) <a href="https://doi.org/b4x7zf">https://doi.org/b4x7zf</a> <br />
 DOI: <a href="https://doi.org/10.1111/j.1574-6976.2000.tb00529.x">10.1111/j.1574-6976.2000.tb00529.x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/10640595">10640595</a></p>
 </div>
 <div id="ref-NcYZqBux">
-<p>20. <strong>Snakemake–a scalable bioinformatics workflow engine</strong> <br />
+<p>18. <strong>Snakemake–a scalable bioinformatics workflow engine</strong> <br />
 J. Koster, S. Rahmann<br />
 <em>Bioinformatics</em> (2012-08-20) <a href="https://doi.org/gd2xzq">https://doi.org/gd2xzq</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/bts480">10.1093/bioinformatics/bts480</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/22908215">22908215</a></p>
 </div>
 <div id="ref-tGyXVFvJ">
-<p>21. <strong>Beyond the SNP Threshold: Identifying Outbreak Clusters Using Inferred Transmissions</strong> <br />
+<p>19. <strong>Beyond the SNP Threshold: Identifying Outbreak Clusters Using Inferred Transmissions</strong> <br />
 James Stimson, Jennifer Gardy, Barun Mathema, Valeriu Crudu, Ted Cohen, Caroline Colijn<br />
 <em>Molecular Biology and Evolution</em> (2019-03) <a href="https://doi.org/d9r7">https://doi.org/d9r7</a> <br />
 DOI: <a href="https://doi.org/10.1093/molbev/msy242">10.1093/molbev/msy242</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30690464">30690464</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6389316">PMC6389316</a></p>
 </div>
 <div id="ref-64Rp8zLg">
-<p>22. <strong>Interpreting whole genome sequencing for investigating tuberculosis transmission: a systematic review</strong> <br />
+<p>20. <strong>Interpreting whole genome sequencing for investigating tuberculosis transmission: a systematic review</strong> <br />
 Hollie-Ann Hatherell, Caroline Colijn, Helen R. Stagg, Charlotte Jackson, Joanne R. Winter, Ibrahim Abubakar<br />
 <em>BMC Medicine</em> (2016-03-23) <a href="https://doi.org/f8gsk2">https://doi.org/f8gsk2</a> <br />
 DOI: <a href="https://doi.org/10.1186/s12916-016-0566-x">10.1186/s12916-016-0566-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27005433">27005433</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4804562">PMC4804562</a></p>
 </div>
 <div id="ref-dRRsEE8Z">
-<p>23. <strong>Bottlenecks and broomsticks: the molecular evolution of Mycobacterium bovis</strong> <br />
+<p>21. <strong>Bottlenecks and broomsticks: the molecular evolution of Mycobacterium bovis</strong> <br />
 Noel H. Smith, Stephen V. Gordon, Ricardo de la Rua-Domenech, Richard S. Clifton-Hadley, R. Glyn Hewinson<br />
 <em>Nature Reviews Microbiology</em> (2006-09) <a href="https://doi.org/fhqqkv">https://doi.org/fhqqkv</a> <br />
 DOI: <a href="https://doi.org/10.1038/nrmicro1472">10.1038/nrmicro1472</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16912712">16912712</a></p>
 </div>
 <div id="ref-hpSc80yh">
-<p>24. <strong>Evidence for Recombination in Mycobacterium tuberculosis</strong> <br />
+<p>22. <strong>Evidence for Recombination in Mycobacterium tuberculosis</strong> <br />
 Xiaoming Liu, Michaela M. Gutacker, James M. Musser, Yun-Xin Fu<br />
 <em>Journal of Bacteriology</em> (2006-12-01) <a href="https://doi.org/ftp6r2">https://doi.org/ftp6r2</a> <br />
 DOI: <a href="https://doi.org/10.1128/jb.01062-06">10.1128/jb.01062-06</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16997954">16997954</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1698211">PMC1698211</a></p>
 </div>
 <div id="ref-1H760aM5J">
-<p>25. <strong>Genomic analysis of smooth tubercle bacilli provides insights into ancestry and pathoadaptation of Mycobacterium tuberculosis</strong> <br />
+<p>23. <strong>Genomic analysis of smooth tubercle bacilli provides insights into ancestry and pathoadaptation of Mycobacterium tuberculosis</strong> <br />
 Philip Supply, Michael Marceau, Sophie Mangenot, David Roche, Carine Rouanet, Varun Khanna, Laleh Majlessi, Alexis Criscuolo, Julien Tap, Alexandre Pawlik, … Roland Brosch<br />
 <em>Nature Genetics</em> (2013-01-06) <a href="https://doi.org/f4mrqv">https://doi.org/f4mrqv</a> <br />
 DOI: <a href="https://doi.org/10.1038/ng.2517">10.1038/ng.2517</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23291586">23291586</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3856870">PMC3856870</a></p>
 </div>
 <div id="ref-4U7AuMzS">
-<p>26. <strong>Rasusa: Randomly subsample sequencing reads to a specified coverage</strong> <br />
+<p>24. <strong>Rasusa: Randomly subsample sequencing reads to a specified coverage</strong> <br />
 Michael Hall<br />
 <em>Zenodo</em> (2020-03-27) <a href="https://doi.org/d9rz">https://doi.org/d9rz</a> <br />
 DOI: <a href="https://doi.org/10.5281/zenodo.3731394">10.5281/zenodo.3731394</a></p>
 </div>
 <div id="ref-c17o0GrE">
-<p>27. <strong>Evolutionary pathway analysis and unified classification of East Asian lineage of Mycobacterium tuberculosis</strong> <br />
+<p>25. <strong>Evolutionary pathway analysis and unified classification of East Asian lineage of Mycobacterium tuberculosis</strong> <br />
 Egor Shitikov, Sergey Kolchenko, Igor Mokrousov, Julia Bespyatykh, Dmitry Ischenko, Elena Ilina, Vadim Govorun<br />
 <em>Scientific Reports</em> (2017-08-23) <a href="https://doi.org/gbvbxh">https://doi.org/gbvbxh</a> <br />
 DOI: <a href="https://doi.org/10.1038/s41598-017-10018-5">10.1038/s41598-017-10018-5</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28835627">28835627</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5569047">PMC5569047</a></p>
 </div>
 <div id="ref-6J5Bt0f7">
-<p>28. <strong>Multiple Introductions of Mycobacterium tuberculosis Lineage 2–Beijing Into Africa Over Centuries</strong> <br />
+<p>26. <strong>Multiple Introductions of Mycobacterium tuberculosis Lineage 2–Beijing Into Africa Over Centuries</strong> <br />
 Liliana K. Rutaihwa, Fabrizio Menardo, David Stucki, Sebastian M. Gygli, Serej D. Ley, Bijaya Malla, Julia Feldmann, Sonia Borrell, Christian Beisel, Kerren Middelkoop, … Sebastien Gagneux<br />
 <em>Frontiers in Ecology and Evolution</em> (2019-04-16) <a href="https://doi.org/d9r2">https://doi.org/d9r2</a> <br />
 DOI: <a href="https://doi.org/10.3389/fevo.2019.00112">10.3389/fevo.2019.00112</a></p>
 </div>
 <div id="ref-1CS78SxuA">
-<p>29. <strong>Mycobacterium tuberculosis lineage 4 comprises globally distributed and geographically restricted sublineages</strong> <br />
+<p>27. <strong>Mycobacterium tuberculosis lineage 4 comprises globally distributed and geographically restricted sublineages</strong> <br />
 David Stucki, Daniela Brites, Leïla Jeljeli, Mireia Coscolla, Qingyun Liu, Andrej Trauner, Lukas Fenner, Liliana Rutaihwa, Sonia Borrell, Tao Luo, … Sebastien Gagneux<br />
 <em>Nature Genetics</em> (2016-10-31) <a href="https://doi.org/f9dg9j">https://doi.org/f9dg9j</a> <br />
 DOI: <a href="https://doi.org/10.1038/ng.3704">10.1038/ng.3704</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27798628">27798628</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5238942">PMC5238942</a></p>
 </div>
 <div id="ref-Lvhz1sqs">
-<p>30. <strong>Towards standardisation: comparison of five whole genome sequencing (WGS) analysis pipelines for detection of epidemiologically linked tuberculosis cases</strong> <br />
+<p>28. <strong>Towards standardisation: comparison of five whole genome sequencing (WGS) analysis pipelines for detection of epidemiologically linked tuberculosis cases</strong> <br />
 Rana Jajou, Thomas A Kohl, Timothy Walker, Anders Norman, Daniela Maria Cirillo, Elisa Tagliani, Stefan Niemann, Albert de Neeling, Troels Lillebaek, Richard M Anthony, Dick van Soolingen<br />
 <em>Eurosurveillance</em> (2019-12-12) <a href="https://doi.org/d9r9">https://doi.org/d9r9</a> <br />
 DOI: <a href="https://doi.org/10.2807/1560-7917.es.2019.24.50.1900130">10.2807/1560-7917.es.2019.24.50.1900130</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31847944">31847944</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6918587">PMC6918587</a></p>
 </div>
 <div id="ref-IPc8cy7s">
-<p>31. <strong>The Sequence Alignment/Map format and SAMtools</strong> <br />
+<p>29. <strong>The Sequence Alignment/Map format and SAMtools</strong> <br />
 H. Li, B. Handsaker, A. Wysoker, T. Fennell, J. Ruan, N. Homer, G. Marth, G. Abecasis, R. Durbin, 1000 Genome Project Data Processing Subgroup<br />
 <em>Bioinformatics</em> (2009-06-08) <a href="https://doi.org/ff6426">https://doi.org/ff6426</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/btp352">10.1093/bioinformatics/btp352</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/19505943">19505943</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2723002">PMC2723002</a></p>
 </div>
 <div id="ref-bXIkkZJW">
-<p>32. <strong>Improving SNP discovery by base alignment quality</strong> <br />
+<p>30. <strong>Improving SNP discovery by base alignment quality</strong> <br />
 H. Li<br />
 <em>Bioinformatics</em> (2011-02-13) <a href="https://doi.org/fw7k5k">https://doi.org/fw7k5k</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/btr076">10.1093/bioinformatics/btr076</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21320865">21320865</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3072548">PMC3072548</a></p>
 </div>
 <div id="ref-zOTPF2vW">
-<p>33. <strong>Assessment of Mycobacterium tuberculosis transmission in Oxfordshire, UK, 2007–12, with whole pathogen genome sequences: an observational study</strong> <br />
+<p>31. <strong>Assessment of Mycobacterium tuberculosis transmission in Oxfordshire, UK, 2007–12, with whole pathogen genome sequences: an observational study</strong> <br />
 Timothy M Walker, Maeve K Lalor, Agnieszka Broda, Luisa Saldana Ortega, Marcus Morgan, Lynne Parker, Sheila Churchill, Karen Bennett, Tanya Golubchik, Adam P Giess, … Christopher P Conlon<br />
 <em>The Lancet Respiratory Medicine</em> (2014-04) <a href="https://doi.org/f3hxn7">https://doi.org/f3hxn7</a> <br />
 DOI: <a href="https://doi.org/10.1016/s2213-2600(14)70027-x">10.1016/s2213-2600(14)70027-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24717625">24717625</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4571080">PMC4571080</a></p>
 </div>
 <div id="ref-WXM67imc">
-<p>34. <strong>Source code for snp-dists software</strong> <br />
+<p>32. <strong>Source code for snp-dists software</strong> <br />
 Torsten Seemann<br />
 <em>Zenodo</em> (2018-09-09) <a href="https://doi.org/d9zj">https://doi.org/d9zj</a> <br />
 DOI: <a href="https://doi.org/10.5281/zenodo.1411986">10.5281/zenodo.1411986</a></p>
 </div>
 <div id="ref-f0G74pRS">
-<p>35. <strong>Assembly of long, error-prone reads using repeat graphs</strong> <br />
+<p>33. <strong>Assembly of long, error-prone reads using repeat graphs</strong> <br />
 Mikhail Kolmogorov, Jeffrey Yuan, Yu Lin, Pavel A. Pevzner<br />
 <em>Nature Biotechnology</em> (2019-04-01) <a href="https://doi.org/gfzbrd">https://doi.org/gfzbrd</a> <br />
 DOI: <a href="https://doi.org/10.1038/s41587-019-0072-8">10.1038/s41587-019-0072-8</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30936562">30936562</a></p>
 </div>
+<div id="ref-9NLFJZN2">
+<p>34. <strong>Same-Day Diagnostic and Surveillance Data for Tuberculosis via Whole-Genome Sequencing of Direct Respiratory Samples</strong> <br />
+Antonina A. Votintseva, Phelim Bradley, Louise Pankhurst, Carlos del Ojo Elias, Matthew Loose, Kayzad Nilgiriwala, Anirvan Chatterjee, E. Grace Smith, Nicolas Sanderson, Timothy M. Walker, … Zamin Iqbal<br />
+<em>Journal of Clinical Microbiology</em> (2017-05) <a href="https://doi.org/f94vt4">https://doi.org/f94vt4</a> <br />
+DOI: <a href="https://doi.org/10.1128/jcm.02483-16">10.1128/jcm.02483-16</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28275074">28275074</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5405248">PMC5405248</a></p>
+</div>
 <div id="ref-zRTBU1FP">
-<p>36. <strong>Antibiotic resistance prediction for Mycobacterium tuberculosis from genome sequence data with Mykrobe</strong> <br />
+<p>35. <strong>Antibiotic resistance prediction for Mycobacterium tuberculosis from genome sequence data with Mykrobe</strong> <br />
 Martin Hunt, Phelim Bradley, Simon Grandjean Lapierre, Simon Heys, Mark Thomsit, Michael B. Hall, Kerri M. Malone, Penelope Wintringer, Timothy M. Walker, Daniela M. Cirillo, … Zamin Iqbal<br />
 <em>Wellcome Open Research</em> (2019-12-02) <a href="https://doi.org/ggd835">https://doi.org/ggd835</a> <br />
 DOI: <a href="https://doi.org/10.12688/wellcomeopenres.15603.1">10.12688/wellcomeopenres.15603.1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32055708">32055708</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7004237">PMC7004237</a></p>
 </div>
 <div id="ref-AgK2Kztc">
-<p>37. <strong>Integrating informatics tools and portable sequencing technology for rapid detection of resistance to anti-tuberculous drugs</strong> <br />
+<p>36. <strong>Integrating informatics tools and portable sequencing technology for rapid detection of resistance to anti-tuberculous drugs</strong> <br />
 Jody E. Phelan, Denise M. O’Sullivan, Diana Machado, Jorge Ramos, Yaa E. A. Oppong, Susana Campino, Justin O’Grady, Ruth McNerney, Martin L. Hibberd, Miguel Viveiros, … Taane G. Clark<br />
 <em>Genome Medicine</em> (2019-06-24) <a href="https://doi.org/d949">https://doi.org/d949</a> <br />
 DOI: <a href="https://doi.org/10.1186/s13073-019-0650-x">10.1186/s13073-019-0650-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31234910">31234910</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6591855">PMC6591855</a></p>
 </div>
-<div id="ref-3x48DbyN">
-<p>38. <strong>High-throughput microbial population genomics using the Cortex variation assembler</strong> <br />
-Zamin Iqbal, Isaac Turner, Gil McVean<br />
-<em>Bioinformatics</em> (2013-01-15) <a href="https://doi.org/d95c">https://doi.org/d95c</a> <br />
-DOI: <a href="https://doi.org/10.1093/bioinformatics/bts673">10.1093/bioinformatics/bts673</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23172865">23172865</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3546798">PMC3546798</a></p>
-</div>
 <div id="ref-3yP1ZZU9">
-<p>39. <strong>Limitations of the Mycobacterium tuberculosis reference genome H37Rv in the detection of virulence-related loci</strong> <br />
+<p>37. <strong>Limitations of the Mycobacterium tuberculosis reference genome H37Rv in the detection of virulence-related loci</strong> <br />
 Ronan F. O’Toole, Sanjay S. Gautam<br />
 <em>Genomics</em> (2017-10) <a href="https://doi.org/gchzjz">https://doi.org/gchzjz</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.ygeno.2017.07.004">10.1016/j.ygeno.2017.07.004</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28743540">28743540</a></p>
 </div>
 <div id="ref-cF2ezTu8">
-<p>40. <strong>The Enigmatic PE/PPE Multigene Family of Mycobacteria and Tuberculosis Vaccination</strong> <br />
+<p>38. <strong>The Enigmatic PE/PPE Multigene Family of Mycobacteria and Tuberculosis Vaccination</strong> <br />
 Michael J. Brennan<br />
 <em>Infection and Immunity</em> (2017-03-27) <a href="https://doi.org/gbpvsd">https://doi.org/gbpvsd</a> <br />
 DOI: <a href="https://doi.org/10.1128/iai.00969-16">10.1128/iai.00969-16</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28348055">28348055</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5442627">PMC5442627</a></p>
 </div>
 <div id="ref-edkEM6K6">
-<p>41. <strong>Recombination in pe/ppe genes contributes to genetic variation in Mycobacterium tuberculosis lineages</strong> <br />
+<p>39. <strong>Recombination in pe/ppe genes contributes to genetic variation in Mycobacterium tuberculosis lineages</strong> <br />
 Jody E. Phelan, Francesc Coll, Indra Bergval, Richard M. Anthony, Rob Warren, Samantha L. Sampson, Nicolaas C. Gey van Pittius, Judith R. Glynn, Amelia C. Crampin, Adriana Alves, … Taane G. Clark<br />
 <em>BMC Genomics</em> (2016-02-29) <a href="https://doi.org/f8sf3h">https://doi.org/f8sf3h</a> <br />
 DOI: <a href="https://doi.org/10.1186/s12864-016-2467-y">10.1186/s12864-016-2467-y</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26923687">26923687</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4770551">PMC4770551</a></p>
 </div>
 <div id="ref-T9mwbO7q">
-<p>42. <strong>Evolution and expansion of the Mycobacterium tuberculosis PE and PPE multigene families and their association with the duplication of the ESAT-6 (esx) gene cluster regions</strong> <br />
+<p>40. <strong>Evolution and expansion of the Mycobacterium tuberculosis PE and PPE multigene families and their association with the duplication of the ESAT-6 (esx) gene cluster regions</strong> <br />
 Nicolaas C Gey van Pittius, Samantha L Sampson, Hyeyoung Lee, Yeun Kim, Paul D van Helden, Robin M Warren<br />
 <em>BMC evolutionary biology</em> (2006-11-15) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1660551/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1660551/</a> <br />
 DOI: <a href="https://doi.org/10.1186/1471-2148-6-95">10.1186/1471-2148-6-95</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/17105670">17105670</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1660551">PMC1660551</a></p>
 </div>
 <div id="ref-183b1YJFc">
-<p>43. <strong>Freshwater monitoring by nanopore sequencing</strong> <br />
+<p>41. <strong>Freshwater monitoring by nanopore sequencing</strong> <br />
 Lara Urban, Andre Holzer, J Jotautas Baronas, Michael Hall, Philipp Braeuninger-Weimer, Michael J Scherm, Daniel J Kunz, Surangi N Perera, Daniel E Martin-Herranz, Edward T Tipper, … Maximilian R Stammnitz<br />
 <em>bioRxiv</em> (2020-02-07) <a href="https://doi.org/ghdcjv">https://doi.org/ghdcjv</a> <br />
 DOI: <a href="https://doi.org/10.1101/2020.02.06.936302">10.1101/2020.02.06.936302</a></p>

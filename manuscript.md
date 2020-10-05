@@ -3,7 +3,7 @@ author-meta:
 - Michael B. Hall
 bibliography:
 - content/manual-references.json
-date-meta: '2020-10-02'
+date-meta: '2020-10-05'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
 
-  <meta name="dc.date" content="2020-10-02" />
+  <meta name="dc.date" content="2020-10-05" />
 
-  <meta name="citation_publication_date" content="2020-10-02" />
+  <meta name="citation_publication_date" content="2020-10-05" />
 
   <meta name="dc.language" content="en-UK" />
 
@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/a3d3550288f6b7b000263defff7e60492f1a8923/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/a3d3550288f6b7b000263defff7e60492f1a8923/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/a3d3550288f6b7b000263defff7e60492f1a8923/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,10 +101,10 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/a3d3550288f6b7b000263defff7e60492f1a8923/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88/))
 was automatically generated
-from [mbhall88/TAC3_Report@a3d3550](https://github.com/mbhall88/TAC3_Report/tree/a3d3550288f6b7b000263defff7e60492f1a8923)
-on October 2, 2020.
+from [mbhall88/TAC3_Report@819b83e](https://github.com/mbhall88/TAC3_Report/tree/819b83e4da5978ce8a4bfdb99f528e4bbfdc3b88)
+on October 5, 2020.
 </em></small>
 
 ## Authors
@@ -172,49 +172,6 @@ These motivations drive the following PhD thesis structure:
 
 ### Motivation and Background
 
-In 2018, 1.4 million people died of tuberculosis (TB) globally, and over 10 million
-people fell ill to the disease. There were also 484,000 new cases of
-rifampicin-resistant TB reported, of which 78% were multi-drug resistant (MDR)
-[@isbn:9789241565714]. Drug-resistant TB is not a new problem; the first clinical trial
-using Streptomycin to treat TB reported resistance and this outcome influenced the
-creation of the four-drug first-line regimen used today. Standard of care requires
-phenotypic testing of the infecting organism against these four drugs to ensure that
-appropriate treatment is prescribed. However, *Mycobacterium tuberculosis* (Mtb), the
-causative agent of TB, is a slow-growing organism and the gold-standard phenotypic tests
-("mix bug and drug") take around two months to complete. Thus, the traditional clinical
-diagnostic and treatment regimen is slow and expensive. Whole-genome sequencing offers a
-faster solution; recently it was shown that equivalent results are achievable by
-sequencing Mtb grown in "liquid culture" (also known as MGIT, Mycobacterial Growth
-Indicator Tube) after two weeks of culture in contrast to the two-month traditional
-(Lowenstein-Jensen) culture method [@doi:10.1128/JCM.03073-14]. A number of genes are
-implicated in drug resistance and predicting resistance from sequencing data based on a
-catalogue of resistance single-nucleotide polymorphisms (SNPs) and indels (insertions or
-deletions) works with high-specificity [@doi:10/f755tg; @doi:10/f3jjtq]. For the four
-first-line drugs, a study by the CRyPTIC consortium is the first of its kind to
-demonstrate that phenotyping is not required if genotype predicts susceptibility
-[@doi:10.1056/NEJMoa1800474]. However, as the genetic basis for drug resistance is not
-entirely understood, there is still a sensitivity gap that differs drug-by-drug.
-
-Public health requirements for TB diagnostics are **resistance prediction, species
-identification, and clustering** of genomes. The clusters are intended to contain
-potential transmission events, thus enabling more effective contact tracing. All of the
-main requirements are currently successfully achieved with Illumina sequencing
-technology. However, there are reasons to consider abandoning Illumina for Oxford
-Nanopore Technology's (ONT) sequencer. First, there is cost - Illumina has raised its
-reagent prices considerably. Second, the burden of TB lies primarily in places where
-there is neither capital nor infrastructure for purchasing or maintaining a large
-machine. The third is speed: Votintseva *et al.* showed that it was feasible to go from
-patient to result via a Nanopore sequencer in 12.5 hours [@doi:10.1128/JCM.02483-16].
-Since this publication, the yield and quality of Nanopore has risen. Therefore, a
-diagnostic that delivers results while the patient is in the clinic is now imaginable.
-
-As an aside, it is worth noting that in high prevalence areas, there is no interest in
-transmission analysis, and therefore all of the information that they need (species and
-resistance) could be attained via deep amplicon sequencing. We accept this but ignore it
-and focus on a whole-genome solution nevertheless; both because of the better
-phylogenetic resolution, and because we do not yet know the relevant genetic mutations
-associated with new drugs.
-
 The idea of using a single, linear reference genome to represent a population of
 individuals is not ideal. Even more so in the context of a bacterium such as *Salmonella
 enterica*, where two individuals can differ to such a degree that they only share 16% of
@@ -233,53 +190,68 @@ column signifies an individual genome, with the coloured blocks representing gen
 Numbers label 50 segregating SNPs. The percentages at the bottom express the proportion
 of SNPs which can be detected using each of the 6 'genomes' as a reference by mapping
 perfect reads from the remaining 5 to this reference.](images/refbias.png){#fig:refbias
-height="4in"}
+width="40%"}
 
 One of the first questions that arise from a computational point-of-view is how to apply
 current methods, which assume a single reference, to a pan-genome? An approach to
 answering this question that has been gaining considerable traction in recent years is
 that of genome graphs. This new paradigm uses a population reference graph (PRG) as its
-equivalent of a single, linear, reference genome. A PRG is built to represent variation
-seen within a population, conceding the fact that no single genome can accurately
-represent an entire species. To construct such a PRG, one takes a multiple sequence
-alignment (MSA) and collapses shared sequence and creates "bubbles", or branch points,
-where they do not (see Figure {@fig:prg} for an illustration of this process). We define
-a collection of PRGs as a pan-genome reference graph (PanRG), which we will
-interchangeably refer to as a pan-genome. Thus far, genome graph methods have focused
-mainly on eukaryotes. Given the rich diversity of genetic content in the prokaryote
-world, it would seem genome graphs are more suited to utilisation there.
+equivalent of a reference genome. A PRG is built to represent variation seen within a
+population, conceding the fact that no single genome can accurately represent an entire
+species. To construct such a PRG, one takes a multiple sequence alignment (MSA) and
+collapses shared sequence and creates "bubbles", or branch points, where they do not
+(see Figure {@fig:prg} for an illustration of this process). We define a collection of
+PRGs as a pan-genome reference graph (PanRG), which we will interchangeably refer to as
+a pan-genome. Thus far, genome graph methods have focused mainly on eukaryotes. Given
+the rich diversity of genetic content in the prokaryote world, it would seem genome
+graphs are more suited to utilisation there.
 
 ![An illustration of how a population reference graph (PRG) is constructed. Regions
 (columns) of shared sequence are collapsed into a single node. Those that differ are
-split into "bubbles", or branching nodes.](images/prg.png){#fig:prg width="100%"}
+split into "bubbles", or branching nodes.](images/prg.png){#fig:prg width="65%"}
 
-Nanopore sequencing yields very long reads (up to 2.2Mbp [@doi:10/gfnkxj]), the
-mean/mode read identity tends to fall in the range of 87-94% (using ONT's `guppy`
-basecaller), while on a consensus level, it can achieve 99.94% with assembly polishing
-[@doi:10/gf4jwm].  
+In 2018, 1.4 million people died of tuberculosis (TB) globally, and over 10 million
+people fell ill to the disease, with 377,520 of those being multi-drug resistant (MDR)
+[@isbn:9789241565714]. Standard of care requires phenotypic testing of the infecting
+organism against the four first-line drugs to ensure that appropriate treatment is
+prescribed. However, *Mycobacterium tuberculosis* (Mtb), the causative agent of TB, is a
+slow-growing organism and phenotypic testing takes around two months to complete.
+Whole-genome sequencing (WGS) offers a faster solution; recently it was shown that
+equivalent results are achievable by sequencing Mtb grown in liquid culture after two
+weeks of culture in contrast to the two-month traditional (Lowenstein-Jensen) culture
+method [@doi:10.1128/JCM.03073-14]. A number of genes are implicated in drug resistance
+and predicting resistance from sequencing data based on a catalogue of resistance SNPs
+and indels works with high specificity [@doi:10/f755tg; @doi:10/f3jjtq]. For the four
+first-line drugs, a study by the CRyPTIC consortium is the first of its kind to
+demonstrate that phenotyping is not required if genotype predicts susceptibility
+[@doi:10.1056/NEJMoa1800474]. However, as the genetic basis for drug resistance is not
+entirely understood, there is still a sensitivity gap that differs drug-by-drug.
+
+Nanopore sequencing yields ultra long reads with a mean/mode read identity in the range
+of 87-94%, while on a consensus level, it can achieve 99.94% identity with assembly
+polishing [@doi:10/gf4jwm].  
 Variant calling with Nanopore sequencing data has seen a somewhat slow development.
-Currently, the main tools that have had reasonable testing done and are versatile enough
-to detect both SNPs and (some) indels are `nanopolish` [@doi:10/f88652], Clair
-[@doi:10/d9kq] and `medaka` [@https://github.com/nanoporetech/medaka]. A recent
-benchmark showed that Nanopore variant calling provides reliable diagnostic information
-for *Neisseria gonorrhoeae* [@doi:10.1101/gr.262865.120]. However, to date, there has
-been no extensive Nanopore variant calling benchmark done for Mtb. Given the potential
-benefits of using genome graphs and long-read Nanopore sequencing for bacterial
-genomics, it makes sense to try and blend the two.
+Currently, the main tools that have had reasonable testing done are `nanopolish`
+[@doi:10/f88652], Clair [@doi:10/d9kq] and `medaka`
+[@https://github.com/nanoporetech/medaka]. A recent benchmark showed that Nanopore
+variant calling provides reliable diagnostic information for *Neisseria gonorrhoeae*
+[@doi:10.1101/gr.262865.120]. However, to date, there has been no extensive Nanopore
+variant calling benchmark done for Mtb. Given the potential benefits of using genome
+graphs and long-read Nanopore sequencing for bacterial genomics, it makes sense to try
+and blend the two.
 
 Pandora is a method being developed in the group to genotype across the *entire*
-pan-genome of a bacterial sample - not just the core. It does this by working with a
-PRG, rather than a linear reference. The method is based on the following intuition
-(similar to that behind the Li and Stephens model in population genetics): genomes
-evolve by recombination and mutation, and thus we ought to be able to approximate a
-$N+1$ genome as a mosaic of the first $N$ genomes. `pandora` maps Nanopore reads to a
-graph encoding of a PRG, infers a mosaic, and provides genotypes at all variants in the
-PanRG. Mapping is done using minimising k-mers [@doi:10/dkhs8w] in a similar vein to
-that done by `minimap`[@doi:10/f8zxc3], and is therefore fast. By using Nanopore
-sequencing data, it is also possible to infer gene order as, in general, a single read
-will contain multiple genes, as opposed to Illumina sequencing where multiple reads are
-required to span a single gene. Note `pandora` does not (prior to this work) include any
-facility for discovering novel variation.
+pan-genome of a bacterial sample. It does this by working with a PRG, rather than a
+linear reference. The method is based on the following intuition: genomes evolve by
+recombination and mutation, and thus we ought to be able to approximate a $N+1$ genome
+as a mosaic of the first $N$ genomes. `pandora` maps Nanopore reads to a graph encoding
+of a PRG, infers a mosaic, and provides genotypes at all variants in the PanRG. Mapping
+is done using minimising k-mers [@doi:10/dkhs8w] in a similar vein to that done by
+`minimap`[@doi:10/f8zxc3], and is therefore fast. By using Nanopore sequencing data, it
+is also possible to infer gene order as, in general, a single read will contain multiple
+genes, as opposed to Illumina sequencing where multiple reads are required to span a
+single gene. Note `pandora` does not (prior to this work) include any facility for
+discovering novel variation.
 
 #### Summary
 
@@ -305,45 +277,31 @@ pan-genomes are this open, but it does raise the question: what do we use as a
 the specific strain of interest. This works fine when dealing with a single sample or
 multiple samples of the same strain. However, when expanding to many samples from
 varying strains, the reference is no longer representative. An alternative solution is
-to focus solely on the core genome - the complement of genes found in all members of a
-species. The issue with this approach is the loss of information about variation in all
-of the non-core genes, which could be a large number if the pan-genome is open. See
-Figure {@fig:pangenome} for an illustration of this reference-bias problem.
-
-<!--![Schematic representation of a pan-genome. Each oval represents the-->
-<!--genetic content of a single individual within a species. Reference [@doi:10/gfw8gq].](images/pangenome.jpg){#fig:pangenome-->
-<!--width="50%"}-->
-
-The message we are aiming to drive home at the beginning of this chapter is that
-reference-based analysis fundamentally cannot access all of the variation in a bacterial
-species.
+to focus solely on the core genome. The issue with this approach is the loss of
+information about variation in all of the non-core genes, which could be a large number
+if the pan-genome is open.
 
 #### Prior work: Mosaic approximations and genotyping
 
-Standard approaches to variant analysis are effectively a first-order approximation. In
-such an approximation, samples are considered identical to the reference, one maps reads
-to it, identifies clear SNPs via the read pileup, and then modifies the reference to get
-an estimate of the sample's genome. As mentioned in
-[Motivation and Background](#motivation-and-background), `pandora` is a method developed
-by a previous PhD student in the lab, Rachel Colquhoun. It works on the premise of
-approximating a genome as a hierarchical mosaic. At a high-level, it represents a mosaic
-of loci - usually genes and intergenic regions - while at the locus-level, it is a
-mosaic of previously-seen genomes.
+As mentioned in [Motivation and Background](#motivation-and-background), `pandora` is a
+method developed by a previous PhD student in the lab, Rachel Colquhoun. It works on the
+premise of approximating a genome as a hierarchical mosaic. At a high-level, it
+represents a mosaic of loci - usually genes and intergenic regions - while at the
+locus-level, it is a mosaic of previously-seen genomes.
 
 `pandora` aims to infer a consensus sequence from a PRG for a single sample or a
 collection of samples. In the case of a collection of samples, the consensus sequence
-will be one that collection of samples. `pandora` can additionally perform genotyping of
-the sample(s) with respect to this inferred consensus and produces a Variant Call Format
-(VCF) file. If a gene is present in only 2 of 50 samples then genotyping information is
-provided for those 2 samples and null for the other 48.
+will be one that best fits the collection of samples. `pandora` can additionally perform
+genotyping of the sample(s) with respect to this inferred consensus and produces a
+Variant Call Format (VCF) file. If a gene is present in only 2 of 50 samples then
+genotyping information is provided for those 2 samples and null for the other 48.
 
 While `pandora`, before the work in this chapter, allows comparison of genomes to a
 level of detail provided by no other tool, there is still a significant shortcoming: it
 cannot discover novel variation. If a sample contains a variant not present in the PRG,
 the best `pandora` can do is select the path that is closest to that variant. The work
-in my first chapter outlines a method for removing this limitation within `pandora` and
-provides an analysis of the gain in recall and precision by incorporating *de novo*
-variant discovery into the `pandora` workflow.
+in this chapter outlines a method for removing this limitation and provides an analysis
+of the gain in recall and precision by incorporating *de novo* variant discovery.
 
 #### Local *de novo* variant discovery in a genome graph
 
@@ -379,21 +337,12 @@ describes the shortest path from that node to the end anchor. So as we walk alon
 DFS tree, if a node is not reachable within our maximum distance threshold, we abandon
 path enumeration.
 
+---
+
 I programmed the above methods in C++ and added them into the code base for `pandora`.
 They constitute 1325 lines of source code and 3486 lines of test code. I had help with
 the implementation of multi-threading the *de novo* component and the BFS pruning from
-Leandro Ishi. The overall workflow for `pandora` with *de novo* variant discovery
-enabled is illustrated in Figure {@fig:pandora}.
-
-<!--![Schematic of the `pandora` method. Note Steps 4-6 are those developed and added-->
-<!--in the scope of chapter 1. 1) A Population Reference Graph (PRG) built from known-->
-<!--variants or previous samples. 2) Sequencing reads to try and map on to the PRG. 3) Reads-->
-<!--mapped on to the PRG (where possible) using minimising k-mers. Coloured segments show-->
-<!--paths where reads map. 4) Local assembly of the reads using a de Bruijn graph due to-->
-<!--lower than expected coverage on a section of the PRG (many unmapped reads). A new path-->
-<!--is discovered (orange). 5) The new path is added into the original PRG. 6) Reads are-->
-<!--remapped to the new PRG with many reads mapping to the newly included path (orange).](images/pandora.png){#fig:pandora-->
-<!--width="80%"}-->
+Leandro Ishi.
 
 #### Evaluation
 
@@ -404,63 +353,16 @@ method on simulated data to ensure if does indeed do as it advertises. For the s
 keeping this report concise, I will refrain from repeating the results here, except to
 say that this method does indeed find a large number of variants not already in the PRG.
 
-<!--The first step in evaluating the effect of adding *de novo* variant calling to `pandora`-->
-<!--is with a simulated dataset. What we aim to show here is that the addition of *de novo*-->
-<!--discovery allows `pandora` to improve its probability of variant detection (recall). The-->
-<!--first step was randomly selecting 100 gene MSAs from a pool of 29702 obtained for-->
-<!--*Escherichia coli* from the panX database [@doi:10/gczkbr]. Next, a PRG is constructed-->
-<!--for each gene MSA, and a random path through each is selected using `pandora`. Each-->
-<!--PRG's random path is then concatenated together to form a single "genome" sequence. We-->
-<!--subsequently add SNPs to the simulated genome at a specified rate of SNPs per-gene using-->
-<!--`snp-mutator` [@doi:10/d9np]. We then simulated Nanopore reads from this mutated genome-->
-<!--using `nanosim-h` [@doi:10/gbj69k; @doi:10/d9nq]. `pandora map` is then run, using the-->
-<!--original PRG as input, along with the reads simulated from the mutated genome. With this-->
-<!--approach, we know the exact SNPs we hope to find. After running the `map` routine, we-->
-<!--are left with a collection of candidate paths produced by the *de novo* component. We-->
-<!--then added these back into the PRG and iterated the `map` routine again, this time-->
-<!--without *de novo* discovery enabled. Re-adding variants into the graph has the effect of-->
-<!--making all of the *de novo* variants visible to genotyping. The result is a VCF file-->
-<!--that (hopefully) contains the variants we introduced in the beginning. To compare the-->
-<!--performance of `pandora` before and after *de novo* is added, we can compare the VCF-->
-<!--produced from the first round of `map` with the last VCF.-->
-
-<!--To avoid error-prone conversion of linear coordinates into graph coordinates the-->
-<!--evaluation of whether the variants called by `pandora` are correct was undertaken in a-->
-<!--slightly more convoluted manner. We define a probe-set $P$ as a collection of probes,-->
-<!--$p$, where $p$ represents an entry, $e$, in a VCF file, $V$. For each $e \in V$, $p$ is-->
-<!--constructed by the concatenation of $l_w$, $e_c$, and $r_w$ (in that order), where $e_c$-->
-<!--is the called variant of $e$, and $l_w$ and $r_w$ are the sequences, of maximum length-->
-<!--$w$, in the VCF reference to the left and right, respectively, of $e_c$.-->
-
-<!--A truth probe-set, $P_t$, was constructed from the VCF of variants added to the-->
-<!--simulated genome and a query probe-set, $P_q$, from the variants called by `pandora`. We-->
-<!--then mapped all probes from $P_t$ to $P_q$ using `bwa mem` [@arxiv:1303.3997]. We then-->
-<!--classify each mapped probe as a false positive or true positive and calculate precision-->
-<!--and recall for the pre-*de novo* and post-*de novo* VCF files from `pandora`. As-->
-<!--expected, Figure {@fig:simulation_roc} shows that without *de novo* variant discovery,-->
-<!--we are unable to find almost all introduced variants. In future work, we plan to add-->
-<!--indels to the simulations.-->
-
-<!--![Precision-recall curve for `pandora` simulations with (circles) and without (crosses) *de novo* variant-->
-<!--discovery. This plot is measuring the proportion of SNPs we introduced into our-->
-<!--simulated genome we correctly found (recall) on the X-axis. On the Y-axis is the-->
-<!--proportion of calls we made which were correct (precision). Colours represent different-->
-<!--coverage depth. Each point represents a different genotype confidence-->
-<!--threshold.](images/simulation_roc_denovo_and_no_denovo.png){#fig:simulation_roc-->
-<!--width="90%"}-->
-
 ##### Empirical data - multi-sample comparison
 
 This section will be the major focus for the evaluation of both *de novo* *and*
 `pandora` and will constitute (part of) the results section of the `pandora` paper (near
-completion). We show the power of using a PRG, instead of a single reference, along with
-`pandora`'s performance compared to Nanopore- and Illumina-based variant callers. We
-compare 20 samples, from across the *E. coli* phylogeny. As other variant callers do not
-use a PRG we carefully selected 24 single-reference genomes representing the diversity
-of the *E. coli* phylogenetic tree as best as possible. Each variant caller was run once
-for each reference genome with the aim being to show that the more samples in the
-analysis (i.e. the larger the pan-genome of the samples), the lower the number of
-variants the other callers can find.
+completion). We show the benefits of using a PRG, along with `pandora`'s performance
+compared to Nanopore- and Illumina-based variant callers. We compare 20 samples, from
+across the *E. coli* phylogeny. As other variant callers do not use a PRG we carefully
+selected 24 single-reference genomes representing the diversity of the *E. coli* tree as
+best as possible. Each variant caller was run once for each reference genome to
+illustrate the variance in results depending on the reference genome used.
 
 In the process of developing an evaluation framework, we produced a python package
 called `varifier` (<https://github.com/iqbal-lab-org/varifier>). Briefly, for precision,
@@ -583,29 +485,6 @@ clock and will artefactually extend branch lengths on the phylogenetic tree
 recombination [@doi:10/fhqqkv; @doi:10/ftp6r2; @doi:10/f4mrqv], so this step in not
 required.
 
-<!--There are three main issues we need to address or keep in mind for the clustering-->
-<!--component of this chapter:-->
-
-<!--- When running a variant caller on a single sample, typically the tool only makes a-->
-<!--  non-reference call when it finds a definite difference from the reference. Therefore,-->
-<!--  it is impossible to tell the difference between a reference-matching site and one in-->
-<!--  which there is genotyping uncertainty. One solution is to make a de-duplicated list of-->
-<!--  variants found in all samples and genotype the samples at those positions. Solving-->
-<!--  this reference-bias issue is the strength of the `compare` routine within `pandora`.-->
-<!--  It tackles the problem in this manner while also handling issues of overlapping-->
-<!--  variants in the list of all-sample-variants.-->
-<!--- What distance measure do we use? Do we exclude positions where any sample has missing-->
-<!--  data? Missing data of this type could be due to low coverage, but it could also be-->
-<!--  because a section of the genome is not present. We will extensively cover this issue-->
-<!--  for *E. coli* in [Chapter 1](#chapter-1-variant-discovery-in-genome-graphs). The-->
-<!--  pan-genome of Mtb is small, but it does exist nonetheless [@doi:10/d9r8;-->
-<!--  @doi:10/f4mrqv]. There is also a secondary issue that if certain regions have-->
-<!--  clustered genetic variation in some lineages of Mtb then reads will not map well to-->
-<!--  the reference. Both of the above issues are handled by `pandora` due to its use of a-->
-<!--  PRG, but we still need to make a choice about missing data.-->
-<!--- How do we handle sites where there is evidence of heterozygosity - i.e. a mixed-->
-<!--  sample?-->
-
 For this chapter, we define genetic distance to be the sum of genetic discordances,
 where missing data and heterozygosity do not cause discordance and study the clustering
 this definition generates.
@@ -640,16 +519,10 @@ lineage-defining SNPs [@doi:10/gbvbxh; @doi:10/d9r2; @doi:10/f9dg9j] was used in
 conjunction with a sample's Illumina VCF from the
 [Baseline variant analysis](#baseline-variant-analysis) for the lineage assignment.
 
-In the end, we chose to exclude samples from further analysis if they met any of the
-following criteria:
-
-- Illumina coverage below 20x
-- Nanopore coverage below 30x
-- Evidence of mixed infection - i.e. mixed lineage classification
-- Unknown lineage assignment - no valid SNPs at lineage-defining sites
-
-This filtering criteria led to a further 57 samples being excluded; leaving us with a
-total of 150 samples to use for the remainder of this work. In addition to the QC of the
+We exclude samples from further analysis if they had coverage below 20x (Illumina) or
+30x (Nanopore), or if they could not be assigned a single lineage. This filtering
+criteria led to a further 57 samples being excluded; leaving us with a total of 150
+samples to use for the remainder of this work. In addition to the QC of the
 Illumina/Nanopore data, we sadly had to exclude 26/35 PacBio sequencing datasets due to
 mismatched Illumina/Nanopore data or PacBio coverage lower than 20x.
 
@@ -677,50 +550,40 @@ segregation-based metric above -0.5, or a variant distance bias below 0.002.
 To assess how well the Nanopore SNPs agree with Illumina we first look at SNP
 concordance. Two metrics of interest here are the call rate - what proportion of COMPASS
 alternate alleles does `bcftools` make a reference/alternate call - and the concordance
-\- what proportion of COMPASS alternate alleles does `bcftools` genotype agree with.
-Figure {@fig:alt_concordance} shows that concordance is very high between the two
-technologies, with nearly all samples having a concordance greater than 99.5%. Call rate
-is a little lower than this, with the majority of samples being above 97%.
-
-![Call rate (Y-axis) and concordance (X-axis) of `bcftools` SNP calls to Illumina
-COMPASS calls. Call rate is what proportion of COMPASS alternate alleles does
-`bcftools` make a reference/alternate call. Concordance is what proportion of COMPASS
-alternate alleles does `bcftools` genotype agree with. Each point represents a sample,
-with samples coloured by the site the data came from.](images/alt_concordance.png){#fig:alt_concordance}
+\- what proportion of COMPASS alternate alleles does `bcftools` genotype agree with. We
+found that concordance is very high between the two technologies, with nearly all
+samples having a concordance greater than 99.5%. Call rate is a little lower than this,
+with the majority of samples being above 97%.
 
 As transmission clusters are ultimately defined based on a SNP distance matrix, it is
 important to understand how such matrices differ between Illumina and Nanopore variant
-calls. To investigate this, a consensus sequence was generated from the filtered VCFs by
-replacing reference positions with passing SNP calls. Any positions with a null genotype
-or that failed the filtering were masked. Positions which do not appear in the VCF (i.e.
-no reads mapped to this region) were also masked, as were positions in repetitive
-regions [@doi:10/f3hxn7]. We then generate a pairwise SNP distance matrix for each
-sequencing technology from their respective consensus genomes using `snp-dists`
-[@doi:10/d9zj].  
-Figure {@fig:dotplot} shows the relationship of these distances between pairs of samples
-based on the sequencing technology used. While the relationship across all samples of
-all distances is interesting, in the context of defining transmission clusters, it is
-slightly misleading. Transmission clusters by grouping together samples that are within
-a certain number of SNPs. The threshold used for this grouping is generally in the order
-of tens-of-SNPs [@doi:10/d9r7] so it makes more sense to look at the distance
+calls. To investigate this, a consensus sequence was generated from the filtered VCFs,
+with repetitive regions masked [@doi:10/f3hxn7]. We then generate a pairwise SNP
+distance matrix for each sequencing technology from their respective consensus genomes
+using `snp-dists` [@doi:10/d9zj].  
+Figure {@fig:dotplot} shows the relationship of the pairwise distance of samples based
+on the sequencing technology used. While the relationship across all samples is
+interesting, in the context of defining transmission clusters, it is slightly
+misleading. Transmission clusters are defined by grouping together samples that are
+within a certain number of SNPs. The threshold used for this grouping is generally in
+the order of tens-of-SNPs [@doi:10/d9r7] so it makes more sense to look at the distance
 relationship for samples that are closer to each other. In Figure {@fig:close_dotplot},
-we zoom in on the bottom left of Figure {@fig:dotplot}, to samples within an Illumina
-SNP distance of 100. It shows that, at this scale, the relationship between Illumina-
-and Nanopore-defined SNP distance is much closer. The correlation between the two can be
-quantified by the linear equation $y=0.93x+0.84$, where $y$ is the predicted Nanopore
-distance between two samples, given the Illumina distance $x$. We can use this equation
-as a way of translating transmission cluster SNP thresholds for Illumina data to
-Nanopore. For instance, if clusters are defined as samples within 12 SNPs of each other,
-we can use this as $x$ and define our Nanopore transmission clusters as $y=0.93\times 12
-\+ 0.84=12.0$. So at a threshold of 12 SNPs, the Nanopore threshold would be the same as
-Illumina.
+we limit to samples within an Illumina SNP distance of 100. It shows that, at this
+scale, the relationship between Illumina- and Nanopore-defined SNP distance is much
+closer. The correlation between the two can be quantified by the linear equation
+$y=0.93x+0.84$, where $y$ is the predicted Nanopore distance between two samples, given
+the Illumina distance $x$. We can use this equation as a way of translating transmission
+cluster SNP thresholds for Illumina data to Nanopore. For instance, if clusters are
+defined as samples within 12 SNPs of each other, we can use this as $x$ and define our
+Nanopore transmission clusters as $y=0.93\times{12}+0.84=12.0$. So at a threshold of 12
+SNPs, the Nanopore threshold would be the same as Illumina.
 
 ![Relationship between pairwise SNP distance for Illumina (COMPASS; X-axis) and Nanopore
 (`bcftools`; Y-axis). Each point represents a pair of samples. The red diagonal line
 is the identity line, which is where the points should lie if the distance between samples
 is the same for each technology. The black line shows the line of best fit for the data.
 The legend also shows the equations for these lines, along with their correlation
-coefficient (r).](images/dotplot.png){#fig:dotplot}
+coefficient (r).](images/dotplot.png){#fig:dotplot width="80%"}
 
 ![Relationship between pairwise SNP distance for Illumina (COMPASS; X-axis) and Nanopore
 (`bcftools`; Y-axis) for samples within 100 SNPs of each other (based on Illumina distance).
@@ -728,7 +591,7 @@ Each point represents a pair of samples. The red diagonal line
 is the identity line, which is where the points should lie if the distance between samples
 is the same for each technology. The black line shows the line of best fit for the data.
 The legend also shows the equations for these lines, along with their correlation
-coefficient (r).](images/close_dotplot.png){#fig:close_dotplot}
+coefficient (r).](images/close_dotplot.png){#fig:close_dotplot width="80%"}
 
 ##### Comparing Illumina and Nanopore SNPs to truth assemblies
 
@@ -740,9 +603,11 @@ positions in the assembly where mapped Illumina reads did not have more than 90%
 agreement with the assembly, or had less than 10 reads. One sample was excluded due to
 the detection of other species contigs within the assembly. We then used `varifier` to
 assess the precision and recall of the SNP calls for the eight samples with high quality
-assemblies. Figure {@fig:baseline_truth} shows that ...
+assemblies. Figure {@fig:baseline_truth} shows that the precision and recall for
+Nanopore is slightly lower than for Illumina, however, the difference is not large.
 
-![Evaluation of the Illumina (COMPASS; green) and Nanopore (`bcftools`; orange) SNP calls to the PacBio CCS assemblies for eight samples using `varifier`. The left plot shows precision and the right is recall. Each point is one of the eight samples.](images/baseline_truth.png){#fig:baseline_truth}
+![Evaluation of the Illumina (COMPASS; green) and Nanopore (`bcftools`; orange) SNP calls to the PacBio CCS assemblies for eight samples using `varifier`. The left plot shows precision and the right is recall. Each point is one of the eight samples.](images/baseline_truth.png){#fig:baseline_truth
+width="90%"}
 
 #### Per-sample variant calls with `pandora`
 
@@ -752,7 +617,7 @@ analysis. At this stage, we have two varieties in mind:
 - Sparse PRG - H37Rv and all variants from a random selection of 100 samples from each
   lineage in the CRyPTIC (Comprehensive Resistance Prediction for Tuberculosis: an
   International Consortium) dataset [@doi:10/d9kj].
-- Dense PRG - The same as Sparse PRG, but 2,000 samples from each lineage.
+- Dense PRG - The same as Sparse PRG, but 500 samples from each lineage.
 
 In all of the above PRGs, we will apply the same mask from the baseline analysis and
 divide the genome into genes and intergenic regions, with a local PRG for each.
@@ -823,19 +688,18 @@ first-line drugs, it is possible to detect the majority of resistant strains wit
 confidence [@doi:10/d9kj], but for second-line, novel, and repurposed drugs, this is
 much harder.
 
-Previous work from our group has shown that using whole-genome sequencing (WGS) it is
-possible to create a panel of resistance markers and then successfully use this panel to
-predict drug resistance from Mtb sequence data [@doi:10/f755tg; @doi:10/f3jjtq]. This
-work involved the development of a software program called `mykrobe` to automate this
-inference and can use either Illumina or Nanopore data [@doi:10/f94vt4]. During the
-previous year, the predictive power of `mykrobe` has expanded and become even more
-accurate [@doi:10/ggd835] (I played a small role in improving the likelihood
-calculations). This update of the `mykrobe` panel was mostly due to the recently
-published work from the CRyPTIC project [@doi:10/d9kj]. CRyPTIC aims to perform drug
-susceptibility testing and WGS on 40,000 Mtb samples (many MDR) from all over the globe,
-and combine this with WGS data from another 60,000 samples. The goal of the project is
-to improve genotypic resistance prediction by expanding our catalogue of resistance
-mutations.
+Previous work from our group has shown that using WGS it is possible to create a panel
+of resistance markers and then successfully use this panel to predict drug resistance
+from Mtb sequence data [@doi:10/f755tg; @doi:10/f3jjtq]. This work involved the
+development of a software program called `mykrobe` to automate this inference and can
+use either Illumina or Nanopore data [@doi:10/f94vt4]. During the previous year, the
+predictive power of `mykrobe` has expanded and become even more accurate
+[@doi:10/ggd835] (I played a small role in improving the likelihood calculations). This
+update of the `mykrobe` panel was mostly due to the recently published work from the
+CRyPTIC project [@doi:10/d9kj]. CRyPTIC aims to perform drug susceptibility testing and
+WGS on 40,000 Mtb samples (many MDR) from all over the globe, and combine this with WGS
+data from another 60,000 samples. The goal of the project is to improve genotypic
+resistance prediction by expanding our catalogue of resistance mutations.
 
 The proposed work for this chapter is based on the assumption that a large part of the
 work by this consortium (which our group is a critical part of) will be available. While
@@ -854,31 +718,18 @@ catalogue of resistance mutations used. However, given the same panel, different
 do not perform identically, and therefore methodology is still important. While some
 studies have focused specifically on Nanopore data, all used a small sample size
 (Votintseva *et al.* 2017 n=5, Hunt *et al.* 2019 n=5, `tb-profiler` 2019 n=3).
-Additionally, `tb-profiler` and `mykrobe` both have limitations with their methods.
-
-`tb-profiler` uses an approach similar to a read pileup and then taking consensus at
-each site. This means they will never perform particularly well with indel calls as
-pileups do not work well for Illumina [@doi:10/d95c], let alone Nanopore. Given that
-indel calls are critical for some drugs in Mtb such as pyrazinamide [@doi:10/d9kj], this
-becomes a ceiling for the `tb-profiler` method. On the other hand, `mykrobe` uses a
-conservative, precise approach of mapping 21-mers to a de Bruijn graph. With an
-approximate error rate of 10% in Nanopore data, the probability of a correct 21-mer is
-11%. Meaning that `mykrobe` requires high depth-of-coverage to get sufficient, correct
-21-mers. By comparison, `pandora` maps entire reads to genes - rather than k-mers in
-isolation as with `mykrobe` - confirms that the read really does overlap the gene, and
-only then includes the k-mers in the calculation. Theoretically, this allows for the use
-of a smaller k-mer size and therefore reduces coverage requirements.  
-A second limitation of both `tb-profiler` and `mykrobe` is that they only genotype with
-respect to know variants - i.e. they cannot detect novel variants. The CRyPTIC
-consortium recently introduced a new approach whereby if an unknown mutation is
-identified in a gene known to be involved in resistance, they refuse to make a call and
-instead send the sample for phenotyping [@doi:10/d9kj]. On their 10,000 samples, this
-achieved a specificity and sensitivity for first-line drugs that was acceptable for
-clinical usage. This method is now in use at Public Health England for all Mtb samples
-in England. Hunt *et al.* 2019 [@doi:10/ggd835] quantified the cost of the
-pure-genotyping approach of `mykrobe`, showing that 2.4-4.6% of resistant samples were
-missed. By introducing *de novo* discovery into `pandora`, I enable us to address this
-issue, and that is the focus for this chapter.
+Additionally, `tb-profiler` and `mykrobe` both have limitations with their methods. Both
+`tb-profiler` and `mykrobe` only genotype with respect to known variants - i.e. they
+cannot detect novel variants. The CRyPTIC consortium recently introduced a new approach
+whereby if an unknown mutation is identified in a gene known to be involved in
+resistance, they refuse to make a call and instead send the sample for phenotyping
+[@doi:10/d9kj]. On their 10,000 samples, this achieved a specificity and sensitivity for
+first-line drugs that was acceptable for clinical usage. This method is now in use at
+Public Health England for all Mtb samples in England. Hunt *et al.* 2019
+[@doi:10/ggd835] quantified the cost of the pure-genotyping approach of `mykrobe`,
+showing that 2.4-4.6% of resistant samples were missed. By introducing *de novo*
+discovery into `pandora`, I enable us to address this issue, and that is the focus for
+this chapter.
 
 #### Drug susceptibility prediction for *M. tuberculosis* using `pandora`
 
@@ -1089,34 +940,27 @@ research within the reproducible bioinformatics field.
 
 #### Please comment on the types of position you would like to apply to for after the PhD and your expected application timeline?
 
-I have already been in discussions with Lachlan Coin (my Master's supervisor), from the
-University of Melbourne, about the possibility of a job post-PhD. He recently received
-funding for a project aimed at implementation, in Papua New Guinea, of rapid
-direct-from-sample DNA sequencing approaches to characterise drug resistant
+I have already been in discussions with my Master's supervisor about a job post-PhD. He
+recently received funding for a project aimed at implementation, in Papua New Guinea, of
+rapid direct-from-sample DNA sequencing approaches to characterise drug resistant
 tuberculosis, and evaluation of the accuracy of this approach compared to standard
-culture-based approaches. The bioinformatics component of this project is not yet filled
-and Lachlan and I are in discussions about the possibility of me joining the project in
-either a postdoc or research officer capacity.
+culture-based approaches. The bioinformatics component of this project is not yet
+filled. We are in discussions about the possibility of me joining the project in either
+a postdoc or research officer capacity.
 
 There are also a couple of Australian-based postdoctoral fellowships I would like to
 apply for within the next year or two:
 
 - Australian Research Council (ARC) [Discovery Early Career Researcher Awards][decra]
-  (DECRA). The applications for funding beginning 2022 closes on October 14 2020.
-  Therefore, I will need to apply for this fellowship next year (for 2023 funding). This
-  grant provides focused research support for early career researchers in both teaching
-  and research, and research-only positions.
+  (DECRA). This grant provides focused research support for early career researchers in
+  both teaching and research, and research-only positions. The applications for funding
+  beginning 2023 closes in October 2021.
 - [NHMRC Investigator Grant][nhmrc]: These grants provide the investigator with
   flexibility to pursue important new research directions as they arise and to form
   collaborations as needed, rather than being restricted to the scope of a specific
   research project. This grant has been [postponed][postpone], but applications are
-  likely to open in February/March 2021. I will need to try and begun discussions with a
-  university partner in order to be able to apply for this funding and come up with a
-  project.
-
-In addition to these national-level funding schemes, I have started contacting
-researchers in Queensland to discuss mutual research interests and see if there is any
-funding already available within established projects.
+  likely to open in February/March 2021. I will need to begin discussions with a
+  university partner in order to be able to apply for this funding.
 
 #### What do you see as your strengths (2-3 skills)?
 
