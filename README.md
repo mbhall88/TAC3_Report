@@ -14,6 +14,15 @@
 - Part B: Training, career development and timelines
 - Part C: Impact of COVID-19 pandemic
 
+### PDF
+
+A PDF version of the report can be found on the [`output` branch][output-branch] at [`manuscript.pdf`][pdf]
+
+[output-branch]: https://github.com/mbhall88/TAC3_Report/tree/output
+[pdf]: https://github.com/mbhall88/TAC3_Report/blob/output/manuscript.pdf
+
+### Slide Deck
+
 The associated slide deck for the presentation I gave to the TAC is: <https://tac3.netlify.app>
 
 ## Manubot
