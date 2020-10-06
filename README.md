@@ -24,7 +24,7 @@ A PDF version of the report can be found at <https://mbh.sh/TAC3_Report/manuscri
 
 ### Slide Deck
 
-The associated slide deck for the presentation I gave to the TAC is: <https://tac3.netlify.app>
+The associated slide deck for the presentation I gave to the TAC is live at <https://tac3.netlify.app> and the associated GitHub repository is <https://github.com/mbhall88/TAC3_Presentation>
 
 ## Manubot
 
