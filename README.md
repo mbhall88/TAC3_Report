@@ -14,6 +14,8 @@
 - Part B: Training, career development and timelines
 - Part C: Impact of COVID-19 pandemic
 
+The associated slide deck for the presentation I gave to the TAC is: <https://tac3.netlify.app>
+
 ## Manubot
 
 <!-- usage note: do not edit this section -->
