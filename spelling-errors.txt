@@ -3,7 +3,7 @@ basecall
 basecalling
 BFS
 Bielefeld
-bioinformatics
+Bioinformatics
 Bruijn
 CCS
 coli
@@ -81,7 +81,7 @@ pre
 predoc
 preprint
 preprints
-PRG
+prg
 PRGs
 Programme
 prokaryote
