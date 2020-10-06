@@ -1,7 +1,6 @@
 artefactually
 basecall
 basecalling
-benchmarked
 BFS
 Bielefeld
 Bioinformatics

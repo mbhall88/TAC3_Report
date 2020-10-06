@@ -3,7 +3,7 @@ author-meta:
 - Michael B. Hall
 bibliography:
 - content/manual-references.json
-date-meta: '2020-10-05'
+date-meta: '2020-10-06'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
 
-  <meta name="dc.date" content="2020-10-05" />
+  <meta name="dc.date" content="2020-10-06" />
 
-  <meta name="citation_publication_date" content="2020-10-05" />
+  <meta name="citation_publication_date" content="2020-10-06" />
 
   <meta name="dc.language" content="en-UK" />
 
@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/b09dfe0c36d95da89fe34b3a77fc2559f4a09b83/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/185d57a16870fb10308af56e200d498c35a8e6f8/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b09dfe0c36d95da89fe34b3a77fc2559f4a09b83/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/185d57a16870fb10308af56e200d498c35a8e6f8/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/b09dfe0c36d95da89fe34b3a77fc2559f4a09b83/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/185d57a16870fb10308af56e200d498c35a8e6f8/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,10 +101,10 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/b09dfe0c36d95da89fe34b3a77fc2559f4a09b83/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/185d57a16870fb10308af56e200d498c35a8e6f8/))
 was automatically generated
-from [mbhall88/TAC3_Report@b09dfe0](https://github.com/mbhall88/TAC3_Report/tree/b09dfe0c36d95da89fe34b3a77fc2559f4a09b83)
-on October 5, 2020.
+from [mbhall88/TAC3_Report@185d57a](https://github.com/mbhall88/TAC3_Report/tree/185d57a16870fb10308af56e200d498c35a8e6f8)
+on October 6, 2020.
 </em></small>
 
 ## Authors
@@ -135,40 +135,41 @@ on October 5, 2020.
 **Starting Date**: 12/10/2017  
 **Qualifying Assessment Date**: 06/07/2018  
 **Second TAC Meeting**: 15/10/2019  
-**Third TAC Meeting**: 13/10/2020
+**Third TAC Meeting**: 13/10/2020  
+**Current Contract Expiry**: 11/04/2021
+
+### Executive summary
+
+#### Progress
+
+- The content of Chapter 1 is effectively finished and a paper covering the work
+  (second-author) is in the process of submission. All that remains is to write the
+  thesis chapter.
+- The major publication from this thesis comprises the work in chapters 2 & 3. I am on
+  track to have this paper complete and submitted by the end of quarter 1 2021.
+- All results for chapter 2 are close to complete. I have written some of this chapter
+  and hope to complete the methods and results by the end of 2020.
+- The "start-up" work and method refinement for chapter 3 are mostly complete as they
+  are intertwined with chapter 2. I expect to have chapter 3 complete in quarter 1 of
+  2021\.
+
+#### Timeline
+
+**Chapter 1**: written by April 2021.  
+**Chapters 2 & 3**: written by March 2021.  
+**Chapter 4**: Begin work in February/March 2021 and will likely require 6 months of
+work to get it to a stage where I can write a chapter about it. Unlikely to reach
+publication stage within my PhD.
+
+---
+
+Taking the progress and timelines outlined above into account, I would like to ask for a
+6-month extension from 3.5 to 4 years.
 
 
 ## Part A: Progress Report {.page_break_before}
 
 ### Examining bacterial variation with genome graphs
-
-### Executive summary
-
-Genomics is now ubiquitous in clinical and public health microbiology, at least in the
-developed world. However, many significant challenges remain.
-
-- Bacterial genomes harbour huge amounts of diversity, even within a species, and
-  traditional reference-based approaches are problematic.
-- Much of the variation in bacteria is fundamentally inaccessible to short reads.
-- Long Nanopore reads are noisy, and SNP calling with this data is not properly
-  benchmarked or standardised.
-- Since *Mycobacterium tuberculosis* (Mtb) infects so many people, there is potential
-  for considerable impact for clinical applications.
-- There is also much to be gained from a high-quality pan-genome of Mtb as well as a
-  detailed map of its enigmatic *pe/ppe* gene repertoire.
-
-These motivations drive the following PhD thesis structure:
-
-1. Develop algorithms and software for variant discovery using bacterial genome graphs,
-   building on work of a previous student in the lab (my first paper, second author).
-2. Benchmark Nanopore versus Illumina SNP calling, showing our algorithms meet the needs
-   of clinical and public health users, validate, and publish (second paper).
-3. Improve upon current whole-genome sequencing-based drug resistance prediction for Mtb
-   using genome graphs.
-4. Curate a high-quality reference pan-genome for Mtb that includes a detailed map of
-   the *pe/ppe* genes.
-
-<!--================================================================================-->
 
 ### Motivation and Background
 
@@ -869,7 +870,7 @@ am also involved in the following publications:
   improve read and consensus accuracy. This attempt did not yield a more accurate model
   than the default, but we think it is important to make this result available and
   challenge others to do the same for their species-of-interest.
-- I am third-author on a new manuscript for the workflow management system `snakemake`
+- I am a co-author on a new manuscript for the workflow management system `snakemake`
   [@doi:10.1093/bioinformatics/bts480]. The manuscript is in the process of being
   submitted to *Nature Communications*. I contributed to this work by co-developing a
   tool called `snakefmt` (<https://github.com/snakemake/snakefmt>) that is used to
@@ -877,6 +878,9 @@ am also involved in the following publications:
   workflows. Additionally, I also developed and maintain the `snakemake`
   ["profile"][lsf] that configures job submission and status-checking for the LSF
   cluster system.
+- A paper in review at *Emerging Infectious Diseases* by some of our collaborators in
+  Madagascar about a lemur that contracted and died of TB. I performed the WGS analysis
+  that was required to address previous major revisions they had been asked to make.
 - I plan to submit an ["Application Note"][app-note] to *Bioinformatics* for `rasusa`
   [@doi:10/d9rz]. This is a tool I wrote in the Rust programming language to randomly
   subsample sequencing reads to a specified coverage.
@@ -912,7 +916,7 @@ when I need to submit.
 Lastly, I will work on the introductory chapter. I prefer to do this once I have a clear
 picture of all of the topics touched on in the body of the work.
 
-I plan to submit (pending the six-month extension) my thesis in (INSERT MONTH) 2021.
+I plan to submit (pending a six-month extension) my thesis in October 2021.
 
 ### List of scientific courses and conferences attended to date and planned for next year
 
