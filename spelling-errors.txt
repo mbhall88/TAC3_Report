@@ -3,7 +3,7 @@ basecall
 basecalling
 BFS
 Bielefeld
-Bioinformatics
+bioinformatics
 Bruijn
 CCS
 coli
