@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/185d57a16870fb10308af56e200d498c35a8e6f8/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/961752c3c072e2992f3d774dc30668d3b360c3cd/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/185d57a16870fb10308af56e200d498c35a8e6f8/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/961752c3c072e2992f3d774dc30668d3b360c3cd/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/185d57a16870fb10308af56e200d498c35a8e6f8/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/961752c3c072e2992f3d774dc30668d3b360c3cd/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/185d57a16870fb10308af56e200d498c35a8e6f8/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/961752c3c072e2992f3d774dc30668d3b360c3cd/))
 was automatically generated
-from [mbhall88/TAC3_Report@185d57a](https://github.com/mbhall88/TAC3_Report/tree/185d57a16870fb10308af56e200d498c35a8e6f8)
+from [mbhall88/TAC3_Report@961752c](https://github.com/mbhall88/TAC3_Report/tree/961752c3c072e2992f3d774dc30668d3b360c3cd)
 on October 6, 2020.
 </em></small>
 
