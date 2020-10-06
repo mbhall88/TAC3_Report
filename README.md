@@ -14,12 +14,13 @@
 - Part B: Training, career development and timelines
 - Part C: Impact of COVID-19 pandemic
 
+### Webpage
+
+A live, interactive version of the report can be found at <https://mbh.sh/TAC3_Report>
+
 ### PDF
 
-A PDF version of the report can be found on the [`output` branch][output-branch] at [`manuscript.pdf`][pdf]
-
-[output-branch]: https://github.com/mbhall88/TAC3_Report/tree/output
-[pdf]: https://github.com/mbhall88/TAC3_Report/blob/output/manuscript.pdf
+A PDF version of the report can be found at <https://mbh.sh/TAC3_Report/manuscript.pdf>
 
 ### Slide Deck
 
