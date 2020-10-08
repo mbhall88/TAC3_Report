@@ -3,7 +3,7 @@ author-meta:
 - Michael B. Hall
 bibliography:
 - content/manual-references.json
-date-meta: '2020-10-06'
+date-meta: '2020-10-08'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Third-year progress report for thesis advisory committee" />
 
-  <meta name="dc.date" content="2020-10-06" />
+  <meta name="dc.date" content="2020-10-08" />
 
-  <meta name="citation_publication_date" content="2020-10-06" />
+  <meta name="citation_publication_date" content="2020-10-08" />
 
   <meta name="dc.language" content="en-UK" />
 
@@ -60,11 +60,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://mbhall88.github.io/TAC3_Report/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/0c2eae0f13f492f8a5fff5f83256da002f753555/" />
+  <link rel="alternate" type="text/html" href="https://mbhall88.github.io/TAC3_Report/v/22f71d7c68006cd71a34df455910811d32b1156b/" />
 
-  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/0c2eae0f13f492f8a5fff5f83256da002f753555/" />
+  <meta name="manubot_html_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/22f71d7c68006cd71a34df455910811d32b1156b/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/0c2eae0f13f492f8a5fff5f83256da002f753555/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://mbhall88.github.io/TAC3_Report/v/22f71d7c68006cd71a34df455910811d32b1156b/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,10 +101,10 @@ title: Third-year progress report for thesis advisory committee
 
 <small><em>
 This manuscript
-([permalink](https://mbhall88.github.io/TAC3_Report/v/0c2eae0f13f492f8a5fff5f83256da002f753555/))
+([permalink](https://mbhall88.github.io/TAC3_Report/v/22f71d7c68006cd71a34df455910811d32b1156b/))
 was automatically generated
-from [mbhall88/TAC3_Report@0c2eae0](https://github.com/mbhall88/TAC3_Report/tree/0c2eae0f13f492f8a5fff5f83256da002f753555)
-on October 6, 2020.
+from [mbhall88/TAC3_Report@22f71d7](https://github.com/mbhall88/TAC3_Report/tree/22f71d7c68006cd71a34df455910811d32b1156b)
+on October 8, 2020.
 </em></small>
 
 ## Authors
@@ -155,8 +155,8 @@ on October 6, 2020.
 
 #### Timeline
 
-**Chapter 1**: written by April 2021.  
-**Chapters 2 & 3**: written by March 2021.  
+**Chapter 1**: written by April/May 2021.  
+**Chapters 2 & 3**: written by April/May 2021.  
 **Chapter 4**: Begin work in February/March 2021 and will likely require 6 months of
 work to get it to a stage where I can write a chapter about it. Unlikely to reach
 publication stage within my PhD.
@@ -164,7 +164,7 @@ publication stage within my PhD.
 ---
 
 Taking the progress and timelines outlined above into account, I would like to ask for a
-6-month extension from 3.5 to 4 years.
+6-month extension from 3.5 (11/04/2021) to 4 years.
 
 
 ## Part A: Progress Report {.page_break_before}
@@ -288,9 +288,7 @@ As mentioned in [Motivation and Background](#motivation-and-background), `pandor
 method developed by a previous PhD student in the lab, Rachel Colquhoun. It works on the
 premise of approximating a genome as a hierarchical mosaic. At a high-level, it
 represents a mosaic of loci - usually genes and intergenic regions - while at the
-locus-level, it is a mosaic of previously-seen genomes.
-
-`pandora` aims to infer a consensus sequence from a PRG for a single sample or a
+locus-level, it is a mosaic of previously-seen genomes. `pandora` aims to infer a consensus sequence from a PRG for a single sample or a
 collection of samples. In the case of a collection of samples, the consensus sequence
 will be one that best fits the collection of samples. `pandora` can additionally perform
 genotyping of the sample(s) with respect to this inferred consensus and produces a
@@ -301,7 +299,7 @@ While `pandora`, before the work in this chapter, allows comparison of genomes t
 level of detail provided by no other tool, there is still a significant shortcoming: it
 cannot discover novel variation. If a sample contains a variant not present in the PRG,
 the best `pandora` can do is select the path that is closest to that variant. The work
-in this chapter outlines a method for removing this limitation and provides an analysis
+in this chapter outlines a method I have developed for removing this limitation and provides an analysis
 of the gain in recall and precision by incorporating *de novo* variant discovery.
 
 #### Local *de novo* variant discovery in a genome graph
@@ -385,7 +383,7 @@ with these truth variants.
 
 Figure {@fig:basecall_model} shows, for a subset of four samples, two important results
 regarding the effect of (unfiltered) *de novo* variant discovery in `pandora`. Firstly,
-is shows that the choice of the Nanopore basecalling model has a sizeable impact - at
+it shows that **the choice of the Nanopore basecalling model has a sizeable impact** - at
 least for *E. coli*. When using a methylation-aware model (not default), there is a
 significant increase in recall and decrease in error rate. While this has been
 previously described for Enterobacteriaceae [@doi:10.1186/s13059-019-1727-y], it
@@ -417,13 +415,13 @@ samples, `pandora` has recall at least inline with other variant callers for bot
 Nanopore and Illumina reads. However, when the number of shared samples is less than 6
 (30%), `pandora`'s recall is significantly greater for both sequencing technologies.
 
-![Variant caller recall across the pan-genome. The Y-axis shows the number of variants found. The X-axis shows, for each locus, how many samples is it found in (i.e. left is more "accessory" and right is more "core"). The panels split the results by Illumina (left) and Nanopore (right) data and variant callers. The boxes represent using different reference genomes from across the phylogenetic tree to call variants (for non-`pandor` callers).](images/recall.png){#fig:recall}
+![Variant caller recall across the pan-genome. The Y-axis shows the number of variants found. The X-axis shows, for each locus, how many samples is it found in (i.e. left is more "accessory" and right is more "core"). The panels split the results by Illumina (left) and Nanopore (right) data and variant callers. The boxes represent using different reference genomes from across the phylogenetic tree to call variants (for non-`pandora` callers).](images/recall.png){#fig:recall}
 
 We then show in Figure {@fig:precision} that the variants called by `pandora` have
 significantly higher precision than `nanopolish` and `medaka` for Nanopore data and
 `samtools` for Illumina. `snippy` (Illumina) does have a superior precision to `pandora`
-though. One other important point is that, aside from `snippy` all other variant
-caller's precision varies quite a lot depending on the choice of reference genome.
+though. One other important point is that, aside from `snippy`, all other variant
+caller's precision varies quite a lot depending on the choice of reference genome. Having said that, `snippy`'s precision *does* vary depending on the referece; it just does so on a different scale to the other callers.
 `pandora`, on the other hand, maintains consistent precision regardless of the
 phylogroup of a sample.
 
@@ -484,9 +482,7 @@ is necessary as they will have arrived at a different rate to the putative molec
 clock and will artefactually extend branch lengths on the phylogenetic tree
 [@doi:10/d9r7; @doi:10/f8gsk2]. In the case of Mtb, however, there is virtually no
 recombination [@doi:10/fhqqkv; @doi:10/ftp6r2; @doi:10/f4mrqv], so this step in not
-required.
-
-For this chapter, we define genetic distance to be the sum of genetic discordances,
+required. For this chapter, we define genetic distance to be the sum of genetic discordances,
 where missing data and heterozygosity do not cause discordance and study the clustering
 this definition generates.
 
@@ -495,37 +491,10 @@ this definition generates.
 Each sample was sequenced on both Nanopore and Illumina platforms from the same isolate
 and DNA extraction. In total, we received 118 samples from Madagascar, 83 from South
 Africa, and 46 from the National Tuberculosis Reference Lab in Birmingham; giving us a
-total of 247 samples. As these samples are not reference isolates, we need to be able to
+total of 247 samples - 150 of which passed quality control. As these samples are not reference isolates, we need to be able to
 compare both Illumina and Nanopore to a truth. To establish how each platform compares
-to the truth, we have additionally sequenced 35 of the Malagasy isolates with PacBio and
+to the truth, we have additionally sequenced 35 of the Malagasy isolates with PacBio - only 7 made it through quality control - and
 will use the high-quality assemblies for validation of variant calls.
-
-#### Quality Control
-
-The first step in quality control (QC) was to exclude samples where the Nanopore and
-Illumina data were not perfectly matched. In total, we excluded 40 samples at this
-stage.
-
-The remaining 207 samples were processed through a QC pipeline. The first step in the
-pipeline is decontamination of sequencing reads. We used the decontamination database
-from `clockwork` (<https://github.com/iqbal-lab-org/clockwork>), which contains a wide
-range of organisms, including viral, human, Mtb, non-tuberculosis Mycobacterium (NTM),
-and nasopharyngeal-associated bacterial genomes. Reads were mapped to the database and
-was output to a final decontaminated fastq file if it had any mapping to a
-non-contaminant genome. All decontaminated fastq files were subsampled to a depth of 60x
-(Illumina) and 150x (Nanopore) using `rasusa` [@doi:10/d9rz].
-
-The last step in the QC pipeline is to assign lineages for each sample. A panel of
-lineage-defining SNPs [@doi:10/gbvbxh; @doi:10/d9r2; @doi:10/f9dg9j] was used in
-conjunction with a sample's Illumina VCF from the
-[Baseline variant analysis](#baseline-variant-analysis) for the lineage assignment.
-
-We exclude samples from further analysis if they had coverage below 20x (Illumina) or
-30x (Nanopore), or if they could not be assigned a single lineage. This filtering
-criteria led to a further 57 samples being excluded; leaving us with a total of 150
-samples to use for the remainder of this work. In addition to the QC of the
-Illumina/Nanopore data, we sadly had to exclude 26/35 PacBio sequencing datasets due to
-mismatched Illumina/Nanopore data or PacBio coverage lower than 20x.
 
 #### Baseline variant analysis
 
@@ -571,7 +540,7 @@ the order of tens-of-SNPs [@doi:10/d9r7] so it makes more sense to look at the d
 relationship for samples that are closer to each other. In Figure {@fig:close_dotplot},
 we limit to samples within an Illumina SNP distance of 100. It shows that, at this
 scale, the relationship between Illumina- and Nanopore-defined SNP distance is much
-closer. The correlation between the two can be quantified by the linear equation
+closer. The best fit for the data can be described by the linear equation
 $y=0.93x+0.84$, where $y$ is the predicted Nanopore distance between two samples, given
 the Illumina distance $x$. We can use this equation as a way of translating transmission
 cluster SNP thresholds for Illumina data to Nanopore. For instance, if clusters are
@@ -630,29 +599,6 @@ between `pandora` and the truth that agree. Additionally, we will investigate ho
 complexity of the PRG effects the call rates and what the cost in computational
 performance is.
 
-#### Multi-sample comparison
-
-Multi-sample comparison suffers from two main challenges. First, large chunks of DNA may
-be present or absent across samples - this is the pan-genome effect. This effect causes
-significant issues with single-reference approaches, as outlined previously, but
-`pandora` was developed to address this. Second, when comparing a set of samples, the
-choice of reference affects how one describes variants. `pandora`, by design, chooses a
-reference for each loci PRG based on the current dataset, intending to maximise the
-succinctness of variant descriptions (see Figure {@fig:refbias}). For example, we want
-to see SNPs as what they are - single-base variants - not as a nested region (as in
-Figure {@fig:refbias}).
-
-As mentioned, we handle these cases implicitly in `pandora`, however, the aim of this
-chapter and the next, in addition to comparing across technologies, will also be to
-compare methods for gaining drug resistance and epidemiological clustering information.
-To be able to compare with other methods though, we will need to be able to compare
-variants called with respect to a single-reference by other tools, with those from
-`pandora`.
-
-With that in mind, this section will focus on producing a distance matrix for all
-samples using the result of the `pandora compare` routine and contrast this to those
-obtained from the single-reference methods.
-
 #### Reproducing "truth" Illumina transmission clusters
 
 In this section we will examine how well we can recreate the transmission clusters
@@ -664,9 +610,7 @@ clusters.
 
 ---
 
-All of the analysis in this chapter was performed by myself - with the exception of the
-running of COMPASS - and all of the pipelines can be found at
-<https://github.com/mbhall88/head_to_head_pipeline>.
+All of the analysis in this chapter was performed by myself.
 
 #### Outstanding work
 
@@ -687,9 +631,7 @@ quick process.
 The genetic basis for drug resistance in Mtb is only partially understood. For the four
 first-line drugs, it is possible to detect the majority of resistant strains with high
 confidence [@doi:10/d9kj], but for second-line, novel, and repurposed drugs, this is
-much harder.
-
-Previous work from our group has shown that using WGS it is possible to create a panel
+much harder. Previous work from our group has shown that using WGS it is possible to create a panel
 of resistance markers and then successfully use this panel to predict drug resistance
 from Mtb sequence data [@doi:10/f755tg; @doi:10/f3jjtq]. This work involved the
 development of a software program called `mykrobe` to automate this inference and can
@@ -718,7 +660,7 @@ have shown that the primary factor determining how well a tool performed was the
 catalogue of resistance mutations used. However, given the same panel, different tools
 do not perform identically, and therefore methodology is still important. While some
 studies have focused specifically on Nanopore data, all used a small sample size
-(Votintseva *et al.* 2017 n=5, Hunt *et al.* 2019 n=5, `tb-profiler` 2019 n=3).
+(`mykrobe` n=5 and `tb-profiler` n=3).
 Additionally, `tb-profiler` and `mykrobe` both have limitations with their methods. Both
 `tb-profiler` and `mykrobe` only genotype with respect to known variants - i.e. they
 cannot detect novel variants. The CRyPTIC consortium recently introduced a new approach
@@ -791,10 +733,7 @@ these genomes using synteny and parsimony with existing gene identifiers.
 
 Ultimately, the overall gene ordering is not of great importance for the construction of
 a `pandora`-friendly pan-genome. The design of `pandora` is such that we divide the
-pan-genome into discrete pieces (loci) - i.e. genes and intergenic regions. Due to the
-low nucleotide diversity of Mtb, it may end up being necessary to split the Mtb genome
-into synteny blocks rather than the standard gene/intergenic approach we have used for
-other bacteria.
+pan-genome into discrete pieces (loci) - i.e. genes and intergenic regions.
 
 #### A genome graph map of *pe/ppe* genes
 
@@ -844,7 +783,7 @@ knowledge of Mtb biology.
   and
   [Chapter 3](./20.partA.md#chapter-3-applications-to-improving-m-tuberculosis-drug-resistance-prediction)
   will also be contained in a paper, of which I will be the first author. We aim to have
-  this work completed and a manuscript submitted by the end of November 2020 - or the
+  this work completed and a manuscript submitted by the end of March 2021 - or the
   first quarter of 2021 at the latest.
 - The work in
   [Chapter 4](./20.partA.md#chapter-4-construction-of-a-m-tuberculosis-reference-pan-genome)
@@ -867,9 +806,9 @@ am also involved in the following publications:
   species-specific Nanopore basecalling models. I used the data we have good PacBio
   assemblies for to try and train a Mtb-specific basecalling model, as it has been
   previously shown (in *K. pneumoniae*) [@doi:10.1186/s13059-019-1727-y] that this can
-  improve read and consensus accuracy. This attempt did not yield a more accurate model
-  than the default, but we think it is important to make this result available and
-  challenge others to do the same for their species-of-interest.
+  improve read and consensus accuracy. We will show the improvement such species-specific 
+  models can have by re-analysing the chapter 2 work with this new Mtb model and challenging 
+  others to do the same for their species-of-interest.
 - I am a co-author on a new manuscript for the workflow management system `snakemake`
   [@doi:10.1093/bioinformatics/bts480]. The manuscript is in the process of being
   submitted to *Nature Communications*. I contributed to this work by co-developing a
@@ -899,24 +838,27 @@ The writing I have done includes:
 I plan to continue writing the results and methods for Chapter 2 and 3 in parallel with
 the daily work I am doing. As the work in these chapters will be published together (see
 [Publication Strategy](#publication-strategy)) I hope to have completed a well-polished
-draft for them both by the end of the year.
+draft for them both by March 2021.
 
 As a lot of the work in Chapters 2 and 3 leverage (and improve) the methods in Chapter
 1, I will revisit this chapter once the work in these two chapters is complete. By this
 point, the `pandora` paper will be submitted, as will the paper for Chapter 2 and 3.
 This will allow me to write a "finalised" methods and results section for Chapter 1. As
-such, I plan to take some time at the start of next year (2021) to work solely on
-getting Chapter 1 to a near-finished state.
+such, I plan to have Chapter 1 finished by April 2021.
 
-Chapter 4 will be approached in a similar manner to Chapters 2 and 3 - writing methods
-and results in parallel with the work I am doing. This means I will hope to have this
-chapter in a near-complete state, regardless of whether I "finish" the project before
-when I need to submit.
+Chapter 4 is a particular goal of mine and something I would like to continue pursuing 
+throughout my career. I won't have time to complete a *full* analysis in 6 months, but 
+as I have most of the data and methods in place, I will be able to get a solid first draft 
+done by October 2021.
 
 Lastly, I will work on the introductory chapter. I prefer to do this once I have a clear
 picture of all of the topics touched on in the body of the work.
 
-I plan to submit (pending a six-month extension) my thesis in October 2021.
+In summary, my current contract end date of 11/04/2020 is a bit earlier than I can realistically 
+have Chapters 2 & 3 complete. Additionally, I would also need to finish writing Chapter 1 
+and the introductory component of the thesis in that same time period. Ultimately I would 
+find a 6-month extension incredibly valuable and could produce complete versions of 
+chapters 1-3 and a good draft for chapter 4 and submit by October 2021.
 
 ### List of scientific courses and conferences attended to date and planned for next year
 
@@ -970,15 +912,14 @@ apply for within the next year or two:
 
 #### What do you see as your strengths (2-3 skills)?
 
-- Nanopore bioinformatics method development and analysis
-- Bacterial variant-calling evaluation
-- Software engineering
+- Rigour (fueled by healthy scepticism)
+- Methodical and careful working practises. I believe the fastest way to do something is the correct way - no "hacks" or shortcuts.
+- Great interest in both biology and bioinformatics without "worshipping" one over the other.
 
 #### What do you see as your areas for improvement (2-3 areas)?
 
-- Structural organisation of the Mtb genome
-- Phylogenetics
 - Writing and reviewing academic publications
+- Saying "no" to things. I have a tendancy to over commit myself
 
 #### What are your career development priorities until the end of your contract?
 
@@ -988,6 +929,7 @@ apply for within the next year or two:
 - Reviewing and writing papers will be a valuable set of skills for applying to
   postdoctoral fellowships and is something that can fit into the completion of my PhD
   nicely.
+- Get better at saying "no" to certain things.
 
 #### What actions will you take to develop these skills?
 
@@ -1004,6 +946,9 @@ apply for within the next year or two:
   position.
 - I have registered for the EMBL "Applying to postdoc positions" workshop (late-October)
   and am also waiting for the next "Grant Writing" workshop to become available.
+- Given I have a tight schedule for submission, that will really help me with learning to 
+get comfortable with saying "no" to opportunities that are not directly relevant or helpful 
+to getting my thesis done.
 
 [app-note]: https://academic.oup.com/bioinformatics/pages/instructions_for_authors#Types%20of%20Manuscript
 [bielefeld]: https://www.uni-bielefeld.de/(en)/ZiF/AG/2019/09-30-Stoye.html
